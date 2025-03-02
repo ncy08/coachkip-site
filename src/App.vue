@@ -53,8 +53,8 @@
         </v-parallax>
       </section>
   <!-- HOW WE DO -->
-      <section style="position: relative; z-index: 2;" :height="isMobile ? '140vh' : '100vh'" id="how-we-do" @mousemove="handleMouseMove($event, 'How we do')"  @mouseleave="handleMouseLeave">
-        <v-parallax color="black" :height="isMobile ? '140vh' : '100vh'">
+      <section style="position: relative; z-index: 2;" :height="isMobile ? '130vh' : '100vh'" id="how-we-do" @mousemove="handleMouseMove($event, 'How we do')"  @mouseleave="handleMouseLeave">
+        <v-parallax color="black" :height="isMobile ? '130vh' : '100vh'">
           <v-container fluid  style="padding:10% !important;">
             <div class="section-header mb-8">
               <h2 class="text-h3 text-white mb-4">What we do</h2>
@@ -73,8 +73,8 @@
         </v-parallax>
       </section>
   <!-- //2ND SECTON -->
-      <section :height="isMobile ? '220vh' : '100vh'" style="position: relative; z-index: 2;">
-          <v-parallax color="black" :height="isMobile ? '220vh' : '100vh'">
+      <section :height="isMobile ? '200vh' : '100vh'" style="position: relative; z-index: 2;">
+          <v-parallax color="black" :height="isMobile ? '200vh' : '100vh'">
             <v-container fluid class="services-container" style="padding:2% !important">
               <div class="services-grid">
                 <div class="service-item">Market Research</div>
@@ -96,8 +96,8 @@
           </v-parallax>
       </section>
   <!-- //HOW WE DO IT SECTION -->
-      <section style="position: relative; z-index: 2;" :height="isMobile ? '140vh' : '100vh'" id="how-we-do-it"  @mousemove="handleMouseMove($event, 'How we do it')"  @mouseleave="handleMouseLeave">
-        <v-parallax :height="isMobile ? '140vh' : '100vh'" color="black">
+      <section style="position: relative; z-index: 2;" :height="isMobile ? '130vh' : '100vh'" id="how-we-do-it"  @mousemove="handleMouseMove($event, 'How we do it')"  @mouseleave="handleMouseLeave">
+        <v-parallax :height="isMobile ? '130vh' : '100vh'" color="black">
           <v-container fluid  style="padding:10% !important;">
             <div class="section-header mb-8">
               <h2 class="text-h3 text-white mb-4">How we do it</h2>
@@ -114,9 +114,10 @@
           </v-container>
         </v-parallax>
     </section>
+
   <!-- //IDEA SECTION -->
-      <section :height="isMobile ? '160vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '160vh' : '100vh'" color="black">
+      <section :height="isMobile ? '140vh' : '100vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '140vh' : '100vh'" color="black">
           <v-container fluid style="padding: 5% !important">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -141,8 +142,8 @@
         </v-parallax>
       </section>
   <!-- //VALIDATION SECTION -->
-      <section :height="isMobile ? '160vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '160vh' : '100vh'" color="black">
+      <section :height="isMobile ? '135vh' : '100vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '135vh' : '100vh'" color="black">
           <v-container fluid style="padding: 5% !important">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -166,8 +167,8 @@
         </v-parallax>
       </section>
   <!-- //03 CREATION -->
-      <section :height="isMobile ? '160vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '160vh' : '100vh'" color="black">
+      <section :height="isMobile ? '135vh' : '100vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '135vh' : '100vh'" color="black">
           <v-container fluid style="padding: 5% !important">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -189,8 +190,8 @@
         </v-parallax>
       </section>
   <!-- //04 SPINOUT -->
-      <section :height="isMobile ? '160vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '160vh' : '100vh'" color="black">
+      <section :height="isMobile ? '135vh' : '100vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '135vh' : '100vh'" color="black">
           <v-container fluid style="padding: 5% !important">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -213,8 +214,8 @@
         </v-parallax>
       </section>
   <!-- //05 SCALE UP -->
-      <section :height="isMobile ? '160vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '160vh' : '100vh'" color="black">
+      <section :height="isMobile ? '135vh' : '100vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '135vh' : '100vh'" color="black">
           <v-container fluid style="padding: 5% !important">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -239,8 +240,8 @@
       </section>
 
    <!-- //RESULTS SECTION -->
-    <section id="results" :height="isMobile ? '240vh' : '100vh'" style="position: relative; z-index: 2;">
-      <v-parallax :height="isMobile ? '240vh' : '100vh'" color="black">
+    <section id="results" :height="isMobile ? '200vh' : '100vh'" style="position: relative; z-index: 2;">
+      <v-parallax :height="isMobile ? '200vh' : '100vh'" color="black">
         <v-container fluid style="padding: 5% !important">
           <div class="section-header mb-8">
             <h2 class="text-h3 text-white mb-3 mt-2">Results</h2>
@@ -271,8 +272,8 @@
     </section>
 
   <!-- //TEAM SECTION -->
-    <section id="team" :height="isMobile ? '400vh' : '100vh'"  style="position: relative; z-index: 2;">
-        <v-card :height="isMobile ? '400vh' : '100vh'" color="black" style="position: relative; border-radius: 0% !important">
+    <section id="team" :height="isMobile ? '200vh' : '100vh'"  style="position: relative; z-index: 2;">
+        <v-card :height="isMobile ? '360vh' : '100vh'" color="black" style="position: relative; border-radius: 0% !important">
             <v-container fluid style="padding: 5% !important">
                 <div class="section-header mb-8">
                     <h2 class="text-h3 text-white mb-3 mt-2">Team</h2>
