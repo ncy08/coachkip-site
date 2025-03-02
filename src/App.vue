@@ -6,7 +6,7 @@
           <span>{{ hoveredMember.name ? hoveredMember.name  : hoveredMember }}</span>
         </div>
 
-        <v-toolbar class="tBar" color="#212021">
+        <v-toolbar v-if="isAtBottom !== true" class="tBar" color="#212021">
           <v-toolbar-title @click="handleMenuItemClick({link:'#home'})">COACH KIP
           </v-toolbar-title>
           <v-spacer></v-spacer>
@@ -53,8 +53,8 @@
         </v-parallax>
       </section>
   <!-- HOW WE DO -->
-      <section style="position: relative; z-index: 2;" :height="isMobile ? '130vh' : '100vh'" id="how-we-do" @mousemove="handleMouseMove($event, 'How we do')"  @mouseleave="handleMouseLeave">
-        <v-parallax color="black" :height="isMobile ? '130vh' : '100vh'">
+      <section style="position: relative; z-index: 2;" :height="isMobile ? '170vh' : '100vh'" id="how-we-do" @mousemove="handleMouseMove($event, 'How we do')"  @mouseleave="handleMouseLeave">
+        <v-parallax color="black" :height="isMobile ? '170vh' : '100vh'">
           <v-container fluid  style="padding:10% !important;">
             <div class="section-header mb-8">
               <h2 class="text-h3 text-white mb-4">What we do</h2>
@@ -96,8 +96,8 @@
           </v-parallax>
       </section>
   <!-- //HOW WE DO IT SECTION -->
-      <section style="position: relative; z-index: 2;" :height="isMobile ? '130vh' : '100vh'" id="how-we-do-it"  @mousemove="handleMouseMove($event, 'How we do it')"  @mouseleave="handleMouseLeave">
-        <v-parallax :height="isMobile ? '130vh' : '100vh'" color="black">
+      <section style="position: relative; z-index: 2;" :height="isMobile ? '170vh' : '100vh'" id="how-we-do-it"  @mousemove="handleMouseMove($event, 'How we do it')"  @mouseleave="handleMouseLeave">
+        <v-parallax :height="isMobile ? '170vh' : '100vh'" color="black">
           <v-container fluid  style="padding:10% !important;">
             <div class="section-header mb-8">
               <h2 class="text-h3 text-white mb-4">How we do it</h2>
@@ -114,10 +114,9 @@
           </v-container>
         </v-parallax>
     </section>
-
   <!-- //IDEA SECTION -->
-      <section :height="isMobile ? '140vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '140vh' : '100vh'" color="black">
+      <section :height="isMobile ? '200vh' : '100vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '200vh' : '100vh'" color="black">
           <v-container fluid style="padding: 5% !important">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -142,8 +141,8 @@
         </v-parallax>
       </section>
   <!-- //VALIDATION SECTION -->
-      <section :height="isMobile ? '135vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '135vh' : '100vh'" color="black">
+      <section :height="isMobile ? '250vh' : '100vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '250vh' : '100vh'" color="black">
           <v-container fluid style="padding: 5% !important">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -151,7 +150,7 @@
               </v-col>
               <v-col cols="12" md="6">
                 <div class="ideation-text">
-                  <h1 class="section-title color-slate" color="#e4dbcc" style="font-family: Aeonik, Arial, sans-serif;">02—Validation</h1>
+                  <h1 class="section-title color-slate" color="#e4dbcc">02—Validation</h1>
                   <br><br>
                   <p style="font-size:48px !important;font-weight: 400">Every idea we work on sounds good at first. But nine out of ten aren't.</p>
                   <br><br>
@@ -167,8 +166,8 @@
         </v-parallax>
       </section>
   <!-- //03 CREATION -->
-      <section :height="isMobile ? '135vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '135vh' : '100vh'" color="black">
+      <section :height="isMobile ? '200vh' : '100vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '200vh' : '100vh'" color="black">
           <v-container fluid style="padding: 5% !important">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -190,8 +189,8 @@
         </v-parallax>
       </section>
   <!-- //04 SPINOUT -->
-      <section :height="isMobile ? '135vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '135vh' : '100vh'" color="black">
+      <section :height="isMobile ? '200vh' : '100vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '200vh' : '100vh'" color="black">
           <v-container fluid style="padding: 5% !important">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -214,8 +213,8 @@
         </v-parallax>
       </section>
   <!-- //05 SCALE UP -->
-      <section :height="isMobile ? '135vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '135vh' : '100vh'" color="black">
+      <section :height="isMobile ? '250vh' : '100vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '250vh' : '100vh'" color="black">
           <v-container fluid style="padding: 5% !important">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -240,41 +239,42 @@
       </section>
 
    <!-- //RESULTS SECTION -->
-    <section id="results" :height="isMobile ? '200vh' : '100vh'" style="position: relative; z-index: 2;">
-      <v-parallax :height="isMobile ? '200vh' : '100vh'" color="black">
-        <v-container fluid style="padding: 5% !important">
-          <div class="section-header mb-8">
-            <h2 class="text-h3 text-white mb-3 mt-2">Results</h2>
-          </div>
-          <v-row  justify="center" class="mt-9" align="center" style="padding: 1% !important;margin-left: 15% !important;
-            margin-right: 15% !important;">
-            <v-col cols="12" md="6">
-              <h1 class="text-h1 text-yellow large-number mb-16" v-text="countIdeasSpunOut"></h1>
-              <hr><br><br><br>
-              <h3 class="text-h2 text-white">Ideas Spun Out</h3>
-              <br><br>
-              <p class="text-white" style="font-size:25px !important">
-                In the rarest of cases, a startup idea has great timing, true customer demand, and the market is enormous.
-              </p>
-            </v-col>
-            <v-col cols="12" md="6">
-              <h1 class="text-h1 text-yellow large-number mb-16" v-text="countIdeasKilled"></h1>
-              <hr><br><br><br>
-              <h3 class="text-h2 text-white">Ideas Killed</h3>
-              <br><br>
-              <p class="text-white" style="font-size:25px !important">
-                More often than not, an idea isn't a viable business. Our learnings from our failures make us more confident in the ideas that we love.
-              </p>
-            </v-col>
-          </v-row>
+    <section id="results" :height="isMobile ? '250vh' : '150vh'" style="position: relative; z-index: 2;">
+      <v-parallax :height="isMobile ? '250vh' : '150vh'" color="black">
+        <v-container fluid  style="padding:10% !important;">
+            <div class="section-header mb-8">
+              <h2 class="text-h3 text-white mb-4">Results</h2>
+                <v-row  justify="center"  style="padding: 5% !important;">
+                    <v-col cols="12" md="6">
+                      <h1 class="text-h1 text-yellow large-number mb-8"  v-text="countIdeasSpunOut"></h1>
+                      <hr>
+                        <br>
+                        <h3 class="text-h2 text-white" >Ideas Spun Out</h3>
+                        <br/>
+                        <p class="text-white" style="font-size:20px !important">
+                          In the rarest of cases, a startup idea has great timing, true customer demand, and the market is enormous.
+                        </p> 
+                    </v-col>
+                    <v-col cols="12" md="6">
+                      <h1 class="text-h1 text-yellow large-number mb-8"  v-text="countIdeasKilled"></h1>
+                      <hr>
+                      <br>
+                      <h3 class="text-h2 text-white">Ideas Killed</h3>
+                      <br/>
+                      <p class="text-white" style="font-size:22px !important">
+                        More often than not, an idea isn't a viable business. Our learnings from our failures make us more confident in the ideas that we love.
+                      </p> 
+                    </v-col>
+                </v-row>
+            </div>
         </v-container>
       </v-parallax>
     </section>
 
   <!-- //TEAM SECTION -->
-    <section id="team" :height="isMobile ? '200vh' : '100vh'"  style="position: relative; z-index: 2;">
-        <v-card :height="isMobile ? '360vh' : '100vh'" color="black" style="position: relative; border-radius: 0% !important">
-            <v-container fluid style="padding: 5% !important">
+    <section id="team" :height="isMobile ? '520vh' : '150vh'"  style="position: relative; z-index: 2;">
+        <v-card :height="isMobile ? '520vh' : '150vh'" color="black" style="position: relative; border-radius: 0% !important">
+          <v-container fluid  style="padding:10% !important;">
                 <div class="section-header mb-8">
                     <h2 class="text-h3 text-white mb-3 mt-2">Team</h2>
                 </div>
@@ -304,10 +304,10 @@
         </v-card>
     </section>
   <!-- //CONTACT SECTION -->
-  <v-footer color="#b7e3b6" style="height: 92vh; position: fixed; bottom: 0; left: 0; right: 0;" id="contact"
+  <v-footer color="#b7e3b6" v-if="isMobile !== true" style="height: 100vh; position: fixed; bottom: 0; left: 0; right: 0;" id="contact"
   :style="{'z-index':isAtBottom == true ? 9999 : 1}">
     <div class="section-header mb-8">
-        <h2 v-if="isMobile != true" class="text-h3 text-black mb-3 mt-2">Contact</h2>
+        <h2 v-if="isMobile != true" class="text-h3 text-black mb-3 ">Contact</h2>
         <h4 v-else class="text-h4 text-black mb-3 mt-2">Contact</h4>
     </div>
     <v-row>
@@ -315,31 +315,31 @@
             <!-- Currently Working In Section -->
         </v-col>
         <v-col cols="9">
-            <v-row class="mt-n16">
-                <v-col>
-                    <p class="text-black"><strong><h2>Address</h2></strong></p>
-                </v-col>
-                <v-col>
-                    <p class="text-black">Parker Studio</p>
-                    <p class="text-black">5424 Ballard Ave NW</p>
-                    <p class="text-black">Unit 103</p>
-                    <p class="text-black">Seattle, WA 98107</p>
-                    <p class="text-black">United States</p>
-                </v-col>
+              <v-row class="mt-n16">
                   <v-col>
-                    <p class="text-black">Parker Studio</p>
-                    <p class="text-black">5424 Ballard Ave NW</p>
-                    <p class="text-black">Unit 103</p>
-                    <p class="text-black">Seattle, WA 98107</p>
-                    <p class="text-black">United States</p>
-                </v-col>
-            </v-row>
-            <v-row>
+                      <p class="text-black"><strong><h2>Address</h2></strong></p>
+                  </v-col>
+                  <v-col>
+                      <p class="text-black">Parker Studio</p>
+                      <p class="text-black">5424 Ballard Ave NW</p>
+                      <p class="text-black">Unit 103</p>
+                      <p class="text-black">Seattle, WA 98107</p>
+                      <p class="text-black">United States</p>
+                  </v-col>
+                    <v-col>
+                      <p class="text-black">Parker Studio</p>
+                      <p class="text-black">5424 Ballard Ave NW</p>
+                      <p class="text-black">Unit 103</p>
+                      <p class="text-black">Seattle, WA 98107</p>
+                      <p class="text-black">United States</p>
+                  </v-col>
+              </v-row>
+            <v-row class="mt-n5">
                 <v-col>
                     <hr>
                 </v-col>
             </v-row>
-            <v-row class="my-custom-row">
+            <v-row class="my-custom-row mt-n5">
                 <v-col>
                     <p class="text-black"><strong><h2>Inquiries</h2></strong></p>
                 </v-col>
@@ -350,7 +350,7 @@
                     <p class="text-black">hello(at)parker.studio</p>
                 </v-col>
             </v-row>
-            <v-row>
+            <v-row class="mt-n5">
                 <v-col>
                     <hr>
                 </v-col>
@@ -423,7 +423,76 @@
             </div>
         </v-col>
     </v-row>
+  </v-footer>
+  <v-footer color="#b7e3b6" v-if="isMobile" 
+  style="max-height: 100vh; height: 100vh; position: fixed; bottom: 0; left: 0; right: 0; overflow-y: auto;" 
+  id="contact"
+  :style="{'z-index': isAtBottom ? 9999 : 1}">
+
+  <h4 class="text-h4 text-black mb-3 mt-2 text-center">Contact</h4>
+
+  <v-container>
+    <v-row>
+      <v-col cols="12">
+        <h4 class="text-black font-weight-bold">Address</h4>
+        <p class="text-black">Parker Studio</p>
+        <p class="text-black">5424 Ballard Ave NW</p>
+        <p class="text-black">Unit 103</p>
+        <p class="text-black">Seattle, WA 98107</p>
+        <p class="text-black">United States</p>
+        <v-divider class="my-4"></v-divider>
+      </v-col>
+
+      <v-col cols="12">
+        <h4 class="text-black font-weight-bold">Inquiries</h4>
+        <p class="text-black">+1 206 395 9662</p>
+        <p class="text-black">hello(at)parker.studio</p>
+        <v-divider class="my-4"></v-divider>
+      </v-col>
+
+      <v-col cols="12">
+        <h4 class="text-black font-weight-bold">Careers & Internships</h4>
+        <p class="text-black">work(at)parker.studio</p>
+        <p class="text-black">intern(at)parker.studio</p>
+        <v-divider class="my-4"></v-divider>
+      </v-col>
+
+      <v-col cols="12">
+        <h4 class="text-black font-weight-bold">Follow Us</h4>
+        <p class="text-black">Instagram</p>
+        <p class="text-black">Tumblr</p>
+        <v-divider class="my-4"></v-divider>
+      </v-col>
+
+      <v-col cols="12">
+        <h4 class="text-black font-weight-bold">Newsletter</h4>
+        <v-text-field variant="underlined" placeholder="Email" class="mb-2" />
+        <v-btn color="black" class="text-white">SUBMIT</v-btn>
+        <v-divider class="my-4"></v-divider>
+      </v-col>
+    </v-row>
+  </v-container>
+
+  <!-- Marquee Section -->
+  <v-row style="position: relative; bottom: 0; left: 0; right: 0;">
+    <v-col>
+      <v-toolbar style="background-color: #b7e3b6; z-index: 9">
+        <v-toolbar-title>
+          <h5 class="text-black font-weight-bold">Currently Working In:</h5>
+        </v-toolbar-title>
+      </v-toolbar>
+      <div class="marquee-container">
+        <div class="contact__marquee__ticker__inner text-center">
+          <h5 style="display: inline-block;">
+            SEATTLE, SFO, CHICAGO, AUSTIN, NYC, LONDON
+          </h5>
+        </div>
+      </div>
+    </v-col>
+  </v-row>
+
 </v-footer>
+
 
     </v-app>
   </template>
@@ -1185,9 +1254,9 @@
   }
 
   .large-number {
-    font-size: 230px !important;
+    font-size: 180px !important;
     font-weight: bold !important;
-  }
+    }
 
   @media only screen and (min-width: 480px) {
       footer {
@@ -1257,4 +1326,6 @@
         white-space: nowrap; /* Prevent line breaks */
     }
 }
+
+
   </style>
