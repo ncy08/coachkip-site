@@ -304,6 +304,8 @@
         </v-card>
     </section>
   <!-- //CONTACT SECTION -->
+
+  <!-- //Desktop -->
   <v-footer color="#b7e3b6" v-if="isMobile !== true" style="height: 100vh; position: fixed; bottom: 0; left: 0; right: 0;" id="contact"
   :style="{'z-index':isAtBottom == true ? 9999 : 1}">
     <div class="section-header mb-8">
@@ -401,9 +403,9 @@
         </v-col>
     </v-row>
     <v-row :class="isMobile == true ? 'mt-n6': 'mb-16'">
-        <v-col cols="3">
+        <v-col cols="2">
             <!-- Currently Working In Section -->
-            <v-toolbar class="mt-n6" style="background-color: #b7e3b6; z-index: 9">
+            <v-toolbar class="mt-n6 marquee-container" style="background-color: #b7e3b6; z-index: 9">
                 <v-toolbar-title >
                   <h3 v-if="isMobile !== true">Currently working in: </h3>
                   <h5 v-else>Working in:  </h5>
@@ -424,13 +426,12 @@
         </v-col>
     </v-row>
   </v-footer>
+  <!-- //Mobile -->
   <v-footer color="#b7e3b6" v-if="isMobile" 
   style="max-height: 100vh; height: 100vh; position: fixed; bottom: 0; left: 0; right: 0; overflow-y: auto;" 
   id="contact"
   :style="{'z-index': isAtBottom ? 9999 : 1}">
-
   <h4 class="text-h4 text-black mb-3 mt-2 text-center">Contact</h4>
-
   <v-container>
     <v-row>
       <v-col cols="12">
@@ -493,9 +494,8 @@
 
 </v-footer>
 
-
-    </v-app>
-  </template>
+  </v-app>
+</template>
 
   <script>
   import lottie from 'lottie-web'
@@ -1332,5 +1332,39 @@
         display: block; /* Ensure it is visible */
         height: auto; /* Adjust height if necessary */
     }
+}#app {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  margin-top: auto;
+  position: relative;
+}
+
+.marquee-container {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 48px;
+  background-color: #b7e3b6;
+  z-index: 9;
+}
+
+.contact__marquee__ticker__inner {
+  display: flex;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
   </style>

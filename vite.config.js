@@ -7,7 +7,6 @@ export default defineConfig({
     vue(),
   ],
   // Commenting out the server configuration for production deployment
-  /*
   server: {
     host: '10.169.141.193',
     port: 5173,
@@ -23,7 +22,6 @@ export default defineConfig({
       credentials: true
     }
   },
-  */
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
