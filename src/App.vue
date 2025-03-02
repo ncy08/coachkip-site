@@ -7,7 +7,7 @@
         </div>
 
         <v-toolbar class="tBar" color="#212021">
-          <v-toolbar-title>COACH KIP
+          <v-toolbar-title @click="handleMenuItemClick({link:'#home'})">COACH KIP
           </v-toolbar-title>
           <v-spacer></v-spacer>
           <v-app-bar-nav-icon color="#FFD700" class="hidden-md-and-up" size="x-large" @click.stop="drawer = !drawer" />
@@ -150,7 +150,7 @@
               </v-col>
               <v-col cols="12" md="6">
                 <div class="ideation-text">
-                  <h1 class="section-title color-slate" color="#e4dbcc">02—Validation</h1>
+                  <h1 class="section-title color-slate" color="#e4dbcc" style="font-family: Aeonik, Arial, sans-serif;">02—Validation</h1>
                   <br><br>
                   <p style="font-size:48px !important;font-weight: 400">Every idea we work on sounds good at first. But nine out of ten aren't.</p>
                   <br><br>
@@ -325,6 +325,13 @@
                     <p class="text-black">Seattle, WA 98107</p>
                     <p class="text-black">United States</p>
                 </v-col>
+                  <v-col>
+                    <p class="text-black">Parker Studio</p>
+                    <p class="text-black">5424 Ballard Ave NW</p>
+                    <p class="text-black">Unit 103</p>
+                    <p class="text-black">Seattle, WA 98107</p>
+                    <p class="text-black">United States</p>
+                </v-col>
             </v-row>
             <v-row>
                 <v-col>
@@ -392,12 +399,13 @@
             </v-row>
         </v-col>
     </v-row>
-    <v-row class="mt-n6">
+    <v-row :class="isMobile == true ? 'mt-n6': 'mb-16'">
         <v-col cols="3">
             <!-- Currently Working In Section -->
             <v-toolbar class="mt-n6" style="background-color: #b7e3b6; z-index: 9">
-                <v-toolbar-title class="ml-6">
-                    <h3>Currently working in:</h3>
+                <v-toolbar-title >
+                  <h3 v-if="isMobile !== true">Currently working in: </h3>
+                  <h5 v-else>Working in:  </h5>
                 </v-toolbar-title>
             </v-toolbar>
         </v-col>
@@ -763,8 +771,15 @@
     
   };
   </script>
+  <style lang="scss">
+  @import './assets/fonts/fonts.css';
+  body {
+    font-family: 'Poppins-SemiBold', Arial, sans-serif; /* Fallback to Arial and sans-serif */
+  }
+  </style>
 
   <style scoped>
+  
   /* Base Styles */
   .hero-content {
     height: 100%;
