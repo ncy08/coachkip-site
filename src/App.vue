@@ -141,8 +141,8 @@
         </v-parallax>
       </section>
   <!-- //VALIDATION SECTION -->
-      <section :height="isMobile ? '250vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '250vh' : '100vh'" color="black">
+      <section :height="isMobile ? '225vh' : '100vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '225vh' : '100vh'" color="black">
           <v-container fluid style="padding: 5% !important">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -213,8 +213,8 @@
         </v-parallax>
       </section>
   <!-- //05 SCALE UP -->
-      <section :height="isMobile ? '250vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '250vh' : '100vh'" color="black">
+      <section :height="isMobile ? '225vh' : '100vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '225vh' : '100vh'" color="black">
           <v-container fluid style="padding: 5% !important">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -239,8 +239,8 @@
       </section>
 
    <!-- //RESULTS SECTION -->
-    <section id="results" :height="isMobile ? '250vh' : '150vh'" style="position: relative; z-index: 2;">
-      <v-parallax :height="isMobile ? '250vh' : '150vh'" color="black">
+    <section id="results" :height="isMobile ? '205vh' : '150vh'" style="position: relative; z-index: 2;">
+      <v-parallax :height="isMobile ? '205vh' : '150vh'" color="black">
         <v-container fluid  style="padding:10% !important;">
             <div class="section-header mb-8">
               <h2 class="text-h3 text-white mb-4">Results</h2>
@@ -272,8 +272,8 @@
     </section>
 
   <!-- //TEAM SECTION -->
-    <section id="team" :height="isMobile ? '520vh' : '150vh'"  style="position: relative; z-index: 2;">
-        <v-card :height="isMobile ? '520vh' : '150vh'" color="black" style="position: relative; border-radius: 0% !important">
+    <section id="team" :height="isMobile ? '490vh' : '150vh'"  style="position: relative; z-index: 2;">
+        <v-card :height="isMobile ? '490vh' : '150vh'" color="black" style="position: relative; border-radius: 0% !important">
           <v-container fluid  style="padding:10% !important;">
                 <div class="section-header mb-8">
                     <h2 class="text-h3 text-white mb-3 mt-2">Team</h2>
@@ -395,7 +395,7 @@
                     <v-text-field variant="underlined" placeholder="Email" />
                 </v-col>
                 <v-col>
-                    <p class="text-black">SUBMIT</p>
+                  <v-btn color="black" class="text-white">SUBMIT</v-btn>
                 </v-col>
             </v-row>
         </v-col>
@@ -651,6 +651,9 @@
       },
       checkMobile() {
         this.isMobile = window.innerWidth < 768;
+        this.countIdeasSpunOut = 0;
+        this.countIdeasKilled = 0;
+        this.startCounting();
       },
       handleCardMousemove(e, card) {
         this.hoveredCard = card;
@@ -663,34 +666,31 @@
         this.showFloatingText = false;
       },
       createIntersectionObserver() {
-        const observer = new IntersectionObserver(
-          (entries) => {
+    const observer = new IntersectionObserver(
+        (entries) => {
             entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                const sectionId = entry.target.id;
-                this.activeSection = entry.target.id; 
-                console.log(sectionId,'haha');
-                
-                if (sectionId === 'results') {
-                  this.countIdeasSpunOut =  0,
-                  this.countIdeasKilled =  0,
-                  this.startCounting();
-
+                console.log(entry.isIntersecting, entry.target.id); // Debugging line
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.id;
+                    this.activeSection = sectionId; 
+                    if (sectionId === 'results') {
+                        this.countIdeasSpunOut = 0;
+                        this.countIdeasKilled = 0;
+                        this.startCounting();
+                    }
                 }
-              }
-              
             });
-          },
-          {
+        },
+        {
             threshold: 0.5, 
-          }
-        );
+        }
+    );
 
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-          observer.observe(section);
-        });
-      },
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+},
       submitForm() {
         if (this.$refs.form.validate()) {
           // Handle form submission
@@ -829,6 +829,7 @@
       this.loadLottieAnimation3();
       this.loadLottieAnimation4();
       window.addEventListener('scroll', this.handleScroll);
+      this.checkMobile()
     },
     beforeDestroy() {
       window.removeEventListener('resize', this.checkMobile);
@@ -1326,6 +1327,10 @@
         white-space: nowrap; /* Prevent line breaks */
     }
 }
-
-
+@media (max-width: 768px) {
+    #results {
+        display: block; /* Ensure it is visible */
+        height: auto; /* Adjust height if necessary */
+    }
+}
   </style>
