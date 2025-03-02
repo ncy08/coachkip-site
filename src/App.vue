@@ -303,7 +303,7 @@
         </v-card>
     </section>
   <!-- //CONTACT SECTION -->
-<v-footer color="#b7e3b6" style="height: 92vh; position: fixed; bottom: 0; left: 0; right: 0;" id="contact"
+  <v-footer color="#b7e3b6" style="height: 92vh; position: fixed; bottom: 0; left: 0; right: 0;" id="contact"
   :style="{'z-index':isAtBottom == true ? 9999 : 1}">
     <div class="section-header mb-8">
         <h2 v-if="isMobile != true" class="text-h3 text-black mb-3 mt-2">Contact</h2>
@@ -311,19 +311,12 @@
     </div>
     <v-row>
         <v-col cols="3">
-            <!-- Optional space for future content -->
+            <!-- Currently Working In Section -->
         </v-col>
         <v-col cols="9">
             <v-row class="mt-n16">
                 <v-col>
                     <p class="text-black"><strong><h2>Address</h2></strong></p>
-                </v-col>
-                <v-col>
-                    <p class="text-black">Parker Studio</p>
-                    <p class="text-black">5424 Ballard Ave NW</p>
-                    <p class="text-black">Unit 103</p>
-                    <p class="text-black">Seattle, WA 98107</p>
-                    <p class="text-black">United States</p>
                 </v-col>
                 <v-col>
                     <p class="text-black">Parker Studio</p>
@@ -399,25 +392,28 @@
             </v-row>
         </v-col>
     </v-row>
-    <v-row>
-  <v-col cols="2">
-    <!-- Your existing toolbar -->
-    <v-toolbar class="mt-n6" style="background-color: #b7e3b6 ;z-index:9">
-      <v-toolbar-title class="ml-6">
-        <h3>Currently working in:</h3>
-      </v-toolbar-title>
-    </v-toolbar>
-  </v-col>
-  <v-col>
-    <div class="marquee-container">
-      <div class="contact__marquee__ticker__inner">
-        <h3 style="display: inline-block; animation: marquee 10s linear infinite;">
-          SEATTLE <span> (21:07:21),</span> SFO <span> (02:07:21),</span> CHICAGO <span> (23:07:21),</span> AUSTIN <span> (23:07:21),</span> NYC <span> (00:07:21),</span> LONDON <span> (00:07:21),</span>
-        </h3>
-      </div>
-    </div>
-  </v-col>
-</v-row>
+    <v-row class="mt-n6">
+        <v-col cols="3">
+            <!-- Currently Working In Section -->
+            <v-toolbar class="mt-n6" style="background-color: #b7e3b6; z-index: 9">
+                <v-toolbar-title class="ml-6">
+                    <h3>Currently working in:</h3>
+                </v-toolbar-title>
+            </v-toolbar>
+        </v-col>
+        <v-col cols="9">
+            <div class="marquee-container">
+                <div class="contact__marquee__ticker__inner">
+                    <h3 style="display: inline-block;" v-if="isMobile !== true">
+                        SEATTLE <span> (21:07:21),</span> SFO <span> (02:07:21),</span> CHICAGO <span> (23:07:21),</span> AUSTIN <span> (23:07:21),</span> NYC <span> (00:07:21),</span> LONDON <span> (00:07:21),</span>
+                    </h3>
+                    <h5 style="display: inline-block;" v-else>
+                        SEATTLE, SFO, CHICAGO, AUSTIN, NYC, LONDON
+                    </h5>
+                </div>
+            </div>
+        </v-col>
+    </v-row>
 </v-footer>
 
     </v-app>
@@ -1204,24 +1200,45 @@
   .my-custom-row {
       min-height: 95px !important; /* Adjust as needed */
   }
-  .marquee-container {
-  overflow: hidden;
-  position: relative;
-  height: 48px; /* Adjust based on your design */
+ /* Currently Working In Section */
+.v-toolbar {
+    margin-bottom: 20px; /* Add some space below the toolbar */
+}
+
+.marquee-container {
+    overflow: hidden;
+    position: relative;
+    height: 48px; /* Adjust based on your design */
 }
 
 .contact__marquee__ticker__inner {
-  display: flex;
-  animation: marquee 15s linear infinite;
+    display: flex;
+    animation: marquee 15s linear infinite;
 }
 
 @keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  
-  100% {
-    transform: translateX(-100%);
-  }
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .marquee-container {
+        height: 40px; /* Adjust height for mobile */
+    }
+
+    .contact__marquee__ticker__inner h3 {
+        font-size: 1.2rem; /* Adjust font size for mobile */
+    }
+} 
+@media (max-width: 768px) {
+    .contact__marquee__ticker__inner h5 {
+        font-size: 1rem; /* Adjust font size for mobile */
+        white-space: nowrap; /* Prevent line breaks */
+    }
 }
   </style>
