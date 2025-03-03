@@ -6,7 +6,7 @@
           <span>{{ hoveredMember.name ? hoveredMember.name  : hoveredMember }}</span>
         </div>
 
-        <v-toolbar v-if="isAtBottom !== true" class="tBar" color="#212021">
+        <v-toolbar v-if="isAtBottom !== true" class="tBar" color="#252423">
           <v-toolbar-title @click="handleMenuItemClick({link:'#home'})">COACH KIP
           </v-toolbar-title>
           <v-spacer></v-spacer>
@@ -40,7 +40,7 @@
 
   <!-- 1ST Section -->
       <section style="position: relative; z-index: 2;"  id="home" :height="isMobile ? '100vh' : '100vh'" class="overflow-hidden">
-        <v-parallax color="black" :height="isMobile ? '100vh' : '100vh'">
+        <v-parallax color="#252423" :height="isMobile ? '100vh' : '100vh'">
           <div class="hero-content">
             <div class="title-wrapper">
               <div class="main-title">
@@ -52,186 +52,230 @@
           </div>
         </v-parallax>
       </section>
+      
   <!-- HOW WE DO -->
-      <section style="position: relative; z-index: 2;" :height="isMobile ? '170vh' : '100vh'" id="how-we-do" @mousemove="handleMouseMove($event, 'How we do')"  @mouseleave="handleMouseLeave">
-        <v-parallax color="black" :height="isMobile ? '170vh' : '100vh'">
-          <v-container fluid  style="padding:10% !important;">
-            <div class="section-header mb-8">
-              <h2 class="text-h3 text-white mb-4">What we do</h2>
-              <div class="main-title1">
-                <br>
-                <p class="typing-text" style="text-align: left;">
-                  We are your dream swiss-army-knife co-founder.
-                  We design and build a fantastic product, solve the toughest data science problems,
-                  and navigate the way to finding strong customer pull through rigorous validation and digital marketing. 
-                  We bring experience raising billions of dollars of capital. Oh, and we'll manage the books, legal, 
-                  and HR. We invest everything we have in your success.
-                </p>
-              </div>
-            </div>
+  <section style="position: relative; z-index: 2;" :height="isMobile ? '100vh' : '100vh'" id="how-we-do" @mousemove="handleMouseMove($event, 'How we do')" @mouseleave="handleMouseLeave">
+      <v-parallax color="#252423" :height="isMobile ? '100vh' : '100vh'">
+          <v-container :class="!isMobile ? 'custom-padding' : ''">
+                <v-row>
+                    <v-col :class="{'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true}" :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
+                        <h4 :style="{ color: '#636363', fontSize: isMobile ? '21px' : '32px', marginTop: '1.25em',
+                      marginBottom: '.65em', fontWeight: 400, marginLeft: '15px', 
+                      paddingRight: '15px', paddingBottom: '5em', paddingLeft: '0' }">
+                          What we do
+                      </h4>
+                      <p style="font-family: Aeonik, Arial, sans-serif;" :style="{ textAlign: 'left', color: '#fffbe9', fontWeight: 400, display: 'block', fontSize: isMobile ? '21px' : '32px', marginLeft: '15px', paddingRight: '15px', lineHeight: '1.5', paddingLeft: '0' }">
+                          We are your dream swiss-army-knife co-founder.
+                          We design and build a fantastic product, solve the toughest data science problems,
+                          and navigate the way to finding strong customer pull through rigorous validation and digital marketing. 
+                          We bring experience raising billions of dollars of capital. Oh, and we'll manage the books, legal, 
+                          and HR. We invest everything we have in your success.
+                      </p>
+                  </v-col>
+              </v-row>
           </v-container>
-        </v-parallax>
-      </section>
+      </v-parallax>
+  </section>
   <!-- //2ND SECTON -->
-      <section :height="isMobile ? '200vh' : '100vh'" style="position: relative; z-index: 2;">
-          <v-parallax color="black" :height="isMobile ? '200vh' : '100vh'">
-            <v-container fluid class="services-container" style="padding:2% !important">
-              <div class="services-grid">
-                <div class="service-item">Market Research</div>
-                <div class="service-item">Concept Validation</div>
-                <div class="service-item">Engineering</div>
-                <div class="service-item">Data Science</div>
-                <div class="service-item">Go-To-Market</div>
-                <div class="service-item">Visual & UX Design</div>
-                <div class="service-item">Product Management</div>
-                <div class="service-item">Recruiting</div>  
-                <div class="service-item">Fundraising</div>
-                <div class="service-item">Marketing</div>
-                <div class="service-item">Company Formation</div>
-                <div class="service-item">Finance</div>
-                <div class="service-item">Operations</div>
-                <div class="service-item">Legal & HR</div>
-              </div>
-            </v-container>
-          </v-parallax>
-      </section>
-  <!-- //HOW WE DO IT SECTION -->
-      <section style="position: relative; z-index: 2;" :height="isMobile ? '170vh' : '100vh'" id="how-we-do-it"  @mousemove="handleMouseMove($event, 'How we do it')"  @mouseleave="handleMouseLeave">
-        <v-parallax :height="isMobile ? '170vh' : '100vh'" color="black">
-          <v-container fluid  style="padding:10% !important;">
-            <div class="section-header mb-8">
-              <h2 class="text-h3 text-white mb-4">How we do it</h2>
-              <div class="main-title1">
-                <br>
-                <p class="typing-text" style="text-align: left;">
-                  Building a great startup is hard. Really hard. It requires domain expertise, 
-                  uncommon talent, great execution, great timing, and a little luck. 
-                  It also requires the ever-elusive great idea. Our team has developed the playbook on how to rapidly validate,
-                  refine, and build new businesses.
-                </p>
-              </div>
+  <section :height="isMobile ? '80vh' : '100vh'" style="position: relative; z-index: 2;">
+    <v-parallax color="#252423" :height="isMobile ? '80vh' : '100vh'">
+        <v-container fluid  :class="!isMobile ? 'services-container' : ''" :style="!isMobile ? { marginLeft: '10px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
+            <div style="font-family: Aeonik, Arial, sans-serif;" class="services-grid">
+                <div >Market Research</div>
+                <div >Recruiting</div>
+                <div >Concept Validation</div>
+                <div >Fundraising</div>
+                <div >Engineering</div>
+                <div >Marketing</div>
+                <div >Data Science</div>
+                <div >Company Formation</div>  
+                <div >Go-To-Market</div>
+                <div >Finance</div>
+                <div >Visual & UX Design</div>
+                <div >Operations</div>
+                <div >Product Management</div>
+                <div >Legal & HR</div>
             </div>
+        </v-container>
+    </v-parallax>
+</section>
+  <!-- //HOW WE DO IT SECTION -->
+  <section style="position: relative; z-index: 2;" :height="isMobile ? '100vh' : '100vh'" id="how-we-do-it" @mousemove="handleMouseMove($event, 'How we do')" @mouseleave="handleMouseLeave">
+      <v-parallax color="#252423" :height="isMobile ? '100vh' : '100vh'">
+        <v-container :class="!isMobile ? 'custom-padding' : ''">
+              <v-row>
+                  <v-col :class="{'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true}" :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
+                      <h4 :style="{ color: '#636363', fontSize: isMobile ? '21px' : '32px', marginTop: '1.25em',
+                      marginBottom: '.65em', fontWeight: 400, marginLeft: '15px', 
+                      paddingRight: '15px', paddingBottom: '5em', paddingLeft: '0' }">
+                          How we do it
+                      </h4>
+                      <p style="font-family: Aeonik, Arial, sans-serif;" :style="{ textAlign: 'left', color: '#fffbe9', fontWeight: 400, display: 'block', fontSize: isMobile ? '21px' : '32px', marginLeft: '15px', paddingRight: '15px', lineHeight: '1.5', paddingLeft: '0' }">
+                        Building a great startup is hard. Really hard. It requires domain expertise, 
+                        uncommon talent, great execution, great timing, and a little luck. 
+                        It also requires the ever-elusive great idea. Our team has developed the playbook on how to rapidly validate,
+                        refine, and build new businesses.
+                      </p>
+                  </v-col>
+              </v-row>
           </v-container>
-        </v-parallax>
-    </section>
+      </v-parallax>
+  </section>
+
   <!-- //IDEA SECTION -->
-      <section :height="isMobile ? '200vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '200vh' : '100vh'" color="black">
-          <v-container fluid style="padding: 5% !important">
+      <section :height="isMobile ? '120vh' : '120vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '120vh' : '120vh'" color="#252423">
+          <v-container fluid >
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
-                <v-col cols="12" md="6" class="d-flex justify-center align-center">
-                <div  @mousemove="handleMouseMove($event, '01—Ideation')"  @mouseleave="handleMouseLeave" ref="lottieContainer" style="width: 500px; height: 500px;"></div>
+                <div @mousemove="handleMouseMove($event, '01—Ideation')" 
+                  @mouseleave="handleMouseLeave"  ref="lottieContainer" style="margin-bottom: -3em;"
+                  :style="{ width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px' }">
+              </div>
               </v-col>
-              </v-col>
-              <v-col cols="12" md="6">
-                <div class="ideation-text">
-                  <h1 class="section-title color-slate" color="#e4dbcc" style="font-family: Aeonik, Arial, sans-serif;">01—Ideation</h1>
-                  <br><br>
-                  <p style="font-size:48px !important;font-weight: 400">It could be our idea. It could be your idea. </p>
-                  <br><br>
-                  <p class="section-description">
-                    Either way, we put it through the ringer: determining if it can be a world-changing, 
-                    venture-scale company that customers love.Sign up to join our bi-weekly ideation sessions.
+              <v-col cols="12" md="5" style="padding-right: 2% !important;">
+                  <h4 class="section-title color-slate" color="#e4dbcc" style="margin-top: 1.25em; margin-bottom: 1.75em; 
+                  font-family: Aeonik, Arial, sans-serif; ;
+                  font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
+                      01—Ideation
+                  </h4>
+                  <p style="font-family: Aeonik, Arial, sans-serif; font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  :style="{'font-size': !isMobile ? '48px': '30px'}">
+                      It could be our idea. It could be your idea.
                   </p>
-                </div>
+                  <p class="p-large color-ivory" style="padding-right: 15% !important;  padding-bottom: 1em "
+                  :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
+                    Either way, we put it through the ringer: determining if it can be a world-changing, venture-scale company that customers love. 
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_WUMqF_UeOE4F20NAGmEVtapyECjJfggwApu8uOWkWdea-Q/viewform" target="_blank"> Sign up</a> 
+                    to join our bi-weekly ideation sessions.
+                </p>
               </v-col>
             </v-row>
           </v-container>
         </v-parallax>
       </section>
+
   <!-- //VALIDATION SECTION -->
-      <section :height="isMobile ? '225vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '225vh' : '100vh'" color="black">
-          <v-container fluid style="padding: 5% !important">
+      <section :height="isMobile ? '120vh' : '140vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '120vh' : '140vh'" color="#252423">
+          <v-container fluid >
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
-                <div  @mousemove="handleMouseMove($event, '02—Validation')"  @mouseleave="handleMouseLeave" ref="lottieContainer1" style="width: 800px; height: 600px;"></div>
+                <div @mousemove="handleMouseMove($event, '02—Validation')" 
+                  @mouseleave="handleMouseLeave"  ref="lottieContainer1" style="margin-bottom: -3em;"
+                  :style="{ width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px' }">
+              </div>
               </v-col>
-              <v-col cols="12" md="6">
-                <div class="ideation-text">
-                  <h1 class="section-title color-slate" color="#e4dbcc">02—Validation</h1>
-                  <br><br>
-                  <p style="font-size:48px !important;font-weight: 400">Every idea we work on sounds good at first. But nine out of ten aren't.</p>
-                  <br><br>
-                  <p class="section-description">
-                    We know this because we track it. We put an idea through its paces, testing customer demand, technical feasibility, 
-                    business model, unit economics, market dynamics, investor interest, and more. We benchmark every idea against the 
-                    performance of our past ideas to determine if it's worth our time—and yours.
+              <v-col cols="12" md="5" style="padding-right: 2% !important;">
+                  <h4 class="section-title color-slate" color="#e4dbcc" style="margin-top: 1.25em; margin-bottom: 1.75em; 
+                  font-family: Aeonik, Arial, sans-serif; ;
+                  font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
+                      02—Validation
+                  </h4>
+                  <p style="font-family: Aeonik, Arial, sans-serif; font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  :style="{'font-size': !isMobile ? '48px': '30px'}">
+                  Every idea we work on sounds good at first. But nine out of ten aren't.
                   </p>
-                </div>
+                  <p class="p-large color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
+                  :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
+                  We know this because we track it. We put an idea through its paces, testing customer demand, 
+                  technical feasibility, business model, unit economics, market dynamics, investor interest, and more. 
+                  We benchmark every idea against the performance of our past ideas to determine if it's worth our time—and yours.
+                </p>
               </v-col>
             </v-row>
           </v-container>
         </v-parallax>
       </section>
+
   <!-- //03 CREATION -->
-      <section :height="isMobile ? '200vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '200vh' : '100vh'" color="black">
-          <v-container fluid style="padding: 5% !important">
+  <section :height="isMobile ? '120vh' : '120vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '120vh' : '120vh'" color="#252423">
+          <v-container fluid >
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
-                <div  @mousemove="handleMouseMove($event, '03—Creation')"  @mouseleave="handleMouseLeave" ref="lottieContainer2" style="width: 500px; height: 500px;"></div>
+                <div @mousemove="handleMouseMove($event, '03—Creation')" 
+                  @mouseleave="handleMouseLeave"  ref="lottieContainer2" style="margin-bottom: -3em;"
+                  :style="{ width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px' }">
+              </div>
               </v-col>
-              <v-col cols="12" md="6">
-                <div class="ideation-text">
-                  <h1 class="section-title color-slate" color="#e4dbcc" style="    font-family: Aeonik, Arial, sans-serif;">03—Creation</h1>
-                  <br><br>
-                  <p style="font-size:48px !important;font-weight: 400">When an idea is a good one, it’s time to move. Fast.</p>
-                  <br><br>
-                  <p class="section-description">
-                    Our team of designers, engineers, data scientists, marketers, and company builders turn a validated concept into a real product in market.
+              <v-col cols="12" md="5" style="padding-right: 2% !important;">
+                  <h4 class="section-title color-slate" color="#e4dbcc" style="margin-top: 1.25em; margin-bottom: 1.75em; 
+                  font-family: Aeonik, Arial, sans-serif; ;
+                  font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
+                      03—Creation
+                  </h4>
+                  <p style="font-family: Aeonik, Arial, sans-serif; font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  :style="{'font-size': !isMobile ? '48px': '30px'}">
+                  When an idea is a good one, it’s time to move. Fast.
                   </p>
-                </div>
+                  <p class="p-large color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
+                  :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
+                  Our team of designers, engineers, data scientists, marketers,
+                   and company builders turn a validated concept into a real product in market.
+                </p>
               </v-col>
             </v-row>
           </v-container>
         </v-parallax>
       </section>
   <!-- //04 SPINOUT -->
-      <section :height="isMobile ? '200vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '200vh' : '100vh'" color="black">
-          <v-container fluid style="padding: 5% !important">
+  <section :height="isMobile ? '120vh' : '120vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '120vh' : '120vh'" color="#252423">
+          <v-container fluid >
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
-                <div  @mousemove="handleMouseMove($event, '04—Spinout')"  @mouseleave="handleMouseLeave" ref="lottieContainer3" style="width: 500px; height: 400px;"></div>
+                <div @mousemove="handleMouseMove($event, '04—Spinout')" 
+                  @mouseleave="handleMouseLeave"  ref="lottieContainer3" style="margin-bottom: -3em;"
+                  :style="{ width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px' }">
+              </div>
               </v-col>
-              <v-col cols="12" md="6">
-                <div class="ideation-text">
-                  <h1 class="section-title color-slate" color="#e4dbcc" style="    font-family: Aeonik, Arial, sans-serif;">04—Spinout</h1>
-                  <br><br>
-                  <p style="font-size:48px !important;font-weight: 400">Great companies require extraordinary people and smart capital.</p>
-                  <br><br>
-                  <p class="section-description">
-                    Our spinout process is the best method we know of to get a company off the ground, staffed up, 
-                    and funded by great venture investors as fast as humanly possible.
+              <v-col cols="12" md="5" style="padding-right: 2% !important;">
+                  <h4 class="section-title color-slate" color="#e4dbcc" style="margin-top: 1.25em; margin-bottom: 1.75em; 
+                  font-family: Aeonik, Arial, sans-serif; ;
+                  font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
+                      04—Spinout
+                  </h4>
+                  <p style="font-family: Aeonik, Arial, sans-serif; font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  :style="{'font-size': !isMobile ? '48px': '30px'}">
+                  Great companies require extraordinary people and smart capital.
                   </p>
-                </div>
+                  <p class="p-large color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
+                  :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
+                  Our spinout process is the best method we know of to get a company off the ground,
+                   staffed up, and funded by great venture investors as fast as humanly possible.
+                </p>
               </v-col>
             </v-row>
           </v-container>
         </v-parallax>
       </section>
   <!-- //05 SCALE UP -->
-      <section :height="isMobile ? '225vh' : '100vh'" style="position: relative; z-index: 2;">
-        <v-parallax :height="isMobile ? '225vh' : '100vh'" color="black">
-          <v-container fluid style="padding: 5% !important">
+  <section :height="isMobile ? '120vh' : '140vh'" style="position: relative; z-index: 2;">
+        <v-parallax :height="isMobile ? '120vh' : '140vh'" color="#252423">
+          <v-container fluid >
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
-                <div  @mousemove="handleMouseMove($event, '05—Scale Up')"  @mouseleave="handleMouseLeave" ref="lottieContainer4" style="width: 700px; height: 700px;"></div>
+                <div @mousemove="handleMouseMove($event, '05—Scale Up')" 
+                  @mouseleave="handleMouseLeave"  ref="lottieContainer4" style="margin-bottom: -3em;"
+                  :style="{ width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px' }">
+              </div>
               </v-col>
-              <v-col cols="12" md="6">
-                <div class="ideation-text">
-                  <h1 class="section-title color-slate" color="#e4dbcc" style="    font-family: Aeonik, Arial, sans-serif;">05—Scale Up</h1>
-                  <br><br>
-                  <p style="font-size:48px !important;font-weight: 400">We’ll take care of the boring stuff.</p>
-                  <br><br>
-                  <p class="section-description">
-                  Focus is the lifeblood of an early-stage company. Our recruiting, legal, 
-                  and finance teams, along with our relationships with top service providers,
-                  allow founders to keep their eyes squarely on building the business.
+              <v-col cols="12" md="5" style="padding-right: 2% !important;">
+                  <h4 class="section-title color-slate" color="#e4dbcc" style="margin-top: 1.25em; margin-bottom: 1.75em; 
+                  font-family: Aeonik, Arial, sans-serif; ;
+                  font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
+                      05—Scale Up
+                  </h4>
+                  <p style="font-family: Aeonik, Arial, sans-serif; font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  :style="{'font-size': !isMobile ? '48px': '30px'}">
+                  We’ll take care of the boring stuff.
                   </p>
-                </div>
+                  
+                  <p class="p-large color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
+                  :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
+                  Focus is the lifeblood of an early-stage company. Our recruiting, legal, and finance teams, along with our relationships with top service providers, allow founders to keep their eyes squarely on building the business.
+                </p>
               </v-col>
             </v-row>
           </v-container>
@@ -239,41 +283,100 @@
       </section>
 
    <!-- //RESULTS SECTION -->
-    <section id="results" :height="isMobile ? '205vh' : '150vh'" style="position: relative; z-index: 2;">
-      <v-parallax :height="isMobile ? '205vh' : '150vh'" color="black">
-        <v-container fluid  style="padding:10% !important;">
-            <div class="section-header mb-8">
-              <h2 class="text-h3 text-white mb-4">Results</h2>
-                <v-row  justify="center"  style="padding: 5% !important;">
-                    <v-col cols="12" md="6">
-                      <h1 class="text-h1 text-yellow large-number mb-8"  v-text="countIdeasSpunOut"></h1>
-                      <hr>
-                        <br>
-                        <h3 class="text-h2 text-white" >Ideas Spun Out</h3>
-                        <br/>
-                        <p class="text-white" style="font-size:20px !important">
-                          In the rarest of cases, a startup idea has great timing, true customer demand, and the market is enormous.
-                        </p> 
-                    </v-col>
-                    <v-col cols="12" md="6">
-                      <h1 class="text-h1 text-yellow large-number mb-8"  v-text="countIdeasKilled"></h1>
-                      <hr>
-                      <br>
-                      <h3 class="text-h2 text-white">Ideas Killed</h3>
-                      <br/>
-                      <p class="text-white" style="font-size:22px !important">
-                        More often than not, an idea isn't a viable business. Our learnings from our failures make us more confident in the ideas that we love.
-                      </p> 
-                    </v-col>
-                </v-row>
-            </div>
-        </v-container>
-      </v-parallax>
-    </section>
+   <section id="results" :height="isMobile ? '165vh' : '140vh'" style="position: relative; z-index: 2;">
+    <v-parallax :height="isMobile ? '165vh' : '140vh'" color="#252423"> 
+        <v-container :class="!isMobile ? 'custom-padding' : ''">
+            <v-row>
+                <v-col :class="{'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true}" :style="!isMobile ? { marginLeft: '15px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: '15px' } : {}">
+                  <h4 :style="{
+                    color: '#636363',
+                    fontSize: isMobile ? '21px' : '32px',
+                    marginTop: isMobile ? '0' : '1.25em',  // Set marginTop to 0 if isMobile
+                    marginBottom: isMobile ? '0' : '.65em', // Set marginBottom to 0 if isMobile
+                    fontWeight: 400,
+                    marginLeft: '15px',
+                    paddingRight: '15px',
+                    paddingBottom: '5em',
+                    paddingLeft: '0'
+                }">
+                    Results
+                </h4>
+                </v-col>
+            </v-row>
+            
+            <v-row>
+              <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%;">
+      <h1 class="text-h1 large-number" 
+        :style="{
+            paddingRight: isMobile ? '0' : '3%',
+            paddingLeft: isMobile ? '0' : '3%'
+        }" 
+        v-text="countIdeasSpunOut">
+    </h1>
+    <h3 :style="{
+            fontSize: isMobile ? '21px' : '48px',
+            marginTop: '.5em',
+            marginBottom: '1em',
+            fontFamily: 'Aeonik, Arial, sans-serif',
+            fontWeight: 400,
+            lineHeight: 1.15,
+            paddingRight: isMobile ? '0' : '3%',
+            paddingLeft: isMobile ? '0' : '3%'
+        }" 
+        class="color-ivory">
+        Ideas Spun Out
+    </h3>
+    <p :style="{
+            fontSize: isMobile ? '16px' : '21px',
+            fontFamily: 'Aeonik, Arial, sans-serif',
+            fontWeight: 400,
+            lineHeight: 1.625,
+            paddingRight: isMobile ? '0' : '3%',
+            paddingLeft: isMobile ? '0' : '3%'
+        }">
+        In the rarest of cases, a startup idea has great timing, true customer demand, and the market is enormous.
+    </p>
+        </v-col>
 
+        <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%;">
+            <h1 class="text-h1 large-number" 
+                :style="{
+                    paddingRight: isMobile ? '0' : '3%',
+                    paddingLeft: isMobile ? '0' : '3%'
+                }" 
+                v-text="countIdeasKilled">
+            </h1>
+            <h3 :style="{
+                    fontSize: isMobile ? '21px' : '48px',
+                    marginTop: '.5em',
+                    marginBottom: '1em',
+                    fontFamily: 'Aeonik, Arial, sans-serif',
+                    fontWeight: 400,
+                    lineHeight: 1.15,
+                    paddingRight: isMobile ? '0' : '3%',
+                    paddingLeft: isMobile ? '0' : '3%'
+                }" 
+                class="color-ivory">
+                Ideas Killed
+            </h3>
+            <p :style="{
+                    fontSize: isMobile ? '16px' : '21px',
+                    fontFamily: 'Aeonik, Arial, sans-serif',
+                    fontWeight: 400,
+                    lineHeight: 1.625,
+                    paddingRight: isMobile ? '0' : '3%',
+                    paddingLeft: isMobile ? '0' : '3%'
+                }">
+                More often than not, an idea isn't a viable business. Our learnings from our failures make us more confident in the ideas that we love.
+            </p>
+        </v-col>
+            </v-row>
+        </v-container>
+    </v-parallax>
+</section>
   <!-- //TEAM SECTION -->
     <section id="team" :height="isMobile ? '490vh' : '150vh'"  style="position: relative; z-index: 2;">
-        <v-card :height="isMobile ? '490vh' : '150vh'" color="black" style="position: relative; border-radius: 0% !important">
+        <v-card :height="isMobile ? '490vh' : '150vh'" color="#252423" style="position: relative; border-radius: 0% !important">
           <v-container fluid  style="padding:10% !important;">
                 <div class="section-header mb-8">
                     <h2 class="text-h3 text-white mb-3 mt-2">Team</h2>
@@ -494,6 +597,7 @@
 
 </v-footer>
 
+  
   </v-app>
 </template>
 
@@ -710,7 +814,7 @@
           renderer: 'svg',
           loop: true, 
           autoplay: true, 
-          path: '/lotte/Animation2.json' 
+          path: 'https://cdn.prod.website-files.com/5d2f74fb3cba1f3a752e2046/5d916146d12b5b7a3da48d14_Ideation.json' 
         });
       },
       loadLottieAnimation1() {
@@ -719,7 +823,7 @@
           renderer: 'svg',
           loop: true, 
           autoplay: true, 
-          path: '/lotte/Animation8.json' 
+          path: 'https://cdn.prod.website-files.com/5d2f74fb3cba1f3a752e2046/5d9161c9cb36a49d93d6b9e8_Validation.json' 
         });
       },
       loadLottieAnimation2() {
@@ -728,7 +832,8 @@
           renderer: 'svg',
           loop: true, 
           autoplay: true, 
-          path: '/lotte/Animation7.json' 
+          path: 'https://cdn.prod.website-files.com/5d2f74fb3cba1f3a752e2046/5d916201124e0776f419828f_Creation.json' 
+       
         });
       },
       loadLottieAnimation3() {
@@ -737,7 +842,7 @@
           renderer: 'svg',
           loop: true, 
           autoplay: true, 
-          path: '/lotte/Animation10.json' 
+          path: 'https://cdn.prod.website-files.com/5d2f74fb3cba1f3a752e2046/5d9161c97115f97b9bd4a04d_SpinOut.json' 
         });
       },
       loadLottieAnimation4() {
@@ -746,7 +851,7 @@
           renderer: 'svg',
           loop: true, 
           autoplay: true, 
-          path: '/lotte/Animation13.json' 
+          path: 'https://cdn.prod.website-files.com/5d2f74fb3cba1f3a752e2046/5d9161c9e6be583f1654f247_ScaleUp.json' 
         });
       },
       startDrag(event) {
@@ -774,8 +879,8 @@
         });
       },
         startCounting() {
-        const incrementSpunOut = Math.ceil(this.maxSpunOut / (this.duration / 600)); // Calculate increment for spun out
-        const incrementKilled = Math.ceil(this.maxKilled / (this.duration / 600)); // Calculate increment for killed
+        const incrementSpunOut = Math.ceil(this.maxSpunOut / (this.duration / 300)); // Calculate increment for spun out
+        const incrementKilled = Math.ceil(this.maxKilled / (this.duration / 300)); // Calculate increment for killed
 
         this.intervalIdSpunOut = setInterval(() => {
           if (this.countIdeasSpunOut < this.maxSpunOut) {
@@ -1104,22 +1209,7 @@
 
 
   /* SECOND SECTION */
-  .services-container {
-    display: flex; /* Use flexbox to center the content */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    height: 100%; /* Full height to fill the viewport */
-    padding: 2% !important; 
-    font-size: 24px;
-  }
 
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* Ensures columns have a minimum width */
-    gap: 20px; /* Row gap */
-    column-gap: 150px; /* Adjust the space between columns */
-    justify-items: start; /* Left-align the items inside the grid */
-  }
 
   @media (max-width: 768px) {
     .services-grid {
@@ -1187,7 +1277,8 @@
       }
   }
   .color-slate {
-      color: var(--darkreader-text--slate, var(--darkreader-text-000000, #ffffff));
+      color: #636363 !important;
+      font-family: Aeonik, Arial, sans-serif !important;
   }
   @media (max-width: 768px) {
     .section {
@@ -1254,11 +1345,7 @@
     transition: all 0.3s ease; /* Smooth transition */
   }
 
-  .large-number {
-    font-size: 180px !important;
-    font-weight: bold !important;
-    }
-
+  
   @media only screen and (min-width: 480px) {
       footer {
           z-index: 4;
@@ -1367,4 +1454,77 @@ footer {
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }
+
+/* //HOW WE DO */
+.custom-padding {
+    padding-left: 13% !important; /* Use !important if necessary */
+    padding-right: 13% !important; /* Use !important if necessary */
+    display: block;
+    font-weight: 400 !important;
+}
+
+/* //LIST GRID */
+.services-grid {
+    color: #636363 !important;
+    padding-top: .25em !important;
+    padding-bottom: .25em !important;
+    font-size: 21px;
+    flex-basis: 66.67%;
+    max-width: 66.6667%;
+    flex: 1;
+    margin-bottom: 0;
+    padding-left: 2% !important;
+    padding-right: 15px;
+    clear: none;
+    text-align: left;
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 12px; 
+    column-gap: 1px !important;
+    justify-items: start;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) { 
+    .services-grid {
+        padding-left: 0; /* Adjust padding as needed */
+        padding-right: 0; /* Adjust padding as needed */
+    }
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    padding: 2% !important; 
+    font-size: 24px;
+  }
+
+  .p-large {
+    font-family: Aeonik, Arial, sans-serif !important;
+    font-weight: 400 !important;
+    line-height: 1.625 !important;
+    clear: none;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.large-number {
+    font-size: 180px !important;
+    font-weight: bold !important;
+    text-align: left; /* Align text to the left */
+    -webkit-text-stroke: 1px #fffbe9;
+    color: #0000; /* This makes the text transparent; consider changing it */
+    margin-bottom: .25em;
+    padding-bottom: .2em;
+    padding-right: .2em;
+    font-family: Aeonik, Arial, sans-serif;
+    line-height: 1.15;
+    border-bottom: 1px solid #636363 !important;
+}
+
+
+
   </style>
