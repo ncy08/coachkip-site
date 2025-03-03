@@ -283,8 +283,8 @@
       </section>
 
    <!-- //RESULTS SECTION -->
-   <section id="results" :height="isMobile ? '165vh' : '140vh'" style="position: relative; z-index: 2;">
-    <v-parallax :height="isMobile ? '165vh' : '140vh'" color="#252423"> 
+   <section id="results" :height="isMobile ? '155vh' : '140vh'" style="position: relative; z-index: 2;">
+    <v-parallax :height="isMobile ? '155vh' : '140vh'" color="#252423"> 
         <v-container :class="!isMobile ? 'custom-padding' : ''">
             <v-row >
                 <v-col :class="{'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true}" :style="!isMobile ? { marginLeft: '15px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: '15px' } : {}">
@@ -371,8 +371,8 @@
     </v-parallax>
 </section>
   <!-- //TEAM SECTION -->
-    <section id="team" :height="isMobile ? '490vh' : '150vh'"  style="position: relative; z-index: 2;">
-        <v-card :height="isMobile ? '490vh' : '150vh'" color="#252423" style="position: relative; border-radius: 0% !important">
+    <section id="team" :height="isMobile ? '465vh' : '150vh'"  style="position: relative; z-index: 2;">
+        <v-card :height="isMobile ? '465vh' : '150vh'" color="#252423" style="position: relative; border-radius: 0% !important">
           <v-container fluid  style="padding:10% !important;">
                 <div class="section-header mb-8">
                     <h2 class="text-h3 text-white mb-3 mt-2">Team</h2>
