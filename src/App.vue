@@ -64,7 +64,7 @@
                       paddingRight: '15px', paddingBottom: '5em', paddingLeft: '0' }">
                           What we do
                       </h4>
-                      <p style="font-family: Aeonik, Arial, sans-serif;" :style="{ textAlign: 'left', color: '#fffbe9', fontWeight: 400, display: 'block', fontSize: isMobile ? '21px' : '32px', marginLeft: '15px', paddingRight: '15px', lineHeight: '1.5', paddingLeft: '0' }">
+                      <p  :style="{ textAlign: 'left', color: '#fffbe9', fontWeight: 400, display: 'block', fontSize: isMobile ? '21px' : '32px', marginLeft: '15px', paddingRight: '15px', lineHeight: '1.5', paddingLeft: '0' }">
                           We are your dream swiss-army-knife co-founder.
                           We design and build a fantastic product, solve the toughest data science problems,
                           and navigate the way to finding strong customer pull through rigorous validation and digital marketing. 
@@ -80,21 +80,21 @@
   <section :height="isMobile ? '80vh' : '100vh'" style="position: relative; z-index: 2;">
     <v-parallax color="#252423" :height="isMobile ? '80vh' : '100vh'">
         <v-container fluid  :class="!isMobile ? 'services-container' : ''" :style="!isMobile ? { marginLeft: '10px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
-            <div style="font-family: Aeonik, Arial, sans-serif;" class="services-grid">
+          <div class="services-grid" :class="{ 'no-gap': isMobile }">
                 <div >Market Research</div>
-                <div >Recruiting</div>
+                <div :class="isMobile ? 'ml-n10' : ''" >Recruiting</div>
                 <div >Concept Validation</div>
-                <div >Fundraising</div>
+                <div :class="isMobile ? 'ml-n10' : ''" >Fundraising</div>
                 <div >Engineering</div>
-                <div >Marketing</div>
+                <div :class="isMobile ? 'ml-n10' : ''" >Marketing</div>
                 <div >Data Science</div>
-                <div >Company Formation</div>  
+                <div :class="isMobile ? 'ml-n10' : ''" >Company Formation</div>  
                 <div >Go-To-Market</div>
-                <div >Finance</div>
+                <div :class="isMobile ? 'ml-n10' : ''" >Finance</div>
                 <div >Visual & UX Design</div>
-                <div >Operations</div>
+                <div :class="isMobile ? 'ml-n10' : ''" >Operations</div>
                 <div >Product Management</div>
-                <div >Legal & HR</div>
+                <div :class="isMobile ? 'ml-n10' : ''" >Legal & HR</div>
             </div>
         </v-container>
     </v-parallax>
@@ -110,7 +110,7 @@
                       paddingRight: '15px', paddingBottom: '5em', paddingLeft: '0' }">
                           How we do it
                       </h4>
-                      <p style="font-family: Aeonik, Arial, sans-serif;" :style="{ textAlign: 'left', color: '#fffbe9', fontWeight: 400, display: 'block', fontSize: isMobile ? '21px' : '32px', marginLeft: '15px', paddingRight: '15px', lineHeight: '1.5', paddingLeft: '0' }">
+                      <p  :style="{ textAlign: 'left', color: '#fffbe9', fontWeight: 400, display: 'block', fontSize: isMobile ? '21px' : '32px', marginLeft: '15px', paddingRight: '15px', lineHeight: '1.5', paddingLeft: '0' }">
                         Building a great startup is hard. Really hard. It requires domain expertise, 
                         uncommon talent, great execution, great timing, and a little luck. 
                         It also requires the ever-elusive great idea. Our team has developed the playbook on how to rapidly validate,
@@ -128,25 +128,25 @@
           <v-container fluid >
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
-                <div @mousemove="handleMouseMove($event, '01—Ideation')" 
+                <div @mousemove="handleMouseMove($event, '01—ldeation')" 
                   @mouseleave="handleMouseLeave"  ref="lottieContainer" style="margin-bottom: -3em;"
                   :style="{ width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px' }">
               </div>
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 2% !important;">
                   <h4 class="section-title color-slate" color="#e4dbcc" style="margin-top: 1.25em; margin-bottom: 1.75em; 
-                  font-family: Aeonik, Arial, sans-serif; ;
+                   ;
                   font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
                       01—Ideation
                   </h4>
-                  <p style="font-family: Aeonik, Arial, sans-serif; font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
                   :style="{'font-size': !isMobile ? '48px': '30px'}">
                       It could be our idea. It could be your idea.
                   </p>
-                  <p class="p-large color-ivory" style="padding-right: 15% !important;  padding-bottom: 1em "
+                  <p class=" color-ivory" style="padding-right: 15% !important;  padding-bottom: 1em "
                   :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                     Either way, we put it through the ringer: determining if it can be a world-changing, venture-scale company that customers love. 
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_WUMqF_UeOE4F20NAGmEVtapyECjJfggwApu8uOWkWdea-Q/viewform" target="_blank"> Sign up</a> 
+                    <a class="text-white" href="https://docs.google.com/forms/d/e/1FAIpQLSc_WUMqF_UeOE4F20NAGmEVtapyECjJfggwApu8uOWkWdea-Q/viewform" target="_blank"> Sign up</a> 
                     to join our bi-weekly ideation sessions.
                 </p>
               </v-col>
@@ -168,15 +168,15 @@
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 2% !important;">
                   <h4 class="section-title color-slate" color="#e4dbcc" style="margin-top: 1.25em; margin-bottom: 1.75em; 
-                  font-family: Aeonik, Arial, sans-serif; ;
+                   ;
                   font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
                       02—Validation
                   </h4>
-                  <p style="font-family: Aeonik, Arial, sans-serif; font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
                   :style="{'font-size': !isMobile ? '48px': '30px'}">
                   Every idea we work on sounds good at first. But nine out of ten aren't.
                   </p>
-                  <p class="p-large color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
+                  <p class="color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
                   :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                   We know this because we track it. We put an idea through its paces, testing customer demand, 
                   technical feasibility, business model, unit economics, market dynamics, investor interest, and more. 
@@ -201,15 +201,15 @@
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 2% !important;">
                   <h4 class="section-title color-slate" color="#e4dbcc" style="margin-top: 1.25em; margin-bottom: 1.75em; 
-                  font-family: Aeonik, Arial, sans-serif; ;
+                   ;
                   font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
                       03—Creation
                   </h4>
-                  <p style="font-family: Aeonik, Arial, sans-serif; font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
                   :style="{'font-size': !isMobile ? '48px': '30px'}">
                   When an idea is a good one, it’s time to move. Fast.
                   </p>
-                  <p class="p-large color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
+                  <p class=" color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
                   :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                   Our team of designers, engineers, data scientists, marketers,
                    and company builders turn a validated concept into a real product in market.
@@ -232,15 +232,15 @@
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 2% !important;">
                   <h4 class="section-title color-slate" color="#e4dbcc" style="margin-top: 1.25em; margin-bottom: 1.75em; 
-                  font-family: Aeonik, Arial, sans-serif; ;
+                   ;
                   font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
                       04—Spinout
                   </h4>
-                  <p style="font-family: Aeonik, Arial, sans-serif; font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
                   :style="{'font-size': !isMobile ? '48px': '30px'}">
                   Great companies require extraordinary people and smart capital.
                   </p>
-                  <p class="p-large color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
+                  <p class=" color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
                   :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                   Our spinout process is the best method we know of to get a company off the ground,
                    staffed up, and funded by great venture investors as fast as humanly possible.
@@ -263,16 +263,16 @@
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 2% !important;">
                   <h4 class="section-title color-slate" color="#e4dbcc" style="margin-top: 1.25em; margin-bottom: 1.75em; 
-                  font-family: Aeonik, Arial, sans-serif; ;
+                   ;
                   font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
                       05—Scale Up
                   </h4>
-                  <p style="font-family: Aeonik, Arial, sans-serif; font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
                   :style="{'font-size': !isMobile ? '48px': '30px'}">
                   We’ll take care of the boring stuff.
                   </p>
                   
-                  <p class="p-large color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
+                  <p class=" color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
                   :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                   Focus is the lifeblood of an early-stage company. Our recruiting, legal, and finance teams, along with our relationships with top service providers, allow founders to keep their eyes squarely on building the business.
                 </p>
@@ -286,9 +286,9 @@
    <section id="results" :height="isMobile ? '165vh' : '140vh'" style="position: relative; z-index: 2;">
     <v-parallax :height="isMobile ? '165vh' : '140vh'" color="#252423"> 
         <v-container :class="!isMobile ? 'custom-padding' : ''">
-            <v-row>
+            <v-row >
                 <v-col :class="{'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true}" :style="!isMobile ? { marginLeft: '15px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: '15px' } : {}">
-                  <h4 :style="{
+                  <h4 :class="isMobile ? 'mb-n16' : ''" :style="{
                     color: '#636363',
                     fontSize: isMobile ? '21px' : '32px',
                     marginTop: isMobile ? '0' : '1.25em',  // Set marginTop to 0 if isMobile
@@ -304,38 +304,36 @@
                 </v-col>
             </v-row>
             
-            <v-row>
+            <v-row :class="isMobile ? 'mt-n16' : ''">
               <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%;">
-      <h1 class="text-h1 large-number" 
-        :style="{
-            paddingRight: isMobile ? '0' : '3%',
-            paddingLeft: isMobile ? '0' : '3%'
-        }" 
-        v-text="countIdeasSpunOut">
-    </h1>
-    <h3 :style="{
-            fontSize: isMobile ? '21px' : '48px',
-            marginTop: '.5em',
-            marginBottom: '1em',
-            fontFamily: 'Aeonik, Arial, sans-serif',
-            fontWeight: 400,
-            lineHeight: 1.15,
-            paddingRight: isMobile ? '0' : '3%',
-            paddingLeft: isMobile ? '0' : '3%'
-        }" 
-        class="color-ivory">
-        Ideas Spun Out
-    </h3>
-    <p :style="{
-            fontSize: isMobile ? '16px' : '21px',
-            fontFamily: 'Aeonik, Arial, sans-serif',
-            fontWeight: 400,
-            lineHeight: 1.625,
-            paddingRight: isMobile ? '0' : '3%',
-            paddingLeft: isMobile ? '0' : '3%'
-        }">
-        In the rarest of cases, a startup idea has great timing, true customer demand, and the market is enormous.
-    </p>
+          <h1 class="text-h1 large-number" 
+            :style="{
+                paddingRight: isMobile ? '0' : '3%',
+                paddingLeft: isMobile ? '0' : '3%'
+            }" 
+            v-text="countIdeasSpunOut">
+        </h1>
+        <h3 :style="{
+                fontSize: isMobile ? '21px' : '48px',
+                marginTop: '.5em',
+                marginBottom: '1em',
+                fontWeight: 400,
+                lineHeight: 1.15,
+                paddingRight: isMobile ? '0' : '3%',
+                paddingLeft: isMobile ? '0' : '3%'
+            }" 
+            class="color-ivory">
+            Ideas Spun Out
+        </h3>
+        <p :style="{
+                fontSize: isMobile ? '16px' : '21px',
+                fontWeight: 400,
+                lineHeight: 1.625,
+                paddingRight: isMobile ? '0' : '3%',
+                paddingLeft: isMobile ? '0' : '3%'
+            }">
+            In the rarest of cases, a startup idea has great timing, true customer demand, and the market is enormous.
+        </p>
         </v-col>
 
         <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%;">
@@ -350,7 +348,6 @@
                     fontSize: isMobile ? '21px' : '48px',
                     marginTop: '.5em',
                     marginBottom: '1em',
-                    fontFamily: 'Aeonik, Arial, sans-serif',
                     fontWeight: 400,
                     lineHeight: 1.15,
                     paddingRight: isMobile ? '0' : '3%',
@@ -361,7 +358,6 @@
             </h3>
             <p :style="{
                     fontSize: isMobile ? '16px' : '21px',
-                    fontFamily: 'Aeonik, Arial, sans-serif',
                     fontWeight: 400,
                     lineHeight: 1.625,
                     paddingRight: isMobile ? '0' : '3%',
@@ -949,9 +945,9 @@
   </script>
   <style lang="scss">
   @import './assets/fonts/fonts.css';
-  body {
-    font-family: 'Poppins-SemiBold', Arial, sans-serif; /* Fallback to Arial and sans-serif */
-  }
+  // body {
+  //   font-family: 'Aeonik', Arial, sans-serif; /* Fallback to Arial and sans-serif */
+  // }
   </style>
 
   <style scoped>
@@ -1509,6 +1505,7 @@ footer {
     clear: none;
     text-align: left;
     line-height: 1.5;
+    font-family: Aeonik, Arial, sans-serif;
 }
 
 .large-number {
@@ -1520,11 +1517,13 @@ footer {
     margin-bottom: .25em;
     padding-bottom: .2em;
     padding-right: .2em;
-    font-family: Aeonik, Arial, sans-serif;
+    /* font-family: Aeonik, Arial, sans-serif; */
     line-height: 1.15;
     border-bottom: 1px solid #636363 !important;
 }
 
-
+.no-gap {
+    gap: 0 !important; /* Remove gap */
+}
 
   </style>
