@@ -82,19 +82,19 @@
         <v-container fluid  :class="!isMobile ? 'services-container' : ''" :style="!isMobile ? { marginLeft: '10px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
           <div class="services-grid" :class="{ 'no-gap': isMobile }">
                 <div >Market Research</div>
-                <div :class="isMobile ? 'ml-n10' : ''" >Recruiting</div>
+                <div :class="isMobile ? 'ml-n4' : ''" >Recruiting</div>
                 <div >Concept Validation</div>
-                <div :class="isMobile ? 'ml-n10' : ''" >Fundraising</div>
+                <div :class="isMobile ? 'ml-n4' : ''" >Fundraising</div>
                 <div >Engineering</div>
-                <div :class="isMobile ? 'ml-n10' : ''" >Marketing</div>
-                <div >Data Science</div>
-                <div :class="isMobile ? 'ml-n10' : ''" >Company Formation</div>  
+                <div :class="isMobile ? 'ml-n4' : ''" >Marketing</div>
+                <div >Company Formation</div> 
+                <div :class="isMobile ? 'ml-n4' : ''">Data Science</div>
                 <div >Go-To-Market</div>
-                <div :class="isMobile ? 'ml-n10' : ''" >Finance</div>
+                <div :class="isMobile ? 'ml-n4' : ''" >Finance</div>
                 <div >Visual & UX Design</div>
-                <div :class="isMobile ? 'ml-n10' : ''" >Operations</div>
+                <div :class="isMobile ? 'ml-n4' : ''" >Operations</div>
                 <div >Product Management</div>
-                <div :class="isMobile ? 'ml-n10' : ''" >Legal & HR</div>
+                <div :class="isMobile ? 'ml-n4' : ''" >Legal & HR</div>
             </div>
         </v-container>
     </v-parallax>
