@@ -88,7 +88,7 @@
                 <div >Engineering</div>
                 <div :class="isMobile ? 'ml-n4' : ''" >Marketing</div>
                 <div >Company Formation</div> 
-                <div :class="isMobile ? 'ml-n4' : ''">Data Science</div>
+                <div  :class="isMobile ? 'ml-n4' : ''">Data Science</div>
                 <div >Go-To-Market</div>
                 <div :class="isMobile ? 'ml-n4' : ''" >Finance</div>
                 <div >Visual & UX Design</div>
