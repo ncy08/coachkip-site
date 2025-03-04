@@ -596,7 +596,7 @@
   style="max-height: 92vh; height: 92vh; position: fixed; bottom: 0; left: 0; right: 0;" 
   id="contact"
   :style="{'z-index': isAtBottom ? 99 : 1}">
-  <v-container class="mb-3 mt-5">
+  <v-container class="mb-3 mt-12">
     <!-- Addresses Section -->
     <v-row class="mb-4" no-gutters>
       <v-col cols="6" sm="12" md="6">
