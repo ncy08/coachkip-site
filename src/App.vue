@@ -600,7 +600,7 @@
     <!-- Addresses Section -->
     <v-row class="mb-4" no-gutters>
       <v-col cols="6" sm="12" md="6">
-        <div class="section-title mb-4">ADDRESS</div>
+        <div class="section-title1 mb-4">ADDRESS</div>
         <div class="address-content">
           <p>PARKER STUDIO</p>
           <p><u>5424 Ballard Ave NW</u></p>
@@ -611,7 +611,7 @@
         </div>
       </v-col>
       <v-col cols="6" sm="12" md="6" >
-        <div class="section-title mt-10"></div>
+        <div class="section-title1 mt-10"></div>
         <div class="address-content">
           <p class="ml-2">PARKER STORE</p>
           <p class="ml-2"><u>5424 Ballard Ave NW</u></p>
@@ -627,13 +627,13 @@
     <hr class="my-4"/>
     <v-row class="mt-n7">
       <v-col cols="6" sm="12" md="6">
-        <div class="section-title mb-4">INQUIRIES</div>
+        <div class="section-title1 mb-4">INQUIRIES</div>
         <div class="inquiries-content">
           <p><u>+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
         </div>
       </v-col>
       <v-col cols="6" sm="12" md="6">
-        <div class="section-title mt-10"></div>
+        <div class="section-title1 mt-10"></div>
         <div class="email-content">
           <p><u>hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
         </div>
@@ -644,13 +644,13 @@
     <hr class="my-4"/>
     <v-row class="mt-n7">
       <v-col cols="6" sm="12" md="6">
-        <div class="section-title mb-4">CAREER</div>
+        <div class="section-title1 mb-4">CAREER</div>
         <div class="career-content">
           <p><u>work(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
         </div>
       </v-col>
       <v-col cols="6" sm="12" md="6">
-        <div class="section-title mb-10"></div>
+        <div class="section-title1 mb-10"></div>
         <div class="internship-content">
           <p><u>intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
         </div>
@@ -661,13 +661,13 @@
     <hr class="my-4"/>
     <v-row class="mt-n7">
       <v-col cols="6" sm="12" md="6">
-        <div class="section-title mb-4">FOLLOW US</div>
+        <div class="section-title1 mb-4">FOLLOW US</div>
         <div class="social-content">
           <p><u>Instagram <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
         </div>
       </v-col>
       <v-col cols="6" sm="12" md="6">
-        <div class="section-title mb-10"></div>
+        <div class="section-title1 mb-10"></div>
         <div class="blog-content">
           <p><u>Tumblr <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
         </div>
@@ -678,11 +678,11 @@
     <hr class="my-4"/>
     <v-row class="mt-n7">
       <v-col cols="10" sm="12" md="6">
-        <div class="section-title mb-4">NEWSLETTER</div>
+        <div class="section-title1 mb-4">NEWSLETTER</div>
         <v-text-field variant="underlined" placeholder="Email" class="mb-2"/>
       </v-col>
       <v-col cols="2" sm="12" md="6">
-        <div class="section-title mb-10"></div>
+        <div class="section-title1 mb-10"></div>
         <div class="d-flex align-center justify-end">
           <span color="black" class="text-black">SUBMIT</span>
         </div>
@@ -694,7 +694,7 @@
       <v-col>
         <v-toolbar style="background-color: #b7e3b6; z-index: 9">
           <v-toolbar-title>
-            <h5 class="text-black font-weight-bold">Currently Working In:</h5>
+            <h5 class="text-black ">Currently Working In:</h5>
           </v-toolbar-title>
         </v-toolbar>
         <div class="marquee-container">
@@ -1068,7 +1068,7 @@
   @font-face {
     font-family: 'Aeonik1';
     src:url("../src/assets/font/AeonikTRIAL-Light.otf") format("opentype");
-    font-weight: 600;
+    font-weight: 1000 !important;
     font-style: normal;
   }
   
@@ -1743,6 +1743,8 @@ body {
 .social-content,
 .blog-content {
   line-height: 1.5;
+  font-size:13px !important;
+
 }
 
 @media screen and (max-width: 960px) {
@@ -1777,5 +1779,11 @@ a:active, a:hover {
     padding-bottom: 0;
     font-size: 18px;
     line-height: 32px;
+}
+
+.section-title1{
+  font-size: 15px !important;
+  /* line-height: 15px !important; */
+  font-family: 'Aeonik1' !important;
 }
   </style>
