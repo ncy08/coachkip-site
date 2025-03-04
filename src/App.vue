@@ -599,98 +599,109 @@
   <v-container class="mb-3 mt-2">
     <!-- Addresses Section -->
     <v-row class="mb-4">
-      <v-col cols="6" sm="12" md="6">
-        <div class="section-title">ADDRESS</div>
-        <div class="address-content">
-          <p>PARKER STUDIO</p>
-          <p><u>5424 Ballard Ave NW</u></p>
-          <p>Unit 103</p>
-          <p>Seattle, WA 98107</p>
-          <p>United States</p>
-          <p><u>Maps <v-icon size="x-small">mdi-arrow-top-right</v-icon></u><v-icon>mdi-arrow-top-right</v-icon></p>
+      <div class="d-flex flex-wrap">
+        <div class="flex-grow-1 flex-shrink-1">
+          <div class="section-title">ADDRESS</div>
+          <div class="address-content">
+            <p>PARKER STUDIO</p>
+            <p><u>5424 Ballard Ave NW</u></p>
+            <p>Unit 103</p>
+            <p>Seattle, WA 98107</p>
+            <p>United States</p>
+            <p><u>Maps <v-icon size="x-small">mdi-arrow-top-right</v-icon></u><v-icon>mdi-arrow-top-right</v-icon></p>
+          </div>
         </div>
-      </v-col>
-      <v-col cols="6" sm="12" md="6">
-        <div class="section-title mt-10"></div>
-        <div class="address-content">
-          <p>PARKER STORE</p>
-          <p><u>5424 Ballard Ave NW</u></p>
-          <p>Unit 103</p>
-          <p>Seattle, WA 98107</p>
-          <p>United States</p>
-          <p><u>Maps <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+        <div class="flex-grow-1 flex-shrink-1">
+          <div class="section-title mt-10"></div>
+          <div class="address-content">
+            <p>PARKER STORE</p>
+            <p><u>5424 Ballard Ave NW</u></p>
+            <p>Unit 103</p>
+            <p>Seattle, WA 98107</p>
+            <p>United States</p>
+            <p><u>Maps <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+          </div>
         </div>
-      </v-col>
+      </div>
     </v-row>
-
     <!-- Inquiries Section -->
-    <hr class="my-4"/>
-    <v-row class="mt-n7">
-      <v-col cols="6" sm="12" md="6">
-        <div class="section-title mb-4">INQUIRIES</div>
-        <div class="inquiries-content">
-          <p><u>+1 206 395 9662 <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+    <hr class="my-4 full-width-hr"/>
+    <v-row class="mb-4">
+      <div class="d-flex flex-wrap">
+        <div class="flex-grow-5 flex-shrink-1">
+          <div class="section-title">INQUIRIES</div>
+          <div class="address-content">
+            <p><u>+1 206 395 9662 <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+          </div>
         </div>
-      </v-col>
-      <v-col cols="6" sm="12" md="6">
-        <div class="section-title mt-10"></div>
-        <div class="email-content">
-          <p><u>hello(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+        <div class="flex-grow-1 flex-shrink-1">
+          <div class="section-title mt-10"></div>
+          <div class="address-content">
+            <p><u>hello(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+          </div>
         </div>
-      </v-col>
+      </div>
     </v-row>
 
     <!-- Career Section -->
-    <hr class="my-4"/>
-    <v-row class="mt-n7">
-      <v-col cols="6" sm="12" md="6">
-        <div class="section-title mb-4">CAREER</div>
-        <div class="career-content">
-          <p><u>work(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+    <hr class="my-4 full-width-hr"/>
+    <v-row class="mb-4">
+      <div class="d-flex flex-wrap">
+        <div class="flex-grow-2 flex-shrink-1">
+          <div class="section-title">CAREERS</div>
+          <div class="address-content">
+            <p><u>work(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+ </div>
         </div>
-      </v-col>
-      <v-col cols="6" sm="12" md="6">
-        <div class="section-title mb-10"></div>
-        <div class="internship-content">
-          <p><u>intern(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+        <div class="flex-grow-1 flex-shrink-1">
+          <div class="section-title mt-10"></div>
+          <div class="address-content">
+            <p><u>intern(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+          </div>
         </div>
-      </v-col>
+      </div>
     </v-row>
 
     <!-- Social Section -->
-    <hr class="my-4"/>
-    <v-row class="mt-n7">
-      <v-col cols="6" sm="12" md="6">
-        <div class="section-title mb-4">FOLLOW US</div>
-        <div class="social-content">
-          <p><u>Instagram <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+    <hr class="my-4 full-width-hr"/>
+    <v-row class="mb-4">
+      <div class="d-flex flex-wrap">
+        <div class="flex-grow-3 flex-shrink-1">
+          <div class="section-title">FOLLOW US</div>
+          <div class="address-content">
+            <p><u>Instagram <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+          </div>
         </div>
-      </v-col>
-      <v-col cols="6" sm="12" md="6">
-        <div class="section-title mb-10"></div>
-        <div class="blog-content">
-          <p><u>Tumblr <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+        <div class="flex-grow-1 flex-shrink-1">
+          <div class="section-title mt-10"></div>
+          <div class="address-content">
+            <p><u>Tumblr <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+          </div>
         </div>
-      </v-col>
+      </div>
     </v-row>
 
     <!-- Newsletter Section -->
-    <hr class="my-4"/>
-    <v-row class="mt-n7">
-      <v-col cols="6" sm="12" md="6">
-        <div class="section-title mb-4">NEWSLETTER</div>
-        <v-text-field variant="underlined" placeholder="Email" class="mb-2"/>
-      </v-col>
-      <v-col cols="6" sm="12" md="6">
-        <div class="section-title mb-10"></div>
-        <div class="d-flex align-center justify-end">
-          <span color="black" class="text-black">SUBMIT</span>
+    <hr class="my-4 full-width-hr"/>
+    <v-row class="mb-4">
+      <div class="d-flex flex-wrap">
+        <div class="flex-grow-4 flex-shrink-1">
+          <div class="section-title">NEWSLETTER</div>
+          <div class="address-content">
+            <v-text-field variant="underlined" placeholder="Email" class="mb-2"/>
+          </div>
         </div>
-      </v-col>
+        <div class="flex-grow-1 flex-shrink-1">
+          <div class="section-title mt-10"></div>
+          <div class="address-content">
+            <span color="black" class="text-black">SUBMIT</span>
+          </div>
+        </div>
+      </div>
     </v-row>
 
     <!-- Marquee Section -->
-    <v-row class="mt-n10" style="position: relative; bottom: 0; left: 0; right: 0;">
+    <v-row class="mt-n16 ml-n10" style="position: relative; bottom: 0; left: 0; right: 0;">
       <v-col>
         <v-toolbar style="background-color: #b7e3b6; z-index: 9">
           <v-toolbar-title>
@@ -1735,7 +1746,7 @@ body {
 .internship-content,
 .social-content,
 .blog-content {
-  line-height: 1.5;
+  line-height: 1.1;
 }
 
 @media screen and (max-width: 960px) {
@@ -1748,4 +1759,32 @@ body {
   text-decoration-style: dotted;
   text-decoration-thickness: 1px;
 }
-  </style>
+.flex-grow-1 {
+    margin-right: 110px; /* Adjust the value as needed */
+  }
+.flex-grow-5 {
+  margin-right: 115px; /* Adjust the value as needed */
+}
+.flex-grow-2 {
+    margin-right: 88px; /* Adjust the value as needed */
+  }
+.flex-grow-3 {
+  margin-right: 165px; /* Adjust the value as needed */
+}
+.flex-grow-4 {
+  margin-right: 145px; /* Adjust the value as needed */
+}
+
+  
+.flex-grow-1:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+.full-width-hr {
+    width: 100%; /* Full width */
+    border: none; /* Remove default border */
+    height: 1px; /* Thickness of the line */
+    background-color: #976b6b; /* Color of the line */
+    margin: 20px 0; /* Space above and below the line */
+  }
+</style>
