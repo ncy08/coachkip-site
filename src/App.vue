@@ -6,7 +6,7 @@
           <span>{{ hoveredMember.name ? hoveredMember.name  : hoveredMember }}</span>
         </div>
 
-        <v-toolbar v-if="isAtBottom !== true" class="tBar" color="#252423">
+        <v-toolbar class="tBar" color="#252423">
           <v-toolbar-title @click="handleMenuItemClick({link:'#home'})">COACH KIP
           </v-toolbar-title>
           <v-spacer></v-spacer>
@@ -26,16 +26,60 @@
       </v-toolbar>
 
       <!-- Mobile Navigation Drawer -->
-      <v-navigation-drawer style="z-index:10000" location="right" cl v-model="drawer" fixed temporary class="mobile-nav fullscreen-drawer">
-        <v-list nav dense>
-          <v-list-item-group>
-            <template v-for="(item, index) in menuItems" :key="index">
-              <v-list-item @click="handleMenuItemClick(item)">
-                <v-list-item-title>{{ item.text }}</v-list-item-title>
-              </v-list-item>
-            </template>
-          </v-list-item-group>
-        </v-list>
+      <v-navigation-drawer   style="z-index: 10000"
+        location="right"
+        v-model="drawer"
+        fixed
+        temporary
+        class="mobile-nav fullscreen-drawer"
+        width="490">
+        <v-card style="width:50% !important">
+
+        </v-card>
+        <v-toolbar style="background-color:transparent" class="mt-3">
+          <v-icon color="#636363" class="mt-n1 ml-2" v-on:click="handleMenuItemClick({link:'#home'})">mdi-arrow-left</v-icon>
+      <a v-on:click="handleMenuItemClick({link:'#home'})" class="side-nav-link-large " style="font-size: 18px !important; line-height: 25px !important; color:#636363 !important" target="_blank">Home</a>
+          <v-spacer/>
+          <button style="float: right;
+            background-color: #252423;
+            color: #f4ff49;
+            border-bottom-style: none;
+            border-bottom-color: #000;
+            border-radius: 20px;
+            padding: 10px 40px;
+            display: block;" class="mr-6" @click="drawer = false">Close</button>
+        </v-toolbar>
+       <v-row>
+        <v-col>
+          <nav class="col col-nav-top w-clearfix" style="padding-left:2% !important" aria-label="Main Navigation">
+            <ul class="side-nav-list">
+                <a style="font-size: 36px;
+         line-height: 42px;" @click="handleMenuItemClick({link:'#home'} )" class="side-nav-link-large">Home</a>
+                 <a style="font-size: 36px;
+         line-height: 42px;" @click="handleMenuItemClick({link:'#how-we-do'} )" class="side-nav-link-large">How we do</a>
+                 <a style="font-size: 36px;
+         line-height: 42px;" @click="handleMenuItemClick({link:'#how-we-do-it'} )" class="side-nav-link-large">How we do it</a>
+                 <a style="font-size: 36px;
+         line-height: 42px;" @click="handleMenuItemClick({link:'#results'} )" class="side-nav-link-large">Results</a>
+                 <a style="font-size: 36px;
+         line-height: 42px;" @click="handleMenuItemClick({link:'#team'} )" class="side-nav-link-large">We are we</a>
+                 <a style="font-size: 36px;
+         line-height: 42px;" @click="handleMenuItemClick({link:'#contact'} )" class="side-nav-link-large">When to contact</a>
+            </ul>
+        </nav>
+        </v-col>
+       </v-row>
+       
+       <v-row style="margin-top: auto; padding: 10px;">
+            <v-col>
+                <ul class="side-nav-list" style="list-style-type: none; padding: 0;">
+                    <li><a class="side-nav-link-large" style="font-size: 16px !important; line-height: 25px !important;color:#636363 !important" target="_blank">Twitter</a></li>
+                    <li><a class="side-nav-link-large" style="font-size: 16px !important; line-height: 25px !important;color:#636363 !important" target="_blank">LinkedIn</a></li>
+                    <li><a class="side-nav-link-large" style="font-size: 16px !important; line-height: 25px !important;color:#636363 !important" target="_blank">Instagram</a></li>
+                    <li><a class="side-nav-link-large" style="font-size: 16px !important; line-height: 25px !important;color:#636363 !important" target="_blank">Vimeo</a></li>
+                </ul>
+            </v-col>
+        </v-row>
       </v-navigation-drawer>
 
   <!-- 1ST Section -->
@@ -55,9 +99,30 @@
       
   <!-- HOW WE DO -->
   <section style="position: relative; z-index: 2;" :height="isMobile ? '100vh' : '100vh'" id="how-we-do" @mousemove="handleMouseMove($event, 'How we do')" @mouseleave="handleMouseLeave">
+      <v-parallax color="#252423"  :height="isMobile ? '100vh' : '100vh'">
+          <v-container :class="!isMobile ? 'custom-padding' : ''">
+                <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
+                    <v-col :class="{'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true}" :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
+                        <h1 :style="{ 
+                      color: 'white ', fontSize: isMobile ? '71px' : '152px',
+                      lineHeight : !isMobile ? '152px !important' : '84px',
+                      marginBottom: '.65em', fontWeight: 400, marginLeft: '15px', 
+                      paddingRight: '15px', paddingLeft: '0' }">
+                          A new model for building companies.
+                      </h1>
+                      <p  :style="{ textAlign: 'left', color: '#636363', fontWeight: 400, display: 'block', fontSize: isMobile ? '21px' : '32px', marginLeft: '15px', paddingRight: '15px', lineHeight: '1.5', paddingLeft: '0' }">
+                        We work with world-class entreprenuers in the Pacific Northwest to turn the best ideas into market-defining, venture-funded companies with rapid customer adoption.
+                      </p>
+                  </v-col>
+              </v-row>
+          </v-container>
+      </v-parallax>
+  </section>
+
+  <section style="position: relative; z-index: 2;" :height="isMobile ? '100vh' : '100vh'" id="how-we-do" @mousemove="handleMouseMove($event, 'How we do')" @mouseleave="handleMouseLeave">
       <v-parallax color="#252423" :height="isMobile ? '100vh' : '100vh'">
           <v-container :class="!isMobile ? 'custom-padding' : ''">
-                <v-row>
+                <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
                     <v-col :class="{'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true}" :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
                         <h4 :style="{ color: '#636363', fontSize: isMobile ? '21px' : '32px', marginTop: '1.25em',
                       marginBottom: '.65em', fontWeight: 400, marginLeft: '15px', 
@@ -76,6 +141,7 @@
           </v-container>
       </v-parallax>
   </section>
+  
   <!-- //2ND SECTON -->
   <section :height="isMobile ? '80vh' : '100vh'" style="position: relative; z-index: 2;">
     <v-parallax color="#252423" :height="isMobile ? '80vh' : '100vh'">
@@ -88,7 +154,7 @@
                 <div >Engineering</div>
                 <div :class="isMobile ? 'ml-n4' : ''" >Marketing</div>
                 <div >Company Formation</div> 
-                <div  :class="isMobile ? 'ml-n4' : ''">Data Science</div>
+                <div :class="isMobile ? 'ml-n4' : ''">Data Science</div>
                 <div >Go-To-Market</div>
                 <div :class="isMobile ? 'ml-n4' : ''" >Finance</div>
                 <div >Visual & UX Design</div>
@@ -103,7 +169,7 @@
   <section style="position: relative; z-index: 2;" :height="isMobile ? '100vh' : '100vh'" id="how-we-do-it" @mousemove="handleMouseMove($event, 'How we do')" @mouseleave="handleMouseLeave">
       <v-parallax color="#252423" :height="isMobile ? '100vh' : '100vh'">
         <v-container :class="!isMobile ? 'custom-padding' : ''">
-              <v-row>
+              <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
                   <v-col :class="{'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true}" :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
                       <h4 :style="{ color: '#636363', fontSize: isMobile ? '21px' : '32px', marginTop: '1.25em',
                       marginBottom: '.65em', fontWeight: 400, marginLeft: '15px', 
@@ -283,10 +349,10 @@
       </section>
 
    <!-- //RESULTS SECTION -->
-   <section id="results" :height="isMobile ? '155vh' : '140vh'" style="position: relative; z-index: 2;">
-    <v-parallax :height="isMobile ? '155vh' : '140vh'" color="#252423"> 
+   <section id="results" :height="isMobile ? '165vh' : '140vh'" style="position: relative; z-index: 2;">
+    <v-parallax :height="isMobile ? '165vh' : '140vh'" color="#252423"> 
         <v-container :class="!isMobile ? 'custom-padding' : ''">
-            <v-row >
+            <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
                 <v-col :class="{'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true}" :style="!isMobile ? { marginLeft: '15px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: '15px' } : {}">
                   <h4 :class="isMobile ? 'mb-n16' : ''" :style="{
                     color: '#636363',
@@ -371,11 +437,11 @@
     </v-parallax>
 </section>
   <!-- //TEAM SECTION -->
-    <section id="team" :height="isMobile ? '465vh' : '150vh'"  style="position: relative; z-index: 2;">
-        <v-card :height="isMobile ? '465vh' : '150vh'" color="#252423" style="position: relative; border-radius: 0% !important">
+    <section id="team" :height="isMobile ? '440vh' : '130vh'"  style="position: relative; z-index: 2;">
+        <v-card :height="isMobile ? '440vh' : '130vh'" color="#252423" style="position: relative; border-radius: 0% !important">
           <v-container fluid  style="padding:10% !important;">
                 <div class="section-header mb-8">
-                    <h2 class="text-h3 text-white mb-3 mt-2">Team</h2>
+                    <h2  class="text-h3 text-white mb-3 mt-4">Team</h2>
                 </div>
                 <div class="team-members-container" 
                     ref="teamMembersContainer"
@@ -405,7 +471,7 @@
   <!-- //CONTACT SECTION -->
 
   <!-- //Desktop -->
-  <v-footer color="#b7e3b6" v-if="isMobile !== true" style="height: 100vh; position: fixed; bottom: 0; left: 0; right: 0;" id="contact"
+  <v-footer color="#b7e3b6" v-if="isMobile !== true" style="height: 92vh; position: fixed; bottom: 0; left: 0; right: 0;" id="contact"
   :style="{'z-index':isAtBottom == true ? 9999 : 1}">
     <div class="section-header mb-8">
         <h2 v-if="isMobile != true" class="text-h3 text-black mb-3 ">Contact</h2>
@@ -416,7 +482,7 @@
             <!-- Currently Working In Section -->
         </v-col>
         <v-col cols="9">
-              <v-row class="mt-n16">
+              <v-row class="mt-n10">
                   <v-col>
                       <p class="text-black"><strong><h2>Address</h2></strong></p>
                   </v-col>
@@ -435,12 +501,12 @@
                       <p class="text-black">United States</p>
                   </v-col>
               </v-row>
-            <v-row class="mt-n5">
+            <v-row >
                 <v-col>
                     <hr>
                 </v-col>
             </v-row>
-            <v-row class="my-custom-row mt-n5">
+            <v-row class="my-custom-row ">
                 <v-col>
                     <p class="text-black"><strong><h2>Inquiries</h2></strong></p>
                 </v-col>
@@ -451,7 +517,7 @@
                     <p class="text-black">hello(at)parker.studio</p>
                 </v-col>
             </v-row>
-            <v-row class="mt-n5">
+            <v-row >
                 <v-col>
                     <hr>
                 </v-col>
@@ -527,13 +593,13 @@
   </v-footer>
   <!-- //Mobile -->
   <v-footer color="#b7e3b6" v-if="isMobile" 
-  style="max-height: 100vh; height: 100vh; position: fixed; bottom: 0; left: 0; right: 0; overflow-y: auto;" 
+  style="max-height: 92vh; height: 92vh; position: fixed; bottom: 0; left: 0; right: 0; " 
   id="contact"
   :style="{'z-index': isAtBottom ? 9999 : 1}">
   <h4 class="text-h4 text-black mb-3 mt-2 text-center">Contact</h4>
   <v-container>
     <v-row>
-      <v-col cols="12">
+      <v-col cols="12" :class="isMobile ? 'mt-n5': ''">
         <h4 class="text-black font-weight-bold">Address</h4>
         <p class="text-black">Parker Studio</p>
         <p class="text-black">5424 Ballard Ave NW</p>
@@ -543,21 +609,21 @@
         <v-divider class="my-4"></v-divider>
       </v-col>
 
-      <v-col cols="12">
+      <v-col cols="12"  :class="isMobile ? 'mt-n7': ''">
         <h4 class="text-black font-weight-bold">Inquiries</h4>
         <p class="text-black">+1 206 395 9662</p>
         <p class="text-black">hello(at)parker.studio</p>
         <v-divider class="my-4"></v-divider>
       </v-col>
 
-      <v-col cols="12">
+      <v-col cols="12" :class="isMobile ? 'mt-n7': ''">
         <h4 class="text-black font-weight-bold">Careers & Internships</h4>
         <p class="text-black">work(at)parker.studio</p>
         <p class="text-black">intern(at)parker.studio</p>
         <v-divider class="my-4"></v-divider>
       </v-col>
 
-      <v-col cols="12">
+      <v-col cols="12" :class="isMobile ? 'mt-n7': ''">
         <h4 class="text-black font-weight-bold">Follow Us</h4>
         <p class="text-black">Instagram</p>
         <p class="text-black">Tumblr</p>
@@ -742,13 +808,14 @@
             section.scrollIntoView({ behavior: 'smooth' });
           }
           
-              section.scrollIntoView({ behavior: 'smooth' });
+          section.scrollIntoView({ behavior: 'smooth' });
           }
         } else {
           console.log('Navigating to:', item.link);
           this.drawer = false;
         }
-      },
+        this.drawer = false;
+        },
       checkMobile() {
         this.isMobile = window.innerWidth < 768;
         this.countIdeasSpunOut = 0;
@@ -875,8 +942,8 @@
         });
       },
         startCounting() {
-        const incrementSpunOut = Math.ceil(this.maxSpunOut / (this.duration / 300)); // Calculate increment for spun out
-        const incrementKilled = Math.ceil(this.maxKilled / (this.duration / 300)); // Calculate increment for killed
+        const incrementSpunOut = Math.ceil(this.maxSpunOut / (this.duration / 100)); // Calculate increment for spun out
+        const incrementKilled = Math.ceil(this.maxKilled / (this.duration / 100)); // Calculate increment for killed
 
         this.intervalIdSpunOut = setInterval(() => {
           if (this.countIdeasSpunOut < this.maxSpunOut) {
@@ -903,7 +970,7 @@
       
       // Check if we're at the bottom (within 1px)
       if (Math.abs((scrollTop + windowHeight) - documentHeight) < 1) {
-        this.isAtBottom = true;
+        // this.isAtBottom = true;
         this.activeSection = 'contact'
       } else {
         this.isAtBottom = false;
@@ -1033,7 +1100,7 @@
 
   /* Mobile Navigation */
   .mobile-nav {
-    background-color: #FFD700 !important;
+    background-color: #f4ff49 !important;
   }
 
   .mobile-nav .v-list-item {
@@ -1316,6 +1383,7 @@
     height: 100vh; /* Full height */
     background-color: #212021; /* Match the background color */
     z-index: 2000; /* Ensure it is above other elements */
+    transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d !important;
   }
   .fullscreen-drawer {
     transition: transform 0.3s ease;
@@ -1513,7 +1581,7 @@ footer {
     font-weight: bold !important;
     text-align: left; /* Align text to the left */
     -webkit-text-stroke: 1px #fffbe9;
-    color: #0000; /* This makes the text transparent; consider changing it */
+    /* color: #0000;  */
     margin-bottom: .25em;
     padding-bottom: .2em;
     padding-right: .2em;
@@ -1525,5 +1593,78 @@ footer {
 .no-gap {
     gap: 0 !important; /* Remove gap */
 }
+.side-nav-link-large {
+    float: left;
+    clear: left;
+    text-align: right;
+    border-bottom-style: solid;
+    border-bottom-color: #0000;
+    margin-right: 2em;
+    font-size: 48px;
+    line-height: 50px !important;
+    display: block;
+    
+}
+@media screen and (max-width: 479px) {
+    .side-nav-link-large {
+        font-size: 36px;
+        line-height: 42px;
+    }
+}
+.col.col-nav-top {
+    flex: 1;
+}
+.row.row-buffer {
+    justify-content: center;
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
+    position: relative;
+}
+.row.row-buffer.row-nav {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+}
+/* a:hover {
+    border-bottom-style: solid;
+    border-bottom-color: #0000;
+    display: inline-block;
+} */
 
+a:active, a:hover {
+    outline: 0;
+}
+
+.side-nav-link-large {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Change text color */
+    position: relative; /* Position relative for pseudo-element */
+}
+
+.side-nav-link-large:hover {
+    color: #252423; /* Change text color on hover (optional) */
+}
+
+.side-nav-link-large::after {
+    content: ''; /* Create a pseudo-element for the border */
+    display: block; /* Make it a block element */
+    width: 100%; /* Full width */
+    height: 2px; /* Set height for the border */
+    background-color: #252423; /* Border color */
+    position: absolute; /* Position it absolutely */
+    left: 0; /* Align to the left */
+    bottom: 0; /* Position at the bottom */
+    transform: scaleX(0); /* Initially scale to 0 (hidden) */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.side-nav-link-large:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+}
+
+@media screen and (max-width: 479px) {
+    a, a:hover {
+        display: inline;
+    }
+}
   </style>
