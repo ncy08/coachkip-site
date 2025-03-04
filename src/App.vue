@@ -56,7 +56,7 @@
                 <a style="font-size: 36px;
          line-height: 42px;" @click="handleMenuItemClick({link:'#home'} )" class="side-nav-link-large">Home</a>
                  <a style="font-size: 36px;
-         line-height: 42px;" @click="handleMenuItemClick({link:'#how-we-do'} )" class="side-nav-link-large">How we do</a>
+         line-height: 42px;" @click="handleMenuItemClick({link:'#how-we-do'} )" class="side-nav-link-large">What we do</a>
                  <a style="font-size: 36px;
          line-height: 42px;" @click="handleMenuItemClick({link:'#how-we-do-it'} )" class="side-nav-link-large">How we do it</a>
                  <a style="font-size: 36px;
@@ -98,7 +98,7 @@
       </section>
       
   <!-- HOW WE DO -->
-  <section style="position: relative; z-index: 2;" :height="isMobile ? '100vh' : '100vh'" id="how-we-do" @mousemove="handleMouseMove($event, 'How we do')" @mouseleave="handleMouseLeave">
+  <section style="position: relative; z-index: 2;" :height="isMobile ? '100vh' : '100vh'"  @mousemove="handleMouseMove($event, 'How we do')" @mouseleave="handleMouseLeave">
       <v-parallax color="#252423"  :height="isMobile ? '100vh' : '100vh'">
           <v-container :class="!isMobile ? 'custom-padding' : ''">
                 <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
