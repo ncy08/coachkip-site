@@ -62,7 +62,7 @@
                  <a style="font-size: 36px;
          line-height: 42px;" @click="handleMenuItemClick({link:'#results'} )" class="side-nav-link-large">Results</a>
                  <a style="font-size: 36px;
-         line-height: 42px;" @click="handleMenuItemClick({link:'#team'} )" class="side-nav-link-large">We are we</a>
+         line-height: 42px;" @click="handleMenuItemClick({link:'#team'} )" class="side-nav-link-large">Who are we</a>
                  <a style="font-size: 36px;
          line-height: 42px;" @click="handleMenuItemClick({link:'#contact'} )" class="side-nav-link-large">When to contact</a>
             </ul>
@@ -609,7 +609,7 @@
         <v-divider class="my-4"></v-divider>
       </v-col>
 
-      <v-col cols="12"  :class="isMobile ? 'mt-n7': ''">
+      <v-col cols="12"  :class="isMobile ? 'mt-n8': ''">
         <h4 class="text-black font-weight-bold">Inquiries</h4>
         <p class="text-black">+1 206 395 9662</p>
         <p class="text-black">hello(at)parker.studio</p>
@@ -623,14 +623,14 @@
         <v-divider class="my-4"></v-divider>
       </v-col>
 
-      <v-col cols="12" :class="isMobile ? 'mt-n7': ''">
+      <v-col cols="12" :class="isMobile ? 'mt-n8': ''">
         <h4 class="text-black font-weight-bold">Follow Us</h4>
         <p class="text-black">Instagram</p>
         <p class="text-black">Tumblr</p>
         <v-divider class="my-4"></v-divider>
       </v-col>
 
-      <v-col cols="12">
+      <v-col cols="12" :class="isMobile ? 'mt-n8': ''">
         <h4 class="text-black font-weight-bold">Newsletter</h4>
         <v-text-field variant="underlined" placeholder="Email" class="mb-2" />
         <v-btn color="black" class="text-white">SUBMIT</v-btn>
@@ -640,7 +640,7 @@
   </v-container>
 
   <!-- Marquee Section -->
-  <v-row style="position: relative; bottom: 0; left: 0; right: 0;">
+  <v-row class="mt-n10" style="position: relative; bottom: 0; left: 0; right: 0;">
     <v-col>
       <v-toolbar style="background-color: #b7e3b6; z-index: 9">
         <v-toolbar-title>
