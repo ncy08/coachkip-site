@@ -206,7 +206,7 @@
                       01—Ideation
                   </h4>
                   <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;font-family:'Aeonik1'"
-                  :style="{'font-size': !isMobile ? '48px': '30px'}">
+                  :style="{'font-size': !isMobile ? '48px': '30px',lineHeight: 1.15,}">
                       It could be our idea. It could be your idea.
                   </p>
                   <p  class=" color-ivory" style="padding-right: 15% !important;  padding-bottom: 1em; font-family:'Aeonik1' "
@@ -239,7 +239,7 @@
                       02—Validation
                   </h4>
                   <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;font-family:'Aeonik1'"
-                  :style="{'font-size': !isMobile ? '48px': '30px'}">
+                  :style="{'font-size': !isMobile ? '48px': '30px',lineHeight: 1.15,}">
                   Every idea we work on sounds good at first. But nine out of ten aren't.
                   </p>
                   <p class="color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em;font-family:'Aeonik1' "
@@ -272,7 +272,7 @@
                       03—Creation
                   </h4>
                   <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;font-family:'Aeonik1'"
-                  :style="{'font-size': !isMobile ? '48px': '30px'}">
+                  :style="{'font-size': !isMobile ? '48px': '30px',lineHeight: 1.15,}">
                   When an idea is a good one, it’s time to move. Fast.
                   </p>
                   <p class=" color-ivory" style="padding-right: 15% !important; padding-bottom: 1em ;font-family:'Aeonik1'  "
@@ -303,7 +303,7 @@
                       04—Spinout
                   </h4>
                   <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;font-family:'Aeonik1'"
-                  :style="{'font-size': !isMobile ? '48px': '30px'}">
+                  :style="{'font-size': !isMobile ? '48px': '30px',lineHeight: 1.15,}">
                   Great companies require extraordinary people and smart capital.
                   </p>
                   <p class=" color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em ;font-family:'Aeonik1'"
@@ -334,7 +334,7 @@
                       05—Scale Up
                   </h4>
                   <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;font-family:'Aeonik1'"
-                  :style="{'font-size': !isMobile ? '48px': '30px'}">
+                  :style="{'font-size': !isMobile ? '48px': '30px',lineHeight: 1.15,}">
                   We’ll take care of the boring stuff.
                   </p>
                   
