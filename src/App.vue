@@ -596,7 +596,7 @@
   style="max-height: 92vh; height: 92vh; position: fixed; bottom: 0; left: 0; right: 0;" 
   id="contact"
   :style="{'z-index': isAtBottom ? 99 : 1}">
-  <v-container class="mb-3 mt-2">
+  <v-container class="mb-3 mt-5">
     <!-- Addresses Section -->
     <v-row class="mb-4" no-gutters>
       <v-col cols="6" sm="12" md="6">
@@ -607,18 +607,18 @@
           <p>Unit 103</p>
           <p>Seattle, WA 98107</p>
           <p>United States</p>
-          <p><u>Maps <v-icon size="x-small">mdi-arrow-top-right</v-icon></u><v-icon>mdi-arrow-top-right</v-icon></p>
+          <p><u>Maps <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
         </div>
       </v-col>
-      <v-col cols="6" sm="12" md="6">
+      <v-col cols="6" sm="12" md="6" >
         <div class="section-title mt-10"></div>
         <div class="address-content">
-          <p>PARKER STORE</p>
-          <p><u>5424 Ballard Ave NW</u></p>
-          <p>Unit 103</p>
-          <p>Seattle, WA 98107</p>
-          <p>United States</p>
-          <p><u>Maps <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+          <p class="ml-2">PARKER STORE</p>
+          <p class="ml-2"><u>5424 Ballard Ave NW</u></p>
+          <p class="ml-2">Unit 103</p>
+          <p class="ml-2">Seattle, WA 98107</p>
+          <p class="ml-2">United States</p>
+          <p class="ml-2"><u>Maps <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
         </div>
       </v-col>
     </v-row>
@@ -629,13 +629,13 @@
       <v-col cols="6" sm="12" md="6">
         <div class="section-title mb-4">INQUIRIES</div>
         <div class="inquiries-content">
-          <p><u>+1 206 395 9662 <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+          <p><u>+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
         </div>
       </v-col>
       <v-col cols="6" sm="12" md="6">
         <div class="section-title mt-10"></div>
         <div class="email-content">
-          <p><u>hello(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+          <p><u>hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
         </div>
       </v-col>
     </v-row>
@@ -646,13 +646,13 @@
       <v-col cols="6" sm="12" md="6">
         <div class="section-title mb-4">CAREER</div>
         <div class="career-content">
-          <p><u>work(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+          <p><u>work(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
         </div>
       </v-col>
       <v-col cols="6" sm="12" md="6">
         <div class="section-title mb-10"></div>
         <div class="internship-content">
-          <p><u>intern(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
+          <p><u>intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
         </div>
       </v-col>
     </v-row>
@@ -663,13 +663,13 @@
       <v-col cols="6" sm="12" md="6">
         <div class="section-title mb-4">FOLLOW US</div>
         <div class="social-content">
-          <p><u>Instagram</u></p>
+          <p><u>Instagram <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
         </div>
       </v-col>
       <v-col cols="6" sm="12" md="6">
         <div class="section-title mb-10"></div>
         <div class="blog-content">
-          <p><u>Tumblr</u></p>
+          <p><u>Tumblr <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
         </div>
       </v-col>
     </v-row>
@@ -677,11 +677,11 @@
     <!-- Newsletter Section -->
     <hr class="my-4"/>
     <v-row class="mt-n7">
-      <v-col cols="6" sm="12" md="6">
+      <v-col cols="10" sm="12" md="6">
         <div class="section-title mb-4">NEWSLETTER</div>
         <v-text-field variant="underlined" placeholder="Email" class="mb-2"/>
       </v-col>
-      <v-col cols="6" sm="12" md="6">
+      <v-col cols="2" sm="12" md="6">
         <div class="section-title mb-10"></div>
         <div class="d-flex align-center justify-end">
           <span color="black" class="text-black">SUBMIT</span>
