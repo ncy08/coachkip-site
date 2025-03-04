@@ -106,7 +106,7 @@
                         <h1 :style="{
                             color: 'white ', fontSize: isMobile ? '48px' : '112px',
                             lineHeight : !isMobile ? '112px !important' : '45px',
-                            marginBottom: '.25em', fontWeight: 400, marginLeft: '15px', 
+                            marginBottom: '.60em', fontWeight: 400, marginLeft: '15px', 
                             paddingRight: '15px', paddingLeft: '15' }">
                           A new model for building companies.
                       </h1>
@@ -690,7 +690,7 @@
     </v-row>
 
     <!-- Marquee Section -->
-    <v-row class="mt-n10" style="position: relative; bottom: 0; left: 0; right: 0;">
+    <v-row class="mt-n2" style="position: relative; bottom: 0; left: 0; right: 0;">
       <v-col>
         <v-toolbar style="background-color: #b7e3b6; z-index: 9">
           <v-toolbar-title>
@@ -1784,7 +1784,7 @@ a:active, a:hover {
 }
 
 .section-title1{
-  font-size: 17px !important;
+  font-size: 15px !important;
   /* line-height: 15px !important; */
   font-family: 'Poppins' !important;
   /* font-weight: 700; */
@@ -1798,7 +1798,7 @@ a:active, a:hover {
 .social-content,
 .blog-content {
   line-height: 1.5;
-  font-size:13px !important; 
+  font-size:12px !important; 
   /* font-weight: 300 !important; */
   font-family: 'Poppins';
 
