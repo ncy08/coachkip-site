@@ -103,10 +103,10 @@
           <v-container :class="!isMobile ? 'custom-padding' : ''">
                 <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
                     <v-col :class="{'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true}" :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
-                        <h1 :style="{ 
-                            color: 'white ', fontSize: isMobile ? '60px' : '152px',
-                            lineHeight : !isMobile ? '152px !important' : '76px',
-                            marginBottom: '.65em', fontWeight: 400, marginLeft: '15px', 
+                        <h1 :style="{
+                            color: 'white ', fontSize: isMobile ? '48px' : '112px',
+                            lineHeight : !isMobile ? '112px !important' : '76px',
+                            marginBottom: '.25em', fontWeight: 400, marginLeft: '15px', 
                             paddingRight: '15px', paddingLeft: '15' }">
                           A new model for building companies.
                       </h1>
@@ -143,8 +143,8 @@
   </section>
   
   <!-- //2ND SECTON -->
-  <section :height="isMobile ? '80vh' : '100vh'" style="position: relative; z-index: 2;">
-    <v-parallax color="#252423" :height="isMobile ? '80vh' : '100vh'">
+  <section :height="isMobile ? '70vh' : '100vh'" style="position: relative; z-index: 2;">
+    <v-parallax color="#252423" :height="isMobile ? '70vh' : '100vh'">
         <v-container fluid  :class="!isMobile ? 'services-container' : ''" :style="!isMobile ? { marginLeft: '10px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
           <div class="services-grid" :class="{ 'no-gap': isMobile }">
                 <div >Market Research</div>
