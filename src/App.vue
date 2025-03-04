@@ -104,10 +104,10 @@
                 <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
                     <v-col :class="{'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true}" :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
                         <h1 :style="{ 
-                      color: 'white ', fontSize: isMobile ? '71px' : '152px',
-                      lineHeight : !isMobile ? '152px !important' : '84px',
-                      marginBottom: '.65em', fontWeight: 400, marginLeft: '15px', 
-                      paddingRight: '15px', paddingLeft: '0' }">
+                            color: 'white ', fontSize: isMobile ? '60px' : '152px',
+                            lineHeight : !isMobile ? '152px !important' : '76px',
+                            marginBottom: '.65em', fontWeight: 400, marginLeft: '15px', 
+                            paddingRight: '15px', paddingLeft: '15' }">
                           A new model for building companies.
                       </h1>
                       <p  :style="{ textAlign: 'left', color: '#636363', fontWeight: 400, display: 'block', fontSize: isMobile ? '21px' : '32px', marginLeft: '15px', paddingRight: '15px', lineHeight: '1.5', paddingLeft: '0' }">
@@ -595,7 +595,7 @@
   <v-footer color="#b7e3b6" v-if="isMobile" 
   style="max-height: 92vh; height: 92vh; position: fixed; bottom: 0; left: 0; right: 0; " 
   id="contact"
-  :style="{'z-index': isAtBottom ? 9999 : 1}">
+  :style="{'z-index': isAtBottom ? 99 : 1}">
   <h4 class="text-h4 text-black mb-3 mt-2 text-center">Contact</h4>
   <v-container>
     <v-row>
@@ -1666,5 +1666,11 @@ a:active, a:hover {
     a, a:hover {
         display: inline;
     }
+}
+
+body {
+  transform: scale(0.8);
+  transform-origin: top left;
+  width: 125%; /* Adjust width to compensate for scaling */
 }
   </style>
