@@ -992,8 +992,8 @@
         });
       },
         startCounting() {
-        const incrementSpunOut = Math.ceil(this.maxSpunOut / (this.duration / 100)); // Calculate increment for spun out
-        const incrementKilled = Math.ceil(this.maxKilled / (this.duration / 100)); // Calculate increment for killed
+        const incrementSpunOut = Math.ceil(this.maxSpunOut / (this.duration / 10)); // Calculate increment for spun out
+        const incrementKilled = Math.ceil(this.maxKilled / (this.duration / 10)); // Calculate increment for killed
 
         this.intervalIdSpunOut = setInterval(() => {
           if (this.countIdeasSpunOut < this.maxSpunOut) {
