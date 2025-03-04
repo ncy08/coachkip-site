@@ -625,7 +625,7 @@
 
     <!-- Inquiries Section -->
     <hr class="my-4"/>
-    <v-row class="mt-n7">
+    <v-row class="mt-n3">
       <v-col cols="6" sm="12" md="6">
         <div class="section-title1 mb-4">INQUIRIES</div>
         <div class="inquiries-content">
@@ -642,7 +642,7 @@
 
     <!-- Career Section -->
     <hr class="my-4"/>
-    <v-row class="mt-n7">
+    <v-row class="mt-n3">
       <v-col cols="6" sm="12" md="6">
         <div class="section-title1 mb-4">CAREER</div>
         <div class="career-content">
@@ -659,7 +659,7 @@
 
     <!-- Social Section -->
     <hr class="my-4"/>
-    <v-row class="mt-n7">
+    <v-row class="mt-n3">
       <v-col cols="6" sm="12" md="6">
         <div class="section-title1 mb-4">FOLLOW US</div>
         <div class="social-content">
@@ -676,7 +676,7 @@
 
     <!-- Newsletter Section -->
     <hr class="my-4"/>
-    <v-row class="mt-n7">
+    <v-row class="mt-n3">
       <v-col cols="10" sm="12" md="6">
         <div class="section-title1 mb-4">NEWSLETTER</div>
         <v-text-field variant="underlined" placeholder="Email" class="mb-2"/>
