@@ -694,12 +694,12 @@
       <v-col>
         <v-toolbar style="background-color: #b7e3b6; z-index: 9">
           <v-toolbar-title>
-            <h5 class="text-black ">Currently Working In:</h5>
+            <h5 class="text-black " style="font-family:'Poppins'">Currently Working In:</h5>
           </v-toolbar-title>
         </v-toolbar>
         <div class="marquee-container">
           <div class="contact__marquee__ticker__inner text-center">
-            <h5 style="display: inline-block;">
+            <h5 style="display: inline-block;font-family:'Poppins'">
               SEATTLE, SFO, CHICAGO, AUSTIN, NYC, LONDON
             </h5>
           </div>
@@ -1069,6 +1069,12 @@
     font-family: 'Aeonik1';
     src:url("../src/assets/font/AeonikTRIAL-Regular.otf") format("opentype");
     font-weight: 1000 !important;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src:url("../src/assets/font/poppins.medium.ttf") format("opentype");
+    // font-weight: 1000 !important;
     font-style: normal;
   }
   
@@ -1778,10 +1784,10 @@ a:active, a:hover {
 }
 
 .section-title1{
-  font-size: 18px !important;
+  font-size: 17px !important;
   /* line-height: 15px !important; */
-  font-family: 'Aeonik1' !important;
-  font-weight: 700;
+  font-family: 'Poppins' !important;
+  /* font-weight: 700; */
 }
 
 .address-content,
@@ -1792,8 +1798,9 @@ a:active, a:hover {
 .social-content,
 .blog-content {
   line-height: 1.5;
-  font-size:15px !important; 
-  font-weight: 300 !important;
+  font-size:13px !important; 
+  /* font-weight: 300 !important; */
+  font-family: 'Poppins';
 
 }
   </style>
