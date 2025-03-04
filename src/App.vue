@@ -210,7 +210,7 @@
                       It could be our idea. It could be your idea.
                   </p>
                   <p  class=" color-ivory" style="padding-right: 15% !important;  padding-bottom: 1em; font-family:'Aeonik1' "
-                  :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
+                  :style="{'font-size': !isMobile ? '21px': '18px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                     Either way, we put it through the ringer: determining if it can be a world-changing, venture-scale company that customers love. 
                     <a class="text-white" href="https://docs.google.com/forms/d/e/1FAIpQLSc_WUMqF_UeOE4F20NAGmEVtapyECjJfggwApu8uOWkWdea-Q/viewform" target="_blank"> Sign up</a> 
                     to join our bi-weekly ideation sessions.
@@ -243,7 +243,7 @@
                   Every idea we work on sounds good at first. But nine out of ten aren't.
                   </p>
                   <p class="color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em;font-family:'Aeonik1' "
-                  :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
+                  :style="{'font-size': !isMobile ? '21px': '18px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                   We know this because we track it. We put an idea through its paces, testing customer demand, 
                   technical feasibility, business model, unit economics, market dynamics, investor interest, and more. 
                   We benchmark every idea against the performance of our past ideas to determine if it's worth our time—and yours.
@@ -276,7 +276,7 @@
                   When an idea is a good one, it’s time to move. Fast.
                   </p>
                   <p class=" color-ivory" style="padding-right: 15% !important; padding-bottom: 1em ;font-family:'Aeonik1'  "
-                  :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
+                  :style="{'font-size': !isMobile ? '21px': '18px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                   Our team of designers, engineers, data scientists, marketers,
                    and company builders turn a validated concept into a real product in market.
                 </p>
@@ -307,7 +307,7 @@
                   Great companies require extraordinary people and smart capital.
                   </p>
                   <p class=" color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em ;font-family:'Aeonik1'"
-                  :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
+                  :style="{'font-size': !isMobile ? '21px': '18px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                   Our spinout process is the best method we know of to get a company off the ground,
                    staffed up, and funded by great venture investors as fast as humanly possible.
                 </p>
@@ -339,7 +339,7 @@
                   </p>
                   
                   <p class=" color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em;font-family:'Aeonik1' "
-                  :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
+                  :style="{'font-size': !isMobile ? '21px': '18px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                   Focus is the lifeblood of an early-stage company. Our recruiting, legal, and finance teams, along with our relationships with top service providers, allow founders to keep their eyes squarely on building the business.
                 </p>
               </v-col>
@@ -1503,6 +1503,7 @@
  /* Currently Working In Section */
 .v-toolbar {
     margin-bottom: 20px; /* Add some space below the toolbar */
+    /* font-weight: 200px !important; */
 }
 
 .marquee-container {
@@ -1787,7 +1788,7 @@ a:active, a:hover {
   font-size: 15px !important;
   /* line-height: 15px !important; */
   font-family: 'Poppins' !important;
-  /* font-weight: 700; */
+  font-weight: 200;
 }
 
 .address-content,
