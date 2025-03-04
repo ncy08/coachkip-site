@@ -36,9 +36,10 @@
         <v-card style="width:50% !important">
 
         </v-card>
-        <v-toolbar style="background-color:transparent" class="mt-3">
-          <v-icon color="#636363" class="mt-n1 ml-2" v-on:click="handleMenuItemClick({link:'#home'})">mdi-arrow-left</v-icon>
-      <a v-on:click="handleMenuItemClick({link:'#home'})" class="side-nav-link-large " style="font-size: 18px !important; line-height: 25px !important; color:#636363 !important" target="_blank">Home</a>
+        <v-toolbar style="background-color:transparent" class="mt-1">
+          <a data-w-id="4a4302b6-6981-f1fa-9bee-92d7404c033a" href="/" class="side-nav-link-home ml-3"><v-icon size="x-small">mdi-arrow-left</v-icon>Home</a>
+          <!-- <v size="x-small" color="#636363" class="mt-n1 ml-2" v-on:click="handleMenuItemClick({link:'#home'})">mdi-arrow-left</v> -->
+           <!-- <a v-on:click="handleMenuItemClick({link:'#home'})" class="side-nav-link-large " style="font-size: 18px !important; line-height: 25px !important; color:#636363 !important" target="_blank">Home</a> -->
           <v-spacer/>
           <button style="float: right;
             background-color: #252423;
@@ -46,7 +47,7 @@
             border-bottom-style: none;
             border-bottom-color: #000;
             border-radius: 20px;
-            padding: 10px 40px;
+            padding: 6px 34px 6px;
             display: block;" class="mr-6" @click="drawer = false">Close</button>
         </v-toolbar>
        <v-row>
@@ -105,7 +106,7 @@
                     <v-col :class="{'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true}" :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
                         <h1 :style="{
                             color: 'white ', fontSize: isMobile ? '48px' : '112px',
-                            lineHeight : !isMobile ? '112px !important' : '76px',
+                            lineHeight : !isMobile ? '112px !important' : '45px',
                             marginBottom: '.25em', fontWeight: 400, marginLeft: '15px', 
                             paddingRight: '15px', paddingLeft: '15' }">
                           A new model for building companies.
@@ -1787,4 +1788,27 @@ body {
     background-color: #976b6b; /* Color of the line */
     margin: 20px 0; /* Space above and below the line */
   }
+
+  .side-nav-link-home {
+    border-bottom-style: solid;
+    border-bottom-color: #0000;
+    padding-bottom: 0;
+    font-size: 18px;
+    line-height: 32px;
+    padding-left: 2px !important;
+}
+
+a {
+    color: inherit;
+    border-color: inherit;
+}
+a {
+    background-color: #0000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: .03em;
+    text-decoration: none;
+    transition: all .25scubic-bezier(.455,.03,.515,.955);
+    display: inline-block;
+}
 </style>
