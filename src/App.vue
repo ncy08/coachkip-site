@@ -38,7 +38,7 @@
         </v-card>
         <v-toolbar style="background-color:transparent" class="mt-3">
           <v-icon size="small " color="black" class="mt-n1 ml-2" v-on:click="handleMenuItemClick({link:'#home'})">mdi-arrow-left</v-icon>
-          <a  v-on:click="handleMenuItemClick({link:'#home'})" data-w-id="4a4302b6-6981-f1fa-9bee-92d7404c033a" class="side-nav-link-home ">Home</a>
+          <a   v-on:click="handleMenuItemClick({link:'#home'})" data-w-id="4a4302b6-6981-f1fa-9bee-92d7404c033a" class="side-nav-link-home ">Home</a>
           <v-spacer/>
           <button style="float: right;
             background-color: #252423;
@@ -1067,7 +1067,7 @@
   // }
   @font-face {
     font-family: 'Aeonik1';
-    src:url("../src/assets/font/AeonikTRIAL-Light.otf") format("opentype");
+    src:url("../src/assets/font/AeonikTRIAL-Regular.otf") format("opentype");
     font-weight: 1000 !important;
     font-style: normal;
   }
@@ -1630,7 +1630,13 @@ footer {
     clear: none;
     text-align: left;
     line-height: 1.5;
-    font-family: Aeonik, Arial, sans-serif;
+    /* font-family: Aeonik, Arial, sans-serif; */
+}
+@media screen and (max-width: 767px) {
+    .p-large {
+        font-size: 16px;
+        line-height: 1.5;
+    }
 }
 
 .large-number {
@@ -1735,17 +1741,7 @@ body {
   /* font-weight: 600; */
 }
 
-.address-content,
-.inquiries-content,
-.email-content,
-.career-content,
-.internship-content,
-.social-content,
-.blog-content {
-  line-height: 1.5;
-  font-size:13px !important;
 
-}
 
 @media screen and (max-width: 960px) {
   .section-title {
@@ -1782,8 +1778,22 @@ a:active, a:hover {
 }
 
 .section-title1{
-  font-size: 15px !important;
+  font-size: 18px !important;
   /* line-height: 15px !important; */
   font-family: 'Aeonik1' !important;
+  font-weight: 700;
+}
+
+.address-content,
+.inquiries-content,
+.email-content,
+.career-content,
+.internship-content,
+.social-content,
+.blog-content {
+  line-height: 1.5;
+  font-size:15px !important; 
+  font-weight: 300 !important;
+
 }
   </style>
