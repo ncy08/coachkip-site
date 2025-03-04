@@ -36,10 +36,9 @@
         <v-card style="width:50% !important">
 
         </v-card>
-        <v-toolbar style="background-color:transparent" class="mt-1">
-          <a data-w-id="4a4302b6-6981-f1fa-9bee-92d7404c033a" href="/" class="side-nav-link-home ml-3"><v-icon size="x-small">mdi-arrow-left</v-icon>Home</a>
-          <!-- <v size="x-small" color="#636363" class="mt-n1 ml-2" v-on:click="handleMenuItemClick({link:'#home'})">mdi-arrow-left</v> -->
-           <!-- <a v-on:click="handleMenuItemClick({link:'#home'})" class="side-nav-link-large " style="font-size: 18px !important; line-height: 25px !important; color:#636363 !important" target="_blank">Home</a> -->
+        <v-toolbar style="background-color:transparent" class="mt-3">
+          <v-icon size="small " color="black" class="mt-n1 ml-2" v-on:click="handleMenuItemClick({link:'#home'})">mdi-arrow-left</v-icon>
+          <a  v-on:click="handleMenuItemClick({link:'#home'})" data-w-id="4a4302b6-6981-f1fa-9bee-92d7404c033a" class="side-nav-link-home ">Home</a>
           <v-spacer/>
           <button style="float: right;
             background-color: #252423;
@@ -47,7 +46,7 @@
             border-bottom-style: none;
             border-bottom-color: #000;
             border-radius: 20px;
-            padding: 6px 34px 6px;
+            padding: 6px 33px 4px;
             display: block;" class="mr-6" @click="drawer = false">Close</button>
         </v-toolbar>
        <v-row>
@@ -206,11 +205,11 @@
                   font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
                       01—Ideation
                   </h4>
-                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;font-family:'Aeonik1'"
                   :style="{'font-size': !isMobile ? '48px': '30px'}">
                       It could be our idea. It could be your idea.
                   </p>
-                  <p class=" color-ivory" style="padding-right: 15% !important;  padding-bottom: 1em "
+                  <p  class=" color-ivory" style="padding-right: 15% !important;  padding-bottom: 1em; font-family:'Aeonik1' "
                   :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                     Either way, we put it through the ringer: determining if it can be a world-changing, venture-scale company that customers love. 
                     <a class="text-white" href="https://docs.google.com/forms/d/e/1FAIpQLSc_WUMqF_UeOE4F20NAGmEVtapyECjJfggwApu8uOWkWdea-Q/viewform" target="_blank"> Sign up</a> 
@@ -234,16 +233,16 @@
               </div>
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 2% !important;">
-                  <h4 class="section-title color-slate" color="#e4dbcc" style="margin-top: 1.25em; margin-bottom: 1.75em; 
+                  <h4 class="section-title color-slate" color="#e4dbcc" style="margin-top: 1.25em; margin-bottom: 1.75em' 
                    ;
                   font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
                       02—Validation
                   </h4>
-                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;font-family:'Aeonik1'"
                   :style="{'font-size': !isMobile ? '48px': '30px'}">
                   Every idea we work on sounds good at first. But nine out of ten aren't.
                   </p>
-                  <p class="color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
+                  <p class="color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em;font-family:'Aeonik1' "
                   :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                   We know this because we track it. We put an idea through its paces, testing customer demand, 
                   technical feasibility, business model, unit economics, market dynamics, investor interest, and more. 
@@ -268,15 +267,15 @@
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 2% !important;">
                   <h4 class="section-title color-slate" color="#e4dbcc" style="margin-top: 1.25em; margin-bottom: 1.75em; 
-                   ;
+                  
                   font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
                       03—Creation
                   </h4>
-                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;font-family:'Aeonik1'"
                   :style="{'font-size': !isMobile ? '48px': '30px'}">
                   When an idea is a good one, it’s time to move. Fast.
                   </p>
-                  <p class=" color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
+                  <p class=" color-ivory" style="padding-right: 15% !important; padding-bottom: 1em ;font-family:'Aeonik1'  "
                   :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                   Our team of designers, engineers, data scientists, marketers,
                    and company builders turn a validated concept into a real product in market.
@@ -303,11 +302,11 @@
                   font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
                       04—Spinout
                   </h4>
-                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;font-family:'Aeonik1'"
                   :style="{'font-size': !isMobile ? '48px': '30px'}">
                   Great companies require extraordinary people and smart capital.
                   </p>
-                  <p class=" color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
+                  <p class=" color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em ;font-family:'Aeonik1'"
                   :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                   Our spinout process is the best method we know of to get a company off the ground,
                    staffed up, and funded by great venture investors as fast as humanly possible.
@@ -334,12 +333,12 @@
                   font-weight: 400; line-height: 1.5;" :style="{'font-size': !isMobile ? '32px': '21px'}">
                       05—Scale Up
                   </h4>
-                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;"
+                  <p style=" font-weight: 400; display: block; margin-top: .5em; margin-bottom: 1em;font-family:'Aeonik1'"
                   :style="{'font-size': !isMobile ? '48px': '30px'}">
                   We’ll take care of the boring stuff.
                   </p>
                   
-                  <p class=" color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em "
+                  <p class=" color-ivory" style="padding-right: 15% !important;         padding-bottom: 1em;font-family:'Aeonik1' "
                   :style="{'font-size': !isMobile ? '21px': '16px','border-bottom': isMobile ? '1px solid #636363 !important': ''}">
                   Focus is the lifeblood of an early-stage company. Our recruiting, legal, and finance teams, along with our relationships with top service providers, allow founders to keep their eyes squarely on building the business.
                 </p>
@@ -599,110 +598,99 @@
   :style="{'z-index': isAtBottom ? 99 : 1}">
   <v-container class="mb-3 mt-2">
     <!-- Addresses Section -->
-    <v-row class="mb-4">
-      <div class="d-flex flex-wrap">
-        <div class="flex-grow-1 flex-shrink-1">
-          <div class="section-title">ADDRESS</div>
-          <div class="address-content">
-            <p>PARKER STUDIO</p>
-            <p><u>5424 Ballard Ave NW</u></p>
-            <p>Unit 103</p>
-            <p>Seattle, WA 98107</p>
-            <p>United States</p>
-            <p><u>Maps <v-icon size="x-small">mdi-arrow-top-right</v-icon></u><v-icon>mdi-arrow-top-right</v-icon></p>
-          </div>
+    <v-row class="mb-4" no-gutters>
+      <v-col cols="6" sm="12" md="6">
+        <div class="section-title mb-4">ADDRESS</div>
+        <div class="address-content">
+          <p>PARKER STUDIO</p>
+          <p><u>5424 Ballard Ave NW</u></p>
+          <p>Unit 103</p>
+          <p>Seattle, WA 98107</p>
+          <p>United States</p>
+          <p><u>Maps <v-icon size="x-small">mdi-arrow-top-right</v-icon></u><v-icon>mdi-arrow-top-right</v-icon></p>
         </div>
-        <div class="flex-grow-1 flex-shrink-1">
-          <div class="section-title mt-10"></div>
-          <div class="address-content">
-            <p>PARKER STORE</p>
-            <p><u>5424 Ballard Ave NW</u></p>
-            <p>Unit 103</p>
-            <p>Seattle, WA 98107</p>
-            <p>United States</p>
-            <p><u>Maps <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
-          </div>
+      </v-col>
+      <v-col cols="6" sm="12" md="6">
+        <div class="section-title mt-10"></div>
+        <div class="address-content">
+          <p>PARKER STORE</p>
+          <p><u>5424 Ballard Ave NW</u></p>
+          <p>Unit 103</p>
+          <p>Seattle, WA 98107</p>
+          <p>United States</p>
+          <p><u>Maps <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
         </div>
-      </div>
+      </v-col>
     </v-row>
+
     <!-- Inquiries Section -->
-    <hr class="my-4 full-width-hr"/>
-    <v-row class="mb-4">
-      <div class="d-flex flex-wrap">
-        <div class="flex-grow-5 flex-shrink-1">
-          <div class="section-title">INQUIRIES</div>
-          <div class="address-content">
-            <p><u>+1 206 395 9662 <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
-          </div>
+    <hr class="my-4"/>
+    <v-row class="mt-n7">
+      <v-col cols="6" sm="12" md="6">
+        <div class="section-title mb-4">INQUIRIES</div>
+        <div class="inquiries-content">
+          <p><u>+1 206 395 9662 <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
         </div>
-        <div class="flex-grow-1 flex-shrink-1">
-          <div class="section-title mt-10"></div>
-          <div class="address-content">
-            <p><u>hello(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
-          </div>
+      </v-col>
+      <v-col cols="6" sm="12" md="6">
+        <div class="section-title mt-10"></div>
+        <div class="email-content">
+          <p><u>hello(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
         </div>
-      </div>
+      </v-col>
     </v-row>
 
     <!-- Career Section -->
-    <hr class="my-4 full-width-hr"/>
-    <v-row class="mb-4">
-      <div class="d-flex flex-wrap">
-        <div class="flex-grow-2 flex-shrink-1">
-          <div class="section-title">CAREERS</div>
-          <div class="address-content">
-            <p><u>work(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
- </div>
+    <hr class="my-4"/>
+    <v-row class="mt-n7">
+      <v-col cols="6" sm="12" md="6">
+        <div class="section-title mb-4">CAREER</div>
+        <div class="career-content">
+          <p><u>work(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
         </div>
-        <div class="flex-grow-1 flex-shrink-1">
-          <div class="section-title mt-10"></div>
-          <div class="address-content">
-            <p><u>intern(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
-          </div>
+      </v-col>
+      <v-col cols="6" sm="12" md="6">
+        <div class="section-title mb-10"></div>
+        <div class="internship-content">
+          <p><u>intern(at)parker.studio <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
         </div>
-      </div>
+      </v-col>
     </v-row>
 
     <!-- Social Section -->
-    <hr class="my-4 full-width-hr"/>
-    <v-row class="mb-4">
-      <div class="d-flex flex-wrap">
-        <div class="flex-grow-3 flex-shrink-1">
-          <div class="section-title">FOLLOW US</div>
-          <div class="address-content">
-            <p><u>Instagram <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
-          </div>
+    <hr class="my-4"/>
+    <v-row class="mt-n7">
+      <v-col cols="6" sm="12" md="6">
+        <div class="section-title mb-4">FOLLOW US</div>
+        <div class="social-content">
+          <p><u>Instagram</u></p>
         </div>
-        <div class="flex-grow-1 flex-shrink-1">
-          <div class="section-title mt-10"></div>
-          <div class="address-content">
-            <p><u>Tumblr <v-icon size="x-small">mdi-arrow-top-right</v-icon></u></p>
-          </div>
+      </v-col>
+      <v-col cols="6" sm="12" md="6">
+        <div class="section-title mb-10"></div>
+        <div class="blog-content">
+          <p><u>Tumblr</u></p>
         </div>
-      </div>
+      </v-col>
     </v-row>
 
     <!-- Newsletter Section -->
-    <hr class="my-4 full-width-hr"/>
-    <v-row class="mb-4">
-      <div class="d-flex flex-wrap">
-        <div class="flex-grow-4 flex-shrink-1">
-          <div class="section-title">NEWSLETTER</div>
-          <div class="address-content">
-            <v-text-field variant="underlined" placeholder="Email" class="mb-2"/>
-          </div>
+    <hr class="my-4"/>
+    <v-row class="mt-n7">
+      <v-col cols="6" sm="12" md="6">
+        <div class="section-title mb-4">NEWSLETTER</div>
+        <v-text-field variant="underlined" placeholder="Email" class="mb-2"/>
+      </v-col>
+      <v-col cols="6" sm="12" md="6">
+        <div class="section-title mb-10"></div>
+        <div class="d-flex align-center justify-end">
+          <span color="black" class="text-black">SUBMIT</span>
         </div>
-        <div class="flex-grow-1 flex-shrink-1">
-          <div class="section-title mt-10"></div>
-          <div class="address-content">
-            <span color="black" class="text-black">SUBMIT</span>
-          </div>
-        </div>
-      </div>
+      </v-col>
     </v-row>
 
     <!-- Marquee Section -->
-    <v-row class="mt-n16 ml-n10" style="position: relative; bottom: 0; left: 0; right: 0;">
+    <v-row class="mt-n10" style="position: relative; bottom: 0; left: 0; right: 0;">
       <v-col>
         <v-toolbar style="background-color: #b7e3b6; z-index: 9">
           <v-toolbar-title>
@@ -1077,6 +1065,13 @@
   // body {
   //   font-family: 'Aeonik', Arial, sans-serif; /* Fallback to Arial and sans-serif */
   // }
+  @font-face {
+    font-family: 'Aeonik1';
+    src:url("../src/assets/font/AeonikTRIAL-Light.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+  }
+  
   </style>
 
   <style scoped>
@@ -1747,7 +1742,7 @@ body {
 .internship-content,
 .social-content,
 .blog-content {
-  line-height: 1.1;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 960px) {
@@ -1761,54 +1756,26 @@ body {
   text-decoration-thickness: 1px;
 }
 .flex-grow-1 {
-    margin-right: 110px; /* Adjust the value as needed */
+    margin-right: 120px; /* Adjust the value as needed */
   }
-.flex-grow-5 {
-  margin-right: 115px; /* Adjust the value as needed */
-}
-.flex-grow-2 {
-    margin-right: 88px; /* Adjust the value as needed */
-  }
-.flex-grow-3 {
-  margin-right: 165px; /* Adjust the value as needed */
-}
-.flex-grow-4 {
-  margin-right: 145px; /* Adjust the value as needed */
-}
-
   
-.flex-grow-1:last-child {
-  margin-right: 0; /* Remove margin from the last item */
+  .flex-grow-1:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+  }
+  a:hover {
+    border-bottom-style: solid;
+    border-bottom-color: #0000;
+    display: inline-block;
 }
 
-.full-width-hr {
-    width: 100%; /* Full width */
-    border: none; /* Remove default border */
-    height: 1px; /* Thickness of the line */
-    background-color: #976b6b; /* Color of the line */
-    margin: 20px 0; /* Space above and below the line */
-  }
-
-  .side-nav-link-home {
+a:active, a:hover {
+    outline: 0;
+}
+.side-nav-link-home {
     border-bottom-style: solid;
     border-bottom-color: #0000;
     padding-bottom: 0;
     font-size: 18px;
     line-height: 32px;
-    padding-left: 2px !important;
 }
-
-a {
-    color: inherit;
-    border-color: inherit;
-}
-a {
-    background-color: #0000;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    padding-bottom: .03em;
-    text-decoration: none;
-    transition: all .25scubic-bezier(.455,.03,.515,.955);
-    display: inline-block;
-}
-</style>
+  </style>
