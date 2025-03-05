@@ -914,8 +914,8 @@
         },
       checkMobile() {
         this.isMobile = window.innerWidth < 768;
-        this.countIdeasSpunOut = 0;
-        this.countIdeasKilled = 0;
+        // this.countIdeasSpunOut = 0;
+        // this.countIdeasKilled = 0;
         this.startCounting();
       },
       handleCardMousemove(e, card) {
@@ -948,6 +948,7 @@
                               this.forLoading = true
                             }
                         } else {
+                          this.forLoading = true
                             // Optionally clear the countingStarted flag if you want to allow counting to restart
                             // localStorage.removeItem('countingStarted');
                         }
@@ -1106,7 +1107,6 @@
       resizeObserver.observe(document.body);
       this.createIntersectionObserver();
       this.setCustomCursor('dark');
-      this.checkMobile();
       this.loadLottieAnimation();
       this.loadLottieAnimation1();
       this.loadLottieAnimation2();
