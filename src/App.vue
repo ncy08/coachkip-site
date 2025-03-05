@@ -473,129 +473,132 @@
   <!-- //Desktop -->
   <v-footer color="#b7e3b6" v-if="isMobile !== true" style="height: 92vh; position: fixed; bottom: 0; left: 0; right: 0;" id="contact"
   :style="{'z-index':isAtBottom == true ? 9999 : 1}">
-    <div class="section-header mb-8">
-        <h2 v-if="isMobile != true" class="text-h3 text-black mb-3 ">Contact</h2>
-        <h4 v-else class="text-h4 text-black mb-3 mt-2">Contact</h4>
-    </div>
-    <v-row>
-        <v-col cols="3">
-            <!-- Currently Working In Section -->
-        </v-col>
-        <v-col cols="9">
-              <v-row class="mt-n10">
-                  <v-col>
-                      <p class="text-black"><strong><h2>Address</h2></strong></p>
-                  </v-col>
-                  <v-col>
-                      <p class="text-black">Parker Studio</p>
-                      <p class="text-black">5424 Ballard Ave NW</p>
-                      <p class="text-black">Unit 103</p>
-                      <p class="text-black">Seattle, WA 98107</p>
-                      <p class="text-black">United States</p>
-                  </v-col>
-                    <v-col>
-                      <p class="text-black">Parker Studio</p>
-                      <p class="text-black">5424 Ballard Ave NW</p>
-                      <p class="text-black">Unit 103</p>
-                      <p class="text-black">Seattle, WA 98107</p>
-                      <p class="text-black">United States</p>
-                  </v-col>
-              </v-row>
-            <v-row >
-                <v-col>
-                    <hr>
-                </v-col>
-            </v-row>
-            <v-row class="my-custom-row ">
-                <v-col>
-                    <p class="text-black"><strong><h2>Inquiries</h2></strong></p>
-                </v-col>
-                <v-col>
-                    <p class="text-black">+1 206 395 9662</p>
-                </v-col>
-                <v-col>
-                    <p class="text-black">hello(at)parker.studio</p>
-                </v-col>
-            </v-row>
-            <v-row >
-                <v-col>
-                    <hr>
-                </v-col>
-            </v-row>
-            <v-row class="my-custom-row">
-                <v-col>
-                    <p class="text-black"><strong><h2>Careers Internships</h2></strong></p>
-                </v-col>
-                <v-col>
-                    <p class="text-black">work(at)parker.studio</p>
-                </v-col>
-                <v-col>
-                    <p class="text-black">intern(at)parker.studio</p>
-                </v-col>
-            </v-row>
-            <v-row>
-                <v-col>
-                    <hr>
-                </v-col>
-            </v-row>
-            <v-row class="my-custom-row">
-                <v-col>
-                    <p class="text-black"><strong><h2>Follow us</h2></strong></p>
-                </v-col>
-                <v-col>
-                    <p class="text-black">Instagram</p>
-                </v-col>
-                <v-col>
-                    <p class="text-black">Tumblr</p>
-                </v-col>
-            </v-row>
-            <v-row>
-                <v-col>
-                    <hr>
-                </v-col>
-            </v-row>
-            <v-row class="my-custom-row">
-                <v-col>
-                    <p class="text-black"><strong><h2>Newsletter</h2></strong></p>
-                </v-col>
-                <v-col>
-                    <v-text-field variant="underlined" placeholder="Email" />
-                </v-col>
-                <v-col>
-                  <v-btn color="black" class="text-white">SUBMIT</v-btn>
-                </v-col>
-            </v-row>
-        </v-col>
+  <v-container class="mb-3 mt-12">
+    <v-row class="mb-5 mt-n8" no-gutters>
+      <v-col cols="3">
+        <h4 class="text-h4 text-black mb-3">Contact</h4>
+      </v-col>
+      <v-col cols="3">
+        <div class="section-title1 mb-4">ADDRESS</div>
+      </v-col>
+      <v-col cols="3">
+        <div class="address-content1">
+          <p>PARKER STUDIO</p>
+          <p><u>5424 Ballard Ave NW</u></p>
+          <p>Unit 103</p>
+          <p>Seattle, WA 98107</p>
+          <p>United States</p>
+          <p><u>Maps <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
+        </div>
+      </v-col>
+      <v-col cols="3">
+        <div class="address-content1">
+          <p>PARKER STORE</p>
+          <p><u>5424 Ballard Ave NW</u></p>
+          <p>Unit 103</p>
+          <p>Seattle, WA 98107</p>
+          <p>United States</p>
+          <p><u>Maps <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
+        </div>
+      </v-col>
     </v-row>
-    <v-row :class="isMobile == true ? 'mt-n6': 'mb-16'">
-        <v-col cols="2">
-            <!-- Currently Working In Section -->
-            <v-toolbar class="mt-n6 marquee-container" style="background-color: #b7e3b6; z-index: 9">
-                <v-toolbar-title >
-                  <h3 v-if="isMobile !== true">Currently working in: </h3>
-                  <h5 v-else>Working in:  </h5>
-                </v-toolbar-title>
-            </v-toolbar>
-        </v-col>
-        <v-col cols="9">
-            <div class="marquee-container">
-                <div class="contact__marquee__ticker__inner">
-                    <h3 style="display: inline-block;" v-if="isMobile !== true">
-                        SEATTLE <span> (21:07:21),</span> SFO <span> (02:07:21),</span> CHICAGO <span> (23:07:21),</span> AUSTIN <span> (23:07:21),</span> NYC <span> (00:07:21),</span> LONDON <span> (00:07:21),</span>
-                    </h3>
-                    <h5 style="display: inline-block;" v-else>
-                        SEATTLE, SFO, CHICAGO, AUSTIN, NYC, LONDON
-                    </h5>
-                </div>
-            </div>
-        </v-col>
+    <hr style="margin-left:25% !important"/>
+    
+    <v-row class="mb-5 mt-4" no-gutters>
+      <v-col cols="3"/>
+      <v-col cols="3">
+        <div class="section-title1 mb-4">INQUIRIES</div>
+      </v-col>
+      <v-col cols="3">
+        <div class="address-content1">
+          <p><u>+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
+        </div>
+      </v-col>
+      <v-col cols="3">
+        <div class="address-content1">
+          <p><u>hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
+        </div>
+      </v-col>
     </v-row>
-  </v-footer>
+    <hr style="margin-left:25% !important"/>
+    
+    <v-row class="mb-5 mt-4" no-gutters>
+      <v-col cols="3"/>
+      <v-col cols="3">
+        <div class="section-title1 mb-4">CAREER INTERNSHIPS</div>
+      </v-col>
+      <v-col cols="3">
+        <div class="address-content1">
+          <p><u>work(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
+        </div>
+      </v-col>
+      <v-col cols="3">
+        <div class="address-content1">
+          <p><u>intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
+        </div>
+      </v-col>
+    </v-row>
+    <hr style="margin-left:25% !important"/>
+    
+    <v-row class="mb-5 mt-4" no-gutters>
+      <v-col cols="3"/>
+      <v-col cols="3">
+        <div class="section-title1 mb-4">FOLLOW US</div>
+      </v-col>
+      <v-col cols="3">
+        <div class="address-content1">
+          <p><u>Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
+        </div>
+      </v-col>
+      <v-col cols="3">
+        <div class="address-content1">
+          <p><u>Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
+        </div>
+      </v-col>
+    </v-row>
+    <hr style="margin-left:25% !important"/>
+    
+    <v-row class="mb-5 mt-4" no-gutters>
+      <v-col cols="3"/>
+      <v-col cols="3">
+        <div class="section-title1 mb-4">NEWSLETTER</div>
+      </v-col>
+      <v-col cols="3">
+        <div class="address-content1">
+          <v-text-field variant="underlined" placeholder="Email" />
+        </div>
+      </v-col>
+      <v-col cols="3">
+        <div class="address-content1">
+          <v-btn color="black" class="text-white">SUBMIT</v-btn>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
+
+  <v-row :class="isMobile == true ? 'mt-n6': 'mb-16'">
+    <v-col cols="2">
+      <v-toolbar class="mt-n6 marquee-container" style="background-color: #b7e3b6; z-index: 9">
+        <v-toolbar-title >
+          <h5  style="font-family:'Aeonik1'">CURRENTLY WORKING IN: </h5>
+        </v-toolbar-title>
+      </v-toolbar>
+    </v-col>
+    <v-col cols="9">
+      <div class="marquee-container">
+        <div class="contact__marquee__ticker__inner">
+          <h3  style="display: inline-block;font-family:'Aeonik1'" v-if="isMobile !== true">
+            SEATTLE <span> (21:07:21),</span> SFO <span> (02:07:21),</span> CHICAGO <span> (23:07:21),</span> AUSTIN <span> (23:07:21),</span> NYC <span> (00:07:21),</span> LONDON <span> (00:07:21),</span>
+          </h3>
+        </div>
+      </div>
+    </v-col>
+  </v-row>
+</v-footer>
   <!-- //Mobile -->
   <v-footer color="#b7e3b6" v-if="isMobile" 
   style="max-height: 92vh; height: 92vh; position: fixed; bottom: 0; left: 0; right: 0;" 
-  id="contact"
-  :style="{'z-index': isAtBottom ? 99 : 1}">
+  id="contact" :style="{'z-index': isAtBottom ? 99 : 1}">
   <v-container class="mb-3 mt-12">
     <!-- Addresses Section -->
     <v-row class="mb-4" no-gutters>
@@ -1808,6 +1811,13 @@ a:active, a:hover {
 .blog-content {
   line-height: 1.5;
   font-size:12px !important; 
+  /* font-weight: 300 !important; */
+  font-family: 'Poppins';
+
+}
+.address-content1 {
+  line-height: 1.5;
+  font-size:15px !important; 
   /* font-weight: 300 !important; */
   font-family: 'Poppins';
 
