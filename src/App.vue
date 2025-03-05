@@ -473,7 +473,7 @@
         <v-card :height="isMobile ? '410vh' : '130vh'" color="#252423" style="position: relative; border-radius: 0% !important">
           <v-container fluid  style="padding:10% !important;" :class="!isMobile ? 'mt-n10' : ''">
                 <div class="section-header mb-8">
-                    <h2  class="text-h3 text-white mb-3 mt-4">Team</h2>
+                    <h2  class="text-h3 text-white mb-3 mt-4" style="font-family:'Aeonik1">Team</h2>
                 </div>
                 <div class="team-members-container" 
                     ref="teamMembersContainer"
@@ -492,8 +492,8 @@
                                   :width="isMobile ? 400 : 450"
                                   @mousemove="handleMouseMove($event, member.name)"
                                   @mouseleave="handleMouseLeave"/>
-                            <h3 class="text-white">{{ member.name }}</h3>
-                            <p class="text-white">{{ member.position }}</p>
+                            <h3 style="font-family:'Aeonik1" class="text-white mt-1">{{ member.name }}</h3>
+                            <p  style="font-family:'Aeonik1" class="text-white mt-1">{{ member.position }}</p>
                         </v-col>
                     </div>
                 </div>
