@@ -765,6 +765,7 @@
   export default {
     data() {
       return {
+        forLoading:false,
         drawer: false,
         menuItems: [
           { text: 'HOME', link: '#home' },
@@ -937,11 +938,15 @@
 
                         if (sectionId === 'results') {
                             // Check if counting has not started
-                            if (!localStorage.getItem('countingStarted')) {
+                            if (this.forLoading == false) {
                                 this.countIdeasSpunOut = 0;
                                 this.countIdeasKilled = 0;
                                 this.startCounting();
-                                localStorage.setItem('countingStarted', 'true'); // Set the flag to prevent re-triggering
+                                localStorage.setItem('countingStarted', 'true');
+                                this.forLoading = true
+                              // Set the flag to prevent re-triggering
+                            }else{
+                              this.forLoading = true
                             }
                         } else {
                             // Optionally clear the countingStarted flag if you want to allow counting to restart
