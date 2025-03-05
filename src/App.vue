@@ -944,7 +944,6 @@
                                 this.startCounting();
                                 localStorage.setItem('countingStarted', 'true');
                                 this.forLoading = true
-                              // Set the flag to prevent re-triggering
                             }else{
                               this.forLoading = true
                             }
