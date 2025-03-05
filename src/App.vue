@@ -93,7 +93,7 @@
       </v-navigation-drawer>
 
   <!-- 1ST Section -->
-      <section style="position: relative; z-index: 2;"  id="home" :height="isMobile ? '100vh' : '100vh'" >
+      <section style="position: relative; z-index: 999;"  id="home" :height="isMobile ? '100vh' : '100vh'" >
         <v-parallax color="#252423" :height="isMobile ? '100vh' : '100vh'">
           <div class="hero-content">
             <div class="title-wrapper">
