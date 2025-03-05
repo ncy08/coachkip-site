@@ -928,34 +928,38 @@
         this.showFloatingText = false;
       },
       createIntersectionObserver() {
-          const observer = new IntersectionObserver(
-              (entries) => {
-                  entries.forEach(entry => {
-                      if (entry.isIntersecting) {
-                          const sectionId = entry.target.id;
-                          this.activeSection = sectionId; 
-                          if (sectionId === 'results') {
-                          if(!localStorage.getItem('countingStarted')){
-                            this.countIdeasSpunOut = 0;
-                              this.countIdeasKilled = 0;
-                              this.startCounting();
-                              localStorage.setItem('countingStarted', 'true')
-                          }
-                             
-                          }
-                      }
-                  });
-              },
-              {
-                  threshold: 0.5, 
-              }
-          );
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.id;
+                        this.activeSection = sectionId; 
 
-          // Observe all sections
-          document.querySelectorAll('section').forEach(section => {
-              observer.observe(section);
-          });
-      },
+                        if (sectionId === 'results') {
+                            // Check if counting has not started
+                            if (!localStorage.getItem('countingStarted')) {
+                                this.countIdeasSpunOut = 0;
+                                this.countIdeasKilled = 0;
+                                this.startCounting();
+                                localStorage.setItem('countingStarted', 'true'); // Set the flag to prevent re-triggering
+                            }
+                        } else {
+                            // Optionally clear the countingStarted flag if you want to allow counting to restart
+                            // localStorage.removeItem('countingStarted');
+                        }
+                    }
+                });
+            },
+            {
+                threshold: 0.5, 
+            }
+        );
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    },
       resetCounting() {
         localStorage.removeItem('countingStarted');
       },
@@ -1044,7 +1048,7 @@
       },
       startCounting() {
 
-            const duration = 2000; // Duration of the counting animation in milliseconds
+            const duration = 1000; // Duration of the counting animation in milliseconds
             const startTime = performance.now(); // Get the current time
             const initialSpunOut = this.countIdeasSpunOut; // Initial value for spun out
             const initialKilled = this.countIdeasKilled; // Initial value for killed
