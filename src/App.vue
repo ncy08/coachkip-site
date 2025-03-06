@@ -2,7 +2,7 @@
     <v-app light>
 
       <!-- Floating Text Overlay -->
-        <div v-if="showFloatingText" class="floating-text"   :style="{ left: floatingX + 'px', top: floatingY + 'px' }">
+        <div style="z-index:1999;font-family:'Aeonik" v-if="showFloatingText" class="floating-text"   :style="{ left: floatingX + 'px', top: floatingY + 'px' }">
           <span>{{ hoveredMember.name ? hoveredMember.name  : hoveredMember }}</span>
         </div>
 
@@ -131,7 +131,7 @@
       </section>
 
       <!-- HOW WE DO -->
-      <section style="position: relative; z-index: 999;" :height="isMobile ? '80vh' : '100vh'" id="how-we-do" @mousemove="handleMouseMove($event, 'How we do')" @mouseleave="handleMouseLeave">
+      <section style="position: relative; z-index: 999;" :height="isMobile ? '80vh' : '100vh'" id="how-we-do" @mousemove="handleMouseMove($event, 'What we do')" @mouseleave="handleMouseLeave">
           <v-parallax color="#252423" :height="isMobile ? '80vh' : '100vh'">
               <v-container :class="!isMobile ? 'custom-padding' : ''">
                     <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
@@ -183,7 +183,7 @@
         </v-parallax>
       </section>
     <!-- //HOW WE DO IT SECTION -->
-      <section style="position: relative; z-index: 999;" :height="isMobile ? '100vh' : '100vh'" id="how-we-do-it" @mousemove="handleMouseMove($event, 'How we do')" @mouseleave="handleMouseLeave">
+      <section style="position: relative; z-index: 999;" :height="isMobile ? '100vh' : '100vh'" id="how-we-do-it" @mousemove="handleMouseMove($event, 'How we do it')" @mouseleave="handleMouseLeave">
           <v-parallax color="#252423" :height="isMobile ? '100vh' : '100vh'">
             <v-container :class="!isMobile ? 'custom-padding' : ''">
                   <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
