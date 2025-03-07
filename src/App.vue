@@ -1229,7 +1229,7 @@
           right: 0;
           display: flex;
           flex-direction: column;
-          padding: 26px;
+          z-index:2
         "
       >
         <!-- First Row -->
@@ -1525,7 +1525,8 @@
           right: 0;
           display: flex;
           flex-direction: column;
-          padding: 26px;
+          padding: 35px;
+          z-index:2
         "
       >
         <div class="footer-row1" style="margin-top: 10% !important">
@@ -3222,6 +3223,7 @@
     border-radius: 30px; /* Rounded corners */
     border: 1px solid #ccc;
     width: 300px; /* Adjust width */
+    color:white !important;
   }
   .rounded-input1 {
     padding: 15px;
