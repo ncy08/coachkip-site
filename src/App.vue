@@ -256,7 +256,7 @@
                  paddingLeft: '0',paddingRight: '15px',}: {}">
                  <p  style="  font-weight: 400;  display: block;  margin-top: 0.5em;margin-bottom: 1em;
                     font-family: 'Aeonik1';  color: #fffbe9 !important; "
-                    :style="{ 'font-size': !isMobile ? '48px' : '38px', lineHeight: 1.00,paddingRight: '10%',
+                    :style="{ 'font-size': !isMobile ? '48px' : '38px', lineHeight: 1.00,paddingRight: '5%',
                        color:isDarkMode ? '#fffbe9' : '#252423'
                         }" >
                        A new model for building companies.
