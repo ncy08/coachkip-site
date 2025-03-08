@@ -1,6 +1,6 @@
   <template>
     <v-app >
-      <div color="white">
+      <div>
         <v-btn
         @click="toogle"
         class="dark-mode-toggle"
