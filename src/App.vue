@@ -183,7 +183,7 @@
 
   <!-- TITLE -->
   <section style="position: relative; min-height: 100vh; z-index: 999;" id="home">
-  <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; min-height: 100vh;">
+  <v-parallax :color="isDarkMode ? '#252423' : 'white'" style="position: relative; min-height: 100vh;">
     <div class="hero-content">
       <div class="title-wrapper">
         <div class="main-title">
@@ -248,7 +248,7 @@
 
   <!-- FOLLOWING PAGE -->
   <section :style="{ minHeight: isMobile ? '20vh' : '100vh'}"  style=" position: relative; border-radius: 0% !important ;z-index: 999;">
-    <v-parallax  :color="isDarkMode ? '#252423' : '#fffbe9'"  :style="{ minHeight: isMobile ? '20vh' : '100vh'}"  style="position: relative; border-radius: 0% !important;">
+    <v-parallax  :color="isDarkMode ? '#252423' : 'white'"  :style="{ minHeight: isMobile ? '20vh' : '100vh'}"  style="position: relative; border-radius: 0% !important;">
       <v-container :class="!isMobile ? 'custom-padding' : ''">
         <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
           <v-col  :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -280,7 +280,7 @@
         <!-- 1ST SECTION : WHAT WE DO -->
   <section :style="{ minHeight: isMobile ? '20vh' : '80vh'}" style="  position: relative;  border-radius: 0% !important;z-index: 999; "
           id="mission" @mousemove="handleMouseMove($event, 'What we do')" @mouseleave="handleMouseLeave">
-          <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '20vh' : '80vh'}" style="position: relative; border-radius: 0% !important;">
+          <v-parallax :color="isDarkMode ? '#252423' : 'white'" :style="{ minHeight: isMobile ? '20vh' : '80vh'}" style="position: relative; border-radius: 0% !important;">
             <v-container :class="!isMobile ? 'custom-padding' : ''">
               <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
                 <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -315,7 +315,7 @@
         <!-- //2ND SECTON : LIST OF THINGS -->
   <section  :style="{ minHeight: isMobile ? '50vh' : '60vh'}" style=" position: relative;
           border-radius: 0% !important;z-index: 999;">
-          <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'"  :style="{ minHeight: isMobile ? '50vh' : '60vh'}" 
+          <v-parallax :color="isDarkMode ? '#252423' : 'white'"  :style="{ minHeight: isMobile ? '50vh' : '60vh'}" 
             style="position: relative; border-radius: 0% !important; " >
             <v-container  fluid :class="!isMobile ? 'services-container' : ''"
               :style=" !isMobile  ? {  marginLeft: '10px',  paddingBottom: '5em', paddingLeft: '0',
@@ -344,7 +344,7 @@
   <section :style="{ minHeight: isMobile ? '25vh' : '100vh'}"
           style=" position: relative;  border-radius: 0% !important;z-index: 999;"
           id="kip" @mousemove="handleMouseMove($event, 'How we do it')"  @mouseleave="handleMouseLeave">
-          <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '25vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; " >
+          <v-parallax :color="isDarkMode ? '#252423' : 'white'" :style="{ minHeight: isMobile ? '25vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; " >
             <v-container :class="!isMobile ? 'custom-padding' : ''">
               <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
                 <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -379,7 +379,7 @@
   <section  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
-          :color="isDarkMode ? '#252423' : '#fffbe9'" >
+          :color="isDarkMode ? '#252423' : 'white'" >
             <v-container fluid class="fade-up">
               <v-row align="center" justify="center">
                 <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -435,7 +435,7 @@
   <section  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
-          :color="isDarkMode ? '#252423' : '#fffbe9'"  >
+          :color="isDarkMode ? '#252423' : 'white'"  >
             <v-container fluid class="fade-up">
               <v-row align="center" justify="center">
                 <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -488,7 +488,7 @@
   <section  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
-          :color="isDarkMode ? '#252423' : '#fffbe9'"  >
+          :color="isDarkMode ? '#252423' : 'white'"  >
             <v-container fluid class="fade-up">
               <v-row align="center" justify="center">
                 <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -538,7 +538,7 @@
   <section  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
-          :color="isDarkMode ? '#252423' : '#fffbe9'"  >
+          :color="isDarkMode ? '#252423' : 'white'"  >
             <v-container fluid class="fade-up">
               <v-row align="center" justify="center">
                 <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -596,7 +596,7 @@
   <section  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
-          :color="isDarkMode ? '#252423' : '#fffbe9'"  >
+          :color="isDarkMode ? '#252423' : 'white'"  >
             <v-container fluid class="fade-up">
               <v-row align="center" justify="center">
                 <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -654,7 +654,7 @@
         <!-- //RESULTS SECTION -->
   <section id="about" style="position: relative; z-index: 999; min-height: 100vh">
     <v-parallax style="position: relative; border-radius: 0% !important; min-height: 100vh" 
-        :color="isDarkMode ? '#252423' : '#fffbe9'">
+        :color="isDarkMode ? '#252423' : 'white'">
         <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
             <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
                 <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
@@ -703,7 +703,7 @@
         <!-- //SPONSORS SECTION -->
   <section id="about" style="position: relative; z-index: 999; min-height: 60vh">
       <v-parallax style="position: relative; border-radius: 0% !important; min-height: 60vh" 
-          :color="isDarkMode ? '#252423' : '#fffbe9'">
+          :color="isDarkMode ? '#252423' : 'white'">
           <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
               <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
                   <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
@@ -730,7 +730,7 @@
 
         <!-- //TEAM SECTION -->
  <section  id="team" class="shadow-bottom" style="position: relative; z-index: 999; min-height: 100vh">
-    <v-card :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; border-radius: 0% !important; min-height: 100vh">
+    <v-card :color="isDarkMode ? '#252423' : 'white'" style="position: relative; border-radius: 0% !important; min-height: 100vh">
         <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
             <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
                 <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
