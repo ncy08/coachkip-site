@@ -16,10 +16,10 @@
         </div>
 
     <v-toolbar class="tBar" color="#252423" style="z-index: 1999">
-     <v-toolbar-title @click="toogle()" color="#fffbe9">COACH KIP</v-toolbar-title>
+     <v-toolbar-title @click="toogle()" color="white">COACH KIP</v-toolbar-title>
       <v-spacer></v-spacer>
         <button  @click.stop="drawer = !drawer"  style=" float: right; font-family: 'Aeonik1';
-              background-color: #fffbe9; color: black;  border-bottom-style: none;
+              background-color: white; color: black;  border-bottom-style: none;
               border-bottom-color: #000;  border-radius: 20px;  padding: 2px 22px 3px; display: block; "
               class="mr-6 hidden-sm-and-up mt-n1" @click="drawer = true" > Menu
         </button>
