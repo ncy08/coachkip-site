@@ -1,10 +1,7 @@
   <template>
     <v-app >
       <div>
-        <v-btn
-        @click="toogle"
-        class="dark-mode-toggle"
-        icon
+        <v-btn   @click="toogle"  class="dark-mode-toggle"   icon
         :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }"
       >
         <v-icon :style="{ color: isDarkMode ? 'black' : 'white', }">{{ isDarkMode ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
@@ -265,7 +262,6 @@
                       font-family: 'Aeonik1'; color: #fffbe9 !important; "
                     :style="{
                       'font-size': !isMobile ? '21px' : '16px',
-                      'border-bottom': isMobile ? '1px solid #636363 !important' : '',
                       letterSpacing: '0.10px',textAlign: 'left',  color:isDarkMode ? '#fffbe9' : '#252423'}" >
                       
                       We work with world-class entreprenuers in the Pacific Northwest to turn
@@ -297,7 +293,6 @@
                       font-family: 'Aeonik1'; color: #fffbe9 !important; "
                     :style="{
                       'font-size': !isMobile ? '21px' : '16px',
-                      'border-bottom': isMobile ? '1px solid #636363 !important' : '',
                       letterSpacing: '0.2px',textAlign: 'left',  color:isDarkMode ? '#fffbe9' : '#252423'}" >
                       
                       We are your dream swiss-army-knife co-founder. We design and build a
@@ -361,7 +356,6 @@
                       font-family: 'Aeonik1'; color: #fffbe9 !important; "
                     :style="{
                       'font-size': !isMobile ? '21px' : '16px',
-                      'border-bottom': isMobile ? '1px solid #636363 !important' : '',
                       letterSpacing: '0.2px',textAlign: 'left',  color:isDarkMode ? '#fffbe9' : '#252423'}" >
                       
                       Building a great startup is hard. Really hard. It requires domain
@@ -652,7 +646,7 @@
           </v-parallax>
   </section>
         <!-- //RESULTS SECTION -->
-  <section id="about" style="position: relative; z-index: 999; min-height: 100vh">
+  <section id="results" style="position: relative; z-index: 999; min-height: 100vh">
     <v-parallax style="position: relative; border-radius: 0% !important; min-height: 100vh" 
         :color="isDarkMode ? '#252423' : 'white'">
         <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
@@ -729,30 +723,32 @@
   </section>
 
         <!-- //TEAM SECTION -->
- <section  id="team" class="shadow-bottom" style="position: relative; z-index: 999; min-height: 100vh">
-    <v-card :color="isDarkMode ? '#252423' : 'white'" style="position: relative; border-radius: 0% !important; min-height: 100vh">
-        <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
-            <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
-                <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
-                    :style="!isMobile ? { marginLeft: '16px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: '15px' } : {}">
-                    <h4 :class="isMobile ? 'mb-n3' : ''" 
-                        :style="{ color: '#636363', fontSize: isMobile ? '21px' : '32px', marginTop: isMobile ? '0' : '1.25em', marginBottom: isMobile ? '0' : '.65em', fontWeight: 400, marginLeft: '15px', paddingRight: '15px', paddingBottom: '5em', paddingLeft: '0', fontFamily: 'Aeonik1' }">
-                        Team
-                    </h4>
-                </v-col>
-            </v-row>
-            <div class="team-members-container" ref="teamMembersContainer" @mousedown="startDrag" @mouseup="stopDrag" @mouseleave="stopDrag" @mousemove="drag">
-                <div :class="!isMobile ? 'team-members-row' : ''">
-                    <v-col v-for="member in teamMembers" :key="member.id" :cols="isMobile ? 12 : 2" class="d-flex flex-column align-center fade-up">
-                        <v-img :src="member.image" class="team-image" :height="isMobile ? 470 : 570" :width="isMobile ? 400 : 450" 
-                            @mousemove="handleMouseMove($event, member.name)" @mouseleave="handleMouseLeave" />
-                        <h3 style="font-family: 'Aeonik1'" :class="isDarkMode ? 'text-white' : 'text-black'">{{ member.name }}</h3>
-                        <p color="black" style="font-family: 'Aeonik1'" :class="isDarkMode ? 'text-white' : 'text-black'">{{ member.position }}</p>
-                    </v-col>
-                </div>
-            </div>
-        </v-container>
-    </v-card>
+ <section id="team" class="shadow-bottom" style="position: relative; z-index: 999; min-height: 70vh">
+  <v-card :color="isDarkMode ? '#252423' : 'white'" style="position: relative; border-radius: 0% !important; min-height: 70vh">
+    <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
+      <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
+        <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
+            :style="!isMobile ? { marginLeft: '16px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: '15px' } : {}">
+          <h4 :class="isMobile ? 'mb-n3' : ''" 
+              :style="{ color: '#636363', fontSize: isMobile ? '21px' : '32px', marginTop: isMobile ? '0' : '1.25em', marginBottom: isMobile ? '0' : '.65em', fontWeight: 400, marginLeft: '15px', paddingRight: '15px', paddingBottom: '5em', paddingLeft: '0', fontFamily: 'Aeonik1' }">
+              Team
+          </h4>
+        </v-col>
+      </v-row>
+      <div class="team-members-container mt-n15"  ref="teamMembersContainer" @mousedown="startDrag" 
+           @mouseup="stopDrag"  @mouseleave="stopDrag"      @mousemove="drag"
+           :style="{ overflowX: isMobile ? 'auto' : 'hidden', whiteSpace: 'nowrap' }">
+        <div class="team-members-row" style="display: flex; flex-direction: row;">
+          <v-col v-for="member in teamMembers" :key="member.id" :cols="isMobile ? 9 : 8" class="d-flex flex-column align-center fade-up">
+            <v-img  :src="member.image" class="team-image" :height="isMobile ? 470 : 570" :width="isMobile ? 400 : 450" 
+                @mousemove="handleMouseMove($event, member.name)" @mouseleave="handleMouseLeave" />
+            <h3 style="font-family: 'Aeonik1'" :class="isDarkMode ? 'text-white' : 'text-black'">{{ member.name }}</h3>
+            <p color="black" style="font-family: 'Aeonik1'" :class="isDarkMode ? 'text-white' : 'text-black'">{{ member.position }}</p>
+          </v-col>
+        </div>
+      </div>
+    </v-container>
+  </v-card>
 </section>
 
      <!-- //CONTACT SECTION -->
@@ -1319,30 +1315,25 @@
     export default {
       data() {
         return {
+          hasStartedCounting:false,
           isDarkMode:false,
           logos: [
-            {
-              src:
+            { src:
                 "https://cdn.prod.website-files.com/63ef52716f3c2cb3c5525f21/63ef63b75aac697bb4b17e81_client-06.svg",
             },
-            {
-              src:
+            { src:
                 "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e78784f08679efe2756_SnapShotDark.svg",
             },
-            {
-              src:
+            {src:
                 "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12d83d99315176ef82659_GenZDark.svg",
             },
-            {
-              src:
+            {src:
                 "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ebafce2edf7ddb8cf58_VolumeDark.svg",
             },
-            {
-              src:
+            {src:
                 "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73563dba154dad_SitemarkDark.svg",
             },
-            {
-              src:
+            {src:
                 "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ec2e784a68c2fbf43fc_WavelessDark.svg",
             },
           ],
@@ -1541,7 +1532,7 @@
           this.isMobile = window.innerWidth < 480;
           // this.countIdeasSpunOut = 0;
           // this.countIdeasKilled = 0;
-          this.startCounting();
+          // this.startCounting();
         },
         handleCardMousemove(e, card) {
           this.hoveredCard = card;
@@ -1554,45 +1545,43 @@
           this.showFloatingText = false;
         },
         createIntersectionObserver() {
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  const sectionId = entry.target.id;
-                  this.activeSection = sectionId;
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const sectionId = entry.target.id;
+                this.activeSection = sectionId;
 
-                  // Add visible class to text elements
-                  const textElements = entry.target.querySelectorAll(".fade-up");
-                  textElements.forEach((el) => el.classList.add("visible"));
-
-                  // Existing logic for counting
-                  if (sectionId === "results") {
-                    if (this.forLoading == false) {
-                      this.countIdeasSpunOut = 0;
-                      this.countIdeasKilled = 0;
-                      this.startCounting();
-                      localStorage.setItem("countingStarted", "true");
-                      this.forLoading = true;
-                    } else {
-                      this.forLoading = true;
-                    }
-                  }
-                } else {
-                  // Remove visible class when out of view
-                  const textElements = entry.target.querySelectorAll(".fade-up");
-                  textElements.forEach((el) => el.classList.remove("visible"));
+                // Add visible class to text elements
+                const textElements = entry.target.querySelectorAll(".fade-up");
+                textElements.forEach((el) => el.classList.add("visible"));
+                console.log(sectionId);
+                
+                // Existing logic for counting
+                if (sectionId === "results" && !this.hasStartedCounting) {
+                  console.log('ey');
+                  
+                  this.countIdeasSpunOut = 0;
+                  this.countIdeasKilled = 0;
+                  this.startCounting();
+                  this.hasStartedCounting = true; // Set the flag to true
                 }
-              });
-            },
-            {
-              threshold: 0.5,
-            }
-          );
-          // Observe all sections
-          document.querySelectorAll("section").forEach((section) => {
-            observer.observe(section);
-          });
-        },
+              } else {
+                // Remove visible class when out of view
+                const textElements = entry.target.querySelectorAll(".fade-up");
+                textElements.forEach((el) => el.classList.remove("visible"));
+              }
+            });
+          },
+          {
+            threshold: 0.5,
+          }
+        );
+        // Observe all sections
+        document.querySelectorAll("section").forEach((section) => {
+          observer.observe(section);
+        });
+      },
         resetCounting() {
           localStorage.removeItem("countingStarted");
         },
@@ -1731,13 +1720,15 @@
           this.lastScrollPosition = scrollTop;
         },
       },
+      created() {
+        this.checkDarkMode(); // Check dark mode preference on component creation
+      },
       mounted() {
         const resizeObserver = new ResizeObserver((entries) => {
           const isMobile = entries[0].contentRect.width < 768;
           this.setCustomCursor(isMobile ? "white" : "dark");
         });
         localStorage.setItem('isDarkMode', this.isDarkMode);
-        this.checkDarkMode();
         window.addEventListener("resize", this.checkMobile);
         resizeObserver.observe(document.body);
         this.createIntersectionObserver();
@@ -2144,12 +2135,10 @@
 
     .team-members-row {
       display: inline-flex;
-      padding: 0 40px;
     }
 
     .team-image {
       transition: transform 0.3s ease;
-      margin: 0 10px;
       user-select: none;
       -moz-user-select: none;
       -webkit-user-select: none;
@@ -2950,5 +2939,46 @@
     width: 56px; /* Adjust size */
     height: 56px; /* Adjust size */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+.team-members-container {
+  overflow-x: auto; /* Allow horizontal scrolling */
+  overflow-y: hidden; /* Hide vertical overflow */
+  white-space: nowrap; /* Prevent line breaks */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  padding: 20px 0; /* Add some padding */
+  position: relative; /* Position relative for dragging */
+}
+.team-members-container {
+  overflow-x: auto; /* Allow horizontal scrolling */
+  overflow-y: hidden; /* Hide vertical overflow */
+  white-space: nowrap; /* Prevent line breaks */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  position: relative; /* Position relative for dragging */
+}
+
+.team-members-row {
+  display: flex; /* Use flexbox to arrange items in a row */
+  flex-direction: row; /* Ensure items are in a row */
+}
+/* Remove fixed positioning and high z-index */
+v-footer {
+  position: relative;
+  margin-top: auto;
+  z-index: auto;
+}
+
+/* Add this to improve scrolling performance */
+.v-parallax {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Optimize the floating text overlay */
+.floating-text {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1; /* Lower z-index */
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
   </style>
