@@ -1,5 +1,5 @@
   <template>
-    <v-app >
+    <v-app light>
       <div>
         <v-btn   @click="toogle"  class="dark-mode-toggle"   icon
         :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }"
@@ -247,7 +247,7 @@
 </section>
 
   <!-- FOLLOWING PAGE -->
-  <section :style="{ minHeight: isMobile ? '20vh' : '100vh'}"  style=" position: relative; border-radius: 0% !important ;z-index: 999;">
+  <section :style="{ minHeight: isMobile ? '30vh' : '100vh'}"  style=" position: relative; border-radius: 0% !important ;z-index: 999;">
     <v-parallax  :color="isDarkMode ? '#252423' : 'white'"  :style="{ minHeight: isMobile ? '20vh' : '100vh'}"  style="position: relative; border-radius: 0% !important;">
       <v-container :class="!isMobile ? 'custom-padding' : ''">
         <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
@@ -377,7 +377,7 @@
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
           :color="isDarkMode ? '#252423' : 'white'" >
-            <v-container fluid class="fade-up">
+            <v-container fluid >
               <v-row align="center" justify="center">
                 <v-col cols="12" md="6" class="d-flex justify-center align-center">
                   <div 
@@ -433,7 +433,7 @@
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
           :color="isDarkMode ? '#252423' : 'white'" >
-            <v-container fluid class="fade-up">
+            <v-container fluid >
               <v-row align="center" justify="center">
                 <v-col cols="12" md="6" class="d-flex justify-center align-center">
                   <div 
@@ -484,7 +484,7 @@
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
           :color="isDarkMode ? '#252423' : 'white'"  >
-            <v-container fluid class="fade-up">
+            <v-container fluid >
               <v-row align="center" justify="center">
                 <v-col cols="12" md="6" class="d-flex justify-center align-center">
                   <div
@@ -537,7 +537,7 @@
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
           :color="isDarkMode ? '#252423' : 'white'"  >
-            <v-container fluid class="fade-up">
+            <v-container fluid >
               <v-row align="center" justify="center">
                 <v-col cols="12" md="6" class="d-flex justify-center align-center">
                   <div
@@ -587,7 +587,7 @@
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
           :color="isDarkMode ? '#252423' : 'white'"  >
-            <v-container fluid class="fade-up">
+            <v-container fluid >
               <v-row align="center" justify="center">
                 <v-col cols="12" md="6" class="d-flex justify-center align-center">
                   <div
@@ -638,7 +638,7 @@
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
           :color="isDarkMode ? '#252423' : 'white'"  >
-            <v-container fluid class="fade-up">
+            <v-container fluid >
               <v-row align="center" justify="center">
                 <v-col cols="12" md="6" class="d-flex justify-center align-center">
                   <div
@@ -689,7 +689,7 @@
   <section id="results" style="position: relative; z-index: 999; min-height: 110vh">
     <v-parallax style="position: relative; border-radius: 0% !important; min-height: 110vh" 
         :color="isDarkMode ? '#252423' : 'white'">
-        <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
+        <v-container :class="!isMobile ? 'custom-padding' : ''" >
             <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
                 <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
                     :style="!isMobile ? { marginLeft: '15px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: '15px' } : {}">
@@ -738,7 +738,7 @@
      <section id="results" style="position: relative; z-index: 999; min-height: 60vh">
     <v-parallax style="position: relative; border-radius: 0% !important; min-height: 60vh" 
         :color="isDarkMode ? '#252423' : 'white'">
-        <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
+        <v-container :class="!isMobile ? 'custom-padding' : ''" >
             
               <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
                   <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
@@ -766,7 +766,7 @@
         <!-- //TEAM SECTION -->
  <section id="team" class="shadow-bottom" style="position: relative; z-index: 999; min-height: 70vh">
   <v-card :color="isDarkMode ? '#252423' : 'white'" style="position: relative; border-radius: 0% !important; min-height: 70vh">
-    <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
+    <v-container :class="!isMobile ? 'custom-padding' : ''" >
       <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
         <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
             :style="!isMobile ? { marginLeft: '16px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: '15px' } : {}">
@@ -2817,22 +2817,22 @@
 
     .rounded-input {
       padding: 20px;
-      border-radius: 30px; /* Rounded corners */
+      border-radius: 30px; 
       border: 1px solid #ccc;
-      width: 300px; /* Adjust width */
+      width: 300px; 
       color:white !important;
     }
     .rounded-input1 {
       padding: 15px;
-      border-radius: 30px; /* Rounded corners */
-      width: 280px; /* Adjust width */
+      border-radius: 30px; 
+      width: 280px; 
     }
 
     .join-button {
       margin-top: 10px;
       padding: 20px 10px 22px 15px;
       border-radius: 30px;
-      background-color: black; /* Blue color */
+      background-color: black; 
       color: white;
       border: none;
       cursor: pointer;
@@ -2843,7 +2843,7 @@
       margin-top: 10px;
       padding: 10px 10px;
       border-radius: 30px;
-      background-color: black; /* Blue color */
+      background-color: black; 
       color: white;
       border: none;
       cursor: pointer;
@@ -2851,19 +2851,18 @@
       letter-spacing: 1px;
     }
 
-    /* Optional animation for button on hover */
     .join-button:hover {
       transition: background-color 1.3s ease;
       background-color: #ffd700;
       color: rgb(3, 3, 3) !important;
     }
     .dark-mode {
-      filter: invert(1); /* Inverts the colors */
+      filter: invert(1);
     } 
 
     .title-wrapper {
-    margin-top: 10vh; /* Push the title down */
-    font-size: 3.5rem; /* Smaller title size */
+    margin-top: 10vh; 
+    font-size: 3.5rem; 
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -2885,11 +2884,10 @@
   .separator {
     width: 50%;
     height: 2px;
-    background-color: #ffd700; /* Accent color for the separator */
-    margin: 40px auto; /* Space between the title and the form */
+    background-color: #ffd700; 
+    margin: 40px auto; 
   }
 
-  /* Input and button styling */
   .form-container {
     margin-top: 20px;
     text-align: center;
@@ -2932,7 +2930,6 @@
     transform: scale(1.05);
   }
 
-  /* Social Icon Styling */
   .social-icons {
     margin-top: 30px;
   }
@@ -2946,7 +2943,6 @@
     transform: scale(1.2);
   }
 
-  /* Animation for fading in title */
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -2956,7 +2952,6 @@
     }
   }
 
-  /* Animation for the word elements */
   @keyframes wordAnim {
     0% {
       opacity: 0;
@@ -2972,10 +2967,9 @@
     }
   }
 
-  /* Add mobile responsiveness */
   @media (max-width: 600px) {
     .title-wrapper {
-      font-size: 2.5rem; /* Smaller title for mobile */
+      font-size: 2.5rem; 
     }
 
     .input-field {
@@ -2989,12 +2983,12 @@
   }
   .dark-mode-toggle {
     position: fixed;
-    bottom: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    z-index: 1000; /* Ensure it is above other elements */
-    border-radius: 50%; /* Make it circular */
-    width: 56px; /* Adjust size */
-    height: 56px; /* Adjust size */
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; 
+    border-radius: 50%; 
+    width: 56px;
+    height: 56px; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
 }
 .team-members-container {
@@ -3025,10 +3019,7 @@ v-footer {
 }
 
 /* Add this to improve scrolling performance */
-.v-parallax {
-  will-change: transform;
-  transform: translateZ(0);
-}
+
 
 /* Optimize the floating text overlay */
 .floating-text {
