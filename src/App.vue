@@ -200,8 +200,11 @@
             type="email"
             placeholder="Enter Email"
             :class="isMobile ? 'rounded-input1' : 'rounded-input'"
-            :style="{ border: !isDarkMode ? '1px solid black' : '1px solid #ccc' }"
-          />
+            :style="{
+              border: !isDarkMode ? '1px solid black' : '1px solid #ccc',
+              color: isDarkMode ? 'white' : 'black !important' // Change text color based on isDarkMode
+            }"
+  />
           <button :class="isMobile ? 'join-button1' : 'join-button'" class="join-button">
             Join Waitlist
           </button>
