@@ -373,7 +373,7 @@
           </v-parallax>
   </section>
         <!-- //1 - IDEA SECTION -->
-  <section  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+  <section id="mission"  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
           :color="isDarkMode ? '#252423' : 'white'" >
@@ -429,7 +429,58 @@
           </v-parallax>
   </section>
         <!-- //2 - VALIDATION SECTION -->
-  <section  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+  <section id="mission" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+            z-index: 999;  " >
+          <v-parallax :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+          :color="isDarkMode ? '#252423' : 'white'" >
+            <v-container fluid class="fade-up">
+              <v-row align="center" justify="center">
+                <v-col cols="12" md="6" class="d-flex justify-center align-center">
+                  <div 
+                    @mousemove="handleMouseMove($event, '02—Validation')" 
+                    @mouseleave="handleMouseLeave"
+                    ref="lottieContainer2" 
+                    :class="{'dark-mode': !isDarkMode}" 
+                    style="margin-bottom: -3em" 
+                    :style="{width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px'}"
+                  ></div>
+                </v-col>
+                <v-col cols="12" md="5" style="padding-right: 2% !important">
+                  <h4  class="section-title color-slate"  color="#e4dbcc"
+                    style="margin-top: 1.25em; margin-bottom: 1.75em'  ;
+                    font-weight: 400; line-height: 1.5;"
+                    :style="{ 'font-size': !isMobile ? '32px' : '21px' }">
+                    02—Validation
+                  </h4>
+                  <p  
+                    style="   font-weight: 400;  display: block;  margin-top: 0.5em;
+                      margin-bottom: 1em;  font-family: 'Aeonik1'; color: #fffbe9 !important; "
+                    :style="{ 'font-size': !isMobile ? '21px' : '30px', 
+                    lineHeight: 1.15 , letterSpacing: '0.1px',  paddingRight: '6%',
+                    color:isDarkMode ? '#fffbe9' : '#252423'  }">
+                                        Every idea we work on sounds good at first. But nine out of ten aren't.
+
+                  </p>
+                  <p class="color-ivory"
+                    style="padding-right: 6% !important;  padding-bottom: 1em;
+                      font-family: 'Aeonik1'; color: #fffbe9 !important; "
+                    :style="{
+                      'font-size': !isMobile ? '21px' : '16px',
+                      'border-bottom': isMobile ? '1px solid #636363 !important' : '',
+                      letterSpacing: '0.2px',textAlign: 'left',
+                      color:isDarkMode ? '#fffbe9' : '#252423' }" >
+                      We know this because we track it. We put an idea through its paces,
+                      testing customer demand, technical feasibility, business model, unit
+                      economics, market dynamics, investor interest, and more. We benchmark
+                      every idea against the performance of our past ideas to determine if
+                      it's worth our time—and yours.  
+                  </p>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-parallax>
+  </section>
+  <!-- <section  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
           :color="isDarkMode ? '#252423' : 'white'"  >
@@ -480,9 +531,9 @@
               </v-row>
             </v-container>
           </v-parallax>
-  </section>
+  </section> -->
         <!-- //03 -  CREATION -->
-  <section  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+  <section id="mission"  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
           :color="isDarkMode ? '#252423' : 'white'"  >
@@ -532,7 +583,7 @@
           </v-parallax>
   </section>
         <!-- //04 - SPINOUT -->
-  <section  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+  <section  id="mission" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
           :color="isDarkMode ? '#252423' : 'white'"  >
@@ -583,7 +634,7 @@
           </v-parallax>
   </section>
         <!-- //05 - SCALE UP -->
-  <section  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+  <section id="mission" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
           :color="isDarkMode ? '#252423' : 'white'"  >
@@ -635,8 +686,8 @@
           </v-parallax>
   </section>
         <!-- //RESULTS SECTION -->
-  <section id="results" style="position: relative; z-index: 999; min-height: 100vh">
-    <v-parallax style="position: relative; border-radius: 0% !important; min-height: 100vh" 
+  <section id="results" style="position: relative; z-index: 999; min-height: 110vh">
+    <v-parallax style="position: relative; border-radius: 0% !important; min-height: 110vh" 
         :color="isDarkMode ? '#252423' : 'white'">
         <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
             <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
@@ -744,7 +795,7 @@
      <!-- //CONTACT SECTION -->
 <v-footer
           v-if="!isMobile"
-          color="#b7e3b6"
+          :color="ColorFooter"
           id="contact"
           style="
             min-height: 92vh;
@@ -1039,7 +1090,7 @@
 </v-footer>
 <v-footer
           v-if="isMobile"
-          color="#b7e3b6"
+          :color="ColorFooter"
           id="contact"
           style="
             min-height: 92vh;
@@ -1305,6 +1356,7 @@
     export default {
       data() {
         return {
+          ColorFooter:'',
           hasStartedCounting:false,
           isDarkMode:false,
           logos: [
@@ -1555,6 +1607,23 @@
                   this.countIdeasKilled = 0;
                   this.startCounting();
                   this.hasStartedCounting = true; // Set the flag to true
+                }
+                if (sectionId === "mission" && this.isDarkMode == true){
+                    this.ColorFooter = '#252423'
+                    console.log('ey')
+                }
+                if (sectionId === "mission" && this.isDarkMode == false){
+                    this.ColorFooter = 'white'
+                }
+                if (sectionId === "results" && this.isDarkMode == true){
+                    this.ColorFooter = '#252423'
+                    console.log('ey')
+                }
+                if (sectionId === "results" && this.isDarkMode == false){
+                    this.ColorFooter = 'white'
+                }
+                else{
+                    this.ColorFooter = '#b7e3b6'
                 }
               } else {
                 // Remove visible class when out of view
