@@ -426,7 +426,7 @@
           </v-parallax>
   </section>
         <!-- //2 - VALIDATION SECTION -->
-        <section  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+  <section  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
             z-index: 999;  " >
           <v-parallax :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
           :color="isDarkMode ? '#252423' : 'white'"  >
@@ -439,37 +439,39 @@
                     ref="lottieContainer1"
                     :class="{'dark-mode': !isDarkMode}" 
                     style="margin-bottom: -3em"
-                    :style="{
-                      width: isMobile ? '300px' : '450px',
-                      height: isMobile ? '300px' : '450px',
+                    :style="{   width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px',
                     }"
                   ></div>
                 </v-col>
-                <v-col cols="12" md="5" style="padding-right: 6% !important">
+                <v-col cols="12" md="5" >
                   <h4  class="section-title color-slate"  color="#e4dbcc"
                     style="margin-top: 1.25em; margin-bottom: 1.75em'  ;
                     font-weight: 400; line-height: 1.5;"
-                    :style="{ 'font-size': !isMobile ? '32px' : '21px' }">
+                    :style="{ 'font-size': !isMobile ? '32px' : '21px' ,
+                      
+                    }">
                     02—Validation
                   </h4>
-                  <p
-                    style="  font-weight: 400;  display: block;  margin-top: 0.5em;margin-bottom: 1em;
-                      font-family: 'Aeonik1';  color: #fffbe9 !important; "
-                    :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15 ,
-                       color:isDarkMode ? '#fffbe9' : '#252423'
-                    }" >
-                                     Every idea we work on sounds good at first. But nine out of ten aren't.
+                  <p  
+                    style="   font-weight: 400;  display: block;  margin-top: 0.5em;
+                      margin-bottom: 1em;  font-family: 'Aeonik1'; color: #fffbe9 !important; "
+                    :style="{ 'font-size': !isMobile ? '21px' : '30px', 
+                    lineHeight: 1.15 , letterSpacing: '0.1px',  paddingRight: '6%',
+                    color:isDarkMode ? '#fffbe9' : '#252423'  }">
+                    Every idea we work on sounds good at first. But nine out of ten aren't.
                   </p>
                   <p  class="color-ivory" style="padding-right: 6% !important;  padding-bottom: 1em;
                       font-family: 'Aeonik1'; color: #fffbe9 !important; "
                     :style="{
                       'font-size': !isMobile ? '21px' : '16px',
                       'border-bottom': isMobile ? '1px solid #636363 !important' : '',
-                      letterSpacing: '0.2px',textAlign: 'left',
-                      color:isDarkMode ? '#fffbe9' : '#252423'}" >
-                     We know this because we track it. We put an idea through its paces, testing customer demand, 
-                  technical feasibility, business model, unit economics, market dynamics, investor interest, and more. 
-                  We benchmark every idea against the performance of our past ideas to determine if it's worth our time—and yours.
+                      letterSpacing: '0.2px',textAlign: 'left',  color:isDarkMode ? '#fffbe9' : '#252423'}" >
+                      
+                      We know this because we track it. We put an idea through its paces,
+                      testing customer demand, technical feasibility, business model, unit
+                      economics, market dynamics, investor interest, and more. We benchmark
+                      every idea against the performance of our past ideas to determine if
+                      it's worth our time—and yours.
                   </p>
                 </v-col>
               </v-row>
@@ -503,12 +505,12 @@
                     :style="{ 'font-size': !isMobile ? '32px' : '21px' }">
                     03—Creation
                   </h4>
-                  <p
-                    style="  font-weight: 400;  display: block;  margin-top: 0.5em;margin-bottom: 1em;
-                      font-family: 'Aeonik1';  color: #fffbe9 !important; "
-                    :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15 ,
-                       color:isDarkMode ? '#fffbe9' : '#252423'
-                    }" >
+                  <p  
+                    style="   font-weight: 400;  display: block;  margin-top: 0.5em;
+                      margin-bottom: 1em;  font-family: 'Aeonik1'; color: #fffbe9 !important; "
+                    :style="{ 'font-size': !isMobile ? '21px' : '30px', 
+                    lineHeight: 1.15 , letterSpacing: '0.1px',  paddingRight: '6%',
+                    color:isDarkMode ? '#fffbe9' : '#252423'  }">
                     When an idea is a good one, it’s time to move. Fast.
                   </p>
                   <p  class="color-ivory" style="padding-right: 6% !important;  padding-bottom: 1em;
@@ -553,19 +555,12 @@
                     :style="{ 'font-size': !isMobile ? '32px' : '21px' }">
                     04—Spinout
                   </h4>
-                  <p
-                    style="
-                      font-weight: 400;
-                      display: block;
-                      margin-top: 0.5em;
-                      margin-bottom: 1em;
-                      font-family: 'Aeonik1';
-                      color: #fffbe9 !important;
-                    "
-                    :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
-                       color:isDarkMode ? '#fffbe9' : '#252423'
-                     }"
-                  >
+                  <p  
+                    style="   font-weight: 400;  display: block;  margin-top: 0.5em;
+                      margin-bottom: 1em;  font-family: 'Aeonik1'; color: #fffbe9 !important; "
+                    :style="{ 'font-size': !isMobile ? '21px' : '30px', 
+                    lineHeight: 1.15 , letterSpacing: '0.1px',  paddingRight: '6%',
+                    color:isDarkMode ? '#fffbe9' : '#252423'  }">
                     Great companies require extraordinary people and smart capital.
                   </p>
                   <p  class="color-ivory" style="padding-right: 6% !important;  padding-bottom: 1em;
@@ -611,19 +606,12 @@
                     :style="{ 'font-size': !isMobile ? '32px' : '21px' }">
                     05—Scale Up
                   </h4>
-                  <p
-                    style="
-                      font-weight: 400;
-                      display: block;
-                      margin-top: 0.5em;
-                      margin-bottom: 1em;
-                      font-family: 'Aeonik1';
-                      color: #fffbe9 !important;
-                    "
-                    :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
-                       color:isDarkMode ? '#fffbe9' : '#252423'
-                     }"
-                  >
+                  <p  
+                    style="   font-weight: 400;  display: block;  margin-top: 0.5em;
+                      margin-bottom: 1em;  font-family: 'Aeonik1'; color: #fffbe9 !important; "
+                    :style="{ 'font-size': !isMobile ? '21px' : '30px', 
+                    lineHeight: 1.15 , letterSpacing: '0.1px',  paddingRight: '6%',
+                    color:isDarkMode ? '#fffbe9' : '#252423'  }">
                     We’ll take care of the boring stuff.
                   </p>
 
@@ -693,13 +681,14 @@
     </v-parallax>
   </section>
         <!-- //SPONSORS SECTION -->
-  <section id="about" style="position: relative; z-index: 999; min-height: 60vh">
-      <v-parallax style="position: relative; border-radius: 0% !important; min-height: 60vh" 
-          :color="isDarkMode ? '#252423' : 'white'">
-          <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
+     <section id="results" style="position: relative; z-index: 999; min-height: 50vh">
+    <v-parallax style="position: relative; border-radius: 0% !important; min-height: 50vh" 
+        :color="isDarkMode ? '#252423' : 'white'">
+        <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
+            
               <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
                   <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
-                      :style="!isMobile ? { marginLeft: '15px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: '15px' } : {}">
+                      :style="!isMobile ? { marginLeft: '15px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: ' 6%' } : {}">
                       <h4 :class="isMobile ? 'mb-n3' : ''" 
                           :style="{ color: '#636363', fontSize: isMobile ? '21px' : '32px', marginTop: isMobile ? '0' : '1.25em', marginBottom: isMobile ? '0' : '.65em', fontWeight: 400, marginLeft: '15px', paddingRight: '15px', paddingBottom: '5em', paddingLeft: '0', fontFamily: 'Aeonik1' }">
                           Sponsors
