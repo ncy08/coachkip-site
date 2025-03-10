@@ -2928,4 +2928,9 @@ padding-left: 100%;
   height: 56px; /* Adjust size */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
 }
+
+.v-parallax {
+will-change: transform;
+transform: translateZ(0);
+}
 </style>
