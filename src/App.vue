@@ -184,9 +184,9 @@
   <div class="hero-content">
     <div class="title-wrapper">
       <div class="main-title">
-        <span :style="{color:isDarkMode ? 'white' : 'black', '--i': 0 }" class="word" >COACH</span>
-        <span :style="{color:isDarkMode ? 'white' : 'black', '--i': 3 }" class="word" >&nbsp;</span>
-        <span :style="{color:isDarkMode ? 'white' : 'black', '--i': 6 }" class="word" >KIP</span>
+        <span class="word" :style="{ '--i': 0 }">COACH</span>
+        <span class="word" :style="{ '--i': 3 }">&nbsp;</span>
+        <span class="word" :style="{ '--i': 6 }">KIP</span>
       </div>
     </div>
 
@@ -1811,6 +1811,7 @@
   opacity: 0;
   animation: fadeInRotate 0.8s ease-out forwards;
   animation-delay: calc(var(--i) * 1s);
+  color:#fffbe9 !important;
 }
 
 @keyframes fadeInRotate {
@@ -2361,7 +2362,7 @@ animation: marquee 15s linear infinite;
   font-size: 180px !important;
   font-weight: bold !important;
   text-align: left; /* Align text to the left */
-  /* -webkit-text-stroke: 1px #fffbe9; */
+  -webkit-text-stroke: 1px #fffbe9;
   /* color: #0000;  */
   margin-bottom: .25em;
   padding-bottom: .2em;
@@ -2928,9 +2929,13 @@ padding-left: 100%;
   height: 56px; /* Adjust size */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
 }
-
 .v-parallax {
-will-change: transform;
-transform: translateZ(0);
+  backface-visibility: hidden; /* Prevents flickering */
+  perspective: 1000px; /* Creates a 3D space for child elements */
+}
+
+.v-parallax > * {
+  transform-style: preserve-3d; /* Allows child elements to maintain their 3D position */
+  transition: transform 0.3s ease; /* Smooth transition for transformations */
 }
 </style>
