@@ -437,7 +437,7 @@
               <v-row align="center" justify="center">
                 <v-col cols="12" md="6" class="d-flex justify-center align-center">
                   <div 
-                    @mousemove="handleMouseMove($event, '02—Validation')" 
+                    @mousemove="handleMouseMove($event,'02—Validation')" 
                     @mouseleave="handleMouseLeave"
                     ref="lottieContainer2" 
                     :class="{'dark-mode': !isDarkMode}" 
