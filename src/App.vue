@@ -184,9 +184,9 @@
   <div class="hero-content">
     <div class="title-wrapper">
       <div class="main-title">
-        <span class="word" :style="{ '--i': 0 }">COACH</span>
-        <span class="word" :style="{ '--i': 3 }">&nbsp;</span>
-        <span class="word" :style="{ '--i': 6 }">KIP</span>
+        <span :style="{color:isDarkMode ? 'white' : 'black', '--i': 0 }" class="word" >COACH</span>
+        <span :style="{color:isDarkMode ? 'white' : 'black', '--i': 3 }" class="word" >&nbsp;</span>
+        <span :style="{color:isDarkMode ? 'white' : 'black', '--i': 6 }" class="word" >KIP</span>
       </div>
     </div>
 
@@ -1811,7 +1811,6 @@
   opacity: 0;
   animation: fadeInRotate 0.8s ease-out forwards;
   animation-delay: calc(var(--i) * 1s);
-  color:#fffbe9 !important;
 }
 
 @keyframes fadeInRotate {
