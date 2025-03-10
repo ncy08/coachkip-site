@@ -184,9 +184,9 @@
   <div class="hero-content">
     <div class="title-wrapper">
       <div class="main-title">
-        <span class="word" :style="{ '--i': 0 }">COACH</span>
-        <span class="word" :style="{ '--i': 3 }">&nbsp;</span>
-        <span class="word" :style="{ '--i': 6 }">KIP</span>
+        <span class="word" :style="{ '--i': 0, font: isDarkMode ? 'white' ? 'black' }">COACH</span>
+        <span class="word" :style="{ '--i': 3, font: isDarkMode ? 'white' ? 'black' }">&nbsp;</span>
+        <span class="word" :style="{ '--i': 6, font: isDarkMode ? 'white' ? 'black' }">KIP</span>
       </div>
     </div>
 
