@@ -12,7 +12,7 @@ const vuetify = createVuetify({
         defaultSet: 'mdi',
     },
     theme: {
-        defaultTheme: localStorage.getItem("theme") || "light",
+        defaultTheme: 'light',
         themes: {
             light: {
                 colors: {

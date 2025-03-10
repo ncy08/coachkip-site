@@ -16,6 +16,7 @@ import { defineStore } from 'pinia';
 export const useMainStore = defineStore('store', {
     state: () => ({
         userInformation: {},
+        storedColor:''
     }),
     getters: {
         doubleCount: (state) => state.count * 2,
@@ -27,6 +28,6 @@ export const useMainStore = defineStore('store', {
     },
     persist: {
         key: 'store',
-        paths: ['userInformation'] 
+        paths: ['storedColor'] 
     }
 });
