@@ -250,8 +250,8 @@
   </section>
 
   <!-- FOLLOWING PAGE -->
-  <section :style="{ minHeight: isMobile ? '20vh' : '100vh'}"  style=" position: relative; border-radius: 0% !important ;z-index: 999;">
-    <v-parallax  :color="isDarkMode ? '#252423' : 'white'"  :style="{ minHeight: isMobile ? '20vh' : '100vh'}"  style="position: relative; border-radius: 0% !important;">
+  <section :style="{ minHeight: isMobile ? '30vh' : '100vh'}"  style=" position: relative; border-radius: 0% !important ;z-index: 999;">
+    <v-parallax  :color="isDarkMode ? '#252423' : 'white'"  :style="{ minHeight: isMobile ? '30vh' : '100vh'}"  style="position: relative; border-radius: 0% !important;">
       <v-container :class="!isMobile ? 'custom-padding' : ''">
         <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
           <v-col  :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -280,9 +280,9 @@
     </v-parallax>
   </section>
         <!-- 1ST SECTION : WHAT WE DO -->
-  <section :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;z-index: 999; "
+  <section :style="{ minHeight: isMobile ? '30vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;z-index: 999; "
           id="mission" @mousemove="handleMouseMove($event, 'What we do')" @mouseleave="handleMouseLeave">
-          <v-parallax :color="isDarkMode ? '#252423' : 'white'" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
+          <v-parallax :color="isDarkMode ? '#252423' : 'white'" :style="{ minHeight: isMobile ? '30vh ' : '100vh'}" style="position: relative; border-radius: 0% !important;">
             <v-container :class="!isMobile ? 'custom-padding' : ''">
               <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
                 <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -314,9 +314,9 @@
           </v-parallax>
   </section>
         <!-- //2ND SECTON : LIST OF THINGS -->
-  <section  :style="{ minHeight: isMobile ? '100vh' : '100vh'}" style=" position: relative;
+  <section  :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style=" position: relative;
           border-radius: 0% !important;z-index: 999;">
-          <v-parallax :color="isDarkMode ? '#252423' : 'white'"  :style="{ minHeight: isMobile ? '100vh' : '100vh'}" 
+          <v-parallax :color="isDarkMode ? '#252423' : 'white'"  :style="{ minHeight: isMobile ? '60vh' : '100vh'}" 
             style="position: relative; border-radius: 0% !important; " >
             <v-container  fluid :class="!isMobile ? 'services-container' : ''"
               :style=" !isMobile  ? {  marginLeft: '10px',  paddingBottom: '5em', paddingLeft: '8%',
@@ -642,13 +642,17 @@
     <v-parallax style="position: relative; border-radius: 0% !important; min-height: 120vh" 
         :color="isDarkMode ? '#252423' : 'white'">
         <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
-            <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
+          <v-row :class="isMobile ? 'mt-15 mb-8' : 'mt-10'">
+
                 <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
                     :style="!isMobile ? { marginLeft: '15px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: '15px' } : {}">
-                    <h4 :class="isMobile ? 'mb-n3' : ''" 
-                        :style="{ color: '#636363', fontSize: isMobile ? '21px' : '32px', marginTop: isMobile ? '0' : '1.25em', marginBottom: isMobile ? '0' : '.65em', fontWeight: 400, marginLeft: '15px', paddingRight: '15px', paddingBottom: '5em', paddingLeft: '0', fontFamily: 'Aeonik1' }">
-                        Results
-                    </h4>
+                    <p  style="  font-weight: 400;  display: block;  margin-top: 0.5em;margin-bottom: 1em;
+                        font-family: 'Aeonik1';  color: #fffbe9 !important; "
+                      :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
+                          color:isDarkMode ? '#fffbe9' : '#252423'
+                        }" >
+                      Miles Ran
+                    </p>
                 </v-col>
             </v-row>
 
@@ -692,13 +696,16 @@
         :color="isDarkMode ? '#252423' : 'white'">
         <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
             
-              <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
+              <v-row :class="isMobile ? 'mt-15 mb-8' : 'mt-10'">
                   <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
                       :style="!isMobile ? { marginLeft: '15px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: ' 6%' } : {}">
-                      <h4 :class="isMobile ? 'mb-n3' : ''" 
-                          :style="{ color: '#636363', fontSize: isMobile ? '21px' : '32px', marginTop: isMobile ? '0' : '1.25em', marginBottom: isMobile ? '0' : '.65em', fontWeight: 400, marginLeft: '15px', paddingRight: '15px', paddingBottom: '5em', paddingLeft: '0', fontFamily: 'Aeonik1' }">
-                          Sponsors
-                      </h4>
+                      <p  style="  font-weight: 400;  display: block;  margin-top: 0.5em;margin-bottom: 1em;
+                        font-family: 'Aeonik1';  color: #fffbe9 !important; "
+                      :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
+                          color:isDarkMode ? '#fffbe9' : '#252423',
+                        }" >
+                        Partners
+                    </p>
                   </v-col>
               </v-row>
               <v-row :class="isMobile ? 'mt-n16' : ''" class="logo-container">
@@ -719,13 +726,16 @@
   <section id="team" class="shadow-bottom" style="position: relative; z-index: 999; min-height: 70vh">
   <v-card :color="isDarkMode ? '#252423' : 'white'" style="position: relative; border-radius: 0% !important; min-height: 70vh">
     <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
-      <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
+      <v-row :class="isMobile ? 'mt-15 mb-8' : 'mt-10'">
         <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
             :style="!isMobile ? { marginLeft: '16px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: '15px' } : {}">
-          <h4 :class="isMobile ? 'mb-n3' : ''" 
-              :style="{ color: '#636363', fontSize: isMobile ? '21px' : '32px', marginTop: isMobile ? '0' : '1.25em', marginBottom: isMobile ? '0' : '.65em', fontWeight: 400, marginLeft: '15px', paddingRight: '15px', paddingBottom: '5em', paddingLeft: '0', fontFamily: 'Aeonik1' }">
-              Team
-          </h4>
+            <p  style="  font-weight: 400;  display: block;  margin-top: 0.5em;margin-bottom: 1em;
+                        font-family: 'Aeonik1';  color: #fffbe9 !important; "
+                      :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
+                          color:isDarkMode ? '#fffbe9' : '#252423'
+                        }" >
+                      Team
+                    </p>
         </v-col>
       </v-row>
       <div class="team-members-container mt-n15"  ref="teamMembersContainer" @mousedown="startDrag" 
@@ -1045,7 +1055,7 @@
           :color="ColorFooter"
           id="contact"
           style="
-            min-height: 92vh;
+            min-height: 100vh;
             position: fixed;
             bottom: 0;
             left: 0;
@@ -1366,40 +1376,21 @@
           teamMembers: [
             {
               id: 1,
-              name: "Anthony Pablo",
+              name: "James Jackson",
               position: "CEO",
               image:
                 "https://img.freepik.com/premium-photo/3d-cartoon-business-character_776674-532471.jpg",
               details:
-                "Anthony has over 20 years of experience in the tech industry and has led multiple successful startups.",
+                "James has over 20 years of experience in the tech industry and has led multiple successful startups.",
             },
-            {
-              id: 2,
-              name: "Alice Johnson",
-              position: "CFO",
-              image:
-                "https://img.freepik.com/premium-photo/3d-character-business-woman_935410-589.jpg",
-              details:
-                "Alice has a strong background in finance and has helped companies raise millions in funding.",
-            },
-            {
-              id: 3,
-              name: "Sandra Kate",
-              position: "CTO",
-              image:
-                "https://img.freepik.com/premium-photo/3d-animation-style-portrait-business-woman-3d-metaverse-avatar-cartoon-character-3d-illustration_839035-102292.jpg",
-              details:
-                "Jane is an expert in software development and has a passion for innovative technology solutions.",
-            },
-            
             {
               id: 4,
-              name: "Barry Diaz",
+              name: "Nick Yebra",
               position: "CMO",
               image:
                 "https://img.freepik.com/premium-photo/cartoon-character-with-contract-hands-3d-illustration_839035-120672.jpg",
               details:
-                "Barry is a marketing guru with a knack for creating compelling brand stories.",
+                "Nick is a marketing guru with a knack for creating compelling brand stories.",
             },
             {
               id: 5,
@@ -1889,7 +1880,7 @@
 
   /* Mobile Navigation */
   .mobile-nav {
-    background-color: #f4ff49 !important;
+    background-color: #b7e3b6 !important;
   }
 
   .mobile-nav .v-list-item {
