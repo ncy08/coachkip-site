@@ -208,7 +208,7 @@
               color: isDarkMode ? 'white' : 'black !important' // Change text color based on isDarkMode
             }"
   />
-          <button :class="isMobile ? 'join-button1' : 'join-button'" class="join-button mt-n8">
+          <button :class="isMobile ? 'join-button1' : 'join-button'" class="mt-n9">
             Join Waitlist
           </button>
         </div>
@@ -2775,29 +2775,17 @@
     }
     .rounded-input1 {
       border-radius: 30px; /* Rounded corners */
-      width: 280px; /* Adjust width */
-    }
-
-    .join-button {
-      margin-top: 10px;
-      padding: 20px 10px 22px 15px;
-      border-radius: 30px;
-      background-color: black; /* Blue color */
-      color: white;
-      border: none;
-      cursor: pointer;
-      width: 200px;
-      letter-spacing: 3px;
+      width: 300px !important; /* Adjust width */
     }
     .join-button1 {
       margin-top: 10px;
-      padding: 10px 10px;
+      padding: 5px 15px;
       border-radius: 30px;
       background-color: black; /* Blue color */
       color: white;
       border: none;
       cursor: pointer;
-      width: 150px;
+      width: 140px;
       letter-spacing: 1px;
     }
 
@@ -2838,23 +2826,13 @@
   }
   .form-container {
     margin-top: 20px;
+    padding-left: 6% !important;
+    padding-right: 6% !important;
     text-align: center;
   }
 
   .input-form {
     margin-top: 20px;
-  }
-
-  .input-field {
-    padding: 7px;
-    font-size: 1.2rem;
-    border-radius: 30px;
-    outline: none;
-    border: 1px solid #ccc;
-    transition: 0.3s ease-in-out;
-    width: 80%;
-    max-width: 400px;
-    margin-bottom: 20px;
   }
 
   .input-field:focus {
@@ -2863,7 +2841,7 @@
   }
 
   .join-button {
-    padding: 10px 20px;
+    padding: 7px 17px;
     background-color: black;
     color: white;
     border: none;
@@ -2871,6 +2849,14 @@
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+      border-radius: 30px;
+      background-color: black; /* Blue color */
+      color: white;
+      border: none;
+      cursor: pointer;
+      width: 200px;
+      letter-spacing: 3px;
   }
 
   .join-button:hover {
@@ -2967,13 +2953,13 @@
       padding-left: 3%;
   }
   .input-field {
-      padding: 7px;
+      padding: 4px;
       font-size: 1.2rem; /* Font size for the input text */
       border-radius: 30px;
       outline: none;
       border: 1px solid #ccc;
       transition: 0.3s ease-in-out;
-      width: 80%;
+      width: 64% !important;
       max-width: 400px;
       margin-bottom: 20px;
   }
