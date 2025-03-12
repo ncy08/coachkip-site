@@ -2527,7 +2527,7 @@ animation: marquee 15s linear infinite;
   font-size: 180px !important;
   font-weight: bold !important;
   text-align: left; /* Align text to the left */
-  -webkit-text-stroke: 1px #fffbe9;
+  /* -webkit-text-stroke: 1px #fffbe9; */
   /* color: #0000;  */
   margin-bottom: .25em;
   padding-bottom: .2em;
