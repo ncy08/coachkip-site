@@ -678,8 +678,8 @@
         </v-parallax>
 </section>
       <!-- //RESULTS SECTION -->
-<section id="about" style="position: relative; z-index: 999; min-height: 50vh">
-  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 50vh" 
+<section id="about" style="position: relative; z-index: 999; min-height: 60vh">
+  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 60vh" 
       :color="isDarkMode ? '#252423' : '#fffbe9'">
       <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
           <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
@@ -731,8 +731,8 @@
   </v-parallax>
 </section>
       <!-- //SPONSORS SECTION -->
-  <section id="sponsor" style="position: relative; z-index: 999; min-height: 70vh">
-  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 70vh" 
+  <section id="sponsor" style="position: relative; z-index: 999; min-height: 65vh">
+  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 65vh" 
       :color="isDarkMode ? '#252423' : '#fffbe9'">
       <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
             <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
