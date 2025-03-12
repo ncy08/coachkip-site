@@ -1104,11 +1104,10 @@
           right: 0;
           display: flex;
           flex-direction: column;
-          padding: 35px;
           z-index:2
         "
       >
-        <div class="footer-row1" style="margin-top: 30% !important">
+        <div class="footer-row1" style="margin-top: 23% !important" >
           <div
             class="address-section1"
             :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
@@ -1155,7 +1154,7 @@
           class="mt-2 contact__information__detail__line"
         ></v-divider>
 
-        <div class="footer-row1" style="margin-top: 4% !important">
+        <div class="footer-row1" style="padding: 14px 0 7px 0">
           <div
             class="address-section1"
             :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
@@ -1193,7 +1192,7 @@
           class="mt-2 contact__information__detail__line"
         ></v-divider>
 
-        <div class="footer-row1" style="margin-top: 4% !important">
+        <div class="footer-row1" style="padding: 3px 0 6px 0">
           <div
             class="address-section1"
             :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
@@ -1231,7 +1230,7 @@
           class="mt-2 contact__information__detail__line"
         ></v-divider>
 
-        <div class="footer-row1" style="margin-top: 4% !important">
+        <div class="footer-row1" style="padding: 13px 0 6px 0">
           <div
             class="address-section1"
             :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
@@ -1249,7 +1248,7 @@
             </div>
           </div>
           <div
-            class="address-section1"
+            class="address-section1 mt-n1"
             :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
           >
             <div class="footer1">&nbsp</div>
@@ -1272,9 +1271,9 @@
         <div class="footer-row1" style="margin-top: 4% !important">
           <div
             class="address-section1"
-            :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
+            :style="{ flex: isMobile ? '0.8' : '0.5', textAlign: 'left' }"
           >
-            <div class="footer1">FOLLOW US</div>
+            <div class="footer1">NEWSLETTER</div>
             <div class="footer1">&nbsp</div>
             <div class="address-details1">
               <p>
@@ -1284,7 +1283,7 @@
           </div>
           <div
             class="address-section1"
-            :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
+            :style="{ flex: isMobile ? '0.2' : '0.5', textAlign: 'left' }"
           >
             <div class="footer1">&nbsp</div>
             <div class="footer1">&nbsp</div>
@@ -1309,7 +1308,7 @@
         >
           <v-row>
             <v-col>
-              <div class="marquee-container">
+              <div class="marquee-container" >
                 <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
                 <span v-else class="marquee-label1"> WORKING IN:</span>
                 <div class="marquee-content1">
@@ -2546,13 +2545,13 @@ a:active, a:hover {
 .section-title1{
 font-size: 15px !important;
 /* line-height: 15px !important; */
-font-family: 'Poppins' !important;
+font-family: 'ChaletBook1' !important;
 font-weight: 200;
 }
 .section-title2{
 font-size: 26px !important;
 /* line-height: 15px !important; */
-font-family: 'Poppins' !important;
+font-family: 'ChaletBook' !important;
 font-weight: 200;
 }
 
@@ -2677,31 +2676,33 @@ padding-left: 100%;
 
   /* ADDED 03-07 MOBILE */
   .footer1 {
-    font-family: "Poppins" !important;
+    font-family: "ChaletBook1" !important;
     font-size: 4vw;
     transition: all 0.5s ease; /* Add transition for smooth font size change */
   }
   .footer-row1 {
-    font-family: "Poppins" !important;
+    font-family: "ChaletBook1" !important;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    font-weight: normal !important;
   }
 
   .address-section1 {
     flex: 0.3;
     text-align: left;
-    font-family: "Poppins" !important;
+    font-family: "ChaletBook1" !important;
   }
 
   .address-details1 p {
-    font-family: "Poppins" !important;
-    font-size: 3vw;
+    font-family: "ChaletBook1" !important;
+    font-size: 14px !important;
     transition: all 0.5s ease;
-    /* line-height: 1.15em !important; */
+    line-height: 0.8em !important; 
+    margin-bottom: 3% !important;
   }
   .contact__information__detail__line {
-    border-width: 0.5px;
+    height: 1vh !important;
   }
 
   .marquee-container1 {
@@ -2720,7 +2721,7 @@ padding-left: 100%;
     white-space: nowrap;
   }
   .marquee-label1 {
-    font-family: "Poppins" !important;
+    font-family: "ChaletBook1" !important;
     font-size: 3.5vw;
     margin-right: 4px;
     transition: all 0.5s ease; /* Add transition for smooth font size change */
@@ -2745,7 +2746,7 @@ padding-left: 100%;
     animation: marquee 20s linear infinite;
     padding-left: 100%;
     font-size: 5vw;
-    font-family: "Poppins" !important;
+    font-family: "ChaletBook1" !important;
     transition: all 0.5s ease;
   }
 
