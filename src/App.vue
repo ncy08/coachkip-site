@@ -472,9 +472,9 @@
         </v-parallax>
 </section>
       <!-- //2 - VALIDATION SECTION -->
-<section id="mission" :style="{ minHeight: isMobile ? '90vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section id="mission" :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '90vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        <v-parallax :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'" >
           <v-container fluid class="fade-up">
             <v-row align="center" justify="center">
@@ -525,9 +525,9 @@
 </section>
 
       <!-- //03 -  CREATION -->
-<section id="mission"  :style="{ minHeight: isMobile ? '90vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section id="mission"  :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '90vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        <v-parallax :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
           <v-container fluid class="fade-up">
             <v-row align="center" justify="center">
@@ -575,9 +575,9 @@
         </v-parallax>
 </section>
       <!-- //04 - SPINOUT -->
-<section  id="mission" :style="{ minHeight: isMobile ? '90vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section  id="mission" :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '90vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        <v-parallax :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
           <v-container fluid class="fade-up">
             <v-row align="center" justify="center">
@@ -626,9 +626,9 @@
         </v-parallax>
 </section>
       <!-- //05 - SCALE UP -->
-<section id="mission" :style="{ minHeight: isMobile ? '90vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section id="mission" :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '90vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        <v-parallax :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
           <v-container fluid class="fade-up">
             <v-row align="center" justify="center">
