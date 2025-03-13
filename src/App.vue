@@ -179,7 +179,7 @@
 <!-- TITLE -->
 <section style="position: relative; min-height: 100vh; z-index: 999;" id="home">
 <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; min-height: 100vh;">
-  <div class="hero-content" :style="{paddingBottom: isMobile ? '12% !important' : ''}">
+  <div class="hero-content" :style="{paddingTop: isMobile ? '4% !important' : ''}">
     <div class="title-wrapper">
       <div class="main-title">
         <span :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 0 }" class="word" >COACH</span>
