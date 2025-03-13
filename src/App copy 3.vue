@@ -1,38 +1,33 @@
 <template>
   <v-app >
     <div>
-      <v-btn   @click="toogle"  class="dark-mode-toggle"   icon
-      :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }">
+      <v-btn   @click="toogle"  class="dark-mode-toggle"  icon
+      :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }"
+    >
       <v-icon :style="{ color: isDarkMode ? 'black' : 'white', }">{{ isDarkMode ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
     </v-btn>
-
       <!-- Floating Text Overlay -->
       <div style="z-index:1999;font-family:'Aeonik"  v-if="showFloatingText"
         class="floating-text"  :style="{ left: floatingX + 'px', top: floatingY + 'px' }">
         <span>{{ hoveredMember.name ? hoveredMember.name : hoveredMember }}</span>
       </div>
       <transition name="fade">
-      <v-app-bar elevation="0" v-if="isToolbarVisible && !drawer" :color="isDarkMode ? '#252423' : 'white'" class="tBar" style="z-index: 1999">
-        <v-toolbar-title @click="toogle()" :color="isDarkMode ? 'red' : 'black'">COACH KIP</v-toolbar-title>
+      <v-toolbar v-show="isToolbarVisible" :color="isDarkMode ? '#252423' : '#fffbe9'" class="tBar" style="z-index: 1999">
+        <v-toolbar-title @click="toogle()" :style="{color : isDarkMode ? 'white' : 'black'}">COACH KIP</v-toolbar-title>
         <v-spacer></v-spacer>
-        <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" 
-                @click.stop="drawer = !drawer" style="float: right; 
-                 font-family: 'Aeonik1'; border-bottom-style: none; border-bottom-color: #000; border-radius: 20px;
-                 padding: 1px 22px 1px; display: block;" 
-                class="mr-6 hidden-sm-and-up mt-n3" @click="drawer = true"> Menu
+        <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 20px; padding: 2px 22px 3px; display: block;" class="mr-6 hidden-sm-and-up mt-n1" @click="drawer = true"> Menu
         </button>
         <v-toolbar-items class="hidden-sm-and-down">
           <template v-for="(item, index) in menuItems" :key="index">
-            <v-btn :style="{color:isDarkMode ? 'white' : 'black'}" flat 
-            :class="{ 'active-line': activeSection === item.link.substring(1) }"
-                  :color="activeSection === item.link.substring(1) ? '#FFD700' : '#FFFFFF'"
-                  class="menu-button" @click="handleMenuItemClick(item)">
+            <v-btn :style="{color:isDarkMode ? 'white' : 'black'}" flat :class="{ 'active-line': activeSection === item.link.substring(1) }"
+              :color="activeSection === item.link.substring(1) ? '#FFD700' : '#FFFFFF'"
+              class="menu-button" @click="handleMenuItemClick(item)">
               {{ item.text }}
             </v-btn>
           </template>
         </v-toolbar-items>
-      </v-app-bar>
-    </transition>
+      </v-toolbar>
+      </transition>
   <v-navigation-drawer style="z-index: 10000"  location="right" v-model="drawer"
         fixed  temporary  class="mobile-nav fullscreen-drawer" width="490"
       >
@@ -58,7 +53,7 @@
               float: right;
               font-family: 'Aeonik1';
               background-color: #252423;
-              color: #f4ff49;
+              color: #b7e3b6 ;
               border-bottom-style: none;
               border-bottom-color: #000;
               border-radius: 20px;
@@ -179,25 +174,25 @@
             </ul>
           </v-col>
         </v-row>
-  </v-navigation-drawer>
+   </v-navigation-drawer>
 
 <!-- TITLE -->
 <section style="position: relative; min-height: 100vh; z-index: 999;" id="home">
-<v-parallax :color="isDarkMode ? '#252423' : 'white'" style="position: relative; min-height: 100vh;">
-  <div class="hero-content">
+<v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; min-height: 100vh;">
+  <div class="hero-content" :style="{paddingTop: isMobile ? '4% !important' : ''}">
     <div class="title-wrapper">
       <div class="main-title">
-        <span class="word" :style="{ '--i': 0, color: isDarkMode ? 'white' : 'black !important' }">COACH</span>
-        <span class="word" :style="{ '--i': 3, color: isDarkMode ? 'white' : 'black !important' }">&nbsp;</span>
-        <span class="word" :style="{ '--i': 6, color: isDarkMode ? 'white' : 'black !important' }">KIP</span>
+        <span :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 0 }" class="word" >COACH</span>
+        <span :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 3 }" class="word" >&nbsp;</span>
+        <span :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 6 }" class="word" >KIP</span>
       </div>
     </div>
 
     <!-- Line separator between title and form -->
-    <div class="separator word" :style="{ backgroundColor: isDarkMode ? 'white' : 'black', '--i': 7 }"></div>
+    <div class="separator word" :style="{ backgroundColor: isDarkMode ? '#887C5C' : 'black', '--i': 7 }"></div>
 
-    <div class="form-container word" :style="{ '--i': 8 }">
-      <div class="input-form">
+    <div v-if="!isMobile" class="form-container word" :style="{ '--i': 8 }">
+      <div class="input-form" >
         <input
           class="input-field"
           type="email"
@@ -245,26 +240,71 @@
         </v-row>
       </div>
     </div>
+    <div v-else>
+      <div class="form-container word " :style="{ '--i': 8 }">
+      <div class="input-form"  :style="{marginBottom: isMobile ? '53%': '',
+         paddingTop: isMobile ? '15% !important' : ''}">
+        <v-text-field rounded placeholder="Enter email" :width="isMobile ? '205px' : '280px'" hide-details  :style="{
+              border: !isDarkMode ? '1px solid black' : '1px solid #ccc',
+              color: isDarkMode ? 'white' : 'black' , borderRadius:'30px',  }">
+
+        </v-text-field>
+        <v-btn  :color="isDarkMode ? 'white' : 'black'" variant="elevated" class="mt-3" 
+        style="border-radius:30px" size="small">Join Waitlist</v-btn>
+        <v-row no-gutters class="social-row mt-2" style="justify-content: center">
+          <v-icon
+            @mousemove="handleMouseMove($event, 'Twitter')"
+            @mouseleave="handleMouseLeave"
+            size="x-large"
+            :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
+            class="mr-2 social-icon"
+          >
+            mdi-twitter
+          </v-icon>
+          <v-icon
+            @mousemove="handleMouseMove($event, 'Instagram')"
+            @mouseleave="handleMouseLeave"
+            size="x-large"
+            :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
+            class="mr-2 social-icon"
+          >
+            mdi-instagram
+          </v-icon>
+          <v-icon
+            @mousemove="handleMouseMove($event, 'Message')"
+            @mouseleave="handleMouseLeave"
+            size="x-large"
+            :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
+            class="ml-1 social-icon"
+          >
+            mdi-message
+          </v-icon>
+        </v-row>
+      </div> 
+    
+    </div> 
+    </div>
+   
   </div>
 </v-parallax>
 </section>
 
 <!-- FOLLOWING PAGE -->
-<section :style="{ minHeight: isMobile ? '30vh' : '100vh'}"  style=" position: relative; border-radius: 0% !important ;z-index: 999;">
-  <v-parallax  :color="isDarkMode ? '#252423' : 'white'"  :style="{ minHeight: isMobile ? '30vh' : '100vh'}"  style="position: relative; border-radius: 0% !important;">
+<section :style="{ minHeight: isMobile ? '50vh' : '100vh'}"  style=" position: relative; border-radius: 0% !important ;z-index: 999;">
+  <v-parallax  :color="isDarkMode ? '#252423' : '#fffbe9'"  :style="{ minHeight: isMobile ? '50vh' : '100vh'}"  style="position: relative; border-radius: 0% !important;">
     <v-container :class="!isMobile ? 'custom-padding' : ''">
       <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
         <v-col  :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
           :style="  !isMobile ? { marginLeft: '15px', paddingBottom: '5em',
-              paddingLeft: '0',paddingRight: '15px',}: {}">
-              <p  style="  font-weight: 400;  display: block;  margin-top: 0.5em;margin-bottom: 1em;
+               paddingLeft: '0',paddingRight: '15px',}: {}">
+               <p  style="  font-weight: 400;  display: block;  margin-top: 1.5em;margin-bottom: 1em;
                   font-family: 'Aeonik1';  color: #fffbe9 !important; "
                   :style="{ 'font-size': !isMobile ? '96px' : '38px', lineHeight: 1.00,paddingRight: '5%',
-                    color:isDarkMode ? '#fffbe9' : '#252423'
+                     color:isDarkMode ? '#fffbe9' : '#252423'
                       }" >
-                    A new model for building companies.
-                  </p>
-                  <p  class="color-ivory" style="padding-right: 6% !important;  padding-bottom: 1em;
+                     A new model for building companies.
+                   </p>
+                   <p  class="color-ivory" style="padding-right: 6% !important;  padding-bottom: 1em;
                     font-family: 'Aeonik1'; color: #fffbe9 !important; "
                   :style="{
                     'font-size': !isMobile ? '32px' : '16px',
@@ -280,22 +320,22 @@
   </v-parallax>
 </section>
       <!-- 1ST SECTION : WHAT WE DO -->
-<section :style="{ minHeight: isMobile ? '30vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;z-index: 999; "
+<section :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;z-index: 999; "
         id="mission" @mousemove="handleMouseMove($event, 'What we do')" @mouseleave="handleMouseLeave">
-        <v-parallax :color="isDarkMode ? '#252423' : 'white'" :style="{ minHeight: isMobile ? '30vh ' : '100vh'}" style="position: relative; border-radius: 0% !important;">
+        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
           <v-container :class="!isMobile ? 'custom-padding' : ''">
             <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
               <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
                 :style=" !isMobile   ? {  marginLeft: '15px',  paddingBottom: '5em',  paddingLeft: '0',
                 paddingRight: '15px', }  : {}">
                   <p  style="  font-weight: 400;  display: block;  margin-top: 0.5em;margin-bottom: 1em;
-                      font-family: 'Aeonik1';  color: #fffbe9 !important; "
-                    :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
+                       font-family: 'Aeonik1';  color: #fffbe9 !important; "
+                     :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
                         color:isDarkMode ? '#fffbe9' : '#252423'
                       }" >
-                    What we do
-                  </p>
-                  <p  class="color-ivory" style="padding-right: 6% !important;  padding-bottom: 1em;
+                     What we do
+                   </p>
+                   <p  class="color-ivory" style="padding-right: 6% !important;  padding-bottom: 1em;
                     font-family: 'Aeonik1'; color: #fffbe9 !important; "
                   :style="{
                     'font-size': !isMobile ? '32px' : '16px',
@@ -314,9 +354,9 @@
         </v-parallax>
 </section>
       <!-- //2ND SECTON : LIST OF THINGS -->
-<section  :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style=" position: relative;
+<section  :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style=" position: relative;
         border-radius: 0% !important;z-index: 999;">
-        <v-parallax :color="isDarkMode ? '#252423' : 'white'"  :style="{ minHeight: isMobile ? '60vh' : '100vh'}" 
+        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'"  :style="{ minHeight: isMobile ? '70vh' : '100vh'}" 
           style="position: relative; border-radius: 0% !important; " >
           <v-container  fluid :class="!isMobile ? 'services-container' : ''"
             :style=" !isMobile  ? {  marginLeft: '10px',  paddingBottom: '5em', paddingLeft: '8%',
@@ -340,25 +380,25 @@
             </div>
           </v-container>
         </v-parallax>
-</section>
+ </section>
       <!-- //HOW WE DO IT SECTION -->
-<section :style="{ minHeight: isMobile ? '25vh' : '100vh'}"
+<section :style="{ minHeight: isMobile ? '70vh' : '100vh'}"
         style=" position: relative;  border-radius: 0% !important;z-index: 999;"
         id="kip" @mousemove="handleMouseMove($event, 'How we do it')"  @mouseleave="handleMouseLeave">
-        <v-parallax :color="isDarkMode ? '#252423' : 'white'" :style="{ minHeight: isMobile ? '25vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; " >
+        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '70vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; " >
           <v-container :class="!isMobile ? 'custom-padding' : ''">
             <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
               <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
                 :style="  !isMobile ? { marginLeft: '15px',  paddingBottom: '5em',
                         paddingLeft: '0', paddingRight: '15px', } : {} ">
                         <p  style="  font-weight: 400;  display: block;  margin-top: 0.5em;margin-bottom: 1em;
-                      font-family: 'Aeonik1';  color: #fffbe9 !important; "
-                    :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
+                       font-family: 'Aeonik1';  color: #fffbe9 !important; "
+                     :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
                         color:isDarkMode ? '#fffbe9' : '#252423'
                       }" >
-                    How we do it
-                  </p>
-                  <p  class="color-ivory" style="padding-right: 6% !important;  padding-bottom: 1em;
+                     How we do it
+                   </p>
+                   <p  class="color-ivory" style="padding-right: 6% !important;  padding-bottom: 1em;
                     font-family: 'Aeonik1'; color: #fffbe9 !important; "
                   :style="{
                     'font-size': !isMobile ? '32px' : '16px',
@@ -376,10 +416,10 @@
         </v-parallax>
 </section>
       <!-- //1 - IDEA SECTION -->
-<section id="mission"  :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section id="mission"  :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
-        :color="isDarkMode ? '#252423' : 'white'" >
+        <v-parallax :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        :color="isDarkMode ? '#252423' : '#fffbe9'" >
           <v-container fluid class="fade-up">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -432,10 +472,10 @@
         </v-parallax>
 </section>
       <!-- //2 - VALIDATION SECTION -->
-<section id="mission" :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section id="mission" :style="{ minHeight: isMobile ? '100vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
-        :color="isDarkMode ? '#252423' : 'white'" >
+        <v-parallax :style="{ minHeight: isMobile ? '100vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        :color="isDarkMode ? '#252423' : '#fffbe9'" >
           <v-container fluid class="fade-up">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -485,10 +525,10 @@
 </section>
 
       <!-- //03 -  CREATION -->
-<section id="mission"  :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section id="mission"  :style="{ minHeight: isMobile ? '100vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
-        :color="isDarkMode ? '#252423' : 'white'"  >
+        <v-parallax :style="{ minHeight: isMobile ? '100vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        :color="isDarkMode ? '#252423' : '#fffbe9'"  >
           <v-container fluid class="fade-up">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -535,10 +575,10 @@
         </v-parallax>
 </section>
       <!-- //04 - SPINOUT -->
-<section  id="mission" :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section  id="mission" :style="{ minHeight: isMobile ? '100vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
-        :color="isDarkMode ? '#252423' : 'white'"  >
+        <v-parallax :style="{ minHeight: isMobile ? '100vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        :color="isDarkMode ? '#252423' : '#fffbe9'"  >
           <v-container fluid class="fade-up">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -586,10 +626,10 @@
         </v-parallax>
 </section>
       <!-- //05 - SCALE UP -->
-<section id="mission" :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section id="mission" :style="{ minHeight: isMobile ? '90vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '60vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
-        :color="isDarkMode ? '#252423' : 'white'"  >
+        <v-parallax :style="{ minHeight: isMobile ? '90vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        :color="isDarkMode ? '#252423' : '#fffbe9'"  >
           <v-container fluid class="fade-up">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -638,25 +678,25 @@
         </v-parallax>
 </section>
       <!-- //RESULTS SECTION -->
-<section id="about" style="position: relative; z-index: 999; min-height: 120vh">
-  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 120vh" 
-      :color="isDarkMode ? '#252423' : 'white'">
+<section id="about" style="position: relative; z-index: 999; min-height: 50vh">
+  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 50vh" 
+      :color="isDarkMode ? '#252423' : '#fffbe9'">
       <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
-        <v-row :class="isMobile ? 'mt-15 mb-8' : 'mt-10'">
-
-              <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
-                  :style="!isMobile ? { marginLeft: '15px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: '15px' } : {}">
+          <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
+              <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
+                :style=" !isMobile   ? {  marginLeft: '15px',  paddingBottom: '5em',  paddingLeft: '0',
+                paddingRight: '15px', }  : {}">
                   <p  style="  font-weight: 400;  display: block;  margin-top: 0.5em;margin-bottom: 1em;
-                      font-family: 'Aeonik1';  color: #fffbe9 !important; "
-                    :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
+                       font-family: 'Aeonik1';  color: #fffbe9 !important; "
+                     :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
                         color:isDarkMode ? '#fffbe9' : '#252423'
                       }" >
-                    Miles Ran
-                  </p>
+                      Miles Ran
+                   </p>
               </v-col>
           </v-row>
 
-          <v-row :class="isMobile ? 'mt-n16' : ''">
+          <v-row :class="isMobile ? 'mt-n2 ' : ''">
               <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%">
                   <h1 class="text-h1 large-number" 
                       :style="{ paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
@@ -667,7 +707,7 @@
                       Ideas Spun Out
                   </h3>
                   <p :style="{  letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%',
-                  paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
+                   paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
                       In the rarest of cases, a startup idea has great timing, true customer demand, and the market is enormous.
                   </p>
               </v-col>
@@ -682,7 +722,7 @@
                       Ideas Killed
                   </h3>
                   <p :style="{ letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.15, paddingRight: isMobile ? '0' : '3%',
-                  paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
+                   paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
                       More often than not, an idea isn't a viable business. Our learnings from our failures make us more confident in the ideas that we love.
                   </p>
               </v-col>
@@ -691,24 +731,24 @@
   </v-parallax>
 </section>
       <!-- //SPONSORS SECTION -->
-  <section id="sponsor" style="position: relative; z-index: 999; min-height: 60vh">
-  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 60vh" 
-      :color="isDarkMode ? '#252423' : 'white'">
+  <section id="sponsor" style="position: relative; z-index: 999; min-height: 70vh">
+  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 70vh" 
+      :color="isDarkMode ? '#252423' : '#fffbe9'">
       <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
-          
-            <v-row :class="isMobile ? 'mt-15 mb-8' : 'mt-10'">
-                <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
-                    :style="!isMobile ? { marginLeft: '15px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: ' 6%' } : {}">
-                    <p  style="  font-weight: 400;  display: block;  margin-top: 0.5em;margin-bottom: 1em;
-                      font-family: 'Aeonik1';  color: #fffbe9 !important; "
-                    :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
-                        color:isDarkMode ? '#fffbe9' : '#252423',
+            <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
+              <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
+                :style=" !isMobile   ? {  marginLeft: '15px',  paddingBottom: '5em',  paddingLeft: '0',
+                paddingRight: '15px', }  : {}">
+                  <p  style="  font-weight: 400;  display: block;  margin-top: 0.5em;margin-bottom: 1em;
+                       font-family: 'Aeonik1';  color: #fffbe9 !important; "
+                     :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
+                        color:isDarkMode ? '#fffbe9' : '#252423'
                       }" >
                       Partners
-                  </p>
-                </v-col>
+                   </p>
+              </v-col>
             </v-row>
-            <v-row :class="isMobile ? 'mt-n16' : ''" class="logo-container">
+            <v-row :class="isMobile ? 'mt-n3' : ''" class="logo-container">
                 <transition-group name="fade">
                     <v-col v-for="(logo, index) in displayedLogos" :key="index" 
                         cols="12" md="4" class="d-flex justify-center align-center" 
@@ -724,43 +764,45 @@
 
       <!-- //TEAM SECTION -->
 <section id="team" class="shadow-bottom" style="position: relative; z-index: 999; min-height: 70vh">
-<v-card :color="isDarkMode ? '#252423' : 'white'" style="position: relative; border-radius: 0% !important; min-height: 70vh">
+<v-card :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; border-radius: 0% !important; min-height: 70vh">
   <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
-    <v-row :class="isMobile ? 'mt-15 mb-8' : 'mt-10'">
-      <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }" 
-          :style="!isMobile ? { marginLeft: '16px', paddingBottom: '.2em', paddingLeft: '0', paddingRight: '15px' } : {}">
-          <p  style="  font-weight: 400;  display: block;  margin-top: 0.5em;margin-bottom: 1em;
-                      font-family: 'Aeonik1';  color: #fffbe9 !important; "
-                    :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
+    <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
+              <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
+                :style=" !isMobile   ? {  marginLeft: '15px',  paddingBottom: '5em',  paddingLeft: '0',
+                paddingRight: '15px', }  : {}">
+                  <p  style="  font-weight: 400;  display: block;  margin-top: 0.5em;margin-bottom: 1em;
+                       font-family: 'Aeonik1';  color: #fffbe9 !important; "
+                     :style="{ 'font-size': !isMobile ? '48px' : '30px', lineHeight: 1.15,
                         color:isDarkMode ? '#fffbe9' : '#252423'
                       }" >
-                    Team
-                  </p>
-      </v-col>
-    </v-row>
+                      Team
+                   </p>
+              </v-col>
+            </v-row>
     <div class="team-members-container mt-n15"  ref="teamMembersContainer" @mousedown="startDrag" 
-        @mouseup="stopDrag"  @mouseleave="stopDrag"      @mousemove="drag"
-        :style="{ overflowX: isMobile ? 'auto' : 'hidden', whiteSpace: 'nowrap' }">
+         @mouseup="stopDrag"  @mouseleave="stopDrag"      @mousemove="drag"
+         :style="{ overflowX: isMobile ? 'auto' : 'hidden', whiteSpace: 'nowrap' }">
       <div class="team-members-row" style="display: flex; flex-direction: row;">
         <v-col v-for="member in teamMembers" :key="member.id" :cols="isMobile ? 9 : 5" class="d-flex flex-column align-center fade-up">
           <v-img  :src="member.image" class="team-image" :height="isMobile ? 470 : 670" :width="isMobile ? 400 : 550" 
               @mousemove="handleMouseMove($event, member.name)" @mouseleave="handleMouseLeave" />
           <h3 style="font-family: 'Aeonik1'" :class="isDarkMode ? 'text-white' : 'text-black'">{{ member.name }}</h3>
-          <p color="black" style="font-family: 'Aeonik1'" :class="isDarkMode ? 'text-white' : 'text-black'">{{ member.position }}</p>
+          <!-- <p color="black" style="font-family: 'Aeonik1'" :class="isDarkMode ? 'text-white' : 'text-black'">{{ member.position }}</p> -->
         </v-col>
       </div>
     </div>
   </v-container>
 </v-card>
-</section> -->
+</section>
 
-  <!-- //CONTACT SECTION -->
+
+   <!-- //CONTACT SECTION -->
 <v-footer
         v-if="!isMobile"
         :color="ColorFooter"
         id="contact"
         style="
-          min-height: 92vh;
+         min-height: 100vh;
           position: fixed;
           bottom: 0;
           left: 0;
@@ -1054,19 +1096,161 @@
         v-if="isMobile"
         :color="ColorFooter"
         id="contact"
-        style="
-          min-height: 100vh;
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          display: flex;
-          flex-direction: column;
-          padding: 35px;
-          z-index:2
-        "
+        :style="{
+          position: 'fixed',
+          // top: isToolbarVisible ? '80px' : '0', // Adjust based on toolbar visibility
+          left: '0',
+          right: '0',
+          bottom:'0',
+          zIndex: 2,
+          backgroundColor: ColorFooter,
+          minHeight: '100vh', // Set a minimum height for the footer
+          display: 'flex',
+          flexDirection: 'column',
+        }"
       >
-        <div class="footer-row1" style="margin-top: 10% !important">
+      <div class="footer-row1 mb-2" style="margin-top:30% !important">
+          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1">ADDRESS</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+              <p style="font-family:'ChaletBook'">PARKER STUDIO</p>
+              <p style="font-family:'ChaletBook'">5325 Ballard Ave NW</p>
+              <p style="font-family:'ChaletBook'">Unit 213</p>
+              <p style="font-family:'ChaletBook'">Seattle, WA 98107</p>
+              <p style="font-family:'ChaletBook'">United States</p>
+              <p style="font-family:'ChaletBook'">
+                <u>Map
+                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+                </u>
+              </p>
+            </div>
+          </div>
+          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1"></div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+              <p style="font-family:'ChaletBook'">PARKER STUDIO</p>
+              <p style="font-family:'ChaletBook'">5325 Ballard Ave NW</p>
+              <p style="font-family:'ChaletBook'">Unit 213</p>
+              <p style="font-family:'ChaletBook'">Seattle, WA 98107</p>
+              <p style="font-family:'ChaletBook'">United States</p>
+              <p style="font-family:'ChaletBook'">
+                <u>Map
+                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+                </u>
+              </p>
+        </div>
+        </div>
+        </div>
+        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
+        <div class="footer-row1 mb-2" style="margin-top:3% !important">
+          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1">INQUIRIES</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+              <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" class="b2">
+                <span >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+            </div>
+          </div>
+          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1"></div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+                <a style="color:black" href="mailto:hello@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+                  <span >hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+        </div>
+        </div>
+        </div>
+
+        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
+        <div class="footer-row1 mb-2" style="margin-top:3% !important">
+          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1">CAREERS INTERNSHIPS</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+              <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+                <span >worker(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+            </div>
+          </div>
+          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1"></div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+                <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+                  <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+        </div>
+        </div>
+        </div>
+        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
+        <div class="footer-row1 mb-2" style="margin-top:3% !important">
+          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1">FOLLOW US</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+              <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+                <span >Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+            </div>
+          </div>
+          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1"></div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+                <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+                  <span >Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+        </div>
+        </div>
+        </div>
+        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
+        <div class="footer-row1 mb-2" style="margin-top:3% !important">
+          <div class="address-section1" :style="{ flex: isMobile ? '2' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1">NEWSLETTER</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+              <div class="contact__information__detail__form__input"><input type="email" placeholder="Email address"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31"><g id="Layer_2" data-name="Layer 2"><g id="Design_System" data-name="Design System"><path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path></g></g></svg></div>    
+            </div>
+          </div>
+          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1"></div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+              <button class="b2 decoration active green">Submit</button>
+        </div>
+        </div>
+        </div>
+        <div
+          class="marquee"
+          style="
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(183, 227, 182, 0.8);
+          "
+        >
+          <v-row>
+            <v-col>
+              <div class="marquee-container" >
+                <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
+                <span v-else class="marquee-label1" ><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
+                <div class="marquee-content1">
+                  <div class="marquee-text1">
+                    SEATTLE <span> (21:07:21),</span> SFO
+                    <span> (02:07:21),</span> CHICAGO <span> (23:07:21),</span> AUSTIN
+                    <span> (23:07:21),</span> NYC <span> (00:07:21),</span> LONDON
+                    <span> (00:07:21),</span>
+                  </div>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+        </div>
+
+        <!-- <div class="footer-row1" style="margin-top: 23% !important" >
           <div
             class="address-section1"
             :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
@@ -1109,11 +1293,11 @@
           </div>
         </div>
         <v-divider
-          style="width: 100vw; border-color: black"
+          style="width: 100vw; border-color: black;"
           class="mt-2 contact__information__detail__line"
         ></v-divider>
 
-        <div class="footer-row1" style="margin-top: 4% !important">
+        <div class="footer-row1" style="padding: 14px 0 7px 0">
           <div
             class="address-section1"
             :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
@@ -1151,7 +1335,7 @@
           class="mt-2 contact__information__detail__line"
         ></v-divider>
 
-        <div class="footer-row1" style="margin-top: 4% !important">
+        <div class="footer-row1" style="padding: 3px 0 6px 0">
           <div
             class="address-section1"
             :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
@@ -1189,7 +1373,7 @@
           class="mt-2 contact__information__detail__line"
         ></v-divider>
 
-        <div class="footer-row1" style="margin-top: 4% !important">
+        <div class="footer-row1" style="padding: 13px 0 6px 0">
           <div
             class="address-section1"
             :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
@@ -1207,7 +1391,7 @@
             </div>
           </div>
           <div
-            class="address-section1"
+            class="address-section1 mt-n1"
             :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
           >
             <div class="footer1">&nbsp</div>
@@ -1230,9 +1414,9 @@
         <div class="footer-row1" style="margin-top: 4% !important">
           <div
             class="address-section1"
-            :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
+            :style="{ flex: isMobile ? '0.8' : '0.5', textAlign: 'left' }"
           >
-            <div class="footer1">FOLLOW US</div>
+            <div class="footer1">NEWSLETTER</div>
             <div class="footer1">&nbsp</div>
             <div class="address-details1">
               <p>
@@ -1242,7 +1426,7 @@
           </div>
           <div
             class="address-section1"
-            :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
+            :style="{ flex: isMobile ? '0.2' : '0.5', textAlign: 'left' }"
           >
             <div class="footer1">&nbsp</div>
             <div class="footer1">&nbsp</div>
@@ -1267,9 +1451,9 @@
         >
           <v-row>
             <v-col>
-              <div class="marquee-container">
+              <div class="marquee-container" >
                 <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
-                <span v-else class="marquee-label1"> Working in:</span>
+                <span v-else class="marquee-label1"> WORKING IN:</span>
                 <div class="marquee-content1">
                   <div class="marquee-text1">
                     SEATTLE <span> (21:07:21),</span> SFO
@@ -1281,33 +1465,9 @@
               </div>
             </v-col>
           </v-row>
-        </div>
+        </div> -->
 
-        <!-- <div
-    class="marquee1"
-    style="
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      background-color: rgba(183, 227, 182, 0.8);
-    "
-  >
-    <v-row>
-      <v-col>
-        <div class="marquee-container1">
-          <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
-          <span v-else class="marquee-label1"> Working in:</span>
-          <div class="marquee-content1">
-            <div class="marquee-text1">
-              SEATTLE <span> (21:07:21),</span> SFO <span> (02:07:21),</span> CHICAGO
-              <span> (23:07:21),</span> AUSTIN <span> (23:07:21),</span> NYC
-              <span> (00:07:21),</span> LONDON <span> (00:07:21),</span>
-            </div>
-          </div>
-        </div>
-      </v-col>
-    </v-row>
-  </div> -->
+      
 </v-footer>
     </div>
   </v-app>
@@ -1319,8 +1479,8 @@
     data() {
       return {
         isToolbarVisible: true,
-        lastScrollTop: 0,
-        ColorFooter:'',
+        lastScrollY: 0,
+        ColorFooter:'#b7e3b6',
         hasStartedCounting:false,
         isDarkMode:false,
         logos: [
@@ -1377,7 +1537,7 @@
           {
             id: 1,
             name: "James Jackson",
-            position: "CEO",
+            position: "",
             image:
               "https://img.freepik.com/premium-photo/3d-cartoon-business-character_776674-532471.jpg",
             details:
@@ -1386,7 +1546,7 @@
           {
             id: 4,
             name: "Nick Yebra",
-            position: "CMO",
+            position: "",
             image:
               "https://img.freepik.com/premium-photo/cartoon-character-with-contract-hands-3d-illustration_839035-120672.jpg",
             details:
@@ -1395,7 +1555,7 @@
           {
             id: 5,
             name: "John Fritz",
-            position: "DEVELOPER",
+            position: "",
             image:
               "https://img.freepik.com/premium-photo/cartoon-boy-with-brown-hair-blue-jacket-looking-up-generative-ai_900833-38976.jpg?w=360",
             details: "Fritz has a strong experience in web programming",
@@ -1449,7 +1609,7 @@
       cardHeight() {
         return this.isMobile ? "45vh" : "86vh";
       },
-    
+     
       floatingText() {
         return this.hoveredCard ? this.hoveredCard.text : "";
       },
@@ -1537,6 +1697,8 @@
               const sectionId = entry.target.id;
               this.activeSection = sectionId;
 
+              console.log(sectionId,' HAHA')
+
               // Add visible class to text elements
               const textElements = entry.target.querySelectorAll(".fade-up");
               textElements.forEach((el) => el.classList.add("visible"));
@@ -1565,6 +1727,7 @@
               if (sectionId === "results" && this.isDarkMode == false){
                   this.ColorFooter = 'white'
               }
+              
               else{
                   this.ColorFooter = '#b7e3b6'
               }
@@ -1706,31 +1869,15 @@
         requestAnimationFrame(updateCount);
       },
       handleScroll() {
-        console.log(this.isToolbarVisible)
-        const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (currentScrollTop > this.lastScrollTop) {
-          // Scrolling down
-          this.isToolbarVisible = false; // Hide the toolbar
-        } else {
-          // Scrolling up
-          this.isToolbarVisible = true; // Show the toolbar
-        }
-        this.lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; 
-        // const windowHeight = window.innerHeight;
-        // const documentHeight = document.documentElement.scrollHeight;
-        // const scrollTop = window.scrollY;
+      const currentScrollY = window.scrollY;
 
-        // // Check if we're at the bottom (within 1px)
-        // if (Math.abs(scrollTop + windowHeight - documentHeight) < 1) {
-        //   // this.isAtBottom = true;
-        //   this.activeSection = "contact";
-        // } else {
-        //   this.isAtBottom = false;
-        // }
-
-        // // Store last scroll position for scroll direction detection
-        // this.lastScrollPosition = scrollTop;
-      },
+      if (currentScrollY > this.lastScrollY) {
+        this.isToolbarVisible = false; // Hide toolbar on scroll down
+      } else {
+        this.isToolbarVisible = true; // Show toolbar on scroll up
+      }
+      this.lastScrollY = currentScrollY; // Update last scroll position
+    },
     },
     created() {
       this.checkDarkMode(); // Check dark mode preference on component creation
@@ -1751,11 +1898,10 @@
       this.loadLottieAnimation3();
       this.loadLottieAnimation4();
       window.addEventListener("scroll", this.handleScroll);
-      
       this.checkMobile();
-      this.intervalId = setInterval(() => {
-        this.showFirstSet = !this.showFirstSet;
-      }, 1500);
+      // this.intervalId = setInterval(() => {
+      //   this.showFirstSet = !this.showFirstSet;
+      // }, 1500);
     },
     beforeDestroy() {
       window.removeEventListener("resize", this.checkMobile);
@@ -1794,6 +1940,12 @@
     // font-weight: 1000 !important;
     font-style: normal;
   }
+  @font-face {
+    font-family: "ChaletBook1";
+    src: url("../src/assets/font/ChaletBookRegular.ttf") format("opentype");
+    // font-weight: 1000 !important;
+    font-style: normal;
+  }
 </style>
 
 <style scoped>
@@ -1818,7 +1970,6 @@
   opacity: 0;
   animation: fadeInRotate 0.8s ease-out forwards;
   animation-delay: calc(var(--i) * 1s);
-  color:#fffbe9 !important;
 }
 
 @keyframes fadeInRotate {
@@ -1863,9 +2014,21 @@
   z-index: 100;
   width: 100%;
   padding-top: 0.6em;
-  inset: 0% 0% auto;
-  transition: all 0.3s ease;
-  /* position: fixed; */
+  position: fixed;
+  top: 0; /* Ensure it starts at the top */
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for smooth sliding */
+}
+
+.tBar.hidden {
+  transform: translateY(-100%); /* Slide up out of view */
+  opacity: 0; /* Optional: Fade out */
+}
+
+.tBar.visible {
+  transform: translateY(0); /* Slide back into view */
+  opacity: 1; /* Optional: Fade in */
 }
 
 /* Card Hover Effects */
@@ -1880,7 +2043,7 @@
 
 /* Mobile Navigation */
 .mobile-nav {
-  background-color: #b7e3b6 !important;
+  background-color: #b7e3b6  !important;
 }
 
 .mobile-nav .v-list-item {
@@ -2218,11 +2381,6 @@ style attribute {
     min-height: 95px !important; /* Adjust as needed */
 }
 /* Currently Working In Section */
-.v-app-bar {
-  transform: translateY(0);
-  /* margin-bottom: 20px;  */
-  /* font-weight: 200px !important; */
-}
 
 .marquee-container {
   overflow: hidden;
@@ -2369,6 +2527,7 @@ animation: marquee 15s linear infinite;
   font-size: 180px !important;
   font-weight: bold !important;
   text-align: left; /* Align text to the left */
+  /* -webkit-text-stroke: 1px #fffbe9; */
   /* color: #0000;  */
   margin-bottom: .25em;
   padding-bottom: .2em;
@@ -2505,13 +2664,13 @@ a:active, a:hover {
 .section-title1{
 font-size: 15px !important;
 /* line-height: 15px !important; */
-font-family: 'Poppins' !important;
+font-family: 'ChaletBook1' !important;
 font-weight: 200;
 }
 .section-title2{
 font-size: 26px !important;
 /* line-height: 15px !important; */
-font-family: 'Poppins' !important;
+font-family: 'ChaletBook' !important;
 font-weight: 200;
 }
 
@@ -2636,32 +2795,33 @@ padding-left: 100%;
 
   /* ADDED 03-07 MOBILE */
   .footer1 {
-    font-family: "Poppins" !important;
-    font-size: 3.5vw;
+    font-family: "ChaletBook1" !important;
+    font-size: 4vw;
     transition: all 0.5s ease; /* Add transition for smooth font size change */
   }
   .footer-row1 {
-    font-family: "Poppins" !important;
+    font-family: "ChaletBook1" !important;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    font-weight: normal !important;
   }
 
   .address-section1 {
     flex: 0.3;
     text-align: left;
-    font-family: "Poppins" !important;
+    font-family: "ChaletBook1" !important;
   }
 
   .address-details1 p {
-    font-family: "Poppins" !important;
-    font-size: 3vw;
+    font-family: "ChaletBook1" !important;
+    font-size: 14px !important;
     transition: all 0.5s ease;
+    line-height: 10px !important; 
+    margin-bottom: 3% !important;
+    font-weight: 400 !important;
   }
-  .contact__information__detail__line {
-    border-width: 0.5px;
-  }
-
+ 
   .marquee-container1 {
     overflow: hidden;
     position: absolute;
@@ -2678,10 +2838,11 @@ padding-left: 100%;
     white-space: nowrap;
   }
   .marquee-label1 {
-    font-family: "Poppins" !important;
+    font-family: "ChaletBook1" !important;
     font-size: 3.5vw;
     margin-right: 4px;
     transition: all 0.5s ease; /* Add transition for smooth font size change */
+    
   }
   .marquee-content1 {
     overflow: hidden;
@@ -2701,8 +2862,8 @@ padding-left: 100%;
     white-space: nowrap;
     animation: marquee 20s linear infinite;
     padding-left: 100%;
-    font-size: 3.5vw;
-    font-family: "Poppins" !important;
+    font-size: 5vw;
+    font-family: "ChaletBook1" !important;
     transition: all 0.5s ease;
   }
 
@@ -2759,24 +2920,38 @@ padding-left: 100%;
 
   
   .rounded-input {
+    padding: 20px;
     border-radius: 30px; /* Rounded corners */
     border: 1px solid #ccc;
-    width: 280px; /* Adjust width */
+    width: 300px; /* Adjust width */
     color:white !important;
   }
   .rounded-input1 {
+    padding: 15px;
     border-radius: 30px; /* Rounded corners */
-    width: 300px !important; /* Adjust width */
+    width: 280px; /* Adjust width */
   }
-  .join-button1 {
+
+  .join-button {
     margin-top: 10px;
-    padding: 5px 15px;
+    padding: 20px 10px 22px 15px;
     border-radius: 30px;
     background-color: black; /* Blue color */
     color: white;
     border: none;
     cursor: pointer;
-    width: 140px;
+    width: 200px;
+    letter-spacing: 3px;
+  }
+  .join-button1 {
+    margin-top: 10px;
+    padding: 10px 10px;
+    border-radius: 30px;
+    background-color: black; /* Blue color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 150px;
     letter-spacing: 1px;
   }
 
@@ -2817,13 +2992,23 @@ padding-left: 100%;
 }
 .form-container {
   margin-top: 20px;
-  padding-left: 6% !important;
-  padding-right: 6% !important;
   text-align: center;
 }
 
 .input-form {
   margin-top: 20px;
+}
+
+.input-field {
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  outline: none;
+  border: 1px solid #ccc;
+  transition: 0.3s ease-in-out;
+  width: 80%;
+  max-width: 400px;
+  margin-bottom: 20px;
 }
 
 .input-field:focus {
@@ -2832,7 +3017,7 @@ padding-left: 100%;
 }
 
 .join-button {
-  padding: 7px 17px;
+  padding: 10px 20px;
   background-color: black;
   color: white;
   border: none;
@@ -2840,14 +3025,6 @@ padding-left: 100%;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  margin-top: 10px;
-    border-radius: 30px;
-    background-color: black; /* Blue color */
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 200px;
-    letter-spacing: 3px;
 }
 
 .join-button:hover {
@@ -2918,40 +3095,35 @@ padding-left: 100%;
   height: 56px; /* Adjust size */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
 }
+
 .v-parallax {
-  backface-visibility: hidden; /* Prevents flickering */
-  perspective: 1000px; /* Creates a 3D space for child elements */
+will-change: transform;
+transform: translateZ(0);
 }
 
-.v-parallax > * {
-  transform-style: preserve-3d; /* Allows child elements to maintain their 3D position */
-  transition: transform 0.3s ease; /* Smooth transition for transformations */
-}
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s ease; /* Adjust duration and easing */
+  transition: opacity 0.5s ease;
 }
 .fade-enter, .fade-leave-to {
-  opacity: 0; /* Start with opacity 0 */
+  opacity: 0; 
 }
 .fade-enter-to {
-  opacity: 1; /* End with opacity 1 */
-  transform-style: preserve-3d; /* Allows child elements to maintain their 3D position */
+  opacity: 1;
+  transform-style: preserve-3d;
   transition: transform 0.3s ease; 
 }
-.input-field::placeholder {
-    font-size: 0.8rem; /* Adjust the size as needed */
-    font-family: 'Aeonik1';
-    padding-left: 3%;
+.footer-row1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
-.input-field {
-    padding: 4px;
-    font-size: 1.2rem; /* Font size for the input text */
-    border-radius: 30px;
-    outline: none;
-    border: 1px solid #ccc;
-    transition: 0.3s ease-in-out;
-    width: 64% !important;
-    max-width: 400px;
-    margin-bottom: 20px;
+
+.address-section1 {
+  flex: 0.3;
+  text-align: left;
+}
+
+.footer1 {
+  font-size: 1.5rem; /* Adjust as needed */
 }
 </style>

@@ -795,8 +795,149 @@
 </v-card>
 </section>
 
+<!-- Footer Section -->
+<footer class="footer-mobile footer" v-if="isMobile">
+  <div class="footer-row1 mb-2" style="margin-top:35% !important">
+          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1">ADDRESS</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+              <p style="font-family:'ChaletBook'">PARKER STUDIO</p>
+              <p style="font-family:'ChaletBook'">5325 Ballard Ave NW</p>
+              <p style="font-family:'ChaletBook'">Unit 213</p>
+              <p style="font-family:'ChaletBook'">Seattle, WA 98107</p>
+              <p style="font-family:'ChaletBook'">United States</p>
+              <p style="font-family:'ChaletBook'">
+                <u>Map
+                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+                </u>
+              </p>
+            </div>
+          </div>
+          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1"></div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+              <p style="font-family:'ChaletBook'">PARKER STUDIO</p>
+              <p style="font-family:'ChaletBook'">5325 Ballard Ave NW</p>
+              <p style="font-family:'ChaletBook'">Unit 213</p>
+              <p style="font-family:'ChaletBook'">Seattle, WA 98107</p>
+              <p style="font-family:'ChaletBook'">United States</p>
+              <p style="font-family:'ChaletBook'">
+                <u>Map
+                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+                </u>
+              </p>
+        </div>
+        </div>
+        </div>
+        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
+        <div class="footer-row1 mb-2" style="margin-top:3% !important">
+          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1">INQUIRIES</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+              <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" class="b2">
+                <span >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+            </div>
+          </div>
+          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1"></div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+                <a style="color:black" href="mailto:hello@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+                  <span >hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+        </div>
+        </div>
+        </div>
 
-   <!-- //CONTACT SECTION -->
+        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
+        <div class="footer-row1 mb-2" style="margin-top:3% !important">
+          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1">CAREERS INTERNSHIPS</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+              <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+                <span >worker(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+            </div>
+          </div>
+          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1"></div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+                <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+                  <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+        </div>
+        </div>
+        </div>
+        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
+        <div class="footer-row1 mb-2" style="margin-top:3% !important">
+          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1">FOLLOW US</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+              <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+                <span >Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+            </div>
+          </div>
+          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1"></div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+                <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+                  <span >Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+        </div>
+        </div>
+        </div>
+        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
+        <div class="footer-row1 mb-2" style="margin-top:3% !important">
+          <div class="address-section1" :style="{ flex: isMobile ? '2' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1">NEWSLETTER</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+              <div class="contact__information__detail__form__input"><input type="email" placeholder="Email address"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31"><g id="Layer_2" data-name="Layer 2"><g id="Design_System" data-name="Design System"><path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path></g></g></svg></div>    
+            </div>
+          </div>
+          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
+            <div style="font-size:14px !important" class="address-details1"></div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
+            <div style="font-size:14px !important" class="address-details1">
+              <button class="b2 decoration active green">Submit</button>
+        </div>
+        </div>
+        </div>
+        <div
+          class="marquee"
+          style="
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(183, 227, 182, 0.8);
+          "
+        >
+          <v-row>
+            <v-col>
+              <div class="marquee-container" >
+                <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
+                <span v-else class="marquee-label1" ><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
+                <div class="marquee-content1">
+                  <div class="marquee-text1">
+                    SEATTLE <span> (21:07:21),</span> SFO
+                    <span> (02:07:21),</span> CHICAGO <span> (23:07:21),</span> AUSTIN
+                    <span> (23:07:21),</span> NYC <span> (00:07:21),</span> LONDON
+                    <span> (00:07:21),</span>
+                  </div>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+        </div>
+</footer>
 <v-footer
         v-if="!isMobile"
         :color="ColorFooter"
@@ -816,7 +957,7 @@
         <div
           class="footer-row"
           :style="{
-            marginTop: isMobile ? '30px' : '45px',
+            marginTop: isMobile ? '30px' : '85px',
             marginBottom: isMobile ? '7px' : '10px',
           }"
         >
@@ -1091,383 +1232,6 @@
             </v-col>
           </v-row>
         </div>
-</v-footer>
-<v-footer
-        v-if="isMobile"
-        :color="ColorFooter"
-        id="contact"
-        :style="{
-          position: 'fixed',
-          // top: isToolbarVisible ? '80px' : '0', // Adjust based on toolbar visibility
-          left: '0',
-          right: '0',
-          bottom:'0',
-          zIndex: 2,
-          backgroundColor: ColorFooter,
-          minHeight: '100vh', // Set a minimum height for the footer
-          display: 'flex',
-          flexDirection: 'column',
-        }"
-      >
-      <div class="footer-row1 mb-2" style="margin-top:30% !important">
-          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1">ADDRESS</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-              <p style="font-family:'ChaletBook'">PARKER STUDIO</p>
-              <p style="font-family:'ChaletBook'">5325 Ballard Ave NW</p>
-              <p style="font-family:'ChaletBook'">Unit 213</p>
-              <p style="font-family:'ChaletBook'">Seattle, WA 98107</p>
-              <p style="font-family:'ChaletBook'">United States</p>
-              <p style="font-family:'ChaletBook'">
-                <u>Map
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-                </u>
-              </p>
-            </div>
-          </div>
-          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1"></div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-              <p style="font-family:'ChaletBook'">PARKER STUDIO</p>
-              <p style="font-family:'ChaletBook'">5325 Ballard Ave NW</p>
-              <p style="font-family:'ChaletBook'">Unit 213</p>
-              <p style="font-family:'ChaletBook'">Seattle, WA 98107</p>
-              <p style="font-family:'ChaletBook'">United States</p>
-              <p style="font-family:'ChaletBook'">
-                <u>Map
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-                </u>
-              </p>
-        </div>
-        </div>
-        </div>
-        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
-        <div class="footer-row1 mb-2" style="margin-top:3% !important">
-          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1">INQUIRIES</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-              <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" class="b2">
-                <span >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-            </div>
-          </div>
-          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1"></div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-                <a style="color:black" href="mailto:hello@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-                  <span >hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-        </div>
-        </div>
-        </div>
-
-        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
-        <div class="footer-row1 mb-2" style="margin-top:3% !important">
-          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1">CAREERS INTERNSHIPS</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-              <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-                <span >worker(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-            </div>
-          </div>
-          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1"></div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-                <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-                  <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-        </div>
-        </div>
-        </div>
-        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
-        <div class="footer-row1 mb-2" style="margin-top:3% !important">
-          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1">FOLLOW US</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-              <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-                <span >Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-            </div>
-          </div>
-          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1"></div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-                <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-                  <span >Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-        </div>
-        </div>
-        </div>
-        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
-        <div class="footer-row1 mb-2" style="margin-top:3% !important">
-          <div class="address-section1" :style="{ flex: isMobile ? '2' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1">NEWSLETTER</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-              <div class="contact__information__detail__form__input"><input type="email" placeholder="Email address"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31"><g id="Layer_2" data-name="Layer 2"><g id="Design_System" data-name="Design System"><path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path></g></g></svg></div>    
-            </div>
-          </div>
-          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1"></div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-              <button class="b2 decoration active green">Submit</button>
-        </div>
-        </div>
-        </div>
-        <div
-          class="marquee"
-          style="
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background-color: rgba(183, 227, 182, 0.8);
-          "
-        >
-          <v-row>
-            <v-col>
-              <div class="marquee-container" >
-                <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
-                <span v-else class="marquee-label1" ><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
-                <div class="marquee-content1">
-                  <div class="marquee-text1">
-                    SEATTLE <span> (21:07:21),</span> SFO
-                    <span> (02:07:21),</span> CHICAGO <span> (23:07:21),</span> AUSTIN
-                    <span> (23:07:21),</span> NYC <span> (00:07:21),</span> LONDON
-                    <span> (00:07:21),</span>
-                  </div>
-                </div>
-              </div>
-            </v-col>
-          </v-row>
-        </div>
-
-        <!-- <div class="footer-row1" style="margin-top: 23% !important" >
-          <div
-            class="address-section1"
-            :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
-          >
-            <div class="footer1">ADDRESS</div>
-            <div class="footer1">&nbsp</div>
-            <div class="address-details1">
-              <p>PARKER STUDIO</p>
-              <p><u>5424 Ballard Ave NW</u></p>
-              <p>Unit 103</p>
-              <p>Seattle, WA 98107</p>
-              <p>United States</p>
-              <p>
-                <u
-                  >Maps
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
-                >
-              </p>
-            </div>
-          </div>
-          <div
-            class="address-section1"
-            :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
-          >
-            <div class="footer1">&nbsp</div>
-            <div class="footer1">&nbsp</div>
-            <div class="address-details1">
-              <p>PARKER STUDIO</p>
-              <p><u>5424 Ballard Ave NW</u></p>
-              <p>Unit 103</p>
-              <p>Seattle, WA 98107</p>
-              <p>United States</p>
-              <p>
-                <u
-                  >Maps
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <v-divider
-          style="width: 100vw; border-color: black;"
-          class="mt-2 contact__information__detail__line"
-        ></v-divider>
-
-        <div class="footer-row1" style="padding: 14px 0 7px 0">
-          <div
-            class="address-section1"
-            :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
-          >
-            <div class="footer1">INQUIRIES</div>
-            <div class="footer1">&nbsp</div>
-            <div class="address-details1">
-              <p>
-                <u>
-                  +1 206 395 9662<v-icon size="x-small" class="ml-n1"
-                    >mdi-arrow-top-right</v-icon
-                  ></u
-                >
-              </p>
-            </div>
-          </div>
-          <div
-            class="address-section1"
-            :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
-          >
-            <div class="footer1">&nbsp</div>
-            <div class="footer1">&nbsp</div>
-            <div class="address-details1">
-              <p>
-                <u>
-                  hello(at)parker.studio
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <v-divider
-          style="width: 100vw; border-color: black"
-          class="mt-2 contact__information__detail__line"
-        ></v-divider>
-
-        <div class="footer-row1" style="padding: 3px 0 6px 0">
-          <div
-            class="address-section1"
-            :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
-          >
-            <div class="footer1">CAREER INTERNSHIPS</div>
-            <div class="footer1">&nbsp</div>
-            <div class="address-details1">
-              <p>
-                <u>
-                  work(at)parker.studio<v-icon size="x-small" class="ml-n1"
-                    >mdi-arrow-top-right</v-icon
-                  ></u
-                >
-              </p>
-            </div>
-          </div>
-          <div
-            class="address-section1"
-            :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
-          >
-            <div class="footer1">&nbsp</div>
-            <div class="footer1">&nbsp</div>
-            <div class="address-details1">
-              <p>
-                <u>
-                  intern(at)parker.studio
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <v-divider
-          style="width: 100vw; border-color: black"
-          class="mt-2 contact__information__detail__line"
-        ></v-divider>
-
-        <div class="footer-row1" style="padding: 13px 0 6px 0">
-          <div
-            class="address-section1"
-            :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
-          >
-            <div class="footer1">FOLLOW US</div>
-            <div class="footer1">&nbsp</div>
-            <div class="address-details1">
-              <p>
-                <u>
-                  Instagram<v-icon size="x-small" class="ml-n1"
-                    >mdi-arrow-top-right</v-icon
-                  ></u
-                >
-              </p>
-            </div>
-          </div>
-          <div
-            class="address-section1 mt-n1"
-            :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }"
-          >
-            <div class="footer1">&nbsp</div>
-            <div class="footer1">&nbsp</div>
-            <div class="address-details1">
-              <p>
-                <u>
-                  Tumblr
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <v-divider
-          style="width: 100vw; border-color: black"
-          class="mt-2 contact__information__detail__line"
-        ></v-divider>
-
-        <div class="footer-row1" style="margin-top: 4% !important">
-          <div
-            class="address-section1"
-            :style="{ flex: isMobile ? '0.8' : '0.5', textAlign: 'left' }"
-          >
-            <div class="footer1">NEWSLETTER</div>
-            <div class="footer1">&nbsp</div>
-            <div class="address-details1">
-              <p>
-                <v-text-field variant="underlined" placeholder="Email" />
-              </p>
-            </div>
-          </div>
-          <div
-            class="address-section1"
-            :style="{ flex: isMobile ? '0.2' : '0.5', textAlign: 'left' }"
-          >
-            <div class="footer1">&nbsp</div>
-            <div class="footer1">&nbsp</div>
-            <div class="address-details1">
-              <p>SUBMIT</p>
-            </div>
-          </div>
-        </div>
-        <v-divider
-          style="width: 100vw; border-color: black"
-          class="mt-2 contact__information__detail__line"
-        ></v-divider>
-
-        <div
-          class="marquee"
-          style="
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background-color: rgba(183, 227, 182, 0.8);
-          "
-        >
-          <v-row>
-            <v-col>
-              <div class="marquee-container" >
-                <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
-                <span v-else class="marquee-label1"> WORKING IN:</span>
-                <div class="marquee-content1">
-                  <div class="marquee-text1">
-                    SEATTLE <span> (21:07:21),</span> SFO
-                    <span> (02:07:21),</span> CHICAGO <span> (23:07:21),</span> AUSTIN
-                    <span> (23:07:21),</span> NYC <span> (00:07:21),</span> LONDON
-                    <span> (00:07:21),</span>
-                  </div>
-                </div>
-              </div>
-            </v-col>
-          </v-row>
-        </div> -->
-
-      
 </v-footer>
     </div>
   </v-app>
@@ -3126,4 +2890,38 @@ transform: translateZ(0);
 .footer1 {
   font-size: 1.5rem; /* Adjust as needed */
 }
+
+.footer-mobile {
+  background-color: #b7e3b6; /* Background color */
+  color: black !important; /* Text color */
+  padding: 20px; /* Padding */
+  text-align: center; /* Center text */
+  position: fixed; /* Fix the position */
+  left: 0; /* Align to the left */
+  bottom: 0; /* Align to the bottom */
+  width: 100%; /* Full width */
+  z-index: 2; /* Ensure it is above other content */
+  height: 100vh !important; /* Full height */
+  font-size: 1rem; /* Default font size */
+}
+
+/* Responsive font size adjustments */
+@media (max-width: 768px) {
+  .footer-mobile {
+    font-size: 14px; /* Minimum font size for mobile */
+  }
+}
+
+@media (min-width: 769px) {
+  .footer-mobile {
+    font-size: 1.5rem; /* Adjust font size for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-mobile {
+    font-size: 2rem; /* Further adjust for larger screens */
+  }
+}
+  
 </style>
