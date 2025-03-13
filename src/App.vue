@@ -975,8 +975,8 @@
           >
             <div class="address-details">
               <p>PARKER STUDIO</p>
-              <p><u>5424 Ballard Ave NW</u></p>
-              <p>Unit 103</p>
+              <p><u>5325 Ballard Ave NW</u></p>
+              <p>Unit 213</p>
               <p>Seattle, WA 98107</p>
               <p>United States</p>
               <p>
@@ -996,8 +996,8 @@
 
             <div class="address-details">
               <p>PARKER STORE</p>
-              <p><u>5424 Ballard Ave NW</u></p>
-              <p>Unit 103</p>
+              <p><u>5325 Ballard Ave NW</u></p>
+              <p>Unit 213</p>
               <p>Seattle, WA 98107</p>
               <p>United States</p>
               <p>
