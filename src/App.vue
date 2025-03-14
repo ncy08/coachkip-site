@@ -789,7 +789,7 @@
 
 <!-- Footer Section -->
 <footer id="contact" class="footer-mobile footer" v-if="isMobile">
-  <div class="footer-row1 mb-2" style="margin-top:45% !important">
+  <div class="footer-row1 mb-2" style="margin-top:48% !important">
           <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
             <div style="font-size:14px !important" class="address-details1">ADDRESS</div>
             <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
