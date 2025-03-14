@@ -13,7 +13,7 @@
       </div>
       <transition name="fade">
       <v-toolbar v-show="isToolbarVisible" :color="isDarkMode ? '#252423' : '#fffbe9'" class="tBar" style="z-index: 1999">
-        <v-toolbar-title @click="toogle()" :style="{color : isDarkMode ? 'white' : 'black'}">COACH KIP</v-toolbar-title>
+        <v-toolbar-title v-on:click="handleMenuItemClick({ link: '#home' })" :style="{color : isDarkMode ? 'white' : 'black'}">COACH KIP</v-toolbar-title>
         <v-spacer></v-spacer>
         <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 20px; padding: 2px 22px 3px; display: block;" class="mr-6 hidden-sm-and-up mt-n1" @click="drawer = true"> Menu
         </button>
@@ -382,10 +382,10 @@
         </v-parallax>
  </section>
       <!-- //HOW WE DO IT SECTION -->
-<section :style="{ minHeight: isMobile ? '70vh' : '100vh'}"
+<section :style="{ minHeight: isMobile ? '40vh' : '100vh'}"
         style=" position: relative;  border-radius: 0% !important;z-index: 999;"
         id="kip" @mousemove="handleMouseMove($event, 'How we do it')"  @mouseleave="handleMouseLeave">
-        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '70vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; " >
+        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '40vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; " >
           <v-container :class="!isMobile ? 'custom-padding' : ''">
             <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
               <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -415,6 +415,8 @@
           </v-container>
         </v-parallax>
 </section>
+
+
       <!-- //1 - IDEA SECTION -->
 <section id="mission"  :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
@@ -428,7 +430,6 @@
                   @mouseleave="handleMouseLeave"
                   ref="lottieContainer" 
                   :class="{'dark-mode': !isDarkMode}" 
-                  style="margin-bottom: -3em" 
                   :style="{width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px'}"
                 ></div>
               </v-col>
@@ -472,9 +473,9 @@
         </v-parallax>
 </section>
       <!-- //2 - VALIDATION SECTION -->
-<section id="mission" :style="{ minHeight: isMobile ? '100vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section  id="mission" :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '100vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        <v-parallax :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'" >
           <v-container fluid class="fade-up">
             <v-row align="center" justify="center">
@@ -523,25 +524,21 @@
           </v-container>
         </v-parallax>
 </section>
-
       <!-- //03 -  CREATION -->
-<section id="mission"  :style="{ minHeight: isMobile ? '100vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section id="mission"  :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '100vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        <v-parallax :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
           <v-container fluid class="fade-up">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
-                <div
-                  @mousemove="handleMouseMove($event, '03—Creation')"
+                <div 
+                  @mousemove="handleMouseMove($event, '03—Creation')" 
                   @mouseleave="handleMouseLeave"
-                  ref="lottieContainer2"
+                  ref="lottieContainer2" 
                   :class="{'dark-mode': !isDarkMode}" 
-                  style="margin-bottom: -3em"
-                  :style="{
-                    width: isMobile ? '300px' : '450px',
-                    height: isMobile ? '300px' : '450px',
-                  }"
+                  style="margin-bottom: -3em" 
+                  :style="{width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px'}"
                 ></div>
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 6% !important">
@@ -575,23 +572,20 @@
         </v-parallax>
 </section>
       <!-- //04 - SPINOUT -->
-<section  id="mission" :style="{ minHeight: isMobile ? '100vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section  id="mission" :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '100vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        <v-parallax :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
           <v-container fluid class="fade-up">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
-                <div
-                  @mousemove="handleMouseMove($event, '04—Spinout')"
+                <div 
+                  @mousemove="handleMouseMove($event, '04—Spinout')" 
                   @mouseleave="handleMouseLeave"
-                  ref="lottieContainer3"
+                  ref="lottieContainer3" 
                   :class="{'dark-mode': !isDarkMode}" 
-                  style="margin-bottom: -3em"
-                  :style="{
-                    width: isMobile ? '300px' : '450px',
-                    height: isMobile ? '300px' : '450px',
-                  }"
+                  style="margin-bottom: -3em" 
+                  :style="{width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px'}"
                 ></div>
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 6% !important">
@@ -626,23 +620,20 @@
         </v-parallax>
 </section>
       <!-- //05 - SCALE UP -->
-<section id="mission" :style="{ minHeight: isMobile ? '90vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section id="mission" :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '90vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        <v-parallax :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
           <v-container fluid class="fade-up">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
-                <div
-                  @mousemove="handleMouseMove($event, '05—Scale Up')"
+                <div 
+                  @mousemove="handleMouseMove($event, '05—Scale Up')" 
                   @mouseleave="handleMouseLeave"
-                  ref="lottieContainer4"
-                  :class="{'dark-mode': !isDarkMode}"
-                  style="margin-bottom: -3em"
-                  :style="{
-                    width: isMobile ? '300px' : '450px',
-                    height: isMobile ? '300px' : '450px',
-                  }"
+                  ref="lottieContainer4" 
+                  :class="{'dark-mode': !isDarkMode}" 
+                  style="margin-bottom: -3em" 
+                  :style="{width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px'}"
                 ></div>
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 6% !important">
@@ -796,8 +787,8 @@
 </section>
 
 <!-- Footer Section -->
-<footer class="footer-mobile footer" v-if="isMobile">
-  <div class="footer-row1 mb-2" style="margin-top:35% !important">
+<footer id="contact" class="footer-mobile footer" v-if="isMobile">
+  <div class="footer-row1 mb-2" style="margin-top:50% !important">
           <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
             <div style="font-size:14px !important" class="address-details1">ADDRESS</div>
             <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
@@ -1010,7 +1001,7 @@
           </div>
         </div>
         <v-divider
-          style="width: 100vw; border-color: black; margin-left: 54% !important"
+          style="width: 100vw; border-color: black; margin-left: 50% !important"
         ></v-divider>
 
         <div
@@ -2923,5 +2914,10 @@ transform: translateZ(0);
     font-size: 2rem; /* Further adjust for larger screens */
   }
 }
-  
+@media (max-width: 768px) {
+  /* Ensure sections have a solid background color */
+  section {
+    background-color: #252423; /* Match this to your footer color */
+  }
+}
 </style>
