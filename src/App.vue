@@ -1,7 +1,7 @@
 
 <template>
   <v-app >
-    <div>
+    <div >
       <v-btn   @click="toogle"  class="dark-mode-toggle"  icon
       :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }"
     >
@@ -14,9 +14,11 @@
       </div>
       <transition name="fade">
       <v-toolbar v-show="isToolbarVisible" :color="isDarkMode ? '#252423' : '#fffbe9'" class="tBar" style="z-index: 1999">
-        <v-toolbar-title v-on:click="handleMenuItemClick({ link: '#home' })" :style="{color : isDarkMode ? 'white' : 'black'}">COACH KIP</v-toolbar-title>
+        <v-toolbar-title v-on:click="handleMenuItemClick({ link: '#home' })" :style="{color : isDarkMode ? 'white' : 'black'}">{{ resizeObserver }} COACH KIP</v-toolbar-title>
         <v-spacer></v-spacer>
-        <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 20px; padding: 2px 22px 3px; display: block;" class="mr-6 hidden-sm-and-up mt-n1" @click="drawer = true"> Menu
+        <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" 
+        @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 20px; padding: 2px 22px 3px; display: block;" 
+        class="mr-6 hidden-md-and-up mt-n1" @click="drawer = true"> Menu
         </button>
         <v-toolbar-items class="hidden-sm-and-down">
           <template v-for="(item, index) in menuItems" :key="index">
@@ -178,7 +180,7 @@
    </v-navigation-drawer>
 
 <!-- TITLE -->
-<section style="position: relative; min-height: 100vh; z-index: 999;" id="home">
+<section class="fade-in" style="position: relative; min-height: 100vh; z-index: 999;" id="home">
 <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; min-height: 100vh;">
   <div class="hero-content" :style="{paddingTop: isMobile ? '4% !important' : ''}">
     <div class="title-wrapper">
@@ -291,40 +293,33 @@
 </section>
 
 <!-- FOLLOWING PAGE -->
-<section :style="{ minHeight: isMobile ? '50vh' : '100vh'}"  style=" position: relative; border-radius: 0% !important ;z-index: 999;">
-  <v-parallax  :color="isDarkMode ? '#252423' : '#fffbe9'"  :style="{ minHeight: isMobile ? '50vh' : '100vh'}"  style="position: relative; border-radius: 0% !important;">
-    <v-container :class="!isMobile ? 'custom-padding' : ''">
+<section class="fade-in" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
+  style="position: relative; border-radius: 0% !important; z-index: 999;">
+  <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
+  style="position: relative; border-radius: 0% !important;">
+    <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
       <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
-        <v-col  :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
-          :style="  !isMobile ? { marginLeft: '15px', paddingBottom: '5em',
-               paddingLeft: '0',paddingRight: '15px',}: {}">
-               <p  style="  font-weight: 400;  display: block;  margin-top: 1.5em;margin-bottom: 1em;
-                  font-family: 'Aeonik1';  color: #fffbe9 !important; "
-                  :style="{ 'font-size': !isMobile ? '96px' : '38px', lineHeight: 1.00,paddingRight: '5%',
-                     color:isDarkMode ? '#fffbe9' : '#252423'
-                      }" >
-                     A new model for building companies.
-                   </p>
-                   <p  class="color-ivory" style="padding-right: 6% !important;  padding-bottom: 1em;
-                    font-family: 'Aeonik1'; color: #fffbe9 !important; "
-                  :style="{
-                    'font-size': !isMobile ? '32px' : '16px',
-                    letterSpacing: '0.10px',textAlign: 'left',  color:isDarkMode ? '#fffbe9' : '#252423'}" >
-                    
-                    We work with world-class entreprenuers in the Pacific Northwest to turn
-                    the best ideas into market-defining, venture-funded companies with rapid
-                    customer adoption.
-                </p>
+        <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
+          :style="paddingStyles">
+          <p style="font-weight: 400; display: block; margin-top: 1.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
+            :style="{ 'font-size': !isMobile ? '96px' : '38px', lineHeight: 1.00, paddingRight: '5%', color: isDarkMode ? '#fffbe9' : '#252423' }">
+            A new model for building companies.
+          </p>
+          <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
+            :style="{ 'font-size': !isMobile ? '32px' : '16px', letterSpacing: '0.10px', textAlign: 'left', color: isDarkMode ? '#fffbe9' : '#252423' }">
+            We work with world-class entrepreneurs in the Pacific Northwest to turn
+            the best ideas into market-defining, venture-funded companies with rapid
+            customer adoption.
+          </p>
         </v-col>
       </v-row>
     </v-container>
   </v-parallax>
 </section>
-      <!-- 1ST SECTION : WHAT WE DO -->
-<section :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;z-index: 999; "
+<section class="fade-in" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;z-index: 999; "
         id="mission" @mousemove="handleMouseMove($event, 'What we do')" @mouseleave="handleMouseLeave">
         <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
-          <v-container :class="!isMobile ? 'custom-padding' : ''">
+          <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
             <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
               <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
                 :style=" !isMobile   ? {  marginLeft: '15px',  paddingBottom: '5em',  paddingLeft: '0',
@@ -354,12 +349,11 @@
           </v-container>
         </v-parallax>
 </section>
-      <!-- //2ND SECTON : LIST OF THINGS -->
-<section  :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style=" position: relative;
+<section class="fade-in" :style="{ minHeight: isMobile ? '40vh' : '100vh'}" style=" position: relative;
         border-radius: 0% !important;z-index: 999;">
-        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'"  :style="{ minHeight: isMobile ? '70vh' : '100vh'}" 
+        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'"  :style="{ minHeight: isMobile ? '40vh' : '100vh'}" 
           style="position: relative; border-radius: 0% !important; " >
-          <v-container  fluid :class="!isMobile ? 'services-container' : ''"
+          <v-container  fluid :class="!isMobile ? 'services-container' : 'services-containerMV'"
             :style=" !isMobile  ? {  marginLeft: '10px',  paddingBottom: '5em', paddingLeft: '8%',
               paddingRight: '15px',}: { paddingTop: '5em' } ">
             <div :style="{'grid-template-columns': isMobile ? '' : 'repeat(2, minmax(250px, 1fr))',
@@ -381,13 +375,12 @@
             </div>
           </v-container>
         </v-parallax>
- </section>
-      <!-- //HOW WE DO IT SECTION -->
-<section :style="{ minHeight: isMobile ? '40vh' : '100vh'}"
+</section>
+<section class="fade-in" :style="{ minHeight: isMobile ? '40vh' : '100vh'}"
         style=" position: relative;  border-radius: 0% !important;z-index: 999;"
         id="kip" @mousemove="handleMouseMove($event, 'How we do it')"  @mouseleave="handleMouseLeave">
         <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '40vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; " >
-          <v-container :class="!isMobile ? 'custom-padding' : ''">
+          <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
             <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
               <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
                 :style="  !isMobile ? { marginLeft: '15px',  paddingBottom: '5em',
@@ -415,15 +408,13 @@
             </v-row>
           </v-container>
         </v-parallax>
-</section>
+</section> 
 
-
-      <!-- //1 - IDEA SECTION -->
-<section id="mission"  :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section class="fade-in" id="mission"  :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'" >
-          <v-container fluid class="fade-up">
+          <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -431,7 +422,7 @@
                   @mouseleave="handleMouseLeave"
                   ref="lottieContainer" 
                   :class="{'dark-mode': !isDarkMode}" 
-                  :style="{width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px'}"
+                  :style="{width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight:isMobile ? '10%' : ''}"
                 ></div>
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 2% !important">
@@ -473,12 +464,11 @@
           </v-container>
         </v-parallax>
 </section>
-      <!-- //2 - VALIDATION SECTION -->
-<section  id="mission" :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section class="fade-in"  id="mission" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'" >
-          <v-container fluid class="fade-up">
+        <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -487,7 +477,7 @@
                   ref="lottieContainer1" 
                   :class="{'dark-mode': !isDarkMode}" 
                   style="margin-bottom: -3em" 
-                  :style="{width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px'}"
+                  :style="{width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight:isMobile ? '10%' : ''}"
                 ></div>
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 2% !important">
@@ -525,12 +515,11 @@
           </v-container>
         </v-parallax>
 </section>
-      <!-- //03 -  CREATION -->
-<section id="mission"  :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section class="fade-in" id="mission"  :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
-          <v-container fluid class="fade-up">
+        <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -539,7 +528,7 @@
                   ref="lottieContainer2" 
                   :class="{'dark-mode': !isDarkMode}" 
                   style="margin-bottom: -3em" 
-                  :style="{width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px'}"
+                  :style="{width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight:isMobile ? '10%' : ''}"
                 ></div>
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 6% !important">
@@ -572,12 +561,11 @@
           </v-container>
         </v-parallax>
 </section>
-      <!-- //04 - SPINOUT -->
-<section  id="mission" :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section class="fade-in"  id="mission" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
-          <v-container fluid class="fade-up">
+        <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -586,7 +574,7 @@
                   ref="lottieContainer3" 
                   :class="{'dark-mode': !isDarkMode, 'mt-n6': isMobile}" 
                   style="margin-bottom: -3em" 
-                  :style="{width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px'}"
+                   :style="{width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight:isMobile ? '10%' : ''}"
                 ></div>
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 6% !important">
@@ -620,12 +608,11 @@
           </v-container>
         </v-parallax>
 </section>
-      <!-- //05 - SCALE UP -->
-<section id="mission" :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
+<section class="fade-in" id="mission" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '80vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
+        <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
-          <v-container fluid class="fade-up">
+        <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -634,7 +621,7 @@
                   ref="lottieContainer4" 
                   :class="{'dark-mode': !isDarkMode, 'mt-n13': isMobile}"  
                   style="margin-bottom: -3em" 
-                  :style="{width: isMobile ? '300px' : '450px', height: isMobile ? '300px' : '450px'}"
+                   :style="{width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight:isMobile ? '10%' : ''}"
                 ></div>
               </v-col>
               <v-col cols="12" md="5" style="padding-right: 6% !important">
@@ -669,11 +656,10 @@
           </v-container>
         </v-parallax>
 </section>
-      <!-- //RESULTS SECTION -->
-<section id="about" style="position: relative; z-index: 999; min-height: 50vh">
-  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 50vh" 
+ <section class="fade-in" id="about" style="position: relative; z-index: 999; min-height: 60vh;padding">
+  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 60vh" 
       :color="isDarkMode ? '#252423' : '#fffbe9'">
-      <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
+      <v-container fluid class="fade-up" :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
           <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
               <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
                 :style=" !isMobile   ? {  marginLeft: '15px',  paddingBottom: '5em',  paddingLeft: '0',
@@ -722,11 +708,10 @@
       </v-container>
   </v-parallax>
 </section>
-      <!-- //SPONSORS SECTION -->
-  <section id="sponsor" style="position: relative; z-index: 999; min-height: 70vh">
-  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 70vh" 
+<section class="fade-in" id="sponsor" style="position: relative; z-index: 999; min-height: 60vh">
+  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 60vh" 
       :color="isDarkMode ? '#252423' : '#fffbe9'">
-      <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
+      <v-container fluid class="fade-up" :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
             <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
               <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
                 :style=" !isMobile   ? {  marginLeft: '15px',  paddingBottom: '5em',  paddingLeft: '0',
@@ -753,11 +738,9 @@
         </v-container>
     </v-parallax>
 </section>
-
-      <!-- //TEAM SECTION -->
-<section id="team" class="shadow-bottom" style="position: relative; z-index: 999; min-height: 70vh">
-<v-card :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; border-radius: 0% !important; min-height: 70vh">
-  <v-container :class="!isMobile ? 'custom-padding' : ''" class="fade-up">
+<section class="fade-in shadow-bottom" id="team" style="position: relative; z-index: 999; min-height: 80vh">
+<v-card :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; border-radius: 0% !important; min-height: 80vh">
+  <v-container fluid class="fade-up" :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
               <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
                 :style=" !isMobile   ? {  marginLeft: '15px',  paddingBottom: '5em',  paddingLeft: '0',
@@ -779,13 +762,12 @@
           <v-img  :src="member.image" class="team-image" :height="isMobile ? 470 : 670" :width="isMobile ? 400 : 550" 
               @mousemove="handleMouseMove($event, member.name)" @mouseleave="handleMouseLeave" />
           <h3 style="font-family: 'Aeonik1'" :class="isDarkMode ? 'text-white' : 'text-black'">{{ member.name }}</h3>
-          <!-- <p color="black" style="font-family: 'Aeonik1'" :class="isDarkMode ? 'text-white' : 'text-black'">{{ member.position }}</p> -->
         </v-col>
       </div>
     </div>
   </v-container>
 </v-card>
-</section>
+</section> 
 
 <!-- Footer Section -->
 <footer id="contact" class="footer-mobile footer" v-if="isMobile">
@@ -891,8 +873,28 @@
             <div style="font-size:14px !important" class="address-details1">NEWSLETTER</div>
             <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
             <div style="font-size:14px !important" class="address-details1">
-              <div class="contact__information__detail__form__input"><input type="email" placeholder="Email address"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31"><g id="Layer_2" data-name="Layer 2"><g id="Design_System" data-name="Design System"><path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path></g></g></svg></div>    
+              <div class="contact__information__detail__form__input">
+              <input 
+                type="email" 
+                placeholder="Email address" 
+                :style="{
+                  border: 'none', /* Remove border */
+                  backgroundColor: 'transparent', /* Make background transparent */
+                  color: black, /* Text color based on dark mode */
+                  outline: 'none', /* Remove outline on focus */
+                  width: '100%', /* Full width */
+                  fontSize: '16px' /* Adjust font size as needed */
+                }"
+              />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31">
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Design_System" data-name="Design System">
+                    <path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path>
+                  </g>
+                </g>
+              </svg>
             </div>
+ </div>
           </div>
           <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
             <div style="font-size:14px !important" class="address-details1"></div>
@@ -930,275 +932,156 @@
           </v-row>
         </div>
 </footer>
-<v-footer
-        v-if="!isMobile"
-        :color="ColorFooter"
-        id="contact"
-        style="
-         min-height: 100vh;
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          display: flex;
-          flex-direction: column;
-          z-index:2
-        "
-      >
-        <!-- First Row -->
-        <div
-          class="footer-row"
-          :style="{
-            marginTop: isMobile ? '30px' : '85px',
-            marginBottom: isMobile ? '7px' : '10px',
-          }"
-        >
-          <div v-if="!isMobile" class="address-section contact-title">
-            <div class="footer">Contact</div>
-          </div>
-
-          <div v-if="!isMobile" class="address-section address-title">
-            <div class="footer">ADDRESS</div>
-          </div>
-
-          <div
-            class="address-section"
-            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
-          >
-            <div class="address-details">
-              <p>PARKER STUDIO</p>
-              <p><u>5325 Ballard Ave NW</u></p>
-              <p>Unit 213</p>
-              <p>Seattle, WA 98107</p>
-              <p>United States</p>
-              <p>
-                <u
-                  >Maps
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
-                >
-              </p>
+<footer id="contact" class="footer-desktop">
+  <div class="footer-row mt-16">
+    <div class="address-section">
+      <div class="footer">CONTACT</div>
+      <div class="address-details">
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="footer">ADDRESS</div>
+      <div class="address-details">
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="address-details">
+        <p>PARKER STORE</p>
+        <p><u>5325 Ballard Ave NW</u></p>
+        <p>Unit 213</p>
+        <p>Seattle, WA 98107</p>
+        <p>United States</p>
+        <p><u>Maps</u></p>
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="address-details">
+        <p>PARKER STORE</p>
+        <p><u>5325 Ballard Ave NW</u></p>
+        <p>Unit 213</p>
+        <p>Seattle, WA 98107</p>
+        <p>United States</p>
+        <p><u>Maps</u></p>
+      </div>
+    </div>
+  </div>
+  <v-divider style="width: 100vw; border-color: black;"></v-divider>
+  <div class="footer-row">
+    <div class="address-section">
+      <div class="footer"></div>
+      <div class="address-details">
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="footer">INQUIRIES</div>
+      <div class="address-details">
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="address-details">
+        <p style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" class="b2">
+          <span >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </p>
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="address-details">
+        <p style="color:black" href="mailto:hello@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+          <span >hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </p>
+      </div>
+    </div>
+  </div>
+  <v-divider style="width: 100vw; border-color: black;"></v-divider>
+  <div class="footer-row">
+    <div class="address-section">
+      <div class="footer"></div>
+      <div class="address-details">
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="footer">CAREER INTERNSHIPS</div>
+      <div class="address-details">
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="address-details">
+        <p style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+          <span >worker(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </p>
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="address-details">
+        <p style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+          <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </p>
+      </div>
+    </div>
+  </div>
+  <v-divider style="width: 100vw; border-color: black;"></v-divider>
+  <div class="footer-row">
+    <div class="address-section">
+      <div class="footer"></div>
+      <div class="address-details">
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="footer">FOLLOW US</div>
+      <div class="address-details">
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="address-details">
+        <p><u>Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="address-details">
+       <p> <u>Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
+      </div>
+    </div>
+  </div>
+  <v-divider style="width: 100vw; border-color: black;"></v-divider>
+  <div class="footer-row">
+    <div class="address-section">
+      <div class="footer"></div>
+      <div class="address-details">
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="footer">NEWS LETTER</div>
+      <div class="address-details">
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="address-details">
+        <div class="contact__information__detail__form__input">
+              <p><input 
+                type="email" 
+                placeholder="Email address" 
+                :style="{
+                  border: 'none', /* Remove border */
+                  backgroundColor: 'transparent', /* Make background transparent */
+                  color: black, /* Text color based on dark mode */
+                  outline: 'none', /* Remove outline on focus */
+                  width: '100%', /* Full width */
+                  fontSize: '16px' /* Adjust font size as needed */
+                }"
+              /></p>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31">
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Design_System" data-name="Design System">
+                    <path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path>
+                  </g>
+                </g>
+              </svg>
             </div>
-          </div>
-
-          <div
-            class="address-section"
-            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
-          >
-            <div v-if="isMobile" class="footer">&nbsp</div>
-
-            <div class="address-details">
-              <p>PARKER STORE</p>
-              <p><u>5325 Ballard Ave NW</u></p>
-              <p>Unit 213</p>
-              <p>Seattle, WA 98107</p>
-              <p>United States</p>
-              <p>
-                <u
-                  >Maps
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <v-divider
-          style="width: 100vw; border-color: black; margin-left: 50% !important"
-        ></v-divider>
-
-        <div
-          class="footer-row"
-          :style="{
-            marginTop: isMobile ? '10px' : '45px',
-            marginBottom: isMobile ? '7px' : '15px',
-          }"
-        >
-          <div v-if="!isMobile" class="address-section contact-title">
-            <div class="footer"></div>
-          </div>
-
-          <div v-if="!isMobile" class="address-section address-title">
-            <div class="footer">INQURIES</div>
-          </div>
-
-          <div
-            class="address-section"
-            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
-          >
-            <div v-if="isMobile" class="footer">INQUIRIES</div>
-            <div v-if="isMobile" class="footer">&nbsp</div>
-            <div class="address-details">
-              <p>
-                <u
-                  >+1 206 395 9662<v-icon size="x-small" class="ml-n1"
-                    >mdi-arrow-top-right</v-icon
-                  ></u
-                >
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="address-section"
-            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
-          >
-            <div v-if="isMobile" class="footer">&nbsp</div>
-            <div v-if="isMobile" class="footer">&nbsp</div>
-            <div class="address-details">
-              <p>
-                <u
-                  >+1 206 395 9662
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <v-divider
-          style="width: 100vw; border-color: black; margin-left: 54% !important"
-        ></v-divider>
-
-        <div
-          class="footer-row"
-          :style="{
-            marginTop: isMobile ? '10px' : '45px',
-            marginBottom: isMobile ? '7px' : '15px',
-          }"
-        >
-          <div v-if="!isMobile" class="address-section contact-title">
-            <div class="footer"></div>
-          </div>
-
-          <div v-if="!isMobile" class="address-section address-title">
-            <div class="footer">CAREER INTERNSHIPS</div>
-          </div>
-
-          <div
-            class="address-section"
-            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
-          >
-            <div v-if="isMobile" class="footer">CAREER INTERNSHIPS</div>
-            <div v-if="isMobile" class="footer">&nbsp</div>
-            <div class="address-details">
-              <p>
-                <u
-                  >work(at)parker.studio
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
-                >
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="address-section"
-            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
-          >
-            <div v-if="isMobile" class="footer">&nbsp</div>
-            <div v-if="isMobile" class="footer">&nbsp</div>
-            <div class="address-details">
-              <p>
-                <u
-                  >intern(at)parker.studio
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <v-divider
-          style="width: 100vw; border-color: black; margin-left: 54% !important"
-        ></v-divider>
-
-        <div
-          class="footer-row"
-          :style="{
-            marginTop: isMobile ? '10px' : '45px',
-            marginBottom: isMobile ? '7px' : '15px',
-          }"
-        >
-          <div v-if="!isMobile" class="address-section contact-title">
-            <div class="footer"></div>
-          </div>
-
-          <div v-if="!isMobile" class="address-section address-title">
-            <div class="footer">FOLLOW US</div>
-          </div>
-
-          <div
-            class="address-section"
-            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
-          >
-            <div v-if="isMobile" class="footer">FOLLOW US</div>
-            <div v-if="isMobile" class="footer">&nbsp</div>
-            <div class="address-details">
-              <p>
-                <u
-                  >Instagram<v-icon size="x-small" class="ml-n1"
-                    >mdi-arrow-top-right</v-icon
-                  ></u
-                >
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="address-section"
-            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
-          >
-            <div v-if="isMobile" class="footer">&nbsp</div>
-            <div v-if="isMobile" class="footer">&nbsp</div>
-            <div class="address-details">
-              <p>
-                <u
-                  >Tumblr
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <v-divider
-          style="width: 100vw; border-color: black; margin-left: 54% !important"
-        ></v-divider>
-
-        <div
-          class="footer-row"
-          :style="{
-            marginTop: isMobile ? '10px' : '45px',
-            marginBottom: isMobile ? '7px' : '15px',
-          }"
-        >
-          <div v-if="!isMobile" class="address-section contact-title">
-            <div class="footer"></div>
-          </div>
-
-          <div v-if="!isMobile" class="address-section address-title">
-            <div class="footer">NEWS LETTER</div>
-          </div>
-
-          <div
-            class="address-section"
-            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
-          >
-            <div v-if="isMobile" class="footer">NEWS LETTER</div>
-            <div v-if="isMobile" class="footer">&nbsp</div>
-            <div class="address-details">
-              <v-text-field variant="underlined" placeholder="Email" />
-            </div>
-          </div>
-
-          <div
-            class="address-section"
-            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
-          >
-            <div v-if="isMobile" class="footer">&nbsp</div>
-            <div v-if="isMobile" class="footer">&nbsp</div>
-            <div class="address-details">
-              <p>Submit</p>
-            </div>
-          </div>
-        </div>
-
-        <div
+      </div>
+    </div>
+    <div class="address-section">
+      <div class="address-details">
+        <p><button class="b2 decoration active green">Submit</button></p>
+      </div>
+    </div>
+  </div>
+  <div
           class="marquee"
           style="
             position: absolute;
@@ -1224,8 +1107,10 @@
             </v-col>
           </v-row>
         </div>
-</v-footer>
-    </div>
+</footer>
+
+ 
+  </div>
   </v-app>
 </template>
 
@@ -1234,6 +1119,18 @@
   export default {
     data() {
       return {
+        paddingValues: {
+          desktop: {
+            paddingLeft: '15px',
+            paddingRight: '15px',
+            paddingBottom: '5em',
+          },
+          mobile: {
+            paddingLeft: '5px',
+            paddingRight: '5px',
+            paddingBottom: '2em',
+          },
+        },
         isToolbarVisible: true,
         lastScrollY: 0,
         ColorFooter:'#b7e3b6',
@@ -1337,6 +1234,9 @@
       };
     },
     computed: {
+      paddingStyles() {
+        return this.isMobile ? this.paddingValues.mobile : this.paddingValues.desktop;
+      },
       displayedLogos() {
         if (this.showFirstSet) {
           return this.logos.slice(0, 3);
@@ -1430,7 +1330,7 @@
         this.drawer = false;
       },
       checkMobile() {
-        this.isMobile = window.innerWidth < 480;
+        this.isMobile = window.innerWidth < 700;
         // this.countIdeasSpunOut = 0;
         // this.countIdeasKilled = 0;
         // this.startCounting();
@@ -1655,9 +1555,9 @@
       this.loadLottieAnimation4();
       window.addEventListener("scroll", this.handleScroll);
       this.checkMobile();
-      // this.intervalId = setInterval(() => {
-      //   this.showFirstSet = !this.showFirstSet;
-      // }, 1500);
+      this.intervalId = setInterval(() => {
+        this.showFirstSet = !this.showFirstSet;
+      }, 1500);
     },
     beforeDestroy() {
       window.removeEventListener("resize", this.checkMobile);
@@ -2215,12 +2115,23 @@ animation: marquee 15s linear infinite;
 100% { transform: translateX(-100%); }
 }
 
-/* //HOW WE DO */
 .custom-padding {
-  padding-left: 14% !important; /* Use !important if necessary */
-  padding-right: 14% !important; /* Use !important if necessary */
   display: block;
   font-weight: 400 !important;
+
+  padding-left: 17%;
+  padding-right: 17%;
+
+  @media (max-width: 768px) {
+    padding-left: 5%;  
+    padding-right: 5%;  
+  }
+}
+.custom-paddingMV{
+  padding-left: 9% !important; 
+  padding-right: 9% !important; 
+
+
 }
 
 /* //LIST GRID */
@@ -2259,6 +2170,12 @@ animation: marquee 15s linear infinite;
   height: 100%; 
   padding: 4% !important; 
   font-size: 34px !important;
+  line-height: 3px;
+}
+.services-containerMV {
+  height: 100%; 
+  padding: 9% !important; 
+  font-size: 14px !important;
   line-height: 3px;
 }
 
@@ -2455,10 +2372,12 @@ flex: 1;
 }
 
 .marquee-text {
-display: inline-block;
-white-space: nowrap;
-animation: marquee 20s linear infinite;
-padding-left: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+  padding-left: 100%;
+  font-size: 3vw !important;
+  padding:3% !important;
 }
 
 @keyframes marquee {
@@ -2500,54 +2419,61 @@ padding-left: 100%;
   margin-bottom: 1rem; /* Adjust spacing as needed */
 }
 
-.footer-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
+    .footer-row {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 1em !important;
+    }
 
-  .address-section {
-    flex: 0.3;
-    text-align: left;
-  }
+    .address-section {
+        flex: 1 1 25%; 
+        text-align: left;
+        padding: 1% 0; 
+        transition: all 0.5s ease; /* Add transition for smooth font size change */
 
-  .footer {
-    font-size: 1.5vw;
-    transition: all 0.5s ease; /* Add transition for smooth font size change */
-  }
+    }
 
-  .address-details p {
-    font-size: 1.2vw;
-    transition: all 0.5s ease; /* Add transition for smooth font size change */
-  }
+    .footer {
+        font-size: 1.2vw; 
+        transition: all 0.5s ease;
+    }
 
-  .marquee-text {
-    font-family: "Poppins" !important;
-    font-size: 1.2vw;
-    transition: all 0.5s ease; /* Add transition for smooth font size change */
-  }
+    .address-details p {
+        font-size: 1.2vw; 
+        transition: all 0.5s ease; /* Add transition for smooth font size change */
+    }
 
-  .marquee-container {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    white-space: nowrap;
-  }
+     .marquee-text {
+       font-family: "Poppins" !important;
+       font-size: 1.2vw;
+       transition: all 0.5s ease; /* Add transition for smooth font size change */
+       font-weight: 200 !important;
+     }
+   
+     .marquee-container {
+       display: flex;
+       align-items: center;
+       overflow: hidden;
+       white-space: nowrap;
+     }
 
-  .marquee-label {
-    font-family: "Poppins" !important;
-    font-size: 1.2vw;
-    margin-right: 4px;
-    transition: all 0.5s ease; /* Add transition for smooth font size change */
-  }
-  .footer-text {
-    font-weight: 400;
-    font-family: "ChaletBook" !important; /* Ensure this font is loaded in your project */
-    font-size: 18rem; /* Set font size to 18rem */
-    line-height: 1.15; /* Set line height to 1.15 */
-    letter-spacing: normal; /* Set letter spacing to normal */
-    color: #000; /* Optional: Set a default text color */
-  }
+   .marquee-label {
+     font-family: "Poppins" !important;
+     font-size: 1.2vw;
+     margin-right: 4px;
+     transition: all 0.5s ease; /* Add transition for smooth font size change */
+   }
+
+   .footer-text {
+     font-weight: 400;
+     font-family: "ChaletBook" !important; /* Ensure this font is loaded in your project */
+     font-size: 18rem; /* Set font size to 18rem */
+     line-height: 1.15; /* Set line height to 1.15 */
+     letter-spacing: normal; /* Set letter spacing to normal */
+     color: #000; /* Optional: Set a default text color */
+   }
 
   /* ADDED 03-07 MOBILE */
   .footer1 {
@@ -2896,6 +2822,15 @@ transform: translateZ(0);
   height: 100vh !important; /* Full height */
   font-size: 1rem; /* Default font size */
 }
+.footer-desktop {
+  background-color: #b7e3b6; /* Background color */
+  color: black !important; /* Text color */
+  padding: 1% !important; /* Padding */
+  bottom: 0;
+  left: 0;
+  top:0;
+  position: fixed;
+}
 
 /* Responsive font size adjustments */
 @media (max-width: 768px) {
@@ -2920,5 +2855,14 @@ transform: translateZ(0);
   section {
     background-color: #252423; /* Match this to your footer color */
   }
+}
+.contact__information__detail__form__input{
+  border: none !important;
+}
+input[type="email" i] {
+    padding-block: 1px;
+    padding-inline: 2px;
+  border: none !important;
+
 }
 </style>
