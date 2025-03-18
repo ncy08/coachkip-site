@@ -2130,7 +2130,7 @@ animation: marquee 15s linear infinite;
 .custom-paddingMV{
   padding-left: 9% !important; 
   padding-right: 9% !important; 
-
+/* test */
 
 }
 
