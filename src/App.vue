@@ -2,24 +2,23 @@
 <template>
   <v-app >
     <div >
-      <v-btn   @click="toogle"  class="dark-mode-toggle"  icon
-      :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }"
-    >
-      <v-icon :style="{ color: isDarkMode ? 'black' : 'white', }">{{ isDarkMode ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
-    </v-btn>
+      <v-btn   @click="toogle"  class="dark-mode-toggle"  icon  :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }">
+        <v-icon :style="{ color: isDarkMode ? 'black' : 'white', }">{{ isDarkMode ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
+      </v-btn>
       <!-- Floating Text Overlay -->
       <div style="z-index:1999;font-family:'Aeonik"  v-if="showFloatingText"
         class="floating-text"  :style="{ left: floatingX + 'px', top: floatingY + 'px' }">
         <span>{{ hoveredMember.name ? hoveredMember.name : hoveredMember }}</span>
       </div>
+
       <transition name="fade">
-      <v-toolbar v-show="isToolbarVisible" :color="isDarkMode ? '#252423' : '#fffbe9'" class="tBar" style="z-index: 1999">
-        <v-toolbar-title v-on:click="handleMenuItemClick({ link: '#home' })" :style="{color : isDarkMode ? 'white' : 'black'}">{{ resizeObserver }} COACH KIP</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" 
-        @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 20px; padding: 2px 22px 3px; display: block;" 
-        class="mr-6 hidden-md-and-up mt-n1" @click="drawer = true"> Menu
-        </button>
+        <v-toolbar v-show="isToolbarVisible" :color="isDarkMode ? '#252423' : '#fffbe9'" class="tBar" style="z-index: 1999">
+           <v-toolbar-title v-on:click="handleMenuItemClick({ link: '#home' })" :style="{color : isDarkMode ? 'white' : 'black'}">{{ resizeObserver }} COACH KIP</v-toolbar-title>
+           <v-spacer></v-spacer>
+           <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" 
+            @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 20px; padding: 2px 22px 3px; display: block;" 
+            class="mr-6 hidden-md-and-up mt-n1" @click="drawer = true"> Menu
+          </button>
         <v-toolbar-items class="hidden-sm-and-down">
           <template v-for="(item, index) in menuItems" :key="index">
             <v-btn :style="{color:isDarkMode ? 'white' : 'black'}" flat :class="{ 'active-line': activeSection === item.link.substring(1) }"
@@ -29,90 +28,38 @@
             </v-btn>
           </template>
         </v-toolbar-items>
-      </v-toolbar>
+        </v-toolbar>
       </transition>
-  <v-navigation-drawer style="z-index: 10000"  location="right" v-model="drawer"
-        fixed  temporary  class="mobile-nav fullscreen-drawer" width="490"
-      >
+
+      <v-navigation-drawer style="z-index: 10000"  location="right" v-model="drawer" fixed  temporary  class="mobile-nav fullscreen-drawer" width="490">
         <v-card style="width: 50% !important"></v-card>
         <v-toolbar style="background-color: transparent" class="mt-1">
-          <v-icon
-            size="small "
-            color="black"
-            class="mb-n1 ml-5"
-            v-on:click="handleMenuItemClick({ link: '#home' })"
-            >mdi-arrow-left</v-icon
-          >
-          <a
-            style="font-family: 'Aeonik1'"
-            v-on:click="handleMenuItemClick({ link: '#home' })"
-            data-w-id="4a4302b6-6981-f1fa-9bee-92d7404c033a"
-            class="side-nav-link-home"
-            >Home</a
-          >
+          <v-icon  size="small"  color="black"  class="mb-n1 ml-5"   v-on:click="handleMenuItemClick({ link: '#home' })" >mdi-arrow-left</v-icon >
+          <a style="font-family: 'Aeonik1'"  v-on:click="handleMenuItemClick({ link: '#home' })"  data-w-id="4a4302b6-6981-f1fa-9bee-92d7404c033a"
+            class="side-nav-link-home">Home</a>
           <v-spacer />
           <button
-            style="
-              float: right;
-              font-family: 'Aeonik1';
-              background-color: #252423;
-              color: #b7e3b6 ;
-              border-bottom-style: none;
-              border-bottom-color: #000;
-              border-radius: 20px;
-              padding: 2px 22px 3px;
-              display: block;
-            "
-            class="mr-6 mt-1"
-            @click="drawer = false"
-          >
+            style=" float: right; font-family: 'Aeonik1';  background-color: #252423;  color: #b7e3b6 ;  border-bottom-style: none;
+              border-bottom-color: #000; border-radius: 20px;  padding: 2px 22px 3px; display: block; " class="mr-6 mt-1"  @click="drawer = false">
             Close
           </button>
         </v-toolbar>
         <v-row>
           <v-col class="ml-3 mr-3">
-            <nav
-              class="col col-nav-top w-clearfix"
-              style="padding-left: 2% !important"
-              aria-label="Main Navigation"
-            >
+            <nav  class="col col-nav-top w-clearfix" style="padding-left: 2% !important" aria-label="Main Navigation" >
               <ul class="side-nav-list">
-                <a
-                  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"
-                  @click="handleMenuItemClick({ link: '#home' })"
-                  class="side-nav-link-large"
-                  >Home</a
-                >
-                <a
-                  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"
-                  @click="handleMenuItemClick({ link: '#mission' })"
-                  class="side-nav-link-large mt-n2"
-                  >Mission</a
-                >
-                <a
-                  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"
-                  @click="handleMenuItemClick({ link: '#kip' })"
-                  class="side-nav-link-large mt-n2"
-                  >Kip</a
-                >
-                <a
-                  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"
-                  @click="handleMenuItemClick({ link: '#about' })"
-                  class="side-nav-link-large mt-n2"
-                  >About</a
-                >
-                <a
-                  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"
-                  @click="handleMenuItemClick({ link: '#team' })"
-                  class="side-nav-link-large mt-n2"
-                  >Team</a
-                >
-                <a
-                  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"
-                  @click="handleMenuItemClick({ link: '#contact' })"
-                  class="side-nav-link-large mt-n2"
-                  >Contact</a
-                >
+                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#home' })" class="side-nav-link-large"
+                  >Home</a >
+                <a  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#mission' })"  class="side-nav-link-large mt-n2"
+                  >Mission</a>
+                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#kip' })"  class="side-nav-link-large mt-n2"
+                  >Kip</a>
+                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#about' })"  class="side-nav-link-large mt-n2"
+                  >About</a>
+                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#team' })" class="side-nav-link-large mt-n2"
+                  >Team</a>
+                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#contact' })"  class="side-nav-link-large mt-n2"
+                  >Contact</a>
               </ul>
             </nav>
           </v-col>
@@ -123,61 +70,30 @@
           <v-col class="ml-3 mr-3">
             <ul class="side-nav-list" style="list-style-type: none; padding: 0">
               <li>
-                <a
-                  class="side-nav-link-large"
-                  style="
-                    font-family: 'Aeonik1';
-                    font-size: 16px !important;
-                    line-height: 25px !important;
-                    color: black !important;
-                  "
-                  target="_blank"
-                  ><v-icon class="mr-1">mdi-twitter</v-icon>Twitter</a
+                <a class="side-nav-link-large"
+                  style="  font-family: 'Aeonik1'; font-size: 16px !important; line-height: 25px !important;  color: black !important; "  target="_blank" >
+                  <v-icon class="mr-1">mdi-twitter</v-icon>Twitter</a>
+              </li>
+              <li>
+                <a class="side-nav-link-large"
+                  style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " target="_blank" >
+                  <v-icon class="mr-1">mdi-linkedin</v-icon>LinkedIn</a
                 >
               </li>
               <li>
-                <a
-                  class="side-nav-link-large"
-                  style="
-                    font-family: 'Aeonik1';
-                    font-size: 16px !important;
-                    line-height: 25px !important;
-                    color: black !important;
-                  "
-                  target="_blank"
-                  ><v-icon class="mr-1">mdi-linkedin</v-icon>LinkedIn</a
-                >
+                <a  class="side-nav-link-large"
+                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " target="_blank" >
+                <v-icon class="mr-1">mdi-instagram</v-icon>Instagram</a>
               </li>
               <li>
-                <a
-                  class="side-nav-link-large"
-                  style="
-                    font-family: 'Aeonik1';
-                    font-size: 16px !important;
-                    line-height: 25px !important;
-                    color: black !important;
-                  "
-                  target="_blank"
-                  ><v-icon class="mr-1">mdi-instagram</v-icon>Instagram</a
-                >
-              </li>
-              <li>
-                <a
-                  class="side-nav-link-large"
-                  style="
-                    font-family: 'Aeonik1';
-                    font-size: 16px !important;
-                    line-height: 25px !important;
-                    color: black !important;
-                  "
-                  target="_blank"
-                  ><v-icon class="mr-1">mdi-vimeo</v-icon>Vimeo</a
-                >
+                <a  class="side-nav-link-large"
+                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " target="_blank" >
+                <v-icon class="mr-1">mdi-vimeo</v-icon>Vimeo</a >
               </li>
             </ul>
           </v-col>
         </v-row>
-   </v-navigation-drawer>
+      </v-navigation-drawer>
 
 <!-- TITLE -->
 <section class="fade-in" style="position: relative; min-height: 100vh; z-index: 999;" id="home">
@@ -196,16 +112,12 @@
 
     <div v-if="!isMobile" class="form-container word" :style="{ '--i': 8 }">
       <div class="input-form" >
-        <input
-          class="input-field"
-          type="email"
-          placeholder="Enter Email"
-          :class="isMobile ? 'rounded-input1' : 'rounded-input'"
-          :style="{
-            border: !isDarkMode ? '1px solid black' : '1px solid #ccc',
-            color: isDarkMode ? 'white' : 'black !important' // Change text color based on isDarkMode
-          }"
-/>
+        <v-text-field rounded placeholder="Enter email" class="mb-4" 
+        :width="isMobile ? '205px' : '350px'" hide-details  :style="{
+              border: !isDarkMode ? '1px solid black' : '1px solid #ccc',
+              color: isDarkMode ? 'white' : 'black' , borderRadius:'30px',  }">
+
+        </v-text-field>
         <button :class="isMobile ? 'join-button1' : 'join-button'" class="mt-n9">
           Join Waitlist
         </button>
@@ -247,7 +159,8 @@
       <div class="form-container word " :style="{ '--i': 8 }">
       <div class="input-form"  :style="{marginBottom: isMobile ? '53%': '',
          paddingTop: isMobile ? '15% !important' : ''}">
-        <v-text-field rounded placeholder="Enter email" :width="isMobile ? '205px' : '280px'" hide-details  :style="{
+        <v-text-field rounded placeholder="Enter email" 
+        :width="isMobile ? '205px' : '280px'" hide-details  :style="{
               border: !isDarkMode ? '1px solid black' : '1px solid #ccc',
               color: isDarkMode ? 'white' : 'black' , borderRadius:'30px',  }">
 
@@ -293,16 +206,17 @@
 </section>
 
 <!-- FOLLOWING PAGE -->
-<section class="fade-in" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
-  style="position: relative; border-radius: 0% !important; z-index: 999;">
-  <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
-  style="position: relative; border-radius: 0% !important;">
+<section class="fade-in" :style="{ minHeight: isMobile ? '50vh' : '80vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+  <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '50vh' : '80vh'}" style="position: relative; border-radius: 0% !important;">
     <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
       <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
         <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
           :style="paddingStyles">
           <p style="font-weight: 400; display: block; margin-top: 1.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
-            :style="{ 'font-size': !isMobile ? '96px' : '38px', lineHeight: 1.00, paddingRight: '5%', color: isDarkMode ? '#fffbe9' : '#252423' }">
+            :style="{ 
+            'font-size': !isMobile ? '96px' : '38px', 
+            lineHeight: 1.00, paddingRight: '5%',
+            color: isDarkMode ? '#fffbe9' : '#252423' }">
             A new model for building companies.
           </p>
           <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
@@ -316,9 +230,9 @@
     </v-container>
   </v-parallax>
 </section>
-<section class="fade-in" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;z-index: 999; "
+<section class="fade-in" :style="{ minHeight: isMobile ? '20vh' : '80vh'}" style="  position: relative;  border-radius: 0% !important;z-index: 999; "
         id="mission" @mousemove="handleMouseMove($event, 'What we do')" @mouseleave="handleMouseLeave">
-        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
+        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '20vh' : '80vh'}" style="position: relative; border-radius: 0% !important;">
           <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
             <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
               <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -349,9 +263,9 @@
           </v-container>
         </v-parallax>
 </section>
-<section class="fade-in" :style="{ minHeight: isMobile ? '40vh' : '100vh'}" style=" position: relative;
+<section class="fade-in" :style="{ minHeight: isMobile ? '40vh' : '80vh'}" style=" position: relative;
         border-radius: 0% !important;z-index: 999;">
-        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'"  :style="{ minHeight: isMobile ? '40vh' : '100vh'}" 
+        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'"  :style="{ minHeight: isMobile ? '40vh' : '80vh'}" 
           style="position: relative; border-radius: 0% !important; " >
           <v-container  fluid :class="!isMobile ? 'services-container' : 'services-containerMV'"
             :style=" !isMobile  ? {  marginLeft: '10px',  paddingBottom: '5em', paddingLeft: '8%',
@@ -376,10 +290,10 @@
           </v-container>
         </v-parallax>
 </section>
-<section class="fade-in" :style="{ minHeight: isMobile ? '40vh' : '100vh'}"
+<section class="fade-in" :style="{ minHeight: isMobile ? '40vh' : '90vh'}"
         style=" position: relative;  border-radius: 0% !important;z-index: 999;"
         id="kip" @mousemove="handleMouseMove($event, 'How we do it')"  @mouseleave="handleMouseLeave">
-        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '40vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; " >
+        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '40vh' : '90vh'}"  style="position: relative; border-radius: 0% !important; " >
           <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
             <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
               <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -409,12 +323,9 @@
           </v-container>
         </v-parallax>
 </section> 
-
-<section class="fade-in" id="mission"  :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
-          z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
-        :color="isDarkMode ? '#252423' : '#fffbe9'" >
-          <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
+<section class="fade-in" id="mission"  :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important; z-index: 999;  " >
+  <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'" >
+        <v-container :class="!isMobile ? '' : 'custom-paddingMV'">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -462,13 +373,13 @@
               </v-col>
             </v-row>
           </v-container>
-        </v-parallax>
+  </v-parallax>
 </section>
 <section class="fade-in"  id="mission" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
         <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'" >
-        <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
+        <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -519,7 +430,7 @@
           z-index: 999;  " >
         <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
-        <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
+        <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -565,7 +476,7 @@
           z-index: 999;  " >
         <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
-        <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
+        <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -612,7 +523,8 @@
           z-index: 999;  " >
         <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
-        <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
+        <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
+
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -656,10 +568,10 @@
           </v-container>
         </v-parallax>
 </section>
- <section class="fade-in" id="about" style="position: relative; z-index: 999; min-height: 60vh;padding">
-  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 60vh" 
+ <section class="fade-in" id="about" style="position: relative; z-index: 999; " :style="{ minHeight: isMobile ? '50vh' : '100vh'}">
+  <v-parallax style="position: relative; border-radius: 0% !important; " :style="{ minHeight: isMobile ? '50vh' : '100vh'}"
       :color="isDarkMode ? '#252423' : '#fffbe9'">
-      <v-container fluid class="fade-up" :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
+       <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
           <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
               <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
                 :style=" !isMobile   ? {  marginLeft: '15px',  paddingBottom: '5em',  paddingLeft: '0',
@@ -708,11 +620,11 @@
       </v-container>
   </v-parallax>
 </section>
-<section class="fade-in" id="sponsor" style="position: relative; z-index: 999; min-height: 60vh">
-  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 60vh" 
+<section class="fade-in" id="about" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '50vh' : '100vh'}">
+  <v-parallax style="position: relative; border-radius: 0% !important; " :style="{ minHeight: isMobile ? '50vh' : '100vh'}"
       :color="isDarkMode ? '#252423' : '#fffbe9'">
-      <v-container fluid class="fade-up" :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
-            <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
+       <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
+          <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
               <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
                 :style=" !isMobile   ? {  marginLeft: '15px',  paddingBottom: '5em',  paddingLeft: '0',
                 paddingRight: '15px', }  : {}">
@@ -724,8 +636,8 @@
                       Partners
                    </p>
               </v-col>
-            </v-row>
-            <v-row :class="isMobile ? 'mt-n3' : ''" class="logo-container">
+          </v-row>
+          <v-row :class="isMobile ? 'mt-n3' : ''" class="logo-container">
                 <transition-group name="fade">
                     <v-col v-for="(logo, index) in displayedLogos" :key="index" 
                         cols="12" md="4" class="d-flex justify-center align-center" 
@@ -735,9 +647,10 @@
                     </v-col>
                 </transition-group>
             </v-row>
-        </v-container>
-    </v-parallax>
+      </v-container>
+  </v-parallax>
 </section>
+
 <section class="fade-in shadow-bottom" id="team" style="position: relative; z-index: 999; min-height: 80vh">
 <v-card :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; border-radius: 0% !important; min-height: 80vh">
   <v-container fluid class="fade-up" :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
@@ -932,156 +845,278 @@
           </v-row>
         </div>
 </footer>
-<footer id="contact" class="footer-desktop">
-  <div class="footer-row mt-16">
-    <div class="address-section">
-      <div class="footer">CONTACT</div>
-      <div class="address-details">
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="footer">ADDRESS</div>
-      <div class="address-details">
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="address-details">
-        <p>PARKER STORE</p>
-        <p><u>5325 Ballard Ave NW</u></p>
-        <p>Unit 213</p>
-        <p>Seattle, WA 98107</p>
-        <p>United States</p>
-        <p><u>Maps</u></p>
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="address-details">
-        <p>PARKER STORE</p>
-        <p><u>5325 Ballard Ave NW</u></p>
-        <p>Unit 213</p>
-        <p>Seattle, WA 98107</p>
-        <p>United States</p>
-        <p><u>Maps</u></p>
-      </div>
-    </div>
-  </div>
-  <v-divider style="width: 100vw; border-color: black;"></v-divider>
-  <div class="footer-row">
-    <div class="address-section">
-      <div class="footer"></div>
-      <div class="address-details">
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="footer">INQUIRIES</div>
-      <div class="address-details">
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="address-details">
-        <p style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </p>
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="address-details">
-        <p style="color:black" href="mailto:hello@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </p>
-      </div>
-    </div>
-  </div>
-  <v-divider style="width: 100vw; border-color: black;"></v-divider>
-  <div class="footer-row">
-    <div class="address-section">
-      <div class="footer"></div>
-      <div class="address-details">
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="footer">CAREER INTERNSHIPS</div>
-      <div class="address-details">
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="address-details">
-        <p style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >worker(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </p>
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="address-details">
-        <p style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </p>
-      </div>
-    </div>
-  </div>
-  <v-divider style="width: 100vw; border-color: black;"></v-divider>
-  <div class="footer-row">
-    <div class="address-section">
-      <div class="footer"></div>
-      <div class="address-details">
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="footer">FOLLOW US</div>
-      <div class="address-details">
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="address-details">
-        <p><u>Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="address-details">
-       <p> <u>Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u></p>
-      </div>
-    </div>
-  </div>
-  <v-divider style="width: 100vw; border-color: black;"></v-divider>
-  <div class="footer-row">
-    <div class="address-section">
-      <div class="footer"></div>
-      <div class="address-details">
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="footer">NEWS LETTER</div>
-      <div class="address-details">
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="address-details">
-        <div class="contact__information__detail__form__input">
-              <p><input 
-                type="email" 
-                placeholder="Email address" 
-                :style="{
-                  border: 'none', /* Remove border */
-                  backgroundColor: 'transparent', /* Make background transparent */
-                  color: black, /* Text color based on dark mode */
-                  outline: 'none', /* Remove outline on focus */
-                  width: '100%', /* Full width */
-                  fontSize: '16px' /* Adjust font size as needed */
-                }"
-              /></p>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31">
-                <g id="Layer_2" data-name="Layer 2">
-                  <g id="Design_System" data-name="Design System">
-                    <path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path>
-                  </g>
-                </g>
-              </svg>
-            </div>
-      </div>
-    </div>
-    <div class="address-section">
-      <div class="address-details">
-        <p><button class="b2 decoration active green">Submit</button></p>
-      </div>
-    </div>
-  </div>
+<footer  id="contact" class="footer-desktop" v-if="!isMobile">
   <div
+          class="footer-row"
+          :style="{
+            marginTop: isMobile ? '30px' : '85px',
+            marginBottom: isMobile ? '7px' : '10px',
+          }"
+        >
+          <div v-if="!isMobile" class="address-section contact-title">
+            <div class="footer">CONTACT</div>
+          </div>
+
+          <div v-if="!isMobile" class="address-section address-title">
+            <div class="footer">ADDRESS</div>
+          </div>
+
+          <div
+            class="address-section"
+            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
+          >
+            <div class="address-details">
+              <p>PARKER STUDIO</p>
+              <p><u>5325 Ballard Ave NW</u></p>
+              <p>Unit 213</p>
+              <p>Seattle, WA 98107</p>
+              <p>United States</p>
+              <p>
+                <u
+                  >Maps
+                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
+                >
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="address-section"
+            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
+          >
+            <div v-if="isMobile" class="footer">&nbsp</div>
+
+            <div class="address-details">
+              <p>PARKER STORE</p>
+              <p><u>5325 Ballard Ave NW</u></p>
+              <p>Unit 213</p>
+              <p>Seattle, WA 98107</p>
+              <p>United States</p>
+              <p>
+                <u
+                  >Maps
+                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <v-divider
+          style="width: 100vw; border-color: black; margin-left: 50% !important"
+        ></v-divider>
+
+        <div
+          class="footer-row"
+          :style="{
+            marginTop: isMobile ? '10px' : '45px',
+            marginBottom: isMobile ? '7px' : '15px',
+          }"
+        >
+          <div v-if="!isMobile" class="address-section contact-title">
+            <div class="footer"></div>
+          </div>
+
+          <div v-if="!isMobile" class="address-section address-title">
+            <div class="footer">INQUIRIES</div>
+          </div>
+
+          <div
+            class="address-section"
+            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
+          >
+            <div v-if="isMobile" class="footer">INQUIRIES</div>
+            <div v-if="isMobile" class="footer">&nbsp</div>
+            <div class="address-details">
+              <p>
+                <u
+                  >+1 206 395 9662<v-icon size="x-small" class="ml-n1"
+                    >mdi-arrow-top-right</v-icon
+                  ></u
+                >
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="address-section"
+            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
+          >
+            <div v-if="isMobile" class="footer">&nbsp</div>
+            <div v-if="isMobile" class="footer">&nbsp</div>
+            <div class="address-details">
+              <p>
+                <u
+                  >
+                  hello(at)parker.studio 
+                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <v-divider
+          style="width: 100vw; border-color: black; margin-left: 54% !important"
+        ></v-divider>
+
+        <div
+          class="footer-row"
+          :style="{
+            marginTop: isMobile ? '10px' : '45px',
+            marginBottom: isMobile ? '7px' : '15px',
+          }"
+        >
+          <div v-if="!isMobile" class="address-section contact-title">
+            <div class="footer"></div>
+          </div>
+
+          <div v-if="!isMobile" class="address-section address-title">
+            <div class="footer">CAREER INTERNSHIPS</div>
+          </div>
+
+          <div
+            class="address-section"
+            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
+          >
+            <div v-if="isMobile" class="footer">CAREER INTERNSHIPS</div>
+            <div v-if="isMobile" class="footer">&nbsp</div>
+            <div class="address-details">
+              <p>
+                <u
+                  >work(at)parker.studio
+                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
+                >
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="address-section"
+            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
+          >
+            <div v-if="isMobile" class="footer">&nbsp</div>
+            <div v-if="isMobile" class="footer">&nbsp</div>
+            <div class="address-details">
+              <p>
+                <u
+                  >intern(at)parker.studio
+                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <v-divider
+          style="width: 100vw; border-color: black; margin-left: 54% !important"
+        ></v-divider>
+
+        <div
+          class="footer-row"
+          :style="{
+            marginTop: isMobile ? '10px' : '45px',
+            marginBottom: isMobile ? '7px' : '15px',
+          }"
+        >
+          <div v-if="!isMobile" class="address-section contact-title">
+            <div class="footer"></div>
+          </div>
+
+          <div v-if="!isMobile" class="address-section address-title">
+            <div class="footer">FOLLOW US</div>
+          </div>
+
+          <div
+            class="address-section"
+            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
+          >
+            <div v-if="isMobile" class="footer">FOLLOW US</div>
+            <div v-if="isMobile" class="footer">&nbsp</div>
+            <div class="address-details">
+              <p>
+                <u
+                  >Instagram<v-icon size="x-small" class="ml-n1"
+                    >mdi-arrow-top-right</v-icon
+                  ></u
+                >
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="address-section"
+            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
+          >
+            <div v-if="isMobile" class="footer">&nbsp</div>
+            <div v-if="isMobile" class="footer">&nbsp</div>
+            <div class="address-details">
+              <p>
+                <u
+                  >Tumblr
+                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></u
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <v-divider
+          style="width: 100vw; border-color: black; margin-left: 54% !important"
+        ></v-divider>
+
+        <div
+          class="footer-row"
+          :style="{
+            marginTop: isMobile ? '10px' : '45px',
+            marginBottom: isMobile ? '7px' : '15px',
+          }"
+        >
+          <div v-if="!isMobile" class="address-section contact-title">
+            <div class="footer"></div>
+          </div>
+
+          <div v-if="!isMobile" class="address-section address-title">
+            <div class="footer">NEWS LETTER</div>
+          </div>
+
+          <div
+            class="address-section"
+            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
+          >
+            <div v-if="isMobile" class="footer">NEWS LETTER</div>
+            <div v-if="isMobile" class="footer">&nbsp</div>
+            <div class="address-details">
+              <input 
+    type="email" 
+    placeholder="Email address" 
+    :style="{
+      border: 'none', /* Remove border */
+      backgroundColor: 'transparent', /* Make background transparent */
+      color: 'black', /* Text color based on dark mode */
+      outline: 'none', /* Remove outline on focus */
+      width: '100%', /* Full width */
+      fontSize: '24px' /* Adjust font size as needed */
+    }"
+  />
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Design_System" data-name="Design System">
+        <path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path>
+      </g>
+    </g>
+  </svg>
+</div>
+</div>
+          <div
+            class="address-section"
+            :style="{ flex: isMobile ? '0.6' : '0.3', textAlign: 'left' }"
+          >
+            <div v-if="isMobile" class="footer">&nbsp</div>
+            <div v-if="isMobile" class="footer">&nbsp</div>
+            <div class="address-details">
+              <p>Submit</p>
+            </div>
+          </div>
+        </div>
+
+        <div
           class="marquee"
           style="
             position: absolute;
@@ -1107,9 +1142,8 @@
             </v-col>
           </v-row>
         </div>
-</footer>
 
- 
+</footer>
   </div>
   </v-app>
 </template>
@@ -1330,7 +1364,7 @@
         this.drawer = false;
       },
       checkMobile() {
-        this.isMobile = window.innerWidth < 700;
+        this.isMobile = window.innerWidth < 850;
         // this.countIdeasSpunOut = 0;
         // this.countIdeasKilled = 0;
         // this.startCounting();
@@ -1540,7 +1574,7 @@
     },
     mounted() {
       const resizeObserver = new ResizeObserver((entries) => {
-        const isMobile = entries[0].contentRect.width < 768;
+        const isMobile = entries[0].contentRect.width < 480;
         this.setCustomCursor(isMobile ? "white" : "dark");
       });
       localStorage.setItem('isDarkMode', this.isDarkMode);
@@ -2115,22 +2149,10 @@ animation: marquee 15s linear infinite;
 100% { transform: translateX(-100%); }
 }
 
-.custom-padding {
-  display: block;
-  font-weight: 400 !important;
 
-  padding-left: 17%;
-  padding-right: 17%;
-
-  @media (max-width: 768px) {
-    padding-left: 5%;  
-    padding-right: 5%;  
-  }
-}
 .custom-paddingMV{
-  padding-left: 9% !important; 
-  padding-right: 9% !important; 
-/* test */
+  padding-left: 11% !important; 
+  text-align: left;
 
 }
 
@@ -2419,61 +2441,56 @@ flex: 1;
   margin-bottom: 1rem; /* Adjust spacing as needed */
 }
 
-    .footer-row {
-        display: flex;
-        flex-wrap: wrap; 
-        justify-content: space-between;
-        width: 100%;
-        padding-top: 1em !important;
-    }
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-    .address-section {
-        flex: 1 1 25%; 
-        text-align: left;
-        padding: 1% 0; 
-        transition: all 0.5s ease; /* Add transition for smooth font size change */
+  .address-section {
+    flex: 0.3;
+    text-align: left;
+    padding-top: 1% !important;
+  }
 
-    }
+  .footer {
+    font-size: 1.2vw;
+    transition: all 0.5s ease; /* Add transition for smooth font size change */
+  }
 
-    .footer {
-        font-size: 1.2vw; 
-        transition: all 0.5s ease;
-    }
+  .address-details p {
+    font-size: 1.2vw;
+    transition: all 0.5s ease; /* Add transition for smooth font size change */
+  }
 
-    .address-details p {
-        font-size: 1.2vw; 
-        transition: all 0.5s ease; /* Add transition for smooth font size change */
-    }
+  .marquee-text {
+    font-family: "Poppins" !important;
+    font-size: 1.2vw;
+    transition: all 0.5s ease; /* Add transition for smooth font size change */
+    font-weight: 200 !important;
+  }
 
-     .marquee-text {
-       font-family: "Poppins" !important;
-       font-size: 1.2vw;
-       transition: all 0.5s ease; /* Add transition for smooth font size change */
-       font-weight: 200 !important;
-     }
-   
-     .marquee-container {
-       display: flex;
-       align-items: center;
-       overflow: hidden;
-       white-space: nowrap;
-     }
+  .marquee-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 
-   .marquee-label {
-     font-family: "Poppins" !important;
-     font-size: 1.2vw;
-     margin-right: 4px;
-     transition: all 0.5s ease; /* Add transition for smooth font size change */
-   }
-
-   .footer-text {
-     font-weight: 400;
-     font-family: "ChaletBook" !important; /* Ensure this font is loaded in your project */
-     font-size: 18rem; /* Set font size to 18rem */
-     line-height: 1.15; /* Set line height to 1.15 */
-     letter-spacing: normal; /* Set letter spacing to normal */
-     color: #000; /* Optional: Set a default text color */
-   }
+  .marquee-label {
+    font-family: "Poppins" !important;
+    font-size: 1.2vw;
+    margin-right: 4px;
+    transition: all 0.5s ease; /* Add transition for smooth font size change */
+  }
+  .footer-text {
+    font-weight: 400;
+    font-family: "ChaletBook" !important; /* Ensure this font is loaded in your project */
+    font-size: 18rem; /* Set font size to 18rem */
+    line-height: 1.15; /* Set line height to 1.15 */
+    letter-spacing: normal; /* Set letter spacing to normal */
+    color: #000; /* Optional: Set a default text color */
+  }
 
   /* ADDED 03-07 MOBILE */
   .footer1 {
@@ -2826,10 +2843,13 @@ transform: translateZ(0);
   background-color: #b7e3b6; /* Background color */
   color: black !important; /* Text color */
   padding: 1% !important; /* Padding */
+  min-height: 92vh !important;
   bottom: 0;
   left: 0;
   top:0;
   position: fixed;
+  width: 100%; /* Full width */
+  
 }
 
 /* Responsive font size adjustments */
@@ -2865,4 +2885,74 @@ input[type="email" i] {
   border: none !important;
 
 }
-</style>
+
+/* //03 - 20 */
+p {
+  font-size: 96px;
+}
+/* Adjust font size for smaller screens */
+@media (max-width: 1200px) {
+  p {
+    font-size: 64px;
+  }
+}
+@media (max-width: 768px) {
+  p {
+    font-size: 38px;
+  }
+}
+@media (max-width: 480px) {
+  p {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1850px) {
+  .custom-padding {
+    padding-left: 17%;
+    padding-right: 17%;
+  }
+}
+
+@media (max-width: 958px) {
+  .custom-padding {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .custom-paddingdd {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-padding {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+/* Remove fixed positioning for desktop */
+.footer-desktop {
+  position: fixed; /* Changed from fixed */
+  background-color: #b7e3b6;
+  color: black !important;
+  padding: 1% !important;
+  min-height: 92vh !important;
+  width: 100%;
+  margin-top: auto; /* Auto margin for bottom spacing */
+}
+
+/* Keep fixed positioning for mobile */
+@media (max-width: 768px) {
+  .footer-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh !important;
+    font-size: 1rem;
+  }
+}
+
+
+</style>  
