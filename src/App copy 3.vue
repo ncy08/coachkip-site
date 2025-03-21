@@ -12,13 +12,13 @@
       </div>
 
       <transition name="fade">
-      <v-toolbar v-show="isToolbarVisible" :color="isDarkMode ? '#252423' : '#fffbe9'" class="tBar" style="z-index: 1999">
-        <v-toolbar-title v-on:click="handleMenuItemClick({ link: '#home' })" :style="{color : isDarkMode ? 'white' : 'black'}">{{ resizeObserver }} COACH KIP</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" 
-        @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 20px; padding: 2px 22px 3px; display: block;" 
-        class="mr-6 hidden-md-and-up mt-n1" @click="drawer = true"> Menu
-        </button>
+        <v-toolbar v-show="isToolbarVisible" :color="isDarkMode ? '#252423' : '#fffbe9'" class="tBar" style="z-index: 1999">
+           <v-toolbar-title v-on:click="handleMenuItemClick({ link: '#home' })" :style="{color : isDarkMode ? 'white' : 'black'}">{{ resizeObserver }} COACH KIP</v-toolbar-title>
+           <v-spacer></v-spacer>
+           <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" 
+            @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 20px; padding: 2px 22px 3px; display: block;" 
+            class="mr-6 hidden-md-and-up mt-n1" @click="drawer = true"> Menu
+          </button>
         <v-toolbar-items class="hidden-sm-and-down">
           <template v-for="(item, index) in menuItems" :key="index">
             <v-btn :style="{color:isDarkMode ? 'white' : 'black'}" flat :class="{ 'active-line': activeSection === item.link.substring(1) }"
@@ -28,89 +28,38 @@
             </v-btn>
           </template>
         </v-toolbar-items>
-      </v-toolbar>
+        </v-toolbar>
       </transition>
 
-  <v-navigation-drawer style="z-index: 10000"  location="right" v-model="drawer" fixed  temporary  class="mobile-nav fullscreen-drawer" width="490">
+      <v-navigation-drawer style="z-index: 10000"  location="right" v-model="drawer" fixed  temporary  class="mobile-nav fullscreen-drawer" width="490">
         <v-card style="width: 50% !important"></v-card>
         <v-toolbar style="background-color: transparent" class="mt-1">
-          <v-icon
-            size="small "
-            color="black"
-            class="mb-n1 ml-5"
-            v-on:click="handleMenuItemClick({ link: '#home' })"
-            >mdi-arrow-left</v-icon
-          >
-          <a
-            style="font-family: 'Aeonik1'"
-            v-on:click="handleMenuItemClick({ link: '#home' })"
-            data-w-id="4a4302b6-6981-f1fa-9bee-92d7404c033a"
-            class="side-nav-link-home"
-            >Home</a
-          >
+          <v-icon  size="small"  color="black"  class="mb-n1 ml-5"   v-on:click="handleMenuItemClick({ link: '#home' })" >mdi-arrow-left</v-icon >
+          <a style="font-family: 'Aeonik1'"  v-on:click="handleMenuItemClick({ link: '#home' })"  data-w-id="4a4302b6-6981-f1fa-9bee-92d7404c033a"
+            class="side-nav-link-home">Home</a>
           <v-spacer />
           <button
-            style="
-              float: right;
-              font-family: 'Aeonik1';
-              background-color: #252423;
-              color: #b7e3b6 ;
-              border-bottom-style: none;
-              border-bottom-color: #000;
-              border-radius: 20px;
-              padding: 2px 22px 3px;
-              display: block;
-            "
-            class="mr-6 mt-1"
-            @click="drawer = false"
-          >
+            style=" float: right; font-family: 'Aeonik1';  background-color: #252423;  color: #b7e3b6 ;  border-bottom-style: none;
+              border-bottom-color: #000; border-radius: 20px;  padding: 2px 22px 3px; display: block; " class="mr-6 mt-1"  @click="drawer = false">
             Close
           </button>
         </v-toolbar>
         <v-row>
           <v-col class="ml-3 mr-3">
-            <nav
-              class="col col-nav-top w-clearfix"
-              style="padding-left: 2% !important"
-              aria-label="Main Navigation"
-            >
+            <nav  class="col col-nav-top w-clearfix" style="padding-left: 2% !important" aria-label="Main Navigation" >
               <ul class="side-nav-list">
-                <a
-                  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"
-                  @click="handleMenuItemClick({ link: '#home' })"
-                  class="side-nav-link-large"
-                  >Home</a
-                >
-                <a
-                  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"
-                  @click="handleMenuItemClick({ link: '#mission' })"
-                  class="side-nav-link-large mt-n2"
-                  >Mission</a
-                >
-                <a
-                  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"
-                  @click="handleMenuItemClick({ link: '#kip' })"
-                  class="side-nav-link-large mt-n2"
-                  >Kip</a
-                >
-                <a
-                  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"
-                  @click="handleMenuItemClick({ link: '#about' })"
-                  class="side-nav-link-large mt-n2"
-                  >About</a
-                >
-                <a
-                  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"
-                  @click="handleMenuItemClick({ link: '#team' })"
-                  class="side-nav-link-large mt-n2"
-                  >Team</a
-                >
-                <a
-                  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"
-                  @click="handleMenuItemClick({ link: '#contact' })"
-                  class="side-nav-link-large mt-n2"
-                  >Contact</a
-                >
+                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#home' })" class="side-nav-link-large"
+                  >Home</a >
+                <a  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#mission' })"  class="side-nav-link-large mt-n2"
+                  >Mission</a>
+                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#kip' })"  class="side-nav-link-large mt-n2"
+                  >Kip</a>
+                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#about' })"  class="side-nav-link-large mt-n2"
+                  >About</a>
+                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#team' })" class="side-nav-link-large mt-n2"
+                  >Team</a>
+                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#contact' })"  class="side-nav-link-large mt-n2"
+                  >Contact</a>
               </ul>
             </nav>
           </v-col>
@@ -121,61 +70,30 @@
           <v-col class="ml-3 mr-3">
             <ul class="side-nav-list" style="list-style-type: none; padding: 0">
               <li>
-                <a
-                  class="side-nav-link-large"
-                  style="
-                    font-family: 'Aeonik1';
-                    font-size: 16px !important;
-                    line-height: 25px !important;
-                    color: black !important;
-                  "
-                  target="_blank"
-                  ><v-icon class="mr-1">mdi-twitter</v-icon>Twitter</a
+                <a class="side-nav-link-large"
+                  style="  font-family: 'Aeonik1'; font-size: 16px !important; line-height: 25px !important;  color: black !important; "  target="_blank" >
+                  <v-icon class="mr-1">mdi-twitter</v-icon>Twitter</a>
+              </li>
+              <li>
+                <a class="side-nav-link-large"
+                  style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " target="_blank" >
+                  <v-icon class="mr-1">mdi-linkedin</v-icon>LinkedIn</a
                 >
               </li>
               <li>
-                <a
-                  class="side-nav-link-large"
-                  style="
-                    font-family: 'Aeonik1';
-                    font-size: 16px !important;
-                    line-height: 25px !important;
-                    color: black !important;
-                  "
-                  target="_blank"
-                  ><v-icon class="mr-1">mdi-linkedin</v-icon>LinkedIn</a
-                >
+                <a  class="side-nav-link-large"
+                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " target="_blank" >
+                <v-icon class="mr-1">mdi-instagram</v-icon>Instagram</a>
               </li>
               <li>
-                <a
-                  class="side-nav-link-large"
-                  style="
-                    font-family: 'Aeonik1';
-                    font-size: 16px !important;
-                    line-height: 25px !important;
-                    color: black !important;
-                  "
-                  target="_blank"
-                  ><v-icon class="mr-1">mdi-instagram</v-icon>Instagram</a
-                >
-              </li>
-              <li>
-                <a
-                  class="side-nav-link-large"
-                  style="
-                    font-family: 'Aeonik1';
-                    font-size: 16px !important;
-                    line-height: 25px !important;
-                    color: black !important;
-                  "
-                  target="_blank"
-                  ><v-icon class="mr-1">mdi-vimeo</v-icon>Vimeo</a
-                >
+                <a  class="side-nav-link-large"
+                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " target="_blank" >
+                <v-icon class="mr-1">mdi-vimeo</v-icon>Vimeo</a >
               </li>
             </ul>
           </v-col>
         </v-row>
-   </v-navigation-drawer>
+      </v-navigation-drawer>
 
 <!-- TITLE -->
 <section class="fade-in" style="position: relative; min-height: 100vh; z-index: 999;" id="home">
@@ -288,16 +206,17 @@
 </section>
 
 <!-- FOLLOWING PAGE -->
-<section class="fade-in" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
-  style="position: relative; border-radius: 0% !important; z-index: 999;">
-  <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
-  style="position: relative; border-radius: 0% !important;">
+<section class="fade-in" :style="{ minHeight: isMobile ? '50vh' : '80vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+  <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '50vh' : '80vh'}" style="position: relative; border-radius: 0% !important;">
     <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
       <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
         <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
           :style="paddingStyles">
           <p style="font-weight: 400; display: block; margin-top: 1.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
-            :style="{ 'font-size': !isMobile ? '96px' : '38px', lineHeight: 1.00, paddingRight: '5%', color: isDarkMode ? '#fffbe9' : '#252423' }">
+            :style="{ 
+            'font-size': !isMobile ? '96px' : '38px', 
+            lineHeight: 1.00, paddingRight: '5%',
+            color: isDarkMode ? '#fffbe9' : '#252423' }">
             A new model for building companies.
           </p>
           <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
@@ -311,9 +230,9 @@
     </v-container>
   </v-parallax>
 </section>
-<section class="fade-in" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;z-index: 999; "
+<section class="fade-in" :style="{ minHeight: isMobile ? '20vh' : '80vh'}" style="  position: relative;  border-radius: 0% !important;z-index: 999; "
         id="mission" @mousemove="handleMouseMove($event, 'What we do')" @mouseleave="handleMouseLeave">
-        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
+        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '20vh' : '80vh'}" style="position: relative; border-radius: 0% !important;">
           <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
             <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
               <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -344,9 +263,9 @@
           </v-container>
         </v-parallax>
 </section>
-<section class="fade-in" :style="{ minHeight: isMobile ? '40vh' : '100vh'}" style=" position: relative;
+<section class="fade-in" :style="{ minHeight: isMobile ? '40vh' : '80vh'}" style=" position: relative;
         border-radius: 0% !important;z-index: 999;">
-        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'"  :style="{ minHeight: isMobile ? '40vh' : '100vh'}" 
+        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'"  :style="{ minHeight: isMobile ? '40vh' : '80vh'}" 
           style="position: relative; border-radius: 0% !important; " >
           <v-container  fluid :class="!isMobile ? 'services-container' : 'services-containerMV'"
             :style=" !isMobile  ? {  marginLeft: '10px',  paddingBottom: '5em', paddingLeft: '8%',
@@ -371,10 +290,10 @@
           </v-container>
         </v-parallax>
 </section>
-<section class="fade-in" :style="{ minHeight: isMobile ? '40vh' : '100vh'}"
+<section class="fade-in" :style="{ minHeight: isMobile ? '40vh' : '90vh'}"
         style=" position: relative;  border-radius: 0% !important;z-index: 999;"
         id="kip" @mousemove="handleMouseMove($event, 'How we do it')"  @mouseleave="handleMouseLeave">
-        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '40vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; " >
+        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '40vh' : '90vh'}"  style="position: relative; border-radius: 0% !important; " >
           <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
             <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
               <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -404,12 +323,9 @@
           </v-container>
         </v-parallax>
 </section> 
-
-<section class="fade-in" id="mission"  :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
-          z-index: 999;  " >
-        <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
-        :color="isDarkMode ? '#252423' : '#fffbe9'" >
-          <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
+<section class="fade-in" id="mission"  :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important; z-index: 999;  " >
+  <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'" >
+        <v-container :class="!isMobile ? '' : 'custom-paddingMV'">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -457,13 +373,13 @@
               </v-col>
             </v-row>
           </v-container>
-        </v-parallax>
+  </v-parallax>
 </section>
 <section class="fade-in"  id="mission" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="  position: relative;  border-radius: 0% !important;
           z-index: 999;  " >
         <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'" >
-        <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
+        <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -514,7 +430,7 @@
           z-index: 999;  " >
         <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
-        <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
+        <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -560,7 +476,7 @@
           z-index: 999;  " >
         <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
-        <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
+        <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -607,7 +523,8 @@
           z-index: 999;  " >
         <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;"
         :color="isDarkMode ? '#252423' : '#fffbe9'"  >
-        <v-container fluid class="fade-up" :class="!isMobile ? '' : 'custom-paddingMV'">
+        <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
+
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" class="d-flex justify-center align-center">
                 <div 
@@ -651,10 +568,10 @@
           </v-container>
         </v-parallax>
 </section>
- <section class="fade-in" id="about" style="position: relative; z-index: 999; min-height: 60vh;padding">
-  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 60vh" 
+ <section class="fade-in" id="about" style="position: relative; z-index: 999; " :style="{ minHeight: isMobile ? '50vh' : '100vh'}">
+  <v-parallax style="position: relative; border-radius: 0% !important; " :style="{ minHeight: isMobile ? '50vh' : '100vh'}"
       :color="isDarkMode ? '#252423' : '#fffbe9'">
-      <v-container fluid class="fade-up" :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
+       <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
           <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
               <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
                 :style=" !isMobile   ? {  marginLeft: '15px',  paddingBottom: '5em',  paddingLeft: '0',
@@ -703,11 +620,11 @@
       </v-container>
   </v-parallax>
 </section>
-<section class="fade-in" id="sponsor" style="position: relative; z-index: 999; min-height: 60vh">
-  <v-parallax style="position: relative; border-radius: 0% !important; min-height: 60vh" 
+<section class="fade-in" id="about" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '50vh' : '100vh'}">
+  <v-parallax style="position: relative; border-radius: 0% !important; " :style="{ minHeight: isMobile ? '50vh' : '100vh'}"
       :color="isDarkMode ? '#252423' : '#fffbe9'">
-      <v-container fluid class="fade-up" :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
-            <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
+       <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
+          <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
               <v-col   :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
                 :style=" !isMobile   ? {  marginLeft: '15px',  paddingBottom: '5em',  paddingLeft: '0',
                 paddingRight: '15px', }  : {}">
@@ -719,8 +636,8 @@
                       Partners
                    </p>
               </v-col>
-            </v-row>
-            <v-row :class="isMobile ? 'mt-n3' : ''" class="logo-container">
+          </v-row>
+          <v-row :class="isMobile ? 'mt-n3' : ''" class="logo-container">
                 <transition-group name="fade">
                     <v-col v-for="(logo, index) in displayedLogos" :key="index" 
                         cols="12" md="4" class="d-flex justify-center align-center" 
@@ -730,9 +647,10 @@
                     </v-col>
                 </transition-group>
             </v-row>
-        </v-container>
-    </v-parallax>
+      </v-container>
+  </v-parallax>
 </section>
+
 <section class="fade-in shadow-bottom" id="team" style="position: relative; z-index: 999; min-height: 80vh">
 <v-card :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; border-radius: 0% !important; min-height: 80vh">
   <v-container fluid class="fade-up" :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
@@ -1656,7 +1574,7 @@
     },
     mounted() {
       const resizeObserver = new ResizeObserver((entries) => {
-        const isMobile = entries[0].contentRect.width < 768;
+        const isMobile = entries[0].contentRect.width < 480;
         this.setCustomCursor(isMobile ? "white" : "dark");
       });
       localStorage.setItem('isDarkMode', this.isDarkMode);
@@ -1924,32 +1842,26 @@
     font-size: 1.2rem; /* Adjust font size for mobile */
   }
 }
-
 @media (min-width: 768px) {
   .menu-button {
     margin: 0 15px;
     transition: all 0.3s ease;
   }
-
   .menu-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px  #FFD700;
   }
 }
-
-
 .image-cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 @media (max-width: 768px) {
   .card-sponsor {
     width: 90%;
     margin-bottom: 32px;
   }
-  
   .card-sponsor:hover {
     transform: scale(1.05);
   }
@@ -1959,18 +1871,14 @@
   transform: translateY(50px);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .section.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Add smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 .section {
-  /* Faster animation */
   transition: all 0.5s ease-out;
 }
 
@@ -1984,9 +1892,6 @@ html {
   transform: none;
   transition: opacity 6s ease-in;
 }
-
-
-/* SECOND SECTION */
 
 
 @media (max-width: 768px) {
@@ -2231,18 +2136,7 @@ animation: marquee 15s linear infinite;
 100% { transform: translateX(-100%); }
 }
 
-.custom-padding {
-  display: block;
-  font-weight: 400 !important;
 
-  padding-left: 17%;
-  padding-right: 17%;
-
-  @media (max-width: 768px) {
-    padding-left: 5%;  
-    padding-right: 5%;  
-  }
-}
 .custom-paddingMV{
   padding-left: 11% !important; 
   text-align: left;
@@ -2978,4 +2872,74 @@ input[type="email" i] {
   border: none !important;
 
 }
-</style>
+
+/* //03 - 20 */
+p {
+  font-size: 96px;
+}
+/* Adjust font size for smaller screens */
+@media (max-width: 1200px) {
+  p {
+    font-size: 64px;
+  }
+}
+@media (max-width: 768px) {
+  p {
+    font-size: 38px;
+  }
+}
+@media (max-width: 480px) {
+  p {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1850px) {
+  .custom-padding {
+    padding-left: 17%;
+    padding-right: 17%;
+  }
+}
+
+@media (max-width: 958px) {
+  .custom-padding {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .custom-paddingdd {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-padding {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+/* Remove fixed positioning for desktop */
+.footer-desktop {
+  position: fixed; /* Changed from fixed */
+  background-color: #b7e3b6;
+  color: black !important;
+  padding: 1% !important;
+  min-height: 92vh !important;
+  width: 100%;
+  margin-top: auto; /* Auto margin for bottom spacing */
+}
+
+/* Keep fixed positioning for mobile */
+@media (max-width: 768px) {
+  .footer-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh !important;
+    font-size: 1rem;
+  }
+}
+
+
+</style>  
