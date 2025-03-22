@@ -844,7 +844,7 @@
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="isMobile"  id="contact">
 <div style="display: flex; justify-content: space-between; align-items: flex-start;padding-top:26%;margin-bottom:5% !important">
   <div style="flex-grow: 1; height: 92vh; display: grid; grid-template-columns: repeat(2, 1fr); ">
-    <div style="background: #b7e3b6;margin-left: 14%">
+    <div style="background: #b7e3b6;margin-left: 10%">
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">ADDRESS</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">PARKER STUDIO</P>
@@ -858,7 +858,7 @@
          </u>
       </P>
     </div>
-    <div style="background: #b7e3b6;margin-left: 14%">
+    <div style="background: #b7e3b6;margin-left: 10%">
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">PARKER STUDIO</P>
@@ -874,7 +874,7 @@
     </div>
     <hr/>
     <hr/>
-    <div style="background: #b7e3b6;margin-left: 14%">
+    <div style="background: #b7e3b6;margin-left: 10%">
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">INQUIRIES</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
@@ -882,7 +882,7 @@
           <span >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
       </P>
     </div>
-    <div style="background: #b7e3b6;margin-left: 14%">
+    <div style="background: #b7e3b6;margin-left: 10%">
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
@@ -892,7 +892,7 @@
     </div>
     <hr/>
     <hr/>
-    <div style="background: #b7e3b6;margin-left: 14%">
+    <div style="background: #b7e3b6;margin-left: 10%">
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">CAREER INTERNSHIPS</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
@@ -900,7 +900,7 @@
           <span >work(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
       </P>
     </div>
-    <div style="background: #b7e3b6;margin-left: 14%">
+    <div style="background: #b7e3b6;margin-left: 10%">
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
@@ -910,21 +910,23 @@
     </div>
     <hr/>
     <hr/>
-     <div style="background: #b7e3b6;margin-left: 14%">
+     <div style="background: #b7e3b6;margin-left: 10%">
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">FOLLOW US</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-        <span >Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+     <p style="font-family:'ChaletBook1'; font-size: 3.5vw;"> <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+      <span >Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a></p>
     </div>
-    <div style="background: #b7e3b6;margin-left: 14%">
+    <div style="background: #b7e3b6;margin-left: 10%" >
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-        <span >Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+      <p style="font-family:'ChaletBook1'; font-size: 3.5vw;">
+        <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+          <span >Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+      </p>
     </div>
     <hr/>
     <hr/>
-    <div style="background: #b7e3b6;margin-left: 14%">
+    <div style="background: #b7e3b6;margin-left: 10%">
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">NEWSLETTER</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
       <div class="contact__information__detail__form__input">
@@ -949,7 +951,7 @@
             </svg>
           </div>
     </div>
-    <div style="background: #b7e3b6;margin-left: 14%">
+    <div style="background: #b7e3b6;margin-left: 10%">
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
       <button class="b2 decoration active green">Submit</button>
