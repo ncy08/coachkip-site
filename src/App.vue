@@ -1403,7 +1403,15 @@ s    </div>
         requestAnimationFrame(updateCount);
       },
       handleScroll() {
-      const currentScrollY = window.scrollY;
+     const contactSection = document.getElementById('contact');
+      const contactSectionTop = contactSection.getBoundingClientRect().top;
+
+      if (contactSectionTop <= 0) {
+        this.isToolbarVisible = false; // Hide toolbar when scrolling past contact section
+      } else {
+        this.isToolbarVisible = true; // Show toolbar when above contact section
+      }
+        const currentScrollY = window.scrollY;
 
       if (currentScrollY > this.lastScrollY) {
         this.isToolbarVisible = false; // Hide toolbar on scroll down
@@ -1995,8 +2003,8 @@ animation: marquee 15s linear infinite;
 
 
 .custom-paddingMV{
-  padding-left: 11% !important; 
-  padding-RIGHT: 11% !important; 
+  padding-left: 8% !important; 
+  padding-RIGHT: 8% !important; 
 
   text-align: left;
 
