@@ -837,151 +837,9 @@
 
 </div>
 </footer>
-<footer class="footer-mobile footer" v-if="isMobile">
-  <div class="footer-row1 mb-2" style="margin-top:35% !important">
-          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1">ADDRESS</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-              <p style="font-family:'ChaletBook'">PARKER STUDIO</p>
-              <p style="font-family:'ChaletBook'">5325 Ballard Ave NW</p>
-              <p style="font-family:'ChaletBook'">Unit 213</p>
-              <p style="font-family:'ChaletBook'">Seattle, WA 98107</p>
-              <p style="font-family:'ChaletBook'">United States</p>
-              <p style="font-family:'ChaletBook'">
-                <u>Map
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-                </u>
-              </p>
-            </div>
-          </div>
-          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1"></div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-              <p style="font-family:'ChaletBook'">PARKER STUDIO</p>
-              <p style="font-family:'ChaletBook'">5325 Ballard Ave NW</p>
-              <p style="font-family:'ChaletBook'">Unit 213</p>
-              <p style="font-family:'ChaletBook'">Seattle, WA 98107</p>
-              <p style="font-family:'ChaletBook'">United States</p>
-              <p style="font-family:'ChaletBook'">
-                <u>Map
-                  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-                </u>
-              </p>
-        </div>
-        </div>
-        </div>
-        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
-        <div class="footer-row1 mb-2" style="margin-top:3% !important">
-          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1">INQUIRIES</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-              <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" class="b2">
-                <span >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-            </div>
-          </div>
-          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1"></div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-                <a style="color:black" href="mailto:hello@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-                  <span >hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-        </div>
-        </div>
-        </div>
-
-        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
-        <div class="footer-row1 mb-2" style="margin-top:3% !important">
-          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1">CAREERS INTERNSHIPS</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-              <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-                <span >worker(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-            </div>
-          </div>
-          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1"></div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-                <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-                  <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-        </div>
-        </div>
-        </div>
-        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
-        <div class="footer-row1 mb-2" style="margin-top:3% !important">
-          <div class="address-section1" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1">FOLLOW US</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-              <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-                <span >Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-            </div>
-          </div>
-          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1"></div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-                <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-                  <span >Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-        </div>
-        </div>
-        </div>
-        <v-divider style="width: 100vw; border-color: black; border:0.1em solid black"  class="mt-2 contact__information__detail__line"/>
-        <div class="footer-row1 mb-2" style="margin-top:3% !important">
-          <div class="address-section1" :style="{ flex: isMobile ? '2' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1">NEWSLETTER</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-              <div class="contact__information__detail__form__input"><input type="email" placeholder="Email address"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31"><g id="Layer_2" data-name="Layer 2"><g id="Design_System" data-name="Design System"><path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path></g></g></svg></div>    
-            </div>
-          </div>
-          <div class="address-section1 ml-4" :style="{ flex: isMobile ? '0.6' : '0.5', textAlign: 'left' }">
-            <div style="font-size:14px !important" class="address-details1"></div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">&nbsp;</div>
-            <div style="font-size:14px !important" class="address-details1">
-              <button class="b2 decoration active green">Submit</button>
-        </div>
-        </div>
-        </div>
-        <div
-          class="marquee"
-          style="
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background-color: rgba(183, 227, 182, 0.8);
-          "
-        >
-          <v-row>
-            <v-col>
-              <div class="marquee-container" >
-                <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
-                <span v-else class="marquee-label1" ><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
-                <div class="marquee-content1">
-                  <div class="marquee-text1">
-                    SEATTLE <span> (21:07:21),</span> SFO
-                    <span> (02:07:21),</span> CHICAGO <span> (23:07:21),</span> AUSTIN
-                    <span> (23:07:21),</span> NYC <span> (00:07:21),</span> LONDON
-                    <span> (00:07:21),</span>
-                  </div>
-                </div>
-              </div>
-            </v-col>
-          </v-row>
-        </div>
-</footer>
-<!-- <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="isMobile"  id="contact">
+<footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="isMobile"  id="contact">
 <div style="display: flex; justify-content: space-between; align-items: flex-start;padding-top:26%;margin-bottom:5% !important">
-<div style="flex-grow: 1; height: 92vh; display: grid; grid-template-columns: repeat(2, 1fr); ">
+  <div style="flex-grow: 1; height: 92vh; display: grid; grid-template-columns: repeat(2, 1fr); ">
     <div style="background: #b7e3b6;margin-left: 10%">
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">ADDRESS</P>
       <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
@@ -1125,7 +983,8 @@
         </v-row>
       </div>
 </div>
-</footer> -->
+</footer>
+
 
   </div>
   </v-app>
