@@ -707,17 +707,17 @@
 <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 30px;padding-top:4%">
   
   <div style="width: 30%; height: 92vh;"> 
-    <div style="background: #b7e3b6; padding: 9px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       CONTACT
     </div>
   </div>  
 
   <div style="flex-grow: 1; height: 92vh; display: grid; grid-template-columns: repeat(3, 1fr);"> <!-- Right column with 3 columns -->
     <!-- Each of these divs represents a cell in the grid -->
-    <div style="background: #b7e3b6; padding: 9px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       ADDRESS
     </div>
-    <div style="background: #b7e3b6; padding: 9px;">
+    <div style="background: #b7e3b6; padding: 10px;">
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">PARKER STUDIO</P> <!-- Responsive font size -->
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">5325 Ballard Ave NW</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Unit 213</P>
@@ -729,7 +729,7 @@
          </u>
       </P>
     </div>
-    <div style="background: #b7e3b6; padding: 9px;">
+    <div style="background: #b7e3b6; padding: 10px;">
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">PARKER STUDIO</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">5325 Ballard Ave NW</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Unit 213</P>
@@ -741,47 +741,47 @@
         </u>
       </P>
     </div>
-    <hr />
     <hr/>
     <hr/>
-    <div style="background: #b7e3b6; padding: 9px; font-size: 1.2vw;">INQUIRIES</div>
-    <div style="background: #b7e3b6; padding: 9px; font-size: 1.2vw;">
+    <hr/>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">INQUIRIES</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
         <span >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
     </div>
-    <div style="background: #b7e3b6; padding: 9px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <a style="color:black" href="mailto:hello@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
         <span >hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
     </div>
     <hr/>
     <hr/>
     <hr/>
-    <div style="background: #b7e3b6; padding: 9px; font-size: 1.2vw;">CAREER INTERNSHIPS</div>
-    <div style="background: #b7e3b6; padding: 9px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">CAREER INTERNSHIPS</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
      <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
         <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
     </div>
-    <div style="background: #b7e3b6; padding: 9px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
         <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
     </div>
     <hr/>
     <hr/>
     <hr/>
-    <div style="background: #b7e3b6; padding: 9px; font-size: 1.2vw;">FOLLOW US</div>
-    <div style="background: #b7e3b6; padding: 9px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">FOLLOW US</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
         <span >Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
     </div>
-    <div style="background: #b7e3b6; padding: 9px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
                   <span >Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
     </div>
     <hr/>
     <hr/>
     <hr/> 
-    <div style="background: #b7e3b6; padding: 9px; font-size: 1.2vw;">NEWSLETTER</div>
-    <div style="background: #b7e3b6; padding: 9px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">NEWSLETTER</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <div class="contact__information__detail__form__input">
               <input 
                 type="email" 
@@ -804,7 +804,7 @@
               </svg>
             </div>
     </div>
-    <div style="background: #b7e3b6; padding: 9px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <button class="b2 decoration active green">Submit</button>
     </div>
     <br/>
