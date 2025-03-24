@@ -1066,9 +1066,9 @@ s    </div>
           drawer: false,
           menuItems: [
             { text: "HOME", link: "#home" },
-            { text: "Mission", link: "#mission" },
+            { text: "Mission", link: "#whatwedo" },
             { text: "KIP", link: "#kip" },
-            { text: "ABOUT", link: "#about" },
+            { text: "ABOUT", link: "#milesran" },
             { text: "TEAM", link: "#team" },
             { text: "CONTACT", link: "#contact" },
           ],
