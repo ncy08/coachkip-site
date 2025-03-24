@@ -217,7 +217,7 @@
               lineHeight: 1.00, paddingRight: '5%',
               color: isDarkMode ? '#fffbe9' : '#252423',
               transition: 'font-size 0.5s ease-out' ,
-              opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 0.5s ease'
+              opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
             }">
             A new model for building companies.
           </p>
@@ -228,7 +228,7 @@
               textAlign: 'left', 
               color: isDarkMode ? '#fffbe9' : '#252423',
               transition: 'font-size 0.5s ease-out' ,
-              opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 0.5s ease'
+              opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
             }">
             We work with world-class entrepreneurs in the Pacific Northwest to turn
             the best ideas into market-defining, venture-funded companies with rapid
@@ -251,7 +251,7 @@
               'font-size': !isMobile ? '48px' : '30px', 
               lineHeight: 1.15,
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.whatwedo ? 1 : 0, transition: 'opacity 0.5s ease'
+              opacity: sectionVisible.whatwedo ? 1 : 0, transition: 'opacity 1s ease'
             }">
             What we do
           </p>
@@ -261,7 +261,7 @@
               letterSpacing: '0.2px',
               textAlign: 'left',
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.whatwedo ? 1 : 0, transition: 'opacity 0.5s ease' 
+              opacity: sectionVisible.whatwedo ? 1 : 0, transition: 'opacity 1s ease' 
             }">
             We are your dream swiss-army-knife co-founder. We design and build a
             fantastic product, solve the toughest data science problems, and
@@ -284,20 +284,20 @@
                 paddingRight: '15px',}: { paddingTop: '5em' } ">
               <div :style="{'grid-template-columns': isMobile ? '' : 'repeat(2, minmax(250px, 1fr))',
                   lineHeight: isMobile ? 2 : 1.5, font : isMobile ? '16px' :'32px'}" class="services-grid" :class="{ 'no-gap': isMobile }">
-                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 0.5s ease'}" style="font-family:'Aeonik1;">Market Research</div>
-                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 0.5s ease'}" style="font-family:'Aeonik1;">Recruiting</div>
-                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 0.5s ease'}" style="font-family:'Aeonik1;">Concept Validation</div>
-                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 0.5s ease'}" style="font-family:'Aeonik1;">Fundraising</div>
-                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 0.5s ease'}" style="font-family:'Aeonik1;">Engineering</div>
-                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 0.5s ease'}" style="font-family:'Aeonik1;">Marketing</div>
-                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 0.5s ease'}" style="font-family:'Aeonik1;">Company Formation</div>
-                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 0.5s ease'}" style="font-family:'Aeonik1;">Data Science</div>
-                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 0.5s ease'}" style="font-family:'Aeonik1;">Go-To-Market</div>
-                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 0.5s ease'}" style="font-family:'Aeonik1;">Finance</div>
-                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 0.5s ease'}" style="font-family:'Aeonik1;">Visual & UX Design</div>
-                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 0.5s ease'}" style="font-family:'Aeonik1;">Operations</div>
-                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 0.5s ease'}" style="font-family:'Aeonik1;">Product Management</div>
-                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 0.5s ease'}" style="font-family:'Aeonik1;">Legal & HR</div>
+                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Market Research</div>
+                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Recruiting</div>
+                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Concept Validation</div>
+                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Fundraising</div>
+                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Engineering</div>
+                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Marketing</div>
+                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Company Formation</div>
+                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Data Science</div>
+                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Go-To-Market</div>
+                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Finance</div>
+                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Visual & UX Design</div>
+                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Operations</div>
+                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Product Management</div>
+                <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Legal & HR</div>
               </div>
             </v-container>
           </v-parallax>
@@ -315,7 +315,7 @@
               'font-size': !isMobile ? '48px' : '30px', 
               lineHeight: 1.15,
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.kip ? 1 : 0, transition: 'opacity 0.5s ease'
+              opacity: sectionVisible.kip ? 1 : 0, transition: 'opacity 1s ease'
             }">
             How we do it
           </p>
@@ -325,7 +325,7 @@
               letterSpacing: '0.2px',
               textAlign: 'left',
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.kip ? 1 : 0, transition: 'opacity 0.5s ease'
+              opacity: sectionVisible.kip ? 1 : 0, transition: 'opacity 1s ease'
             }">
             Building a great startup is hard. Really hard. It requires domain
             expertise, uncommon talent, great execution, great timing, and a little
@@ -349,14 +349,14 @@
             ref="lottieContainer" 
             :class="{'dark-mode': !isDarkMode}" 
             :style="{width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '',
-            opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 0.5s ease'}"
+            opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease'}"
           ></div>
         </v-col>
         <v-col cols="12" md="5" style="padding-right: 2% !important">
           <h4 class="section-title color-slate" color="#e4dbcc"
             style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
             :style="{ 'font-size': !isMobile ? '32px' : '21px', 
-            opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 0.5s ease' }">
+            opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease' }">
             01—Ideation
           </h4>
           <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
@@ -366,7 +366,7 @@
               letterSpacing: '0.1px', 
               paddingRight: '6%',
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 0.5s ease'
+              opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease'
             }">
             It could be our idea. It could be your idea.
           </p>
@@ -377,7 +377,7 @@
               letterSpacing: '0.2px',
               textAlign: 'left',
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 0.5s ease' 
+              opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease' 
             }">
             Either way, we put it through the ringer: determining if it can be a
             world-changing, venture-scale company that customers love.
@@ -404,14 +404,14 @@
             :class="{'dark-mode': !isDarkMode}" 
             style="margin-bottom: -3em" 
             :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '' ,
-            opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 0.5s ease'}"
+            opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease'}"
           ></div>
         </v-col>
         <v-col cols="12" md="5" style="padding-right: 2% !important">
           <h4 class="section-title color-slate" color="#e4dbcc"
             style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
             :style="{ 'font-size': !isMobile ? '32px' : '21px',
-             opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 0.5s ease' }">
+             opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease' }">
             02—Validation
           </h4>
           <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
@@ -421,7 +421,7 @@
               letterSpacing: '0.1px', 
               paddingRight: '6%',
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 0.5s ease' 
+              opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease' 
             }">
             Every idea we work on sounds good at first. But nine out of ten aren't.
           </p>
@@ -432,7 +432,7 @@
               letterSpacing: '0.2px',
               textAlign: 'left',
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 0.5s ease' 
+              opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease' 
             }">
             We know this because we track it. We put an idea through its paces,
             testing customer demand, technical feasibility, business model, unit
@@ -457,14 +457,14 @@
             :class="{'dark-mode': !isDarkMode}" 
             style="margin-bottom: -3em" 
             :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '',
-            opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 0.5s ease' }"
+            opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease' }"
           ></div>
         </v-col>
         <v-col cols="12" md="5" style="padding-right: 6% !important">
           <h4 class="section-title color-slate" color="#e4dbcc"
             style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
             :style="{ 'font-size': !isMobile ? '32px' : '21px',
-             opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 0.5s ease' }">
+             opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease' }">
             03—Creation
           </h4>
           <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
@@ -474,7 +474,7 @@
               letterSpacing: '0.1px', 
               paddingRight: '6%',
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 0.5s ease'
+              opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease'
             }">
             When an idea is a good one, it’s time to move. Fast.
           </p>
@@ -485,7 +485,7 @@
               letterSpacing: '0.2px',
               textAlign: 'left',
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 0.5s ease'
+              opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease'
             }">
             Our team of designers, engineers, data scientists, marketers, and
             company builders turn a validated concept into a real product in market.
@@ -507,13 +507,13 @@
             :class="{'dark-mode': !isDarkMode, 'mt-n6': isMobile}" 
             style="margin-bottom: -3em" 
             :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '',
-            opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 0.5s ease' }"
+            opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' }"
           ></div>
         </v-col>
         <v-col cols="12" md="5" style="padding-right: 6% !important">
           <h4 class="section-title color-slate" color="#e4dbcc"
             style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
-            :style="{ 'font-size': !isMobile ? '32px' : '21px', opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 0.5s ease' }">
+            :style="{ 'font-size': !isMobile ? '32px' : '21px', opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' }">
             04—Spinout
           </h4>
           <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
@@ -523,7 +523,7 @@
               letterSpacing: '0.1px', 
               paddingRight: '6%',
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 0.5s ease' 
+              opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' 
             }">
             Great companies require extraordinary people and smart capital.
           </p>
@@ -534,7 +534,7 @@
               letterSpacing: '0.2px',
               textAlign: 'left',
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 0.5s ease' 
+              opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' 
             }">
             Our spinout process is the best method we know of to get a company off
             the ground, staffed up, and funded by great venture investors as fast as
@@ -557,13 +557,13 @@
             :class="{'dark-mode': !isDarkMode, 'mt-n13': isMobile}"  
             style="margin-bottom: -3em" 
             :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '',
-            opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 0.5s ease' }"
+            opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease' }"
           ></div>
         </v-col>
         <v-col cols="12" md="5" style="padding-right: 6% !important">
           <h4 class="section-title color-slate" color="#e4dbcc"
             style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
-            :style="{ 'font-size': !isMobile ? '32px' : '21px', opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 0.5s ease'}">
+            :style="{ 'font-size': !isMobile ? '32px' : '21px', opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease'}">
             05—Scale Up
           </h4>
           <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
@@ -573,7 +573,7 @@
               letterSpacing: '0.1px', 
               paddingRight: '6%',
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 0.5s ease'
+              opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease'
             }">
             We’ll take care of the boring stuff.
           </p>
@@ -584,7 +584,7 @@
               letterSpacing: '0.2px',
               textAlign: 'left',
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 0.5s ease'
+              opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease'
             }">
             Focus is the lifeblood of an early-stage company. Our recruiting, legal,
             and finance teams, along with our relationships with top service
@@ -617,29 +617,29 @@
       <v-row :class="isMobile ? 'mt-n2 ' : ''">
         <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%">
           <h1 class="text-h1 large-number" 
-            :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 0.5s ease' , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
+            :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease' , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
             v-text="countIdeasSpunOut" style="margin-bottom: 0.1em">
           </h1>
-          <h3 :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 0.5s ease'  , 
+          <h3 :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , 
           fontSize: isMobile ? '34px' : '48px', marginTop: '.5em', marginBottom: '1em', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }" 
             class="color-ivory" style="margin-bottom: 0.5em">
             Ideas Spun Out
           </h3>
-          <p :style="{opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 0.5s ease'  , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
+          <p :style="{opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
             In the rarest of cases, a startup idea has great timing, true customer demand, and the market is enormous.
           </p>
         </v-col>
 
         <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%">
           <h1 class="text-h1 large-number" 
-            :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 0.5s ease'  , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
+            :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
             v-text="countIdeasKilled" style="margin-bottom: 0.1em">
           </h1>
-          <h3 :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 0.5s ease'  ,  fontSize: isMobile ? '34px' : '48px', marginTop: '.5em', marginBottom: '1em', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }" 
+          <h3 :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  ,  fontSize: isMobile ? '34px' : '48px', marginTop: '.5em', marginBottom: '1em', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }" 
             class="color-ivory" style="margin-bottom: 0.5em">
             Ideas Killed
           </h3>
-          <p :style="{opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 0.5s ease' , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.15, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
+          <p :style="{opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease' , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.15, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
             More often than not, an idea isn't a viable business. Our learnings from our failures make us more confident in the ideas that we love.
           </p>
         </v-col>
@@ -659,13 +659,13 @@
               'font-size': !isMobile ? '48px' : '30px', 
               lineHeight: 1.15, 
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 0.5s ease'
+              opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease'
             }">
             Partners
           </p>
         </v-col>
       </v-row>
-      <v-row :class="isMobile ? 'mt-n3' : ''" class="logo-container" :style="{opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 0.5s ease'}">
+      <v-row :class="isMobile ? 'mt-n3' : ''" class="logo-container" :style="{opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease'}">
         <transition-group name="fade">
           <v-col  v-for="(logo, index) in displayedLogos" :key="index" 
             cols="12" md="4" class="d-flex justify-center align-center"  :class="isDarkMode ? 'logo-item' : ''">
@@ -687,7 +687,7 @@
               'font-size': !isMobile ? '48px' : '30px', 
               lineHeight: 1.15, 
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.team ? 1 : 0, transition: 'opacity 0.5s ease'
+              opacity: sectionVisible.team ? 1 : 0, transition: 'opacity 1s ease'
             }">
             Team
           </p>
@@ -702,7 +702,7 @@
                 @mousemove="handleMouseMove($event, member.name)" @mouseleave="handleMouseLeave" />
             <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
                 :class="isDarkMode ? 'text-white' : 'text-black'" 
-                :style="{ fontSize: isMobile ? '24px' : '32px', opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 0.5s ease' }">
+                :style="{ fontSize: isMobile ? '24px' : '32px', opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
               {{ member.name }}
             </h3>
           </v-col>
