@@ -50,11 +50,11 @@
                 <ul class="side-nav-list">
                   <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#home' })" class="side-nav-link-large"
                     >Home</a >
-                  <a  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#mission' })"  class="side-nav-link-large mt-n2"
+                  <a  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#whatwedo' })"  class="side-nav-link-large mt-n2"
                     >Mission</a>
                   <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#kip' })"  class="side-nav-link-large mt-n2"
                     >Kip</a>
-                  <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#about' })"  class="side-nav-link-large mt-n2"
+                  <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#milesran' })"  class="side-nav-link-large mt-n2"
                     >About</a>
                   <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#team' })" class="side-nav-link-large mt-n2"
                     >Team</a>
