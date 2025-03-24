@@ -1,7 +1,7 @@
 
 <template>
-  <v-app >
-    <div >
+  <v-app  :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }">
+    <div  :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }">
       <v-btn   @click="toogle"  class="dark-mode-toggle"  icon  :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }">
         <v-icon :style="{ color: isDarkMode ? 'black' : 'white', }">{{ isDarkMode ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
       </v-btn>
@@ -50,11 +50,11 @@
               <ul class="side-nav-list">
                 <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#home' })" class="side-nav-link-large"
                   >Home</a >
-                <a  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#mission' })"  class="side-nav-link-large mt-n2"
+                <a  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#whatwedo' })"  class="side-nav-link-large mt-n2"
                   >Mission</a>
                 <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#kip' })"  class="side-nav-link-large mt-n2"
                   >Kip</a>
-                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#about' })"  class="side-nav-link-large mt-n2"
+                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#milesran' })"  class="side-nav-link-large mt-n2"
                   >About</a>
                 <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#team' })" class="side-nav-link-large mt-n2"
                   >Team</a>
@@ -95,15 +95,16 @@
         </v-row>
       </v-navigation-drawer>
 
-<section class="fade-in" 
- style="position: relative; min-height: 100vh; z-index: 999;" id="home">
+<section>
+
+<section  style="position: relative; min-height: 100vh; z-index: 999;" id="home">
 <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; min-height: 100vh;">
   <div class="hero-content" :style="{paddingTop: isMobile ? '4% !important' : ''}">
-    <div class="title-wrapper" >
+    <div class="title-wrapper">
       <div class="main-title">
-        <span  :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 0 }" class="word" >COACH</span>
-        <span  :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 3 }" class="word" >&nbsp;</span>
-        <span  :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 6 }" class="word" >KIP</span>
+        <span :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 0 }" class="word" >COACH</span>
+        <span :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 3 }" class="word" >&nbsp;</span>
+        <span :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 6 }" class="word" >KIP</span>
       </div>
     </div>
 
@@ -203,8 +204,9 @@
   
   </div>
 </v-parallax>
-<section class="fade-in" :style="{ minHeight: isMobile ? '50vh' : '80vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
-<v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '50vh' : '80vh'}" style="position: relative; border-radius: 0% !important;">
+</section>
+<section id="home1"  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+<v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
       <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -214,7 +216,8 @@
             'font-size': !isMobile ? '96px' : '38px', 
             lineHeight: 1.00, paddingRight: '5%',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            transition: 'font-size 0.5s ease-out' ,
+            opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
           }">
           A new model for building companies.
         </p>
@@ -224,7 +227,8 @@
             letterSpacing: '0.10px', 
             textAlign: 'left', 
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            transition: 'font-size 0.5s ease-out' ,
+            opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
           }">
           We work with world-class entrepreneurs in the Pacific Northwest to turn
           the best ideas into market-defining, venture-funded companies with rapid
@@ -235,9 +239,9 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" :style="{ minHeight: isMobile ? '20vh' : '80vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;" 
-      id="mission" @mousemove="handleMouseMove($event, 'What we do')" @mouseleave="handleMouseLeave">
-<v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '20vh' : '80vh'}" style="position: relative; border-radius: 0% !important;">
+<section id="whatwedo" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;" 
+       @mousemove="handleMouseMove($event, 'What we do')" @mouseleave="handleMouseLeave">
+<v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
       <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -247,7 +251,7 @@
             'font-size': !isMobile ? '48px' : '30px', 
             lineHeight: 1.15,
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.whatwedo ? 1 : 0, transition: 'opacity 1s ease'
           }">
           What we do
         </p>
@@ -257,7 +261,7 @@
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.whatwedo ? 1 : 0, transition: 'opacity 1s ease' 
           }">
           We are your dream swiss-army-knife co-founder. We design and build a
           fantastic product, solve the toughest data science problems, and
@@ -271,36 +275,36 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" :style="{ minHeight: isMobile ? '40vh' : '80vh'}" style=" position: relative;
+<section  id="listofgrid" :style="{ minHeight: isMobile ? '40vh' : '110vh'}" style=" position: relative;
         border-radius: 0% !important;z-index: 999;">
-        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'"  :style="{ minHeight: isMobile ? '40vh' : '80vh'}" 
+        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'"  :style="{ minHeight: isMobile ? '40vh' : '110vh'}" 
           style="position: relative; border-radius: 0% !important; " >
           <v-container  fluid :class="!isMobile ? 'services-container ' : 'services-containerMV'" 
             :style=" !isMobile  ? {  marginLeft: '10px',  paddingBottom: '5em', paddingLeft: '8%',
               paddingRight: '15px',}: { paddingTop: '5em' } ">
             <div :style="{'grid-template-columns': isMobile ? '' : 'repeat(2, minmax(250px, 1fr))',
                 lineHeight: isMobile ? 2 : 1.5, font : isMobile ? '16px' :'32px'}" class="services-grid" :class="{ 'no-gap': isMobile }">
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Market Research</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Recruiting</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Concept Validation</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Fundraising</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Engineering</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Marketing</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Company Formation</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Data Science</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Go-To-Market</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Finance</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Visual & UX Design</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Operations</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Product Management</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Legal & HR</div>
+              <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Market Research</div>
+              <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Recruiting</div>
+              <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Concept Validation</div>
+              <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Fundraising</div>
+              <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Engineering</div>
+              <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Marketing</div>
+              <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Company Formation</div>
+              <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Data Science</div>
+              <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Go-To-Market</div>
+              <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Finance</div>
+              <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Visual & UX Design</div>
+              <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Operations</div>
+              <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Product Management</div>
+              <div :style="{opacity: sectionVisible.listofgrid ? 1 : 0, transition: 'opacity 1s ease'}" style="font-family:'Aeonik1;">Legal & HR</div>
             </div>
           </v-container>
         </v-parallax>
 </section>
-<section class="fade-in" :style="{ minHeight: isMobile ? '40vh' : '100vh'}"
+<section  id="kip" :style="{ minHeight: isMobile ? '40vh' : '100vh'}"
         style="position: relative; border-radius: 0% !important; z-index: 999;"
-        id="kip" @mousemove="handleMouseMove($event, 'How we do it')" @mouseleave="handleMouseLeave">
+         @mousemove="handleMouseMove($event, 'How we do it')" @mouseleave="handleMouseLeave">
 <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '40vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
@@ -311,7 +315,7 @@
             'font-size': !isMobile ? '48px' : '30px', 
             lineHeight: 1.15,
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.kip ? 1 : 0, transition: 'opacity 1s ease'
           }">
           How we do it
         </p>
@@ -321,7 +325,7 @@
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.kip ? 1 : 0, transition: 'opacity 1s ease'
           }">
           Building a great startup is hard. Really hard. It requires domain
           expertise, uncommon talent, great execution, great timing, and a little
@@ -334,7 +338,7 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" id="mission" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+<section  id="mission1" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
 <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? '' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
@@ -344,13 +348,15 @@
           @mouseleave="handleMouseLeave"
           ref="lottieContainer" 
           :class="{'dark-mode': !isDarkMode}" 
-          :style="{width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : ''}"
+          :style="{width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '',
+          opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease'}"
         ></div>
       </v-col>
       <v-col cols="12" md="5" style="padding-right: 2% !important">
         <h4 class="section-title color-slate" color="#e4dbcc"
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
-          :style="{ 'font-size': !isMobile ? '32px' : '21px', transition: 'font-size 0.5s ease-out' }">
+          :style="{ 'font-size': !isMobile ? '32px' : '21px', 
+          opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease' }">
           01—Ideation
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
@@ -360,7 +366,7 @@
             letterSpacing: '0.1px', 
             paddingRight: '6%',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease'
           }">
           It could be our idea. It could be your idea.
         </p>
@@ -371,7 +377,7 @@
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
           Either way, we put it through the ringer: determining if it can be a
           world-changing, venture-scale company that customers love.
@@ -386,8 +392,8 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" id="mission" :style="{ minHeight: isMobile ? '70vh' : '110vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
-<v-parallax :style="{ minHeight: isMobile ? '70vh' : '111vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
+<section  id="mission2" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+<v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -397,13 +403,15 @@
           ref="lottieContainer1" 
           :class="{'dark-mode': !isDarkMode}" 
           style="margin-bottom: -3em" 
-          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '' }"
+          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '' ,
+          opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease'}"
         ></div>
       </v-col>
       <v-col cols="12" md="5" style="padding-right: 2% !important">
         <h4 class="section-title color-slate" color="#e4dbcc"
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
-          :style="{ 'font-size': !isMobile ? '32px' : '21px', transition: 'font-size 0.5s ease-out' }">
+          :style="{ 'font-size': !isMobile ? '32px' : '21px',
+           opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease' }">
           02—Validation
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
@@ -413,7 +421,7 @@
             letterSpacing: '0.1px', 
             paddingRight: '6%',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
           Every idea we work on sounds good at first. But nine out of ten aren't.
         </p>
@@ -424,7 +432,7 @@
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
           We know this because we track it. We put an idea through its paces,
           testing customer demand, technical feasibility, business model, unit
@@ -437,7 +445,7 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" id="mission" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+<section  id="mission3" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
 <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
@@ -448,13 +456,15 @@
           ref="lottieContainer2" 
           :class="{'dark-mode': !isDarkMode}" 
           style="margin-bottom: -3em" 
-          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '' }"
+          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '',
+          opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease' }"
         ></div>
       </v-col>
       <v-col cols="12" md="5" style="padding-right: 6% !important">
         <h4 class="section-title color-slate" color="#e4dbcc"
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
-          :style="{ 'font-size': !isMobile ? '32px' : '21px', transition: 'font-size 0.5s ease-out' }">
+          :style="{ 'font-size': !isMobile ? '32px' : '21px',
+           opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease' }">
           03—Creation
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
@@ -464,7 +474,7 @@
             letterSpacing: '0.1px', 
             paddingRight: '6%',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease'
           }">
           When an idea is a good one, it’s time to move. Fast.
         </p>
@@ -475,7 +485,7 @@
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease'
           }">
           Our team of designers, engineers, data scientists, marketers, and
           company builders turn a validated concept into a real product in market.
@@ -485,7 +495,7 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" id="mission" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+<section  id="mission4" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
 <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
@@ -496,13 +506,14 @@
           ref="lottieContainer3" 
           :class="{'dark-mode': !isDarkMode, 'mt-n6': isMobile}" 
           style="margin-bottom: -3em" 
-          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '' }"
+          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '',
+          opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' }"
         ></div>
       </v-col>
       <v-col cols="12" md="5" style="padding-right: 6% !important">
         <h4 class="section-title color-slate" color="#e4dbcc"
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
-          :style="{ 'font-size': !isMobile ? '32px' : '21px', transition: 'font-size 0.5s ease-out' }">
+          :style="{ 'font-size': !isMobile ? '32px' : '21px', opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' }">
           04—Spinout
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
@@ -512,7 +523,7 @@
             letterSpacing: '0.1px', 
             paddingRight: '6%',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
           Great companies require extraordinary people and smart capital.
         </p>
@@ -523,7 +534,7 @@
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
           Our spinout process is the best method we know of to get a company off
           the ground, staffed up, and funded by great venture investors as fast as
@@ -534,7 +545,7 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" id="mission" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+<section  id="mission5" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
 <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
@@ -545,13 +556,14 @@
           ref="lottieContainer4" 
           :class="{'dark-mode': !isDarkMode, 'mt-n13': isMobile}"  
           style="margin-bottom: -3em" 
-          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '' }"
+          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '',
+          opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease' }"
         ></div>
       </v-col>
       <v-col cols="12" md="5" style="padding-right: 6% !important">
         <h4 class="section-title color-slate" color="#e4dbcc"
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
-          :style="{ 'font-size': !isMobile ? '32px' : '21px', transition: 'font-size 0.5s ease-out' }">
+          :style="{ 'font-size': !isMobile ? '32px' : '21px', opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease'}">
           05—Scale Up
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
@@ -561,7 +573,7 @@
             letterSpacing: '0.1px', 
             paddingRight: '6%',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease'
           }">
           We’ll take care of the boring stuff.
         </p>
@@ -572,7 +584,7 @@
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease'
           }">
           Focus is the lifeblood of an early-stage company. Our recruiting, legal,
           and finance teams, along with our relationships with top service
@@ -584,14 +596,13 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" id="about" style="position: relative; z-index: 999;" 
-:style="{ minHeight: isMobile ? '50vh' : '100vh'}">
+<section  id="milesran" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '50vh' : '100vh'}">
 <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
       <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
         :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
-        <p style="font-weight: 400; display: block; margin-top: 0.5em;  font-family: 'Aeonik1'; color: #fffbe9 !important;"
+        <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
             'font-size': !isMobile ? '48px' : '30px', 
             lineHeight: 1.15, 
@@ -603,31 +614,32 @@
       </v-col>
     </v-row>
 
-    <v-row :class="isMobile ? 'mt-n2 ' : 'mt-n4'">
+    <v-row :class="isMobile ? 'mt-n2 ' : ''">
       <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%">
         <h1 class="text-h1 large-number" 
-          :style="{ transition: 'font-size 0.5s ease-out' , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
+          :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease' , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
           v-text="countIdeasSpunOut" style="margin-bottom: 0.1em">
         </h1>
-        <h3 :style="{ transition: 'font-size 0.5s ease-out'  , fontSize: isMobile ? '34px' : '48px', marginTop: '.5em', marginBottom: '1em', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }" 
+        <h3 :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , 
+        fontSize: isMobile ? '34px' : '48px', marginTop: '.5em', marginBottom: '1em', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }" 
           class="color-ivory" style="margin-bottom: 0.5em">
           Ideas Spun Out
         </h3>
-        <p :style="{transition: 'font-size 0.5s ease-out'  , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
+        <p :style="{opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
           In the rarest of cases, a startup idea has great timing, true customer demand, and the market is enormous.
         </p>
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%">
         <h1 class="text-h1 large-number" 
-          :style="{ transition: 'font-size 0.5s ease-out'  , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
+          :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
           v-text="countIdeasKilled" style="margin-bottom: 0.1em">
         </h1>
-        <h3 :style="{ transition: 'font-size 0.5s ease-out'  ,  fontSize: isMobile ? '34px' : '48px', marginTop: '.5em', marginBottom: '1em', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }" 
+        <h3 :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  ,  fontSize: isMobile ? '34px' : '48px', marginTop: '.5em', marginBottom: '1em', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }" 
           class="color-ivory" style="margin-bottom: 0.5em">
           Ideas Killed
         </h3>
-        <p :style="{transition: 'font-size 0.5s ease-out' , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.15, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
+        <p :style="{opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease' , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.15, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
           More often than not, an idea isn't a viable business. Our learnings from our failures make us more confident in the ideas that we love.
         </p>
       </v-col>
@@ -635,8 +647,8 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" id="about" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '70vh' : '100vh'}">
-<v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '70vh' : '100vh'}"
+<section   id="partners" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '60vh' : '100vh'}">
+<v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '60vh ' : '100vh'}"
   :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
@@ -647,13 +659,13 @@
             'font-size': !isMobile ? '48px' : '30px', 
             lineHeight: 1.15, 
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease'
           }">
           Partners
         </p>
       </v-col>
     </v-row>
-    <v-row :class="isMobile ? 'mt-n3' : ''" class="logo-container">
+    <v-row :class="isMobile ? 'mt-n3' : ''" class="logo-container" :style="{opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease'}">
       <transition-group name="fade">
         <v-col  v-for="(logo, index) in displayedLogos" :key="index" 
           cols="12" md="4" class="d-flex justify-center align-center"  :class="isDarkMode ? 'logo-item' : ''">
@@ -664,7 +676,7 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in shadow-bottom" id="team" style="position: relative; z-index: 999; min-height: 80vh">
+<section class="fade-in shadow-bottom" id="team" style="position: relative; z-index: 999; min-height: 80vh" >
 <v-card :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; border-radius: 0% !important; min-height: 80vh">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
@@ -675,7 +687,7 @@
             'font-size': !isMobile ? '48px' : '30px', 
             lineHeight: 1.15, 
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.team ? 1 : 0, transition: 'opacity 1s ease'
           }">
           Team
         </p>
@@ -690,7 +702,7 @@
               @mousemove="handleMouseMove($event, member.name)" @mouseleave="handleMouseLeave" />
           <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
               :class="isDarkMode ? 'text-white' : 'text-black'" 
-              :style="{ fontSize: isMobile ? '24px' : '32px', transition: 'font-size 0.5s ease-out' }">
+              :style="{ fontSize: isMobile ? '24px' : '32px', opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
             {{ member.name }}
           </h3>
         </v-col>
@@ -702,7 +714,8 @@
 </section>
 
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="!isMobile" id="contact">
-<div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 30px;padding-top:6%">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 30px;padding-top:4%">
+  
   <div style="width: 30%; height: 92vh;"> 
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       CONTACT
@@ -995,7 +1008,23 @@
   export default {
     data() {
       return {
-        isFooterVisible: false,
+        sectionVisible: {
+          home1: false,
+          whatwedo:false,
+          mission: false,
+          kip: false,
+          listofgrid:false,
+          mission1:false,
+          mission2:false,
+          mission3:false,
+          mission4:false,
+          mission5:false,
+          milesran:false,
+          partners:false,
+          team:false,
+
+        },
+        fadeup:false,
         paddingValues: {
           desktop: {
             paddingLeft: '15px',
@@ -1039,9 +1068,9 @@
         drawer: false,
         menuItems: [
           { text: "HOME", link: "#home" },
-          { text: "Mission", link: "#mission" },
+          { text: "Mission", link: "#whatwedo" },
           { text: "KIP", link: "#kip" },
-          { text: "ABOUT", link: "#about" },
+          { text: "ABOUT", link: "#milesran" },
           { text: "TEAM", link: "#team" },
           { text: "CONTACT", link: "#contact" },
         ],
@@ -1208,9 +1237,6 @@
       },
       checkMobile() {
         this.isMobile = window.innerWidth < 850;
-        // this.countIdeasSpunOut = 0;
-        // this.countIdeasKilled = 0;
-        // this.startCounting();
       },
       handleCardMousemove(e, card) {
         this.hoveredCard = card;
@@ -1229,16 +1255,17 @@
             if (entry.isIntersecting) {
               const sectionId = entry.target.id;
               this.activeSection = sectionId;
-
-              console.log(sectionId,' HAHA')
-
               // Add visible class to text elements
               const textElements = entry.target.querySelectorAll(".fade-up");
               textElements.forEach((el) => el.classList.add("visible"));
-              console.log(sectionId);
-              
+              console.log(sectionId , 'here');
+              if (entry.isIntersecting) {
+              this.sectionVisible[sectionId] = true;
+            } else {
+              this.sectionVisible[sectionId] = false;
+            }
               // Existing logic for counting
-              if (sectionId === "about" && !this.hasStartedCounting) {
+              if (sectionId === "milesran" && !this.hasStartedCounting) {
                 console.log('ey');
                 
                 this.countIdeasSpunOut = 0;
@@ -1246,21 +1273,6 @@
                 this.startCounting();
                 this.hasStartedCounting = true; // Set the flag to true
               }
-              if (sectionId === "mission" && this.isDarkMode == true){
-                  this.ColorFooter = '#252423'
-                  console.log('ey')
-              }
-              if (sectionId === "mission" && this.isDarkMode == false){
-                  this.ColorFooter = 'white'
-              }
-              if (sectionId === "results" && this.isDarkMode == true){
-                  this.ColorFooter = '#252423'
-                  console.log('ey')
-              }
-              if (sectionId === "results" && this.isDarkMode == false){
-                  this.ColorFooter = 'white'
-              }
-              
               else{
                   this.ColorFooter = '#b7e3b6'
               }
@@ -1402,15 +1414,7 @@
         requestAnimationFrame(updateCount);
       },
       handleScroll() {
-     const contactSection = document.getElementById('contact');
-      const contactSectionTop = contactSection.getBoundingClientRect().top;
-
-      if (contactSectionTop <= 0) {
-        this.isToolbarVisible = false; // Hide toolbar when scrolling past contact section
-      } else {
-        this.isToolbarVisible = true; // Show toolbar when above contact section
-      }
-        const currentScrollY = window.scrollY;
+      const currentScrollY = window.scrollY;
 
       if (currentScrollY > this.lastScrollY) {
         this.isToolbarVisible = false; // Hide toolbar on scroll down
@@ -2003,8 +2007,7 @@ animation: marquee 15s linear infinite;
 
 .custom-paddingMV{
   padding-left: 8% !important; 
-  padding-RIGHT: 8% !important; 
-
+  padding-right: 8% !important; 
   text-align: left;
 
 }
@@ -2840,6 +2843,9 @@ padding-top: 20px;
 .footer-grid :nth-child(6) {
 border-top: 1px solid #000;
 padding-top: 20px;
+}
+section {
+transition: opacity 0.5s ease;
 }
 
 </style>  
