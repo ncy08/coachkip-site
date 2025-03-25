@@ -850,129 +850,141 @@
 
 </div>
 </footer>
-<footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="isMobile"  id="contact">
-<div style="display: flex; justify-content: space-between; align-items: flex-start;padding-top:26%;margin-bottom:5% !important">
-  <div style="flex-grow: 1; height: 92vh; display: grid; grid-template-columns: repeat(2, 1fr); ">
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">ADDRESS</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">PARKER STUDIO</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">5325 Ballard Ave NW</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">Unit 213</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">Seattle, WA 98107</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">United States</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-         <u>Map
-           <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-         </u>
-      </P>
-    </div>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">PARKER STUDIO</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">5325 Ballard Ave NW</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">Unit 213</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">Seattle, WA 98107</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">United States</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <u>Map
-          <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-        </u>
-      </P>
-    </div>
-    <hr/>
-    <hr/>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">INQUIRIES</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
-          <span >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </P>
-    </div>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="mailto:hello@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </P>
-    </div>
-    <hr/>
-    <hr/>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">CAREER INTERNSHIPS</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >work(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </P>
-    </div>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </P>
-    </div>
-    <hr/>
-    <hr/>
-     <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">FOLLOW US</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-     <p style="font-family:'ChaletBook1'; font-size: 3.5vw;"> <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-      <span >Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a></p>
-    </div>
-    <div style="background: #b7e3b6;margin-left: 10%" >
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <p style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </p>
-    </div>
-    <hr/>
-    <hr/>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">NEWSLETTER</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <div class="contact__information__detail__form__input">
+
+<footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 26%; margin-bottom: 5% !important;">
+    <div style="flex-grow: 1; height: auto; display: grid;margin-top:10%">
+      <v-row style="background: #b7e3b6; margin-left: 1%;">
+        <v-col>
+          <p class="responsive-text">ADDRESS</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">PARKER STUDIO</p>
+          <p class="responsive-text">5325 Ballard Ave NW</p>
+          <p class="responsive-text">Unit 213</p>
+          <p class="responsive-text">Seattle, WA 98107</p>
+          <p class="responsive-text">United States</p>
+          <p class="responsive-text">
+            <u>Map
+              <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+            </u>
+          </p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">PARKER STUDIO</p>
+          <p class="responsive-text">5325 Ballard Ave NW</p>
+          <p class="responsive-text">Unit 213</p>
+          <p class="responsive-text">Seattle, WA 98107</p>
+          <p class="responsive-text">United States</p>
+          <p class="responsive-text">
+            <u>Map
+              <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+            </u>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 1%;">
+        <v-col>
+          <p class="responsive-text">INQUIRIES</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <span style="text-decoration: underline;" >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+          </p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <span style="text-decoration: underline;" >hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> 
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 1%;">
+        <v-col>
+          <p class="responsive-text">CAREER INTERNSHIPS</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <span style="text-decoration: underline;">work(at)parker.studio<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+          </p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <span style="text-decoration: underline;" > intern(at)parker.studio<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 1%;">
+        <v-col>
+          <p class="responsive-text">FOLLOW US</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <span style="text-decoration: underline;">Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+          </p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <span style="text-decoration: underline;" >Tumblr<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 1%;">
+        <v-col cols="8">
+          <p class="responsive-text">NEWS LETTER</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
             <input 
-              type="email" 
-              placeholder="Email address" 
-              :style="{
-                border: 'none', /* Remove border */
-                backgroundColor: 'transparent', /* Make background transparent */
-                color: black, /* Text color based on dark mode */
-                outline: 'none', /* Remove outline on focus */
-                width: '100%', /* Full width */
-                fontSize: '16px' /* Adjust font size as needed */
-              }"
-            />
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31">
-              <g id="Layer_2" data-name="Layer 2">
-                <g id="Design_System" data-name="Design System">
-                  <path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path>
+                type="email" 
+                class="responsive-text"
+                placeholder="Email address" 
+                :style="{
+                  border: 'none',
+                  backgroundColor: 'transparent', 
+                  color: black, 
+                  outline: 'none', 
+                  width: '100%',
+                }"
+              />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31">
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Design_System" data-name="Design System">
+                    <path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path>
+                  </g>
                 </g>
-              </g>
-            </svg>
-          </div>
+              </svg>
+          </p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text ml-4">
+            <button class="b2 decoration active green">Submit</button>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <br>
     </div>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <button class="b2 decoration active green">Submit</button>
-    </div>
-    <br/>
-    <br/>
-  </div>
-  
-  <div
+    <div
         class="marquee"
         style="
-          position: absolute;
+          position: fixed;
           bottom: 0;
           width: 100%;
           background-color: rgba(183, 227, 182, 0.8);
@@ -995,7 +1007,7 @@
           </v-col>
         </v-row>
       </div>
-</div>
+  </div>
 </footer>
 
 
@@ -2847,5 +2859,31 @@ padding-top: 20px;
 section {
 transition: opacity 0.5s ease;
 }
+.responsive-text {
+  font-family: 'ChaletBook1';
+  font-size: 3.5vw; /* Default font size for large screens */
+  transition: all 0.5s ease; /* Smooth transition for font size changes */
+}
 
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .responsive-text {
+    font-size: 4vw; /* Adjust font size for tablets */
+    line-height: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-text {
+    font-size: 3vw; /* Adjust font size for mobile devices */
+    line-height: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-text {
+    font-size: 4vw; /* Further adjust for smaller screens */
+    line-height: 1;
+  }
+}
 </style>  
