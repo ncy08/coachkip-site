@@ -855,6 +855,7 @@
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 26%; margin-bottom: 5% !important;">
     <div style="flex-grow: 1; height: auto; display: grid;margin-top:10%">
+<<<<<<< HEAD
       <v-row style="background: #b7e3b6; margin-left: 2%;">
         <v-col>
           <p class="responsive-text">ADDRESS</p>
@@ -862,6 +863,16 @@
           <p class="responsive-text">KIP HEADQUARTERS</p>
           <p class="responsive-text">1 N 4 Pl.</p>
           <p class="responsive-text">Brooklyn, NY 11249</p>
+=======
+      <v-row style="background: #b7e3b6; margin-left: 1%;">
+        <v-col>
+          <p class="responsive-text">ADDRESS</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">PARKER STUDIO</p>
+          <p class="responsive-text">5325 Ballard Ave NW</p>
+          <p class="responsive-text">Unit 213</p>
+          <p class="responsive-text">Seattle, WA 98107</p>
+>>>>>>> 56bd6b348f04c6dd07101858c22e0d5276bcf8c2
           <p class="responsive-text">United States</p>
           <p class="responsive-text">
             <u>Map
@@ -872,9 +883,16 @@
         <v-col class="ml-n10">
           <p class="responsive-text">&nbsp;</p>
           <p class="responsive-text">&nbsp;</p>
+<<<<<<< HEAD
           <p class="responsive-text">KIP HEADQUARTERS</p>
           <p class="responsive-text">1 N 4 Pl.</p>
           <p class="responsive-text">Brooklyn, NY 11249</p>
+=======
+          <p class="responsive-text">PARKER STUDIO</p>
+          <p class="responsive-text">5325 Ballard Ave NW</p>
+          <p class="responsive-text">Unit 213</p>
+          <p class="responsive-text">Seattle, WA 98107</p>
+>>>>>>> 56bd6b348f04c6dd07101858c22e0d5276bcf8c2
           <p class="responsive-text">United States</p>
           <p class="responsive-text">
             <u>Map
@@ -886,27 +904,40 @@
       <br>
       <hr/>
       <br>
+<<<<<<< HEAD
       <v-row style="background: #b7e3b6; margin-left: 2%;">
+=======
+      <v-row style="background: #b7e3b6; margin-left: 1%;">
+>>>>>>> 56bd6b348f04c6dd07101858c22e0d5276bcf8c2
         <v-col>
           <p class="responsive-text">INQUIRIES</p>
           <p class="responsive-text">&nbsp;</p>
           <p class="responsive-text">
+<<<<<<< HEAD
             <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
               <span >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+=======
+            <span style="text-decoration: underline;" >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+>>>>>>> 56bd6b348f04c6dd07101858c22e0d5276bcf8c2
           </p>
         </v-col>
         <v-col class="ml-n10">
           <p class="responsive-text">&nbsp;</p>
           <p class="responsive-text">&nbsp;</p>
           <p class="responsive-text">
+<<<<<<< HEAD
             <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
               <span >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+=======
+            <span style="text-decoration: underline;" >hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> 
+>>>>>>> 56bd6b348f04c6dd07101858c22e0d5276bcf8c2
           </p>
         </v-col>
       </v-row>
       <br>
       <hr/>
       <br>
+<<<<<<< HEAD
       <v-row style="background: #b7e3b6; margin-left: 2%;">
         <v-col>
           <p class="responsive-text">INFO</p>
@@ -915,43 +946,71 @@
             <a style="color:black" href="mailto:hello@kip.coach" class="b2">
           <span>hello(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
          </a>
+=======
+      <v-row style="background: #b7e3b6; margin-left: 1%;">
+        <v-col>
+          <p class="responsive-text">CAREER INTERNSHIPS</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <span style="text-decoration: underline;">work(at)parker.studio<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+>>>>>>> 56bd6b348f04c6dd07101858c22e0d5276bcf8c2
           </p>
         </v-col>
         <v-col class="ml-n10">
           <p class="responsive-text">&nbsp;</p>
           <p class="responsive-text">&nbsp;</p>
           <p class="responsive-text">
+<<<<<<< HEAD
             <a style="color:black" href="mailto:intern@kip.coach" class="b2">
           <span>intern(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
           </a>
+=======
+            <span style="text-decoration: underline;" > intern(at)parker.studio<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+>>>>>>> 56bd6b348f04c6dd07101858c22e0d5276bcf8c2
           </p>
         </v-col>
       </v-row>
       <br>
       <hr/>
       <br>
+<<<<<<< HEAD
       <v-row style="background: #b7e3b6; margin-left: 2%;">
+=======
+      <v-row style="background: #b7e3b6; margin-left: 1%;">
+>>>>>>> 56bd6b348f04c6dd07101858c22e0d5276bcf8c2
         <v-col>
           <p class="responsive-text">FOLLOW US</p>
           <p class="responsive-text">&nbsp;</p>
           <p class="responsive-text">
+<<<<<<< HEAD
             <a style="color:black" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="b2">
               <span >Linkedin<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+=======
+            <span style="text-decoration: underline;">Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+>>>>>>> 56bd6b348f04c6dd07101858c22e0d5276bcf8c2
           </p>
         </v-col>
         <v-col class="ml-n10">
           <p class="responsive-text">&nbsp;</p>
           <p class="responsive-text">&nbsp;</p>
           <p class="responsive-text">
+<<<<<<< HEAD
             <a style="color:black" href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="b2">
               <span >Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+=======
+            <span style="text-decoration: underline;" >Tumblr<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+>>>>>>> 56bd6b348f04c6dd07101858c22e0d5276bcf8c2
           </p>
         </v-col>
       </v-row>
       <br>
       <hr/>
       <br>
+<<<<<<< HEAD
       <v-row style="background: #b7e3b6; margin-left: 2%;">
+=======
+      <v-row style="background: #b7e3b6; margin-left: 1%;">
+>>>>>>> 56bd6b348f04c6dd07101858c22e0d5276bcf8c2
         <v-col cols="8">
           <p class="responsive-text">NEWS LETTER</p>
           <p class="responsive-text">&nbsp;</p>
