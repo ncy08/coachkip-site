@@ -238,7 +238,7 @@
 </v-parallax>
 </section>
 <section id="whatwedo" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;" 
-       @mousemove="handleMouseMove($event, 'What we do')" @mouseleave="handleMouseLeave">
+       @mousemove="handleMouseMove($event, 'Who is Kip?')" @mouseleave="handleMouseLeave">
 <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
@@ -297,7 +297,7 @@
 </section>
 <section  id="kip" :style="{ minHeight: isMobile ? '40vh' : '100vh'}"
         style="position: relative; border-radius: 0% !important; z-index: 999;"
-         @mousemove="handleMouseMove($event, 'How we do it')" @mouseleave="handleMouseLeave">
+         @mousemove="handleMouseMove($event, 'How Kip Works')" @mouseleave="handleMouseLeave">
 <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '40vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
