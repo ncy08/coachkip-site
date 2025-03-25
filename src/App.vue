@@ -433,8 +433,8 @@
   </v-container>
 </v-parallax>
 </section>
-<section  id="mission3" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
-<v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
+<section  id="mission3" :style="{ minHeight: isMobile ? '70vh' : '130vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+<v-parallax :style="{ minHeight: isMobile ? '70vh' : '130vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -664,7 +664,7 @@
         <v-col  v-for="(logo, index) in displayedLogos" :key="index"   cols="12" 
           md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : ''" >
           <img  :src="logo.src"   alt="Logo" 
-            :style="{   marginRight: isMobile ? '4%' : '0',  maxWidth: isMobile ? '100%' : '400%',  height: 'auto'  }" 
+            :style="{   marginRight: isMobile ? '4%' : '0',  maxWidth: isMobile ? '100%' : '200%',  height: 'auto'  }" 
           />
         </v-col>
       </transition-group>
