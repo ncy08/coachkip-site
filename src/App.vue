@@ -639,8 +639,8 @@
   </v-container>
 </v-parallax>
 </section>
-<section   id="partners" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '60vh' : '100vh'}">
-<v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '60vh ' : '100vh'}"
+<section   id="partners" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '50vh' : '100vh'}">
+<v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '50vh ' : '100vh'}"
   :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
@@ -657,6 +657,7 @@
         </p>
       </v-col>
     </v-row>
+    <br>
     <v-row 
       :class="isMobile ? 'mt-n3' : 'justify-center'"   class="logo-container" 
       :style="{ opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
