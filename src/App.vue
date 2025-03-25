@@ -219,7 +219,7 @@
             transition: 'font-size 0.5s ease-out' ,
             opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          A new model for building companies.
+          Your AGI Running Coach. 
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
@@ -230,9 +230,7 @@
             transition: 'font-size 0.5s ease-out' ,
             opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          We work with world-class entrepreneurs in the Pacific Northwest to turn
-          the best ideas into market-defining, venture-funded companies with rapid
-          customer adoption.
+         Runners are drowning in data—pace, distance, heart rate, sleep scores, and more—but few of us can use this data longitudinally to harness deeper, non-obvious insights locked within these metrics. 
         </p>
       </v-col>
     </v-row>
@@ -253,7 +251,7 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             opacity: sectionVisible.whatwedo ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          What we do
+         Who is Kip?
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
@@ -263,12 +261,7 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             opacity: sectionVisible.whatwedo ? 1 : 0, transition: 'opacity 1s ease' 
           }">
-          We are your dream swiss-army-knife co-founder. We design and build a
-          fantastic product, solve the toughest data science problems, and
-          navigate the way to finding strong customer pull through rigorous
-          validation and digital marketing. We bring experience raising billions
-          of dollars of capital. Oh, and we'll manage the books, legal, and HR. We
-          invest everything we have in your success.
+           Kip is your favorite workout instructor at the gym down the street. He’s that high-school coach that always got the best out of you. She’s your local running coach who guides your Saturday morning runs. Except, they’re all in your pocket. 
         </p>
       </v-col>
     </v-row>
@@ -317,7 +310,7 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             opacity: sectionVisible.kip ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          How we do it
+          How Kip Works
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
@@ -344,7 +337,7 @@
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <div 
-          @mousemove="handleMouseMove($event, '01—Ideation')" 
+          @mousemove="handleMouseMove($event, '01—Import Your Data')" 
           @mouseleave="handleMouseLeave"
           ref="lottieContainer" 
           :class="{'dark-mode': !isDarkMode}" 
@@ -357,7 +350,7 @@
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
           :style="{ 'font-size': !isMobile ? '32px' : '21px', 
           opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease' }">
-          01—Ideation
+          01—Import Your Data
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
@@ -368,7 +361,7 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          It could be our idea. It could be your idea.
+          Harness deeper, non-obvious insights locked within your apps.
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
@@ -379,8 +372,7 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
-          Either way, we put it through the ringer: determining if it can be a
-          world-changing, venture-scale company that customers love.
+         The factors that drive our individual performance interact in complex ways; the first step is bringing them all together.
           <a :style="{color: isDarkMode ? '#fffbe9' : '#252423' }"
             href="https://docs.google.com/forms/d/e/1FAIpQLSc_WUMqF_UeOE4F20NAGmEVtapyECjJfggwApu8uOWkWdea-Q/viewform"
             target="_blank">
@@ -398,7 +390,7 @@
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <div 
-          @mousemove="handleMouseMove($event, '02—Validation')" 
+          @mousemove="handleMouseMove($event, '02—Advanced neural network modeling ')" 
           @mouseleave="handleMouseLeave"
           ref="lottieContainer1" 
           :class="{'dark-mode': !isDarkMode}" 
@@ -412,7 +404,7 @@
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
           :style="{ 'font-size': !isMobile ? '32px' : '21px',
            opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease' }">
-          02—Validation
+          02—Advanced neural network modeling 
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
@@ -423,7 +415,7 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
-          Every idea we work on sounds good at first. But nine out of ten aren't.
+          Inspired by the sophisticated signal optimization strategies of top hedge funds.
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
@@ -434,11 +426,7 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
-          We know this because we track it. We put an idea through its paces,
-          testing customer demand, technical feasibility, business model, unit
-          economics, market dynamics, investor interest, and more. We benchmark
-          every idea against the performance of our past ideas to determine if
-          it's worth our time—and yours.  
+         Kip applies advanced neural network modeling and a Large Language Model (LLM) to each runner’s data to model past, current, and predicted performance.  
         </p>
       </v-col>
     </v-row>
@@ -451,7 +439,7 @@
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <div 
-          @mousemove="handleMouseMove($event, '03—Creation')" 
+          @mousemove="handleMouseMove($event, '03—Clear, Actionable Guidance')" 
           @mouseleave="handleMouseLeave"
           ref="lottieContainer2" 
           :class="{'dark-mode': !isDarkMode}" 
@@ -465,7 +453,7 @@
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
           :style="{ 'font-size': !isMobile ? '32px' : '21px',
            opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease' }">
-          03—Creation
+          03—Clear, Actionable Guidance
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
@@ -476,7 +464,7 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          When an idea is a good one, it’s time to move. Fast.
+         Get an at-a-glance understanding of where you excel, where you lag, and how to improve
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
@@ -501,7 +489,7 @@
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <div 
-          @mousemove="handleMouseMove($event, '04—Spinout')" 
+          @mousemove="handleMouseMove($event, '04—Fresh insights in real time')" 
           @mouseleave="handleMouseLeave"
           ref="lottieContainer3" 
           :class="{'dark-mode': !isDarkMode, 'mt-n6': isMobile}" 
@@ -514,7 +502,7 @@
         <h4 class="section-title color-slate" color="#e4dbcc"
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
           :style="{ 'font-size': !isMobile ? '32px' : '21px', opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' }">
-          04—Spinout
+          04—Fresh insights in real time
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
@@ -525,7 +513,7 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
-          Great companies require extraordinary people and smart capital.
+         Get actionable and understandable insights delivered to you on a Daily & Weekly basis. 
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
@@ -536,9 +524,7 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
-          Our spinout process is the best method we know of to get a company off
-          the ground, staffed up, and funded by great venture investors as fast as
-          humanly possible.
+          No longer do you need a PHD in physics to understand your workout metrics. Understand how your sleep last night affected your run today AND how you should adjust tomorrow.
         </p>
       </v-col>
     </v-row>
@@ -551,7 +537,7 @@
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <div 
-          @mousemove="handleMouseMove($event, '05—Scale Up')" 
+          @mousemove="handleMouseMove($event, '05—Real-Time Voice Coaching (Beta)')" 
           @mouseleave="handleMouseLeave"
           ref="lottieContainer4" 
           :class="{'dark-mode': !isDarkMode, 'mt-n13': isMobile}"  
@@ -564,7 +550,7 @@
         <h4 class="section-title color-slate" color="#e4dbcc"
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
           :style="{ 'font-size': !isMobile ? '32px' : '21px', opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease'}">
-          05—Scale Up
+          05—Real-Time Voice Coaching (Beta)
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
@@ -575,7 +561,7 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          We’ll take care of the boring stuff.
+           Your always-on, ever-ready, voice-powered running assistant. Never look at your watch again.
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
@@ -586,10 +572,7 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          Focus is the lifeblood of an early-stage company. Our recruiting, legal,
-          and finance teams, along with our relationships with top service
-          providers, allow founders to keep their eyes squarely on building the
-          business.
+         Using a real-time generative AI voice-to-voice model, Kip guides you through your workouts to help you adjust in the moment. 
         </p>
       </v-col>
     </v-row>
@@ -609,38 +592,47 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             transition: 'font-size 0.5s ease-out' 
           }">
-          Miles Ran
+          The Research
         </p>
       </v-col>
     </v-row>
 
     <v-row :class="isMobile ? 'mt-n2 ' : ''">
       <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%">
-        <h1 class="text-h1 large-number" 
+        <h1 class="text-h1 large-number" v-if="!isMobile"
+          :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease' , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
+          v-text="countIdeasSpunOut" style="margin-bottom: 0.1em">
+        </h1>
+        <h1 class="text-h1 large-numberMV" v-if="isMobile"
           :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease' , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
           v-text="countIdeasSpunOut" style="margin-bottom: 0.1em">
         </h1>
         <h3 :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , 
         fontSize: isMobile ? '34px' : '48px', marginTop: '.5em', marginBottom: '1em', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }" 
           class="color-ivory" style="margin-bottom: 0.5em">
-          Ideas Spun Out
+          Runners modeled 
         </h3>
         <p :style="{opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
-          In the rarest of cases, a startup idea has great timing, true customer demand, and the market is enormous.
+          Our models have been fine-tuned on data of over 18k runners to glean to most accurate insights
         </p>
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%">
-        <h1 class="text-h1 large-number" 
+        <h1 class="text-h1 large-number" v-if="!isMobile"
+          :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
+          v-text="countIdeasKilled" style="margin-bottom: 0.1em">
+        </h1>
+        <h1 class="text-h1 large-numberMV" v-if="isMobile"
           :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
           v-text="countIdeasKilled" style="margin-bottom: 0.1em">
         </h1>
         <h3 :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  ,  fontSize: isMobile ? '34px' : '48px', marginTop: '.5em', marginBottom: '1em', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }" 
           class="color-ivory" style="margin-bottom: 0.5em">
-          Ideas Killed
+          New Personal Records
         </h3>
         <p :style="{opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease' , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.15, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
-          More often than not, an idea isn't a viable business. Our learnings from our failures make us more confident in the ideas that we love.
+          In early testing, our research and models have accounted for an average of 2+ PR’s for each of our alpha users. 
+
         </p>
       </v-col>
     </v-row>
@@ -665,11 +657,15 @@
         </p>
       </v-col>
     </v-row>
-    <v-row :class="isMobile ? 'mt-n3' : ''" class="logo-container" :style="{opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease'}">
+    <v-row 
+      :class="isMobile ? 'mt-n3' : 'justify-center'"   class="logo-container" 
+      :style="{ opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
       <transition-group name="fade">
-        <v-col  v-for="(logo, index) in displayedLogos" :key="index" 
-          cols="12" md="4" class="d-flex justify-center align-center"  :class="isDarkMode ? 'logo-item' : ''">
-          <img :src="logo.src" alt="Logo"  :style="{ marginRight:isMobile ? '4%' : '',    maxWidth: isMobile ? '50%' : '100%', height: 'auto' }" />
+        <v-col  v-for="(logo, index) in displayedLogos" :key="index"   cols="12" 
+          md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : ''" >
+          <img  :src="logo.src"   alt="Logo" 
+            :style="{   marginRight: isMobile ? '4%' : '0',  maxWidth: isMobile ? '100%' : '400%',  height: 'auto'  }" 
+          />
         </v-col>
       </transition-group>
     </v-row>
@@ -705,6 +701,11 @@
               :style="{ fontSize: isMobile ? '24px' : '32px', opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
             {{ member.name }}
           </h3>
+          <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
+              :class="isDarkMode ? 'text-white' : 'text-black'" 
+              :style="{ fontSize: isMobile ? '14px' : '22px', opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
+            {{ member.position }}
+          </h3>
         </v-col>
       </div>
     </div>
@@ -728,10 +729,9 @@
       ADDRESS
     </div>
     <div style="background: #b7e3b6; padding: 10px;">
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">PARKER STUDIO</P> <!-- Responsive font size -->
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">5325 Ballard Ave NW</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Unit 213</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Seattle, WA 98107</P>
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">KIP HEADQUARTERS</P> <!-- Responsive font size -->
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">1 N 4 Pl.</P>
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Brooklyn, NY 11249</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">United States</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">
          <u>Map
@@ -740,10 +740,9 @@
       </P>
     </div>
     <div style="background: #b7e3b6; padding: 10px;">
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">PARKER STUDIO</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">5325 Ballard Ave NW</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Unit 213</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Seattle, WA 98107</P>
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">KIP HEADQUARTERS</P>
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">1 N 4 Pl.</P>
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Brooklyn, NY 11249</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">United States</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">
         <u>Map
@@ -757,22 +756,24 @@
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">INQUIRIES</div>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
-        <span >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+        <span >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
     </div>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
-      <a style="color:black" href="mailto:hello@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-        <span >hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+      <a style="color:black" href="tel:+17703644726" class="b2">
+          <span>+1 770 364 4726 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+      </a>
     </div>
     <hr/>
     <hr/>
     <hr/>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">CAREER INTERNSHIPS</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">INFO</div>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
-     <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-        <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+      <a style="color:black" href="mailto:hello@kip.coach" class="b2">
+          <span>hello(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+      </a>
     </div>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
-      <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
+      <a style="color:black" href="mailto:hello@kip.coach" target="_blank" rel="noopener noreferrer" class="b2">
         <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
     </div>
     <hr/>
@@ -780,17 +781,17 @@
     <hr/>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">FOLLOW US</div>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
-      <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-        <span >Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+      <a style="color:black" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="b2">
+        <span >Linkedin<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
     </div>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
-      <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-                  <span >Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+      <a style="color:black" href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="b2">
+       <span >Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
     </div>
     <hr/>
     <hr/>
     <hr/> 
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">NEWSLETTER</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">WAITLIST</div>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <div class="contact__information__detail__form__input">
               <input 
@@ -850,129 +851,147 @@
 
 </div>
 </footer>
-<footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="isMobile"  id="contact">
-<div style="display: flex; justify-content: space-between; align-items: flex-start;padding-top:26%;margin-bottom:5% !important">
-  <div style="flex-grow: 1; height: 92vh; display: grid; grid-template-columns: repeat(2, 1fr); ">
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">ADDRESS</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">PARKER STUDIO</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">5325 Ballard Ave NW</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">Unit 213</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">Seattle, WA 98107</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">United States</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-         <u>Map
-           <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-         </u>
-      </P>
-    </div>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">PARKER STUDIO</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">5325 Ballard Ave NW</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">Unit 213</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">Seattle, WA 98107</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">United States</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <u>Map
-          <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-        </u>
-      </P>
-    </div>
-    <hr/>
-    <hr/>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">INQUIRIES</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
-          <span >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </P>
-    </div>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="mailto:hello@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </P>
-    </div>
-    <hr/>
-    <hr/>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">CAREER INTERNSHIPS</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >work(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </P>
-    </div>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </P>
-    </div>
-    <hr/>
-    <hr/>
-     <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">FOLLOW US</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-     <p style="font-family:'ChaletBook1'; font-size: 3.5vw;"> <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-      <span >Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a></p>
-    </div>
-    <div style="background: #b7e3b6;margin-left: 10%" >
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <p style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </p>
-    </div>
-    <hr/>
-    <hr/>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">NEWSLETTER</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <div class="contact__information__detail__form__input">
+
+<footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 26%; margin-bottom: 5% !important;">
+    <div style="flex-grow: 1; height: auto; display: grid;margin-top:10%">
+      <v-row style="background: #b7e3b6; margin-left: 2%;">
+        <v-col>
+          <p class="responsive-text">ADDRESS</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">KIP HEADQUARTERS</p>
+          <p class="responsive-text">1 N 4 Pl.</p>
+          <p class="responsive-text">Brooklyn, NY 11249</p>
+          <p class="responsive-text">United States</p>
+          <p class="responsive-text">
+            <u>Map
+              <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+            </u>
+          </p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">KIP HEADQUARTERS</p>
+          <p class="responsive-text">1 N 4 Pl.</p>
+          <p class="responsive-text">Brooklyn, NY 11249</p>
+          <p class="responsive-text">United States</p>
+          <p class="responsive-text">
+            <u>Map
+              <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+            </u>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 2%;">
+        <v-col>
+          <p class="responsive-text">INQUIRIES</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
+              <span >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+          </p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
+              <span >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 2%;">
+        <v-col>
+          <p class="responsive-text">INFO</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <a style="color:black" href="mailto:hello@kip.coach" class="b2">
+          <span>hello(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+         </a>
+          </p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <a style="color:black" href="mailto:intern@kip.coach" class="b2">
+          <span>intern(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+          </a>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 2%;">
+        <v-col>
+          <p class="responsive-text">FOLLOW US</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <a style="color:black" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="b2">
+              <span >Linkedin<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+          </p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <a style="color:black" href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="b2">
+              <span >Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 2%;">
+        <v-col cols="8">
+          <p class="responsive-text">NEWS LETTER</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
             <input 
-              type="email" 
-              placeholder="Email address" 
-              :style="{
-                border: 'none', /* Remove border */
-                backgroundColor: 'transparent', /* Make background transparent */
-                color: black, /* Text color based on dark mode */
-                outline: 'none', /* Remove outline on focus */
-                width: '100%', /* Full width */
-                fontSize: '16px' /* Adjust font size as needed */
-              }"
-            />
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31">
-              <g id="Layer_2" data-name="Layer 2">
-                <g id="Design_System" data-name="Design System">
-                  <path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path>
+                type="email" 
+                class="responsive-text"
+                placeholder="Email address" 
+                :style="{
+                  border: 'none',
+                  backgroundColor: 'transparent', 
+                  color: black, 
+                  outline: 'none', 
+                  width: '100%',
+                }"
+              />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31">
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Design_System" data-name="Design System">
+                    <path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path>
+                  </g>
                 </g>
-              </g>
-            </svg>
-          </div>
+              </svg>
+          </p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text ml-4">
+            <button class="b2 decoration active green">Submit</button>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <br>
     </div>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <button class="b2 decoration active green">Submit</button>
-    </div>
-    <br/>
-    <br/>
-  </div>
-  
-  <div
+    <div
         class="marquee"
         style="
-          position: absolute;
+          position: fixed;
           bottom: 0;
           width: 100%;
           background-color: rgba(183, 227, 182, 0.8);
@@ -995,7 +1014,7 @@
           </v-col>
         </v-row>
       </div>
-</div>
+  </div>
 </footer>
 
 
@@ -1044,23 +1063,23 @@
         isDarkMode:false,
         logos: [
           { src:
-              "https://cdn.prod.website-files.com/63ef52716f3c2cb3c5525f21/63ef63b75aac697bb4b17e81_client-06.svg",
+              "https://testlio.com/wp-content/uploads/2022/04/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png",
           },
           { src:
-              "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e78784f08679efe2756_SnapShotDark.svg",
+              "https://singaporecycling.org.sg/cdn/shop/files/trainingpeaks_logo_vertical_2-color.png?v=1703918725&width=1500",
           },
           {src:
-              "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12d83d99315176ef82659_GenZDark.svg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Garmin_logo_2006.svg/1200px-Garmin_logo_2006.svg.png",
           },
-          {src:
-              "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ebafce2edf7ddb8cf58_VolumeDark.svg",
-          },
-          {src:
-              "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73563dba154dad_SitemarkDark.svg",
-          },
-          {src:
-              "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ec2e784a68c2fbf43fc_WavelessDark.svg",
-          },
+          // {src:
+          //     "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ebafce2edf7ddb8cf58_VolumeDark.svg",
+          // },
+          // {src:
+          //     "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73563dba154dad_SitemarkDark.svg",
+          // },
+          // {src:
+          //     "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ec2e784a68c2fbf43fc_WavelessDark.svg",
+          // },
         ],
         showFirstSet: true,
         intervalId: null,
@@ -1095,29 +1114,21 @@
         teamMembers: [
           {
             id: 1,
-            name: "James Jackson",
-            position: "",
+            name: "Nick Yebra",
+            position: "First Founder",
             image:
               "https://img.freepik.com/premium-photo/3d-cartoon-business-character_776674-532471.jpg",
             details:
-              "James has over 20 years of experience in the tech industry and has led multiple successful startups.",
+              "",
           },
           {
-            id: 4,
-            name: "Nick Yebra",
-            position: "",
+            id: 2,
+            name: "James Jackson",
+            position: "Second Founder",
             image:
               "https://img.freepik.com/premium-photo/cartoon-character-with-contract-hands-3d-illustration_839035-120672.jpg",
             details:
-              "Nick is a marketing guru with a knack for creating compelling brand stories.",
-          },
-          {
-            id: 5,
-            name: "John Fritz",
-            position: "",
-            image:
-              "https://img.freepik.com/premium-photo/cartoon-boy-with-brown-hair-blue-jacket-looking-up-generative-ai_900833-38976.jpg?w=360",
-            details: "Fritz has a strong experience in web programming",
+              "",
           },
         ],
         activeSection: "home",
@@ -1140,15 +1151,11 @@
       };
     },
     computed: {
+      displayedLogos() {
+      return [this.logos[this.currentIndex]];
+    },
       paddingStyles() {
         return this.isMobile ? this.paddingValues.mobile : this.paddingValues.desktop;
-      },
-      displayedLogos() {
-        if (this.showFirstSet) {
-          return this.logos.slice(0, 3);
-        } else {
-          return this.logos.slice(3);
-        }
       },
       footerTitleFontSize() {
         return this.isMobile ? "2.5vw" : "1.5vw"; // Adjust font size based on screen size
@@ -1183,6 +1190,11 @@
       },
     },
     methods: {
+      startLogoRotation() {
+        this.intervalId = setInterval(() => {
+          this.currentIndex = (this.currentIndex + 1) % this.logos.length; // Loop back to the first logo
+        }, 3000); // Change logo every 3 seconds
+      },
       toogle() {
         this.isDarkMode = !this.isDarkMode;
         localStorage.setItem('isDarkMode', this.isDarkMode); // Save the state in localStorage
@@ -1383,36 +1395,56 @@
         });
       },
       startCounting() {
-        const duration = 1000; // Duration of the counting animation in milliseconds
-        const startTime = performance.now(); // Get the current time
-        const initialSpunOut = this.countIdeasSpunOut; // Initial value for spun out
-        const initialKilled = this.countIdeasKilled; // Initial value for killed
+    const duration = 1000; // Duration of the counting animation in milliseconds
+    const startTime = performance.now(); // Get the current time
+    const initialSpunOut = this.countIdeasSpunOut; // Initial value for spun out
+    const initialKilled = this.countIdeasKilled; // Initial value for killed
 
-        const updateCount = (timestamp) => {
-          const elapsed = timestamp - startTime; // Calculate elapsed time
-          const progress = Math.min(elapsed / duration, 1); // Normalize progress to [0, 1]
+    // Set the maximum values for the counting
+    this.maxSpunOut = 18000; // Set max spun out to 18k
+    this.maxKilled = 2; // Set max killed to a value greater than 2
 
-          // Calculate the current count based on progress
-          this.countIdeasSpunOut = Math.round(
+    const updateCount = (timestamp) => {
+        const elapsed = timestamp - startTime; // Calculate elapsed time
+        const progress = Math.min(elapsed / duration, 1); // Normalize progress to [0, 1]
+
+        // Calculate the current count based on progress
+        this.countIdeasSpunOut = Math.round(
             initialSpunOut + (this.maxSpunOut - initialSpunOut) * progress
-          );
-          this.countIdeasKilled = Math.round(
+        );
+        this.countIdeasKilled = Math.round(
             initialKilled + (this.maxKilled - initialKilled) * progress
-          );
+        );
 
-          // Continue the animation until the duration is reached
-          if (progress < 1) {
+        // Continue the animation until the duration is reached
+        if (progress < 1) {
             requestAnimationFrame(updateCount);
-          } else {
+        } else {
             // Ensure it ends exactly at max
             this.countIdeasSpunOut = this.maxSpunOut;
             this.countIdeasKilled = this.maxKilled;
-          }
-        };
 
-        // Start the animation
-        requestAnimationFrame(updateCount);
-      },
+            // Update the display after counting is complete
+            this.updateDisplay();
+        }
+    };
+
+    // Start the animation
+    requestAnimationFrame(updateCount);
+},
+
+updateDisplay() {
+    // Format the display for spun out
+    const spunOutDisplay = `${this.countIdeasSpunOut / 1000}k+`;
+    this.countIdeasSpunOut = spunOutDisplay
+    // Format the display for killed
+    const killedDisplay = `> ${this.countIdeasKilled}`;
+    this.countIdeasKilled = killedDisplay
+
+    // Assuming you have elements to display these values
+    document.getElementById('spunOutDisplay').innerText = spunOutDisplay;
+    document.getElementById('killedDisplay').innerText = killedDisplay;
+},
       handleScroll() {
       const currentScrollY = window.scrollY;
 
@@ -1428,6 +1460,7 @@
       this.checkDarkMode(); // Check dark mode preference on component creation
     },
     mounted() {
+      this.startLogoRotation();
       const resizeObserver = new ResizeObserver((entries) => {
         const isMobile = entries[0].contentRect.width < 480;
         this.setCustomCursor(isMobile ? "white" : "dark");
@@ -1454,6 +1487,7 @@
       this.stopAutoSwitch();
       clearInterval(this.intervalIdSpunOut);
       clearInterval(this.intervalIdKilled);
+      clearInterval(this.intervalId);
       window.removeEventListener("scroll", this.handleScroll);
       this.resetCounting();
     },
@@ -2076,6 +2110,19 @@ animation: marquee 15s linear infinite;
 
 .large-number {
   font-size: 180px !important;
+  font-weight: bold !important;
+  text-align: left; /* Align text to the left */
+  /* -webkit-text-stroke: 1px #fffbe9; */
+  /* color: #0000;  */
+  margin-bottom: .25em;
+  padding-bottom: .2em;
+  padding-right: .2em;
+  /* font-family: Aeonik, Arial, sans-serif; */
+  line-height: 1.15;
+  border-bottom: 1px solid #636363 !important;
+}
+.large-numberMV {
+  font-size: 130px !important;
   font-weight: bold !important;
   text-align: left; /* Align text to the left */
   /* -webkit-text-stroke: 1px #fffbe9; */
@@ -2847,5 +2894,31 @@ padding-top: 20px;
 section {
 transition: opacity 0.5s ease;
 }
+.responsive-text {
+  font-family: 'ChaletBook1';
+  font-size: 3.5vw; /* Default font size for large screens */
+  transition: all 0.5s ease; /* Smooth transition for font size changes */
+}
 
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .responsive-text {
+    font-size: 4vw; /* Adjust font size for tablets */
+    line-height: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-text {
+    font-size: 3vw; /* Adjust font size for mobile devices */
+    line-height: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-text {
+    font-size: 4vw; /* Further adjust for smaller screens */
+    line-height: 1;
+  }
+}
 </style>  
