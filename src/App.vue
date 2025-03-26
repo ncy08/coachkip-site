@@ -70,24 +70,24 @@
           <v-col class="ml-3 mr-3">
             <ul class="side-nav-list" style="list-style-type: none; padding: 0">
               <li>
-                <a class="side-nav-link-large"
-                  style="  font-family: 'Aeonik1'; font-size: 16px !important; line-height: 25px !important;  color: black !important; "  target="_blank" >
-                  <v-icon class="mr-1">mdi-twitter</v-icon>Twitter</a>
+                <a class="side-nav-link-large"  href="https://x.com" target="_blank"
+                  style="  font-family: 'Aeonik1'; font-size: 16px !important; line-height: 25px !important;  color: black !important; "  >
+                  <v-icon  class="mr-1">mdi-twitter</v-icon>Twitter</a>
               </li>
               <li>
-                <a class="side-nav-link-large"
-                  style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " target="_blank" >
+                <a class="side-nav-link-large"  href="https://linkedin.com" target="_blank"
+                  style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; "  >
                   <v-icon class="mr-1">mdi-linkedin</v-icon>LinkedIn</a
                 >
               </li>
               <li>
-                <a  class="side-nav-link-large"
-                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " target="_blank" >
+                <a  class="side-nav-link-large"  href="https://instagram.com" target="_blank"
+                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " >
                 <v-icon class="mr-1">mdi-instagram</v-icon>Instagram</a>
               </li>
               <li>
-                <a  class="side-nav-link-large"
-                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " target="_blank" >
+                <a  class="side-nav-link-large"  href="https://vimeo.com" target="_blank"
+                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; "  >
                 <v-icon class="mr-1">mdi-vimeo</v-icon>Vimeo</a >
               </li>
             </ul>
@@ -132,6 +132,7 @@
             size="x-large"
             :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
             class="mr-2 social-icon"
+            @click="gotoRoutesite('http://x.com')"
           >
             mdi-twitter
           </v-icon>
@@ -141,6 +142,7 @@
             size="x-large"
             :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
             class="mr-2 social-icon"
+            @click="gotoRoutesite('http://instagram.com')"
           >
             mdi-instagram
           </v-icon>
@@ -150,6 +152,7 @@
             size="x-large"
             :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
             class="ml-2 social-icon"
+            @click="gotoRoutesite('http://message.com')"
           >
             mdi-message
           </v-icon>
@@ -175,6 +178,7 @@
             size="x-large"
             :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
             class="mr-2 social-icon"
+            @click="gotoRoutesite('http://x.com')"
           >
             mdi-twitter
           </v-icon>
@@ -184,6 +188,7 @@
             size="x-large"
             :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
             class="mr-2 social-icon"
+            @click="gotoRoutesite('http://instagram.com')"
           >
             mdi-instagram
           </v-icon>
@@ -193,6 +198,7 @@
             size="x-large"
             :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
             class="ml-1 social-icon"
+             @click="gotoRoutesite('http://message.com')"
           >
             mdi-message
           </v-icon>
@@ -699,7 +705,7 @@
         :style="{ overflowX: isMobile ? 'auto' : 'hidden', whiteSpace: 'nowrap' }">
       <div class="team-members-row" style="display: flex; flex-direction: row;">
         <v-col v-for="member in teamMembers" :key="member.id" :cols="isMobile ? 9 : 5" class="d-flex flex-column align-center fade-up">
-          <v-img :src="member.image" class="team-image" :height="isMobile ? 470 : 670" :width="isMobile ? 400 : 550" 
+          <v-img :src="member.image" class="team-image" :height="isMobile ? 420 : 670" :width="isMobile ? 400 : 550" 
               @mousemove="handleMouseMove($event, member.name)" @mouseleave="handleMouseLeave" />
           <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
               :class="isDarkMode ? 'text-white' : 'text-black'" 
@@ -708,7 +714,8 @@
           </h3>
           <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
               :class="isDarkMode ? 'text-white' : 'text-black'" 
-              :style="{ fontSize: isMobile ? '14px' : '22px', opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
+              :style="{ fontSize: isMobile ? '14px' : '22px', 
+              opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
             {{ member.position }}
           </h3>
         </v-col>
@@ -1215,6 +1222,12 @@
       },
     },
     methods: {
+      gotoRoutesite(item){
+        console.log(item);
+        
+        let ftp = item
+        window.open(ftp, "_blank");
+      },
       updateTimes() {
         const now = new Date();
         const utcOffset = -7; // Seattle and SFO (PDT)
@@ -1488,16 +1501,15 @@ updateDisplay() {
     document.getElementById('spunOutDisplay').innerText = spunOutDisplay;
     document.getElementById('killedDisplay').innerText = killedDisplay;
 },
-      handleScroll() {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > this.lastScrollY) {
-        this.isToolbarVisible = false; // Hide toolbar on scroll down
-      } else {
-        this.isToolbarVisible = true; // Show toolbar on scroll up
-      }
-      this.lastScrollY = currentScrollY; // Update last scroll position
-    },
+handleScroll() {
+  const currentScrollY = window.scrollY;
+  if (currentScrollY > this.lastScrollY && currentScrollY > 0) {
+    this.isToolbarVisible = false; // Hide toolbar on scroll down
+  } else {
+    this.isToolbarVisible = true; // Show toolbar on scroll up
+  }
+  this.lastScrollY = currentScrollY; // Update last scroll position
+}
     },
     created() {
       this.checkDarkMode(); // Check dark mode preference on component creation
