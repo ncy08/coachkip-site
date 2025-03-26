@@ -230,7 +230,9 @@
             transition: 'font-size 0.5s ease-out' ,
             opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
           }">
-         Runners are drowning in data—pace, distance, heart rate, sleep scores, and more—but few of us can use this data longitudinally to harness deeper, non-obvious insights locked within these metrics. 
+         Runners are drowning in data-pace, distance, heart rate, sleep scores, 
+         and more-but few of us can use this data longitudinally to harness deeper,
+         non-obvious insights locked within these metrics. 
         </p>
       </v-col>
     </v-row>
@@ -433,8 +435,8 @@
   </v-container>
 </v-parallax>
 </section>
-<section  id="mission3" :style="{ minHeight: isMobile ? '70vh' : '130vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
-<v-parallax :style="{ minHeight: isMobile ? '70vh' : '130vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
+<section  id="mission3" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+<v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -658,6 +660,8 @@
       </v-col>
     </v-row>
     <br>
+    <br v-if="!isMobile">
+    <br v-if="!isMobile">
     <v-row 
       :class="isMobile ? 'mt-n3' : 'justify-center'"   class="logo-container" 
       :style="{ opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
@@ -735,9 +739,11 @@
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Brooklyn, NY 11249</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">United States</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">
-         <u>Map
-           <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-         </u>
+        <a  href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank">
+            <u style="color:black !important">Map
+              <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+            </u>
+          </a>
       </P>
     </div>
     <div style="background: #b7e3b6; padding: 10px;">
@@ -746,9 +752,11 @@
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Brooklyn, NY 11249</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">United States</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">
-        <u>Map
-          <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-        </u>
+        <a  href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank">
+            <u style="color:black !important">Map
+              <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+            </u>
+          </a>
       </P>
     </div>
     <hr/>
@@ -769,7 +777,7 @@
     <hr/>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">INFO</div>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
-      <a style="color:black" href="mailto:hello@kip.coach" class="b2">
+      <a style="color:black" href="mailto:hello@kip.coach" target="_blank"  rel="noopener noreferrer"  class="b2">
           <span>hello(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
       </a>
     </div>
@@ -838,11 +846,15 @@
                 <span v-if="!isMobile"  style="font-size:32px">Currently Working in:</span>
                 <span v-else style="font-size:32px"><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
                 <div class="marquee-content">
-                  <div class="marquee-text">
-                    SEATTLE <span> (21:07:21),</span> SFO
-                    <span> (02:07:21),</span> CHICAGO <span> (23:07:21),</span> AUSTIN
-                    <span> (23:07:21),</span> NYC <span> (00:07:21),</span> LONDON
-                    <span> (00:07:21),</span>
+                  <div class="marquee-container">
+                    <div class="marquee-text1">
+                      SEATTLE <span> ({{ seattleTime }}),</span> 
+                      SFO <span> ({{ sfoTime }}),</span> 
+                      CHICAGO <span> ({{ chicagoTime }}),</span> 
+                      AUSTIN <span> ({{ austinTime }}),</span> 
+                      NYC <span> ({{ nycTime }}),</span> 
+                      LONDON <span> ({{ londonTime }})</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -856,20 +868,22 @@
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 26%; margin-bottom: 5% !important;">
     <div style="flex-grow: 1; height: auto; display: grid;margin-top:10%">
-      <v-row style="background: #b7e3b6; margin-left: 2%;">
+      <v-row style="background: #b7e3b6; margin-left: 3%;">
         <v-col>
-          <p class="responsive-text">ADDRESS</p>
-          <p class="responsive-text">&nbsp;</p>
-          <p class="responsive-text">KIP HEADQUARTERS</p>
-          <p class="responsive-text">1 N 4 Pl.</p>
-          <p class="responsive-text">Brooklyn, NY 11249</p>
-          <p class="responsive-text">United States</p>
-          <p class="responsive-text">
-            <u>Map
+        <p class="responsive-text">ADDRESS</p>
+        <p class="responsive-text">&nbsp;</p>
+        <p class="responsive-text">KIP HEADQUARTERS</p>
+        <p class="responsive-text">1 N 4 Pl.</p>
+        <p class="responsive-text">Brooklyn, NY 11249</p>
+        <p class="responsive-text">United States</p>
+        <p class="responsive-text">
+          <a  href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank">
+            <u style="color:black !important">Map
               <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
             </u>
-          </p>
-        </v-col>
+          </a>
+        </p>
+      </v-col>
         <v-col class="ml-n10">
           <p class="responsive-text">&nbsp;</p>
           <p class="responsive-text">&nbsp;</p>
@@ -878,16 +892,18 @@
           <p class="responsive-text">Brooklyn, NY 11249</p>
           <p class="responsive-text">United States</p>
           <p class="responsive-text">
-            <u>Map
+            <a  href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank">
+            <u style="color:black !important">Map
               <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
             </u>
+          </a>
           </p>
         </v-col>
       </v-row>
       <br>
       <hr/>
       <br>
-      <v-row style="background: #b7e3b6; margin-left: 2%;">
+      <v-row style="background: #b7e3b6; margin-left: 3%;">
         <v-col>
           <p class="responsive-text">INQUIRIES</p>
           <p class="responsive-text">&nbsp;</p>
@@ -908,7 +924,7 @@
       <br>
       <hr/>
       <br>
-      <v-row style="background: #b7e3b6; margin-left: 2%;">
+      <v-row style="background: #b7e3b6; margin-left: 3%;">
         <v-col>
           <p class="responsive-text">INFO</p>
           <p class="responsive-text">&nbsp;</p>
@@ -931,7 +947,7 @@
       <br>
       <hr/>
       <br>
-      <v-row style="background: #b7e3b6; margin-left: 2%;">
+      <v-row style="background: #b7e3b6; margin-left: 3%;">
         <v-col>
           <p class="responsive-text">FOLLOW US</p>
           <p class="responsive-text">&nbsp;</p>
@@ -952,7 +968,7 @@
       <br>
       <hr/>
       <br>
-      <v-row style="background: #b7e3b6; margin-left: 2%;">
+      <v-row style="background: #b7e3b6; margin-left: 3%;">
         <v-col cols="8">
           <p class="responsive-text">NEWS LETTER</p>
           <p class="responsive-text">&nbsp;</p>
@@ -1005,10 +1021,12 @@
               <span v-else class="marquee-label1" ><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
               <div class="marquee-content1">
                 <div class="marquee-text1">
-                  SEATTLE <span> (21:07:21),</span> SFO
-                  <span> (02:07:21),</span> CHICAGO <span> (23:07:21),</span> AUSTIN
-                  <span> (23:07:21),</span> NYC <span> (00:07:21),</span> LONDON
-                  <span> (00:07:21),</span>
+                      SEATTLE <span> ({{ seattleTime }}),</span> 
+                      SFO <span> ({{ sfoTime }}),</span> 
+                      CHICAGO <span> ({{ chicagoTime }}),</span> 
+                      AUSTIN <span> ({{ austinTime }}),</span> 
+                      NYC <span> ({{ nycTime }}),</span> 
+                      LONDON <span> ({{ londonTime }})</span>
                 </div>
               </div>
             </div>
@@ -1028,6 +1046,12 @@
   export default {
     data() {
       return {
+        seattleTime: '',
+        sfoTime: '',
+        chicagoTime: '',
+        austinTime: '',
+        nycTime: '',
+        londonTime: '',
         sectionVisible: {
           home1: false,
           whatwedo:false,
@@ -1191,6 +1215,24 @@
       },
     },
     methods: {
+      updateTimes() {
+        const now = new Date();
+        const utcOffset = -7; // Seattle and SFO (PDT)
+        const chicagoOffset = -5; // Chicago (CDT)
+        const austinOffset = -5; // Austin (CDT)
+        const nycOffset = -4; // NYC (EDT)
+        const londonOffset = 0; // London (GMT)
+        this.seattleTime = this.formatTime(now, utcOffset);
+        this.sfoTime = this.formatTime(now, utcOffset);
+        this.chicagoTime = this.formatTime(now, chicagoOffset);
+        this.austinTime = this.formatTime(now, austinOffset);
+        this.nycTime = this.formatTime(now, nycOffset);
+        this.londonTime = this.formatTime(now, londonOffset);
+    },
+    formatTime(date, offset) {
+      const localTime = new Date(date.getTime() + offset * 60 * 60 * 1000);
+      return localTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    },
       startLogoRotation() {
         this.intervalId = setInterval(() => {
           this.currentIndex = (this.currentIndex + 1) % this.logos.length; // Loop back to the first logo
@@ -1461,6 +1503,8 @@ updateDisplay() {
       this.checkDarkMode(); // Check dark mode preference on component creation
     },
     mounted() {
+      this.updateTimes(); 
+      setInterval(this.updateTimes, 1000); 
       this.startLogoRotation();
       const resizeObserver = new ResizeObserver((entries) => {
         const isMobile = entries[0].contentRect.width < 480;
@@ -2922,4 +2966,22 @@ transition: opacity 0.5s ease;
     line-height: 1;
   }
 }
-</style>  `
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  height: 48px; /* Adjust based on your design */
+}
+
+.marquee-text1 {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+  padding-left: 100%;
+  font-size: 3vw; /* Adjust font size as needed */
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+</style> 
