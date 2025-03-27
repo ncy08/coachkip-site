@@ -799,7 +799,7 @@
 
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 26%; margin-bottom: 5% !important;">
-    <div style="flex-grow: 1; height: auto; display: grid;margin-top:10%">
+    <div style="flex-grow: 1; height: auto; display: grid;margin-top:23%">
       <v-row style="background: #b7e3b6; margin-left: 3%;">
         <v-col>
         <p class="responsive-text">ADDRESS</p>
