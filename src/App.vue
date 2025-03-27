@@ -108,22 +108,18 @@
       </div>
     </div>
 
-    <!-- Line separator between title and form -->
     <div class="separator word" :style="{ backgroundColor: isDarkMode ? '#887C5C' : 'black', '--i': 7 }"></div>
-
     <div v-if="!isMobile" class="form-container word" :style="{ '--i': 8 }">
       <div class="input-form" >
         <v-text-field rounded placeholder="Enter email" class="mb-4" 
         :width="isMobile ? '205px' : '350px'" hide-details  :style="{
-              border: !isDarkMode ? '1px solid black' : '1px solid #ccc',
-              color: isDarkMode ? 'white' : 'black' , borderRadius:'30px',  }">
-
+          border: !isDarkMode ? '1px solid black' : '1px solid #ccc',
+          color: isDarkMode ? 'white' : 'black' , borderRadius:'30px',  }">
         </v-text-field>
         <button :class="isMobile ? 'join-button1' : 'join-button'" class="mt-n9">
           Join Waitlist
         </button>
       </div>
-
       <div v-if="isMobile" class="social-icons">
         <v-row no-gutters class="social-row" style="justify-content: center">
           <v-icon
@@ -167,7 +163,6 @@
         :width="isMobile ? '205px' : '280px'" hide-details  :style="{
               border: !isDarkMode ? '1px solid black' : '1px solid #ccc',
               color: isDarkMode ? 'white' : 'black' , borderRadius:'30px',  }">
-
         </v-text-field>
         <v-btn  :color="isDarkMode ? 'white' : 'black'" variant="elevated" class="mt-3" 
         style="border-radius:30px" size="small">Join Waitlist</v-btn>
@@ -182,63 +177,48 @@
           >
             mdi-twitter
           </v-icon>
-          <v-icon
-            @mousemove="handleMouseMove($event, 'Instagram')"
-            @mouseleave="handleMouseLeave"
-            size="x-large"
-            :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
-            class="mr-2 social-icon"
-            @click="gotoRoutesite('http://instagram.com')"
-          >
+          <v-icon  @mousemove="handleMouseMove($event, 'Instagram')"  @mouseleave="handleMouseLeave"
+            size="x-large"  :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"  class="mr-2 social-icon"
+            @click="gotoRoutesite('http://instagram.com')" >
             mdi-instagram
           </v-icon>
-          <v-icon
-            @mousemove="handleMouseMove($event, 'Message')"
-            @mouseleave="handleMouseLeave"
-            size="x-large"
-            :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
-            class="ml-1 social-icon"
-             @click="gotoRoutesite('http://message.com')"
-          >
+          <v-icon @mousemove="handleMouseMove($event, 'Message')"  @mouseleave="handleMouseLeave"
+            size="x-large" :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"  class="ml-1 social-icon" >
             mdi-message
           </v-icon>
         </v-row>
       </div> 
-    
     </div> 
-    </div>
+  </div>
   
   </div>
 </v-parallax>
 </section>
-<section id="home1"  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
-<v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
+<section id="home1"  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
+  style="position: relative; border-radius: 0% !important; z-index: 999;">
+<v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
+  style="position: relative; border-radius: 0% !important;">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
       <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
         :style="paddingStyles">
-        <p style="font-weight: 400; display: block; margin-top: 1.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
+        <p style="font-weight: 400; display: block; margin-top: 1.5em; margin-bottom: 1em;
+        font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
-            'font-size': !isMobile ? '96px' : '38px', 
-            lineHeight: 1.00, paddingRight: '5%',
-            color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' ,
-            opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
-          }">
-          Your AGI Running Coach. 
-        </p>
-        <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
+            'font-size': !isMobile ? '96px' : '38px',  lineHeight: 1.00, paddingRight: '5%',
+             color: isDarkMode ? '#fffbe9' : '#252423', transition: 'font-size 0.5s ease-out' ,
+             opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
+          }"> Your AGI Running Coach.
+         </p>
+         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; 
+           font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
-            'font-size': !isMobile ? '32px' : '16px', 
-            letterSpacing: '0.10px', 
-            textAlign: 'left', 
-            color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' ,
-            opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
+            'font-size': !isMobile ? '32px' : '16px',  letterSpacing: '0.12px',  textAlign: 'left', 
+             color: isDarkMode ? '#fffbe9' : '#252423', transition: 'font-size 0.5s ease-out' ,
+             opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
           }">
-         Runners are drowning in data-pace, distance, heart rate, sleep scores, 
-         and more-but few of us can use this data longitudinally to harness deeper,
-         non-obvious insights locked within these metrics. 
+           Runners are drowning in data-pace, distance, heart rate, sleep scores, and more-but few of us can use this data 
+           longitudinally to harness deeper, non-obvious insights locked within these metrics. 
         </p>
       </v-col>
     </v-row>
@@ -246,7 +226,7 @@
 </v-parallax>
 </section>
 <section id="whatwedo" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;" 
-       @mousemove="handleMouseMove($event, 'Who is Kip?')" @mouseleave="handleMouseLeave">
+@mousemove="handleMouseMove($event, 'Who is Kip?')" @mouseleave="handleMouseLeave">
 <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
@@ -1049,6 +1029,7 @@
 </template>
 
 <script>
+import NickYebra from '../src/image/NickYebra.jpg'
   import lottie from "lottie-web";
   export default {
     data() {
@@ -1148,8 +1129,7 @@
             id: 1,
             name: "Nick Yebra",
             position: "First Founder",
-            image:
-              "https://img.freepik.com/premium-photo/3d-cartoon-business-character_776674-532471.jpg",
+            image:NickYebra,
             details:
               "",
           },
@@ -2098,9 +2078,8 @@ animation: marquee 15s linear infinite;
 
 .custom-paddingMV{
   padding-left: 8% !important; 
-  padding-right: 8% !important; 
+  padding-right: 7% !important; 
   text-align: left;
-
 }
 
 /* //LIST GRID */
