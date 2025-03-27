@@ -799,7 +799,7 @@
 
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 26%; margin-bottom: 5% !important;">
-    <div style="flex-grow: 1; height: auto; display: grid;margin-top:23%">
+    <div style="flex-grow: 1; height: auto; display: grid;margin-top:15%">
       <v-row style="background: #b7e3b6; margin-left: 3%;">
         <v-col>
         <p class="responsive-text">ADDRESS</p>
@@ -824,7 +824,7 @@
       <br>
       <hr/>
       <br>
-      <v-row style="background: #b7e3b6; margin-left: 3%;">
+      <v-row style="background: #b7e3b6; margin-left: 3%;padding-top:12px;padding-bottom:10px">
         <v-col>
           <p class="responsive-text">INQUIRIES</p>
         </v-col>
@@ -838,7 +838,7 @@
       <br>
       <hr/>
       <br>
-      <v-row style="background: #b7e3b6; margin-left: 3%;">
+      <v-row style="background: #b7e3b6; margin-left: 3%;padding-top:12px;padding-bottom:10px">
         <v-col>
           <p class="responsive-text">INFO</p>
         </v-col>
@@ -853,7 +853,7 @@
       <br>
       <hr/>
       <br>
-      <v-row style="background: #b7e3b6; margin-left: 3%;">
+      <v-row style="background: #b7e3b6; margin-left: 3%;padding-top:12px;padding-bottom:10px">
         <v-col>
           <p class="responsive-text">FOLLOW US</p>
         </v-col>
@@ -873,7 +873,7 @@
       <hr/>
       <br>
       <v-row style="background: #b7e3b6; margin-left: 3%;">
-        <v-col cols="8">
+        <v-col cols="6">
           <p class="responsive-text">NEWS LETTER</p>
           <p class="responsive-text">&nbsp;</p>
           <p class="responsive-text">
@@ -898,7 +898,7 @@
               </svg>
           </p>
         </v-col>
-        <v-col class="ml-n10">
+        <v-col class="ml-n9">
           <p class="responsive-text">&nbsp;</p>
           <p class="responsive-text">&nbsp;</p>
           <p class="responsive-text ml-4">
