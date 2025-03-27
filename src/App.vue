@@ -636,54 +636,60 @@
     </v-container>
   </v-parallax>
 </section>
-<section class="fade-in shadow-bottom" id="team" style="position: relative; z-index: 999; min-height: 80vh" >
-<v-card :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; border-radius: 0% !important; min-height: 80vh">
-  <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
-    <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
-      <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
-        :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
-        <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
-          :style="{ 
-            'font-size': !isMobile ? '48px' : '30px', 
-            lineHeight: 1.15, 
-            color: isDarkMode ? '#fffbe9' : '#252423',
-            opacity: sectionVisible.team ? 1 : 0, transition: 'opacity 1s ease'
-          }">
-          Team
-        </p>
-      </v-col>
-    </v-row>
-    <div class="team-members-container mt-n15" ref="teamMembersContainer" @mousedown="startDrag" 
-        @mouseup="stopDrag" @mouseleave="stopDrag" @mousemove="drag"
-        :style="{ overflowX: isMobile ? 'auto' : 'hidden', whiteSpace: 'nowrap' }">
-      <div class="team-members-row" style="display: flex; flex-direction: row;">
-        <v-col v-for="member in teamMembers" :key="member.id" :cols="isMobile ? 9 : 5" class="d-flex flex-column align-center fade-up">
-         <br/>
-         <br/>
-          <v-img :src="member.image" class="team-image" :height="isMobile ? 420 : 670" :width="isMobile ? 400 : 550" 
-              @mousemove="handleMouseMove($event, member.name)" @mouseleave="handleMouseLeave" 
-              :style="{objectFit : 'cover', height:!isMobile ? '400px' : '200px'}"/>
-              <br v-if="!isMobile"/>
-              <br v-if="!isMobile"/>
-              <br v-if="!isMobile"/>
-              <br v-if="isMobile"/>
-              <br v-if="isMobile"/>
-          <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
-              :class="isDarkMode ? 'text-white' : 'text-black'" 
-              :style="{ fontSize: isMobile ? '24px' : '32px', opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
-            {{ member.name }}
-          </h3>
-          <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
-              :class="isDarkMode ? 'text-white' : 'text-black'" 
-              :style="{ fontSize: isMobile ? '14px' : '22px', 
-              opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
-            {{ member.position }}
-          </h3>
+<section class="fade-in shadow-bottom" id="team" style="position: relative; z-index: 999; min-height: 80vh">
+  <v-card :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; border-radius: 0% !important; min-height: 80vh">
+    <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
+      <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
+        <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
+          :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
+          <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
+            :style="{ 
+              'font-size': !isMobile ? '48px' : '30px', 
+              lineHeight: 1.15, 
+              color: isDarkMode ? '#fffbe9' : '#252423',
+              opacity: sectionVisible.team ? 1 : 0, transition: 'opacity 1s ease'
+            }">
+            Team
+          </p>
         </v-col>
+      </v-row>
+      <div class="team-members-container mt-n15" ref="teamMembersContainer" @mousedown="startDrag" 
+          @mouseup="stopDrag" @mouseleave="stopDrag" @mousemove="drag"
+          :style="{ overflowX: isMobile ? 'auto' : 'hidden', whiteSpace: 'nowrap' }">
+          <br v-if="!isMobile"/>
+              <br v-if="!isMobile"/>
+              <br v-if="!isMobile"/>
+              <br v-if="isMobile"/>
+              <br v-if="isMobile"/>
+        <div class="team-members-row" style="display: flex; flex-direction: row;">
+          <v-col v-for="member in teamMembers" :key="member.id" :cols="isMobile ? 9 : 5" class="d-flex flex-column align-center fade-up">
+            <v-img 
+              :src="member.image" 
+              class="team-image" 
+              :style="{ 
+                width: '100%', 
+                height: isMobile ? '220px' : 'auto', 
+                objectFit: 'cover' 
+              }" 
+              @mousemove="handleMouseMove($event, member.name)" 
+              @mouseleave="handleMouseLeave" 
+            />
+            <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
+                :class="isDarkMode ? 'text-white' : 'text-black'" 
+                :style="{ fontSize: isMobile ? '24px' : '32px', opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
+              {{ member.name }}
+            </h3>
+            <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
+                :class="isDarkMode ? 'text-white' : 'text-black'" 
+                :style="{ fontSize : isMobile ? '14px' : '22px', 
+                opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
+              {{ member.position }}
+            </h3>
+          </v-col>
+        </div>
       </div>
-    </div>
-  </v-container>
-</v-card>
+    </v-container>
+  </v-card>
 </section>
 </section>
 
@@ -2891,5 +2897,11 @@ transition: opacity 0.5s ease;
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
+}
+.team-image {
+  width: 100%; /* Make the image take the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  max-height: 700px; /* Set a maximum height for larger screens */
 }
 </style> 
