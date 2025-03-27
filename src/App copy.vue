@@ -1,8 +1,7 @@
-
+`
 <template>
-<<<<<<< HEAD
-  <v-app >
-    <div >
+  <v-app  :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }">
+    <div  :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }">
       <v-btn   @click="toogle"  class="dark-mode-toggle"  icon  :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }">
         <v-icon :style="{ color: isDarkMode ? 'black' : 'white', }">{{ isDarkMode ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
       </v-btn>
@@ -21,39 +20,13 @@
             class="mr-6 hidden-md-and-up mt-n1" @click="drawer = true"> Menu
           </button>
         <v-toolbar-items class="hidden-sm-and-down">
-=======
-  <v-app light>
-    <!-- Floating Text Overlay -->
-    <div v-if="showFloatingText" class="floating-text" :style="{ left: floatingX + 'px', top: floatingY + 'px' }">
-      <span v-for="(char, index) in floatingText" :key="index">{{ char }}</span>
-    </div>
-
-    <v-toolbar class="tBar" color="#212021">
-      <v-toolbar-title>
-        TEST SAMPLE <sup>Beta</sup>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-app-bar-nav-icon color="rgba(255, 105, 180, 0.3)" class="hidden-md-and-up" @click.stop="drawer = !drawer" />
-      <v-toolbar-items class="hidden-sm-and-down">
-        <template v-for="(item, index) in menuItems" :key="index">
-          <v-btn flat color="pink" class="menu-button" @click="handleMenuItemClick(item)">
-            {{ item.text }}
-          </v-btn>
-        </template>
-      </v-toolbar-items>
-    </v-toolbar>
-
-    <!-- Mobile Navigation Drawer -->
-    <v-navigation-drawer location="right" v-model="drawer" fixed temporary class="mobile-nav">
-      <v-list nav dense>
-        <v-list-item-group>
->>>>>>> 27cd86e284c86f8b8b1fadd24519154b025bbb83
           <template v-for="(item, index) in menuItems" :key="index">
-            <v-list-item @click="handleMenuItemClick(item)">
-              <v-list-item-title>{{ item.text }}</v-list-item-title>
-            </v-list-item>
+            <v-btn :style="{color:isDarkMode ? 'white' : 'black'}" flat :class="{ 'active-line': activeSection === item.link.substring(1) }"
+              :color="activeSection === item.link.substring(1) ? '#FFD700' : '#FFFFFF'"
+              class="menu-button" @click="handleMenuItemClick(item)">
+              {{ item.text }}
+            </v-btn>
           </template>
-<<<<<<< HEAD
         </v-toolbar-items>
         </v-toolbar>
       </transition>
@@ -77,11 +50,11 @@
               <ul class="side-nav-list">
                 <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#home' })" class="side-nav-link-large"
                   >Home</a >
-                <a  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#mission' })"  class="side-nav-link-large mt-n2"
+                <a  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#whatwedo' })"  class="side-nav-link-large mt-n2"
                   >Mission</a>
                 <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#kip' })"  class="side-nav-link-large mt-n2"
                   >Kip</a>
-                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#about' })"  class="side-nav-link-large mt-n2"
+                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#milesran' })"  class="side-nav-link-large mt-n2"
                   >About</a>
                 <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#team' })" class="side-nav-link-large mt-n2"
                   >Team</a>
@@ -97,24 +70,24 @@
           <v-col class="ml-3 mr-3">
             <ul class="side-nav-list" style="list-style-type: none; padding: 0">
               <li>
-                <a class="side-nav-link-large"
-                  style="  font-family: 'Aeonik1'; font-size: 16px !important; line-height: 25px !important;  color: black !important; "  target="_blank" >
-                  <v-icon class="mr-1">mdi-twitter</v-icon>Twitter</a>
+                <a class="side-nav-link-large"  href="https://x.com" target="_blank"
+                  style="  font-family: 'Aeonik1'; font-size: 16px !important; line-height: 25px !important;  color: black !important; "  >
+                  <v-icon  class="mr-1">mdi-twitter</v-icon>Twitter</a>
               </li>
               <li>
-                <a class="side-nav-link-large"
-                  style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " target="_blank" >
+                <a class="side-nav-link-large"  href="https://linkedin.com" target="_blank"
+                  style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; "  >
                   <v-icon class="mr-1">mdi-linkedin</v-icon>LinkedIn</a
                 >
               </li>
               <li>
-                <a  class="side-nav-link-large"
-                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " target="_blank" >
+                <a  class="side-nav-link-large"  href="https://instagram.com" target="_blank"
+                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " >
                 <v-icon class="mr-1">mdi-instagram</v-icon>Instagram</a>
               </li>
               <li>
-                <a  class="side-nav-link-large"
-                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " target="_blank" >
+                <a  class="side-nav-link-large"  href="https://vimeo.com" target="_blank"
+                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; "  >
                 <v-icon class="mr-1">mdi-vimeo</v-icon>Vimeo</a >
               </li>
             </ul>
@@ -122,78 +95,31 @@
         </v-row>
       </v-navigation-drawer>
 
-<section class="fade-in" 
- style="position: relative; min-height: 100vh; z-index: 999;" id="home">
+<section>
+
+<section  style="position: relative; min-height: 100vh; z-index: 999;" id="home">
 <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; min-height: 100vh;">
   <div class="hero-content" :style="{paddingTop: isMobile ? '4% !important' : ''}">
-    <div class="title-wrapper" >
+    <div class="title-wrapper">
       <div class="main-title">
-        <span  :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 0 }" class="word" >COACH</span>
-        <span  :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 3 }" class="word" >&nbsp;</span>
-        <span  :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 6 }" class="word" >KIP</span>
+        <span :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 0 }" class="word" >COACH</span>
+        <span :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 3 }" class="word" >&nbsp;</span>
+        <span :style="{fontWeight:400, fontFamily:'Aeonik1, Arial , sans-serif', fontSize: isMobile ? '48px' : '', color:isDarkMode ? 'white' : 'black', '--i': 6 }" class="word" >KIP</span>
       </div>
     </div>
-=======
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
 
-    <!-- 1ST Section -->
-    <section style="height: 100vh;" class="overflow-hidden">
-      <v-parallax color="black" height="100vh">
-        <div class="hero-content">
-          <div class="title-wrapper">
-            <div class="main-title">
-                <span class="word" :style="{ '--i': 0 }">INNOVATE</span>
-                <span class="word" :style="{ '--i': 1 }">CREATE</span>
-                <span class="word" :style="{ '--i': 2 }">TRANSFORM</span>
-              </div>
-            <div class="subtitle">
-              <p class="typing-text">This is sample only</p>
-            </div>
-          </div>
-        </div>
-      </v-parallax>
-    </section>
->>>>>>> 27cd86e284c86f8b8b1fadd24519154b025bbb83
-
-    <!-- 2ND Section -->
-    <section style="height: 100vh;">
-      <v-parallax color="black" height="100vh">
-        <v-img src="../src/image/workspace-1280538.jpg" height="90%" cover></v-img>
-      </v-parallax>
-    </section>
-    <section style="height: 100vh;">
-      <v-parallax color="black" height="100vh">
-        <div class="hero-content">
-          <div class="title-wrapper">
-            <div class="main-title1">
-              <p class="typing-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                id est laborum</p>
-            </div>
-          </div>
-        </div>
-      </v-parallax>
-    </section>
-
-<<<<<<< HEAD
+    <div class="separator word" :style="{ backgroundColor: isDarkMode ? '#887C5C' : 'black', '--i': 7 }"></div>
     <div v-if="!isMobile" class="form-container word" :style="{ '--i': 8 }">
       <div class="input-form" >
         <v-text-field rounded placeholder="Enter email" class="mb-4" 
         :width="isMobile ? '205px' : '350px'" hide-details  :style="{
-              border: !isDarkMode ? '1px solid black' : '1px solid #ccc',
-              color: isDarkMode ? 'white' : 'black' , borderRadius:'30px',  }">
-
+          border: !isDarkMode ? '1px solid black' : '1px solid #ccc',
+          color: isDarkMode ? 'white' : 'black' , borderRadius:'30px',  }">
         </v-text-field>
         <button :class="isMobile ? 'join-button1' : 'join-button'" class="mt-n9">
           Join Waitlist
         </button>
       </div>
-
       <div v-if="isMobile" class="social-icons">
         <v-row no-gutters class="social-row" style="justify-content: center">
           <v-icon
@@ -202,6 +128,7 @@
             size="x-large"
             :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
             class="mr-2 social-icon"
+            @click="gotoRoutesite('http://x.com')"
           >
             mdi-twitter
           </v-icon>
@@ -211,6 +138,7 @@
             size="x-large"
             :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
             class="mr-2 social-icon"
+            @click="gotoRoutesite('http://instagram.com')"
           >
             mdi-instagram
           </v-icon>
@@ -220,6 +148,7 @@
             size="x-large"
             :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
             class="ml-2 social-icon"
+            @click="gotoRoutesite('http://message.com')"
           >
             mdi-message
           </v-icon>
@@ -234,7 +163,6 @@
         :width="isMobile ? '205px' : '280px'" hide-details  :style="{
               border: !isDarkMode ? '1px solid black' : '1px solid #ccc',
               color: isDarkMode ? 'white' : 'black' , borderRadius:'30px',  }">
-
         </v-text-field>
         <v-btn  :color="isDarkMode ? 'white' : 'black'" variant="elevated" class="mt-3" 
         style="border-radius:30px" size="small">Join Waitlist</v-btn>
@@ -245,70 +173,61 @@
             size="x-large"
             :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
             class="mr-2 social-icon"
+            @click="gotoRoutesite('http://x.com')"
           >
             mdi-twitter
           </v-icon>
-          <v-icon
-            @mousemove="handleMouseMove($event, 'Instagram')"
-            @mouseleave="handleMouseLeave"
-            size="x-large"
-            :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
-            class="mr-2 social-icon"
-          >
+          <v-icon  @mousemove="handleMouseMove($event, 'Instagram')"  @mouseleave="handleMouseLeave"
+            size="x-large"  :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"  class="mr-2 social-icon"
+            @click="gotoRoutesite('http://instagram.com')" >
             mdi-instagram
           </v-icon>
-          <v-icon
-            @mousemove="handleMouseMove($event, 'Message')"
-            @mouseleave="handleMouseLeave"
-            size="x-large"
-            :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
-            class="ml-1 social-icon"
-          >
+          <v-icon @mousemove="handleMouseMove($event, 'Message')"  @mouseleave="handleMouseLeave"
+            size="x-large" :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"  class="ml-1 social-icon" >
             mdi-message
           </v-icon>
         </v-row>
       </div> 
-    
     </div> 
-    </div>
+  </div>
   
   </div>
 </v-parallax>
-<section class="fade-in" :style="{ minHeight: isMobile ? '50vh' : '80vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
-<v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '50vh' : '80vh'}" style="position: relative; border-radius: 0% !important;">
+</section>
+<section id="home1"  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
+  style="position: relative; border-radius: 0% !important; z-index: 999;">
+<v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
+  style="position: relative; border-radius: 0% !important;">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
       <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
         :style="paddingStyles">
-        <p style="font-weight: 400; display: block; margin-top: 1.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
+        <p style="font-weight: 400; display: block; margin-top: 1.5em; margin-bottom: 1em;
+        font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
-            'font-size': !isMobile ? '96px' : '38px', 
-            lineHeight: 1.00, paddingRight: '5%',
-            color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
-          }">
-          A new model for building companies.
-        </p>
-        <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
+            'font-size': !isMobile ? '96px' : '38px',  lineHeight: 1.00, paddingRight: '5%',
+             color: isDarkMode ? '#fffbe9' : '#252423', transition: 'font-size 0.5s ease-out' ,
+             opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
+          }"> Your AGI Running Coach.
+         </p>
+         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; 
+           font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
-            'font-size': !isMobile ? '32px' : '16px', 
-            letterSpacing: '0.10px', 
-            textAlign: 'left', 
-            color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            'font-size': !isMobile ? '32px' : '16px',  letterSpacing: '0.12px',  textAlign: 'left', 
+             color: isDarkMode ? '#fffbe9' : '#252423', transition: 'font-size 0.5s ease-out' ,
+             opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          We work with world-class entrepreneurs in the Pacific Northwest to turn
-          the best ideas into market-defining, venture-funded companies with rapid
-          customer adoption.
+           Runners are drowning in data-pace, distance, heart rate, sleep scores, and more-but few of us can use this data 
+           longitudinally to harness deeper, non-obvious insights locked within these metrics. 
         </p>
       </v-col>
     </v-row>
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" :style="{ minHeight: isMobile ? '20vh' : '80vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;" 
-      id="mission" @mousemove="handleMouseMove($event, 'What we do')" @mouseleave="handleMouseLeave">
-<v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '20vh' : '80vh'}" style="position: relative; border-radius: 0% !important;">
+<section id="whatwedo" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;" 
+@mousemove="handleMouseMove($event, 'Who is Kip?')" @mouseleave="handleMouseLeave">
+<v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
       <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -318,9 +237,9 @@
             'font-size': !isMobile ? '48px' : '30px', 
             lineHeight: 1.15,
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.whatwedo ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          What we do
+         Who is Kip?
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
@@ -328,50 +247,18 @@
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.whatwedo ? 1 : 0, transition: 'opacity 1s ease' 
           }">
-          We are your dream swiss-army-knife co-founder. We design and build a
-          fantastic product, solve the toughest data science problems, and
-          navigate the way to finding strong customer pull through rigorous
-          validation and digital marketing. We bring experience raising billions
-          of dollars of capital. Oh, and we'll manage the books, legal, and HR. We
-          invest everything we have in your success.
+           Kip is your favorite workout instructor at the gym down the street. He’s that high-school coach that always got the best out of you. She’s your local running coach who guides your Saturday morning runs. Except, they’re all in your pocket. 
         </p>
       </v-col>
     </v-row>
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" :style="{ minHeight: isMobile ? '40vh' : '80vh'}" style=" position: relative;
-        border-radius: 0% !important;z-index: 999;">
-        <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'"  :style="{ minHeight: isMobile ? '40vh' : '80vh'}" 
-          style="position: relative; border-radius: 0% !important; " >
-          <v-container  fluid :class="!isMobile ? 'services-container ' : 'services-containerMV'" 
-            :style=" !isMobile  ? {  marginLeft: '10px',  paddingBottom: '5em', paddingLeft: '8%',
-              paddingRight: '15px',}: { paddingTop: '5em' } ">
-            <div :style="{'grid-template-columns': isMobile ? '' : 'repeat(2, minmax(250px, 1fr))',
-                lineHeight: isMobile ? 2 : 1.5, font : isMobile ? '16px' :'32px'}" class="services-grid" :class="{ 'no-gap': isMobile }">
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Market Research</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Recruiting</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Concept Validation</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Fundraising</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Engineering</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Marketing</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Company Formation</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Data Science</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Go-To-Market</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Finance</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Visual & UX Design</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Operations</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Product Management</div>
-              <div style="font-family:'Aeonik1;transition: 'font-size 0.5s ease-out'">Legal & HR</div>
-            </div>
-          </v-container>
-        </v-parallax>
-</section>
-<section class="fade-in" :style="{ minHeight: isMobile ? '40vh' : '100vh'}"
+<section  id="kip" :style="{ minHeight: isMobile ? '40vh' : '100vh'}"
         style="position: relative; border-radius: 0% !important; z-index: 999;"
-        id="kip" @mousemove="handleMouseMove($event, 'How we do it')" @mouseleave="handleMouseLeave">
+         @mousemove="handleMouseMove($event, 'How Kip Works')" @mouseleave="handleMouseLeave">
 <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '40vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-10' : 'mt-10'">
@@ -382,9 +269,9 @@
             'font-size': !isMobile ? '48px' : '30px', 
             lineHeight: 1.15,
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.kip ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          How we do it
+          How Kip Works
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
@@ -392,7 +279,7 @@
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.kip ? 1 : 0, transition: 'opacity 1s ease'
           }">
           Building a great startup is hard. Really hard. It requires domain
           expertise, uncommon talent, great execution, great timing, and a little
@@ -405,24 +292,26 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" id="mission" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+<section  id="mission1" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
 <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? '' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <div 
-          @mousemove="handleMouseMove($event, '01—Ideation')" 
+          @mousemove="handleMouseMove($event, '01—Import Your Data')" 
           @mouseleave="handleMouseLeave"
           ref="lottieContainer" 
           :class="{'dark-mode': !isDarkMode}" 
-          :style="{width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : ''}"
+          :style="{width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '',
+          opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease'}"
         ></div>
       </v-col>
       <v-col cols="12" md="5" style="padding-right: 2% !important">
         <h4 class="section-title color-slate" color="#e4dbcc"
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
-          :style="{ 'font-size': !isMobile ? '32px' : '21px', transition: 'font-size 0.5s ease-out' }">
-          01—Ideation
+          :style="{ 'font-size': !isMobile ? '32px' : '21px', 
+          opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease' }">
+          01—Import Your Data
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
@@ -431,9 +320,9 @@
             letterSpacing: '0.1px', 
             paddingRight: '6%',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          It could be our idea. It could be your idea.
+          Harness deeper, non-obvious insights locked within your apps.
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
@@ -442,10 +331,9 @@
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission1 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
-          Either way, we put it through the ringer: determining if it can be a
-          world-changing, venture-scale company that customers love.
+         The factors that drive our individual performance interact in complex ways; the first step is bringing them all together.
           <a :style="{color: isDarkMode ? '#fffbe9' : '#252423' }"
             href="https://docs.google.com/forms/d/e/1FAIpQLSc_WUMqF_UeOE4F20NAGmEVtapyECjJfggwApu8uOWkWdea-Q/viewform"
             target="_blank">
@@ -457,25 +345,27 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" id="mission" :style="{ minHeight: isMobile ? '70vh' : '110vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
-<v-parallax :style="{ minHeight: isMobile ? '70vh' : '111vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
+<section  id="mission2" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+<v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <div 
-          @mousemove="handleMouseMove($event, '02—Validation')" 
+          @mousemove="handleMouseMove($event, '02—Advanced neural network modeling ')" 
           @mouseleave="handleMouseLeave"
           ref="lottieContainer1" 
           :class="{'dark-mode': !isDarkMode}" 
           style="margin-bottom: -3em" 
-          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '' }"
+          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '' ,
+          opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease'}"
         ></div>
       </v-col>
       <v-col cols="12" md="5" style="padding-right: 2% !important">
         <h4 class="section-title color-slate" color="#e4dbcc"
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
-          :style="{ 'font-size': !isMobile ? '32px' : '21px', transition: 'font-size 0.5s ease-out' }">
-          02—Validation
+          :style="{ 'font-size': !isMobile ? '32px' : '21px',
+           opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease' }">
+          02—Advanced neural network modeling 
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
@@ -484,9 +374,9 @@
             letterSpacing: '0.1px', 
             paddingRight: '6%',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
-          Every idea we work on sounds good at first. But nine out of ten aren't.
+          Inspired by the sophisticated signal optimization strategies of top hedge funds.
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
@@ -495,38 +385,36 @@
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission2 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
-          We know this because we track it. We put an idea through its paces,
-          testing customer demand, technical feasibility, business model, unit
-          economics, market dynamics, investor interest, and more. We benchmark
-          every idea against the performance of our past ideas to determine if
-          it's worth our time—and yours.  
+         Kip applies advanced neural network modeling and a Large Language Model (LLM) to each runner’s data to model past, current, and predicted performance.  
         </p>
       </v-col>
     </v-row>
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" id="mission" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+<section  id="mission3" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
 <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <div 
-          @mousemove="handleMouseMove($event, '03—Creation')" 
+          @mousemove="handleMouseMove($event, '03—Clear, Actionable Guidance')" 
           @mouseleave="handleMouseLeave"
           ref="lottieContainer2" 
           :class="{'dark-mode': !isDarkMode}" 
           style="margin-bottom: -3em" 
-          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '' }"
+          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '',
+          opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease' }"
         ></div>
       </v-col>
       <v-col cols="12" md="5" style="padding-right: 6% !important">
         <h4 class="section-title color-slate" color="#e4dbcc"
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
-          :style="{ 'font-size': !isMobile ? '32px' : '21px', transition: 'font-size 0.5s ease-out' }">
-          03—Creation
+          :style="{ 'font-size': !isMobile ? '32px' : '21px',
+           opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease' }">
+          03—Clear, Actionable Guidance
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
@@ -535,9 +423,9 @@
             letterSpacing: '0.1px', 
             paddingRight: '6%',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          When an idea is a good one, it’s time to move. Fast.
+         Get an at-a-glance understanding of where you excel, where you lag, and how to improve
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
@@ -546,7 +434,7 @@
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease'
           }">
           Our team of designers, engineers, data scientists, marketers, and
           company builders turn a validated concept into a real product in market.
@@ -556,25 +444,26 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" id="mission" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+<section  id="mission4" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
 <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <div 
-          @mousemove="handleMouseMove($event, '04—Spinout')" 
+          @mousemove="handleMouseMove($event, '04—Fresh insights in real time')" 
           @mouseleave="handleMouseLeave"
           ref="lottieContainer3" 
           :class="{'dark-mode': !isDarkMode, 'mt-n6': isMobile}" 
           style="margin-bottom: -3em" 
-          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '' }"
+          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '',
+          opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' }"
         ></div>
       </v-col>
       <v-col cols="12" md="5" style="padding-right: 6% !important">
         <h4 class="section-title color-slate" color="#e4dbcc"
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
-          :style="{ 'font-size': !isMobile ? '32px' : '21px', transition: 'font-size 0.5s ease-out' }">
-          04—Spinout
+          :style="{ 'font-size': !isMobile ? '32px' : '21px', opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' }">
+          04—Fresh insights in real time
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
@@ -583,9 +472,9 @@
             letterSpacing: '0.1px', 
             paddingRight: '6%',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
-          Great companies require extraordinary people and smart capital.
+         Get actionable and understandable insights delivered to you on a Daily & Weekly basis. 
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
@@ -594,36 +483,35 @@
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission4 ? 1 : 0, transition: 'opacity 1s ease' 
           }">
-          Our spinout process is the best method we know of to get a company off
-          the ground, staffed up, and funded by great venture investors as fast as
-          humanly possible.
+          No longer do you need a PHD in physics to understand your workout metrics. Understand how your sleep last night affected your run today AND how you should adjust tomorrow.
         </p>
       </v-col>
     </v-row>
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" id="mission" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+<section  id="mission5" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
 <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <div 
-          @mousemove="handleMouseMove($event, '05—Scale Up')" 
+          @mousemove="handleMouseMove($event, '05—Real-Time Voice Coaching (Beta)')" 
           @mouseleave="handleMouseLeave"
           ref="lottieContainer4" 
           :class="{'dark-mode': !isDarkMode, 'mt-n13': isMobile}"  
           style="margin-bottom: -3em" 
-          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '' }"
+          :style="{ width: isMobile ? '300px' : '500px', height: isMobile ? '300px' : '500px', marginRight: isMobile ? '10%' : '',
+          opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease' }"
         ></div>
       </v-col>
       <v-col cols="12" md="5" style="padding-right: 6% !important">
         <h4 class="section-title color-slate" color="#e4dbcc"
           style="margin-top: 1.25em; margin-bottom: 1.75em; font-weight: 400; line-height: 1.5;"
-          :style="{ 'font-size': !isMobile ? '32px' : '21px', transition: 'font-size 0.5s ease-out' }">
-          05—Scale Up
+          :style="{ 'font-size': !isMobile ? '32px' : '21px', opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease'}">
+          05—Real-Time Voice Coaching (Beta)
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
@@ -632,9 +520,9 @@
             letterSpacing: '0.1px', 
             paddingRight: '6%',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          We’ll take care of the boring stuff.
+           Your always-on, ever-ready, voice-powered running assistant. Never look at your watch again.
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
@@ -643,76 +531,21 @@
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.mission5 ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          Focus is the lifeblood of an early-stage company. Our recruiting, legal,
-          and finance teams, along with our relationships with top service
-          providers, allow founders to keep their eyes squarely on building the
-          business.
+         Using a real-time generative AI voice-to-voice model, Kip guides you through your workouts to help you adjust in the moment. 
         </p>
       </v-col>
     </v-row>
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in" id="about" style="position: relative; z-index: 999;" 
-:style="{ minHeight: isMobile ? '50vh' : '100vh'}">
+<section  id="milesran" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '50vh' : '100vh'}">
 <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
       <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
         :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
-        <p style="font-weight: 400; display: block; margin-top: 0.5em;  font-family: 'Aeonik1'; color: #fffbe9 !important;"
-          :style="{ 
-            'font-size': !isMobile ? '48px' : '30px', 
-            lineHeight: 1.15, 
-            color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
-          }">
-          Miles Ran
-        </p>
-      </v-col>
-    </v-row>
-
-    <v-row :class="isMobile ? 'mt-n2 ' : 'mt-n4'">
-      <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%">
-        <h1 class="text-h1 large-number" 
-          :style="{ transition: 'font-size 0.5s ease-out' , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
-          v-text="countIdeasSpunOut" style="margin-bottom: 0.1em">
-        </h1>
-        <h3 :style="{ transition: 'font-size 0.5s ease-out'  , fontSize: isMobile ? '34px' : '48px', marginTop: '.5em', marginBottom: '1em', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }" 
-          class="color-ivory" style="margin-bottom: 0.5em">
-          Ideas Spun Out
-        </h3>
-        <p :style="{transition: 'font-size 0.5s ease-out'  , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
-          In the rarest of cases, a startup idea has great timing, true customer demand, and the market is enormous.
-        </p>
-      </v-col>
-
-      <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%">
-        <h1 class="text-h1 large-number" 
-          :style="{ transition: 'font-size 0.5s ease-out'  , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
-          v-text="countIdeasKilled" style="margin-bottom: 0.1em">
-        </h1>
-        <h3 :style="{ transition: 'font-size 0.5s ease-out'  ,  fontSize: isMobile ? '34px' : '48px', marginTop: '.5em', marginBottom: '1em', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }" 
-          class="color-ivory" style="margin-bottom: 0.5em">
-          Ideas Killed
-        </h3>
-        <p :style="{transition: 'font-size 0.5s ease-out' , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.15, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
-          More often than not, an idea isn't a viable business. Our learnings from our failures make us more confident in the ideas that we love.
-        </p>
-      </v-col>
-    </v-row>
-  </v-container>
-</v-parallax>
-</section>
-<section class="fade-in" id="about" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '70vh' : '100vh'}">
-<v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '70vh' : '100vh'}"
-  :color="isDarkMode ? '#252423' : '#fffbe9'">
-  <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
-    <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
-      <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
-        :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
             'font-size': !isMobile ? '48px' : '30px', 
@@ -720,22 +553,90 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             transition: 'font-size 0.5s ease-out' 
           }">
-          Partners
+          The Research
         </p>
       </v-col>
     </v-row>
-    <v-row :class="isMobile ? 'mt-n3' : ''" class="logo-container">
-      <transition-group name="fade">
-        <v-col  v-for="(logo, index) in displayedLogos" :key="index" 
-          cols="12" md="4" class="d-flex justify-center align-center"  :class="isDarkMode ? 'logo-item' : ''">
-          <img :src="logo.src" alt="Logo"  :style="{ marginRight:isMobile ? '4%' : '',    maxWidth: isMobile ? '50%' : '100%', height: 'auto' }" />
-        </v-col>
-      </transition-group>
+
+    <v-row :class="isMobile ? 'mt-n2 ' : ''">
+      <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%">
+        <h1 class="text-h1 large-number" v-if="!isMobile"
+          :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease' , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
+          v-text="countIdeasSpunOut" style="margin-bottom: 0.1em">
+        </h1>
+        <h1 class="text-h1 large-numberMV" v-if="isMobile"
+          :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease' , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
+          v-text="countIdeasSpunOut" style="margin-bottom: 0.1em">
+        </h1>
+        <h3 :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , 
+        fontSize: isMobile ? '34px' : '48px', marginTop: '.5em', marginBottom: '1em', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }" 
+          class="color-ivory" style="margin-bottom: 0.5em">
+          Runners modeled 
+        </h3>
+        <p :style="{opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
+          Our models have been fine-tuned on data of over 18k runners to glean to most accurate insights
+        </p>
+      </v-col>
+
+      <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%">
+        <h1 class="text-h1 large-number" v-if="!isMobile"
+          :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
+          v-text="countIdeasKilled" style="margin-bottom: 0.1em">
+        </h1>
+        <h1 class="text-h1 large-numberMV" v-if="isMobile"
+          :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
+          v-text="countIdeasKilled" style="margin-bottom: 0.1em">
+        </h1>
+        <h3 :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  ,  fontSize: isMobile ? '34px' : '48px', marginTop: '.5em', marginBottom: '1em', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }" 
+          class="color-ivory" style="margin-bottom: 0.5em">
+          New Personal Records
+        </h3>
+        <p :style="{opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease' , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.15, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
+          In early testing, our research and models have accounted for an average of 2+ PR’s for each of our alpha users. 
+
+        </p>
+      </v-col>
     </v-row>
   </v-container>
 </v-parallax>
 </section>
-<section class="fade-in shadow-bottom" id="team" style="position: relative; z-index: 999; min-height: 80vh">
+<section id="partners" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '80vh' : '100vh'}">
+  <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '80vh ' : '100vh'}"
+    :color="isDarkMode ? '#252423' : '#fffbe9'">
+    <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
+      <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
+        <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
+          :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
+          <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
+            :style="{ 
+              'font-size': !isMobile ? '48px' : '30px', 
+              lineHeight: 1.15, 
+              color: isDarkMode ? '#fffbe9' : '#252423',
+              opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease'
+            }">
+            Partners
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <br v-if="!isMobile">
+      <br v-if="!isMobile">
+      <v-row 
+        :class="isMobile ? 'mt-n3' : 'justify-center'" class="logo-container" 
+        :style="{ opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
+        <transition-group name="fade">
+          <v-col v-for="(logo, index) in logos.slice(0, 3)" :key="index" cols="12" 
+            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : ''">
+            <img :src="logo.src" alt="Logo" 
+              :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '100%', height: 'auto' }" 
+            />
+          </v-col>
+        </transition-group>
+      </v-row>
+    </v-container>
+  </v-parallax>
+</section>
+<section class="fade-in shadow-bottom" id="team" style="position: relative; z-index: 999; min-height: 80vh" >
 <v-card :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; border-radius: 0% !important; min-height: 80vh">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
@@ -746,7 +647,7 @@
             'font-size': !isMobile ? '48px' : '30px', 
             lineHeight: 1.15, 
             color: isDarkMode ? '#fffbe9' : '#252423',
-            transition: 'font-size 0.5s ease-out' 
+            opacity: sectionVisible.team ? 1 : 0, transition: 'opacity 1s ease'
           }">
           Team
         </p>
@@ -757,12 +658,18 @@
         :style="{ overflowX: isMobile ? 'auto' : 'hidden', whiteSpace: 'nowrap' }">
       <div class="team-members-row" style="display: flex; flex-direction: row;">
         <v-col v-for="member in teamMembers" :key="member.id" :cols="isMobile ? 9 : 5" class="d-flex flex-column align-center fade-up">
-          <v-img :src="member.image" class="team-image" :height="isMobile ? 470 : 670" :width="isMobile ? 400 : 550" 
+          <v-img :src="member.image" class="team-image" :height="isMobile ? 420 : 670" :width="isMobile ? 400 : 550" 
               @mousemove="handleMouseMove($event, member.name)" @mouseleave="handleMouseLeave" />
           <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
               :class="isDarkMode ? 'text-white' : 'text-black'" 
-              :style="{ fontSize: isMobile ? '24px' : '32px', transition: 'font-size 0.5s ease-out' }">
+              :style="{ fontSize: isMobile ? '24px' : '32px', opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
             {{ member.name }}
+          </h3>
+          <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
+              :class="isDarkMode ? 'text-white' : 'text-black'" 
+              :style="{ fontSize: isMobile ? '14px' : '22px', 
+              opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
+            {{ member.position }}
           </h3>
         </v-col>
       </div>
@@ -774,93 +681,204 @@
 
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="!isMobile" id="contact">
 <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 30px;padding-top:6%">
+  
   <div style="width: 30%; height: 92vh;"> 
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       CONTACT
     </div>
   </div>  
 
-  <div style="flex-grow: 1; height: 92vh; display: grid; grid-template-columns: repeat(3, 1fr);"> <!-- Right column with 3 columns -->
-    <!-- Each of these divs represents a cell in the grid -->
+  <div style="flex-grow: 1; height: 92vh; display: grid; grid-template-columns: repeat(2, 1fr);"> 
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       ADDRESS
     </div>
     <div style="background: #b7e3b6; padding: 10px;">
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">PARKER STUDIO</P> <!-- Responsive font size -->
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">5325 Ballard Ave NW</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Unit 213</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Seattle, WA 98107</P>
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">KIP HEADQUARTERS</P> <!-- Responsive font size -->
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">1 N 4 Pl.</P>
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Brooklyn, NY 11249</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">United States</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">
-         <u>Map
-           <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-         </u>
+        <a  href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank">
+            <u style="color:black !important">Map
+              <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+            </u>
+          </a>
       </P>
     </div>
-    <div style="background: #b7e3b6; padding: 10px;">
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">PARKER STUDIO</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">5325 Ballard Ave NW</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Unit 213</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Seattle, WA 98107</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">United States</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">
-        <u>Map
-          <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-        </u>
-      </P>
-    </div>
-    <hr/>
     <hr/>
     <hr/>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">INQUIRIES</div>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
-        <span >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+        <span >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
     </div>
+    <hr/>
+    <hr/>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">INFO</div>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
-      <a style="color:black" href="mailto:hello@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-        <span >hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+      <a style="color:black" href="mailto:hello@kip.coach" target="_blank"  rel="noopener noreferrer"  class="b2">
+          <span>hello(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+      </a>
     </div>
-    <hr/>
-    <hr/>
-    <hr/>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">CAREER INTERNSHIPS</div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
-     <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-        <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-    </div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
-      <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-        <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-    </div>
-    <hr/>
     <hr/>
     <hr/>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">FOLLOW US</div>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
-      <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-        <span >Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+      <a style="color:black" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="b2">
+        <span >Linkedin<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+        <br/>
+        <br/>
+        <a style="color:black" href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="b2">
+          <span >Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
     </div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
-      <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-                  <span >Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-    </div>
-    <hr/>
     <hr/>
     <hr/> 
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">NEWSLETTER</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">WAITLIST</div>
     <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <div class="contact__information__detail__form__input">
-              <input 
+       <v-row>
+        <v-col cols="9">
+          <input  type="email"   placeholder="Email address" 
+            :style="{  border: 'none', backgroundColor: 'transparent',color: black,
+              outline: 'none',  width: '100%',  fontSize: '1.2vw'}"/>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31" cka>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Design_System" data-name="Design System">
+                <path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" 
+                stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path>
+              </g>
+            </g>
+          </svg>
+        </v-col>
+        <v-col>
+           <button class="b2 decoration active green" style="flex-shrink: 0;">Submit</button>
+         </v-col>
+        </v-row>
+     </div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
+    </div>
+    </div>
+    <br/>
+    <br/>
+
+  </div>
+  <div class="marquee"
+    style=" position: absolute; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8); ">
+      <v-row>
+        <v-col>
+          <div class="marquee-container" >
+            <span v-if="!isMobile"  style="font-size:32px">Currently Working in:</span>
+            <span v-else style="font-size:32px"><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
+            <div class="marquee-content">
+              <div class="marquee-container">
+                <div class="marquee-text1">
+                  SEATTLE <span> ({{ seattleTime }}),</span> 
+                  SFO <span> ({{ sfoTime }}),</span> 
+                  CHICAGO <span> ({{ chicagoTime }}),</span> 
+                  AUSTIN <span> ({{ austinTime }}),</span> 
+                  NYC <span> ({{ nycTime }}),</span> 
+                  LONDON <span> ({{ londonTime }})</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </v-col>
+      </v-row>
+    </div>
+
+</div>
+</footer>
+
+<footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 26%; margin-bottom: 5% !important;">
+    <div style="flex-grow: 1; height: auto; display: grid;margin-top:10%">
+      <v-row style="background: #b7e3b6; margin-left: 3%;">
+        <v-col>
+        <p class="responsive-text">ADDRESS</p>
+        <p class="responsive-text">&nbsp;</p>
+        <p class="responsive-text">&nbsp;</p>
+        <p class="responsive-text">&nbsp; </p>
+      </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">KIP HEADQUARTERS</p>
+          <p class="responsive-text">1 N 4 Pl.</p>
+          <p class="responsive-text">Brooklyn, NY 11249</p>
+          <p class="responsive-text">United States</p>
+          <p class="responsive-text">
+            <a  href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank">
+            <u style="color:black !important">Map
+              <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+            </u>
+          </a>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 3%;">
+        <v-col>
+          <p class="responsive-text">INQUIRIES</p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">
+            <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
+              <span >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 3%;">
+        <v-col>
+          <p class="responsive-text">INFO</p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">
+            <a style="color:black" href="mailto:hello@kip.coach" class="b2">
+          <span>hello(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+          </a>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 3%;">
+        <v-col>
+          <p class="responsive-text">FOLLOW US</p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">
+            <a style="color:black" href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="b2">
+              <span >Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+          </p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <a style="color:black" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="b2">
+              <span >Linkedin<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 3%;">
+        <v-col cols="8">
+          <p class="responsive-text">NEWS LETTER</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <input 
                 type="email" 
+                class="responsive-text"
                 placeholder="Email address" 
                 :style="{
-                  border: 'none', /* Remove border */
-                  backgroundColor: 'transparent', /* Make background transparent */
-                  color: black, /* Text color based on dark mode */
-                  outline: 'none', /* Remove outline on focus */
-                  width: '100%', /* Full width */
-                  fontSize: '1.2vw' /* Adjust font size as needed */
+                  border: 'none',
+                  backgroundColor: 'transparent', 
+                  color: black, 
+                  outline: 'none', 
+                  width: '100%',
                 }"
               />
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31">
@@ -870,167 +888,23 @@
                   </g>
                 </g>
               </svg>
-            </div>
+          </p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text ml-4">
+            <button class="b2 decoration active green">Submit</button>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <br>
     </div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
-      <button class="b2 decoration active green">Submit</button>
-    </div>
-    <br/>
-    <br/>
-
-  </div>
-  <div
-          class="marquee"
-          style="
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background-color: rgba(183, 227, 182, 0.8);
-          "
-        >
-          <v-row>
-            <v-col>
-              <div class="marquee-container" >
-                <span v-if="!isMobile"  style="font-size:32px">Currently Working in:</span>
-                <span v-else style="font-size:32px"><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
-                <div class="marquee-content">
-                  <div class="marquee-text">
-                    SEATTLE <span> (21:07:21),</span> SFO
-                    <span> (02:07:21),</span> CHICAGO <span> (23:07:21),</span> AUSTIN
-                    <span> (23:07:21),</span> NYC <span> (00:07:21),</span> LONDON
-                    <span> (00:07:21),</span>
-                  </div>
-                </div>
-              </div>
-            </v-col>
-          </v-row>
-        </div>
-
-</div>
-</footer>
-<footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="isMobile"  id="contact">
-<div style="display: flex; justify-content: space-between; align-items: flex-start;padding-top:26%;margin-bottom:5% !important">
-  <div style="flex-grow: 1; height: 92vh; display: grid; grid-template-columns: repeat(2, 1fr); ">
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">ADDRESS</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">PARKER STUDIO</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">5325 Ballard Ave NW</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">Unit 213</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">Seattle, WA 98107</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">United States</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-         <u>Map
-           <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-         </u>
-      </P>
-    </div>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">PARKER STUDIO</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">5325 Ballard Ave NW</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">Unit 213</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">Seattle, WA 98107</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">United States</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <u>Map
-          <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-        </u>
-      </P>
-    </div>
-    <hr/>
-    <hr/>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">INQUIRIES</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
-          <span >+1 206 395 9662 <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </P>
-    </div>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="mailto:hello@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >hello(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </P>
-    </div>
-    <hr/>
-    <hr/>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">CAREER INTERNSHIPS</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >work(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </P>
-    </div>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >intern(at)parker.studio <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </P>
-    </div>
-    <hr/>
-    <hr/>
-     <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">FOLLOW US</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-     <p style="font-family:'ChaletBook1'; font-size: 3.5vw;"> <a style="color:black" href="mailto:worker@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-      <span >Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a></p>
-    </div>
-    <div style="background: #b7e3b6;margin-left: 10%" >
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <p style="font-family:'ChaletBook1'; font-size: 3.5vw;">
-        <a style="color:black" href="mailto:intern@parker.studio" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >Tumblr <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-      </p>
-    </div>
-    <hr/>
-    <hr/>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">NEWSLETTER</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <div class="contact__information__detail__form__input">
-            <input 
-              type="email" 
-              placeholder="Email address" 
-              :style="{
-                border: 'none', /* Remove border */
-                backgroundColor: 'transparent', /* Make background transparent */
-                color: black, /* Text color based on dark mode */
-                outline: 'none', /* Remove outline on focus */
-                width: '100%', /* Full width */
-                fontSize: '16px' /* Adjust font size as needed */
-              }"
-            />
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31">
-              <g id="Layer_2" data-name="Layer 2">
-                <g id="Design_System" data-name="Design System">
-                  <path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path>
-                </g>
-              </g>
-            </svg>
-          </div>
-    </div>
-    <div style="background: #b7e3b6;margin-left: 10%">
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <P style="font-family:'ChaletBook1'; font-size: 3.5vw;">&nbsp;</P>
-      <button class="b2 decoration active green">Submit</button>
-    </div>
-    <br/>
-    <br/>
-  </div>
-  
-  <div
+    <div
         class="marquee"
         style="
-          position: absolute;
+          position: fixed;
           bottom: 0;
           width: 100%;
           background-color: rgba(183, 227, 182, 0.8);
@@ -1043,220 +917,55 @@
               <span v-else class="marquee-label1" ><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
               <div class="marquee-content1">
                 <div class="marquee-text1">
-                  SEATTLE <span> (21:07:21),</span> SFO
-                  <span> (02:07:21),</span> CHICAGO <span> (23:07:21),</span> AUSTIN
-                  <span> (23:07:21),</span> NYC <span> (00:07:21),</span> LONDON
-                  <span> (00:07:21),</span>
+                      SEATTLE <span> ({{ seattleTime }}),</span> 
+                      SFO <span> ({{ sfoTime }}),</span> 
+                      CHICAGO <span> ({{ chicagoTime }}),</span> 
+                      AUSTIN <span> ({{ austinTime }}),</span> 
+                      NYC <span> ({{ nycTime }}),</span> 
+                      LONDON <span> ({{ londonTime }})</span>
                 </div>
               </div>
             </div>
           </v-col>
         </v-row>
       </div>
-</div>
+  </div>
 </footer>
 
 
   </div>
-=======
-    <!-- 3RD Section - Image Gallery -->
-    <section style="height: 100vh;">
-      <v-parallax height="100vh" color="black">
-        <v-container fluid class="gallery-container" style="padding:5% !important">
-          <v-row class="fill-height mt-1">
-            <!-- Left Card -->
-            <v-col cols="12" md="6" class="d-flex align-center justify-center">
-              <v-card color="#111112" style="border-radius:0%" :height="cardHeight" width="100%"
-                       class="visible-content card-hover card-how-we-do"
-                       @mousemove="(e) => handleCardMousemove(e, { text: 'How  we  do' })"
-                       @mouseleave="handleCardMouseleave">
-                <v-card-title class="card-title">HOW WE DO</v-card-title>
-                <v-card-text class="flex-grow-1">
-                  <!-- You can keep this section for other content if needed -->
-                </v-card-text>
-                <!-- Title and paragraph above the button -->
-                <v-card-text style="padding: 56px; text-align: center;">
-                  <h1 :style="{'font-size': cardHeight == '45vh' ? '25px' : '40px'}" style="color: white; margin: 0; text-align: left;">
-                    Our Approach: Delivering Results with Precision
-                  </h1>
-                </v-card-text>
-                <v-card-actions class="ml-6 mb-6">
-                  <v-btn rounded size="x-large" variant="outlined" class="enhanced-button">
-                    HOW WE DO <v-icon>mdi-arrow-right</v-icon>
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-col>
-
-            <!-- Right Card -->
-            <v-col cols="12" md="6" class="d-flex align-center justify-center">
-              <v-card color="#111112" style="border-radius:0%" :height="cardHeight" width="100%"
-                       class="visible-content card-hover card-how-we-do-it"
-                       @mousemove="(e) => handleCardMousemove(e, { text: 'How  we  do  it' })"
-                       @mouseleave="handleCardMouseleave">
-                <v-card-title class="card-title">HOW WE DO IT</v-card-title>
-                <v-card-text class="flex-grow-1">
-                </v-card-text>
-                <v-card-text style="padding: 16px;">
-                  <h1 :style="{'font-size': cardHeight == '45vh' ? '25px' : '40px'}" style="color: white; margin: 0; text-align: left;">
-                    We follow a structured approach to ensure that every project is executed with precision and care.
-                  </h1>
-                </v-card-text>
-                <v-card-actions class="ml-6 mb-6">
-                  <v-btn rounded size="x-large" variant="outlined" class="enhanced-button">
-                    HOW WE DO IT <v-icon>mdi-arrow-right</v-icon>
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-parallax>
-    </section>
-    
-    <!-- //4TH SECTION -->
-    <section style="height: 100vh;" >
-    <v-parallax height="100vh" color="black">
-      <v-container fluid class="sponsorship-container" style="padding:5% !important">
-        <div class="section-header mb-8">
-          <h2 class="text-h3 text-white text-center mb-4">Our Spinouts and Investments</h2>
-          <div class="text-center">
-            <v-divider class="mx-auto mb-4" color="rgba(255,255,255,0.2)" style="max-width: 100px"></v-divider>
-          </div>
-        </div>
-      
-      <!-- Sponsorship Grid -->
-      <v-row class="fill-height">
-        <!-- Dynamic Sponsor Cards -->
-        <template v-for="(sponsor, index) in sponsors" :key="sponsor.id">
-          <v-col cols="12" md="4" class="d-flex align-center justify-center">
-            <v-card color="#111112" style="border-radius:0%"  :height="cardHeightsponsort" 
-              width="90%" class="visible-content card-hover card-sponsor"
-              @mousemove="(e) => handleCardMousemove(e, { text: sponsor.title })"
-              @click="handleSponsorClick(sponsor)" 
-              @mouseleave="handleCardMouseleave">
-              <v-card-title class="card-title">{{ sponsor.title }}</v-card-title>
-              <v-card-text class="flex-grow-1">
-                <v-img  :src="sponsor.image"  aspect-ratio="1.777"  class="image-cover" ></v-img>
-              </v-card-text>
-              <v-card-actions class="ml-6 mb-6">
-                <v-btn   rounded   size="large"  variant="outlined"   class="enhanced-button" >
-                  LEARN MORE <v-icon>mdi-arrow-right</v-icon>
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-col>
-        </template>
-      </v-row>
-    </v-container>
-  </v-parallax>
-</section>
-
-<!-- Add this section to your existing template -->
-<section class="contact-section" style="height: 80vh;">
-  <v-parallax height="100vh" color="#b7e3b6">
-    <v-container fluid class="contact-container" style="padding: 5% !important">
-      <div class="section-header mb-8">
-          <h2 class="text-h3 text-black text-center mb-4">Contact us</h2>
-          <div class="text-center">
-            <v-divider class="mx-auto mb-4" color="rgba(255,255,255,0.2)" style="max-width: 100px"></v-divider>
-          </div>
-        </div>
-      <!-- Contact Information -->
-      <div class="contact-info">
-        <div class="info-card" v-for="(info, index) in contactInfo" :key="index">
-          <div class="info-icon">
-            <v-icon size="48" color="pink" class="icon-hover">{{ info.icon }}</v-icon>
-          </div>
-          <h3 class="text-h6 mb-2">{{ info.title }}</h3>
-          <p class="text-body-1">{{ info.content }}</p>
-        </div>
-      </div>
-
-      <!-- Contact Form -->
-      <v-form ref="form" v-model="valid" class="contact-form">
-        <v-row>
-          <v-col cols="12" md="6">
-            <v-text-field
-              v-model="name"
-              :rules="nameRules"
-              label="Name"
-              required
-              class="input-hover"
-            ></v-text-field>
-          </v-col>
-          <v-col cols="12" md="6">
-            <v-text-field
-              v-model="email"
-              :rules="emailRules"
-              label="Email"
-              required
-              class="input-hover"
-            ></v-text-field>
-          </v-col>
-          <v-col cols="12">
-            <v-textarea
-              v-model="message"
-              :rules="messageRules"
-              label="Message"
-              required
-              class="input-hover"
-            ></v-textarea>
-          </v-col>
-          <v-col cols="12">
-            <v-btn
-              color="pink"
-              class="submit-button"
-              @click="submitForm"
-            >
-              Send Message
-              <v-icon right>mdi-send</v-icon>
-            </v-btn>
-          </v-col>
-        </v-row>
-      </v-form>
-    </v-container>
-  </v-parallax>
-</section>
-
-<v-footer dark padless class="footer-section">
-  <v-card flat tile width="100%" class="pink darken-1 white--text text-center">
-    <!-- Social media links -->
-    <v-card-text>
-      <div class="social-links">
-        <a href="#" target="_blank" class="social-link">
-          <v-icon color="pink">mdi-facebook</v-icon>
-        </a>
-        <a href="#" target="_blank" class="social-link">
-          <v-icon color="pink">mdi-twitter</v-icon>
-        </a>
-        <a href="#" target="_blank" class="social-link">
-          <v-icon color="pink">mdi-instagram</v-icon>
-        </a>
-        <a href="#" target="_blank" class="social-link">
-          <v-icon color="pink">mdi-google-downasaur</v-icon>
-        </a>
-      </div>
-    </v-card-text>
-
-    <!-- Copyright information -->
-    <v-card-text class="white--text pt-0">
-      {{ new Date().getFullYear() }} — <strong>TEST COMPANY</strong>
-    </v-card-text>
-  </v-card>
-</v-footer>
-    
->>>>>>> 27cd86e284c86f8b8b1fadd24519154b025bbb83
   </v-app>
 </template>
 
 <script>
-<<<<<<< HEAD
+import NickYebra from '../src/image/NickYebra.jpg'
   import lottie from "lottie-web";
   export default {
     data() {
       return {
-        isFooterVisible: false,
+        seattleTime: '',
+        sfoTime: '',
+        chicagoTime: '',
+        austinTime: '',
+        nycTime: '',
+        londonTime: '',
+        sectionVisible: {
+          home1: false,
+          whatwedo:false,
+          mission: false,
+          kip: false,
+          listofgrid:false,
+          mission1:false,
+          mission2:false,
+          mission3:false,
+          mission4:false,
+          mission5:false,
+          milesran:false,
+          partners:false,
+          team:false,
+
+        },
+        fadeup:false,
         paddingValues: {
           desktop: {
             paddingLeft: '15px',
@@ -1276,23 +985,23 @@
         isDarkMode:false,
         logos: [
           { src:
-              "https://cdn.prod.website-files.com/63ef52716f3c2cb3c5525f21/63ef63b75aac697bb4b17e81_client-06.svg",
+              "https://testlio.com/wp-content/uploads/2022/04/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png",
           },
           { src:
-              "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e78784f08679efe2756_SnapShotDark.svg",
+              "https://singaporecycling.org.sg/cdn/shop/files/trainingpeaks_logo_vertical_2-color.png?v=1703918725&width=1500",
           },
           {src:
-              "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12d83d99315176ef82659_GenZDark.svg",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Garmin_logo_2006.svg/1200px-Garmin_logo_2006.svg.png",
           },
-          {src:
-              "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ebafce2edf7ddb8cf58_VolumeDark.svg",
-          },
-          {src:
-              "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73563dba154dad_SitemarkDark.svg",
-          },
-          {src:
-              "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ec2e784a68c2fbf43fc_WavelessDark.svg",
-          },
+          // {src:
+          //     "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ebafce2edf7ddb8cf58_VolumeDark.svg",
+          // },
+          // {src:
+          //     "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73563dba154dad_SitemarkDark.svg",
+          // },
+          // {src:
+          //     "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ec2e784a68c2fbf43fc_WavelessDark.svg",
+          // },
         ],
         showFirstSet: true,
         intervalId: null,
@@ -1300,9 +1009,9 @@
         drawer: false,
         menuItems: [
           { text: "HOME", link: "#home" },
-          { text: "Mission", link: "#mission" },
+          { text: "Mission", link: "#whatwedo" },
           { text: "KIP", link: "#kip" },
-          { text: "ABOUT", link: "#about" },
+          { text: "ABOUT", link: "#milesran" },
           { text: "TEAM", link: "#team" },
           { text: "CONTACT", link: "#contact" },
         ],
@@ -1327,29 +1036,20 @@
         teamMembers: [
           {
             id: 1,
-            name: "James Jackson",
-            position: "",
-            image:
-              "https://img.freepik.com/premium-photo/3d-cartoon-business-character_776674-532471.jpg",
+            name: "Nick Yebra",
+            position: "First Founder",
+            image:NickYebra,
             details:
-              "James has over 20 years of experience in the tech industry and has led multiple successful startups.",
+              "",
           },
           {
-            id: 4,
-            name: "Nick Yebra",
-            position: "",
+            id: 2,
+            name: "James Jackson",
+            position: "Second Founder",
             image:
               "https://img.freepik.com/premium-photo/cartoon-character-with-contract-hands-3d-illustration_839035-120672.jpg",
             details:
-              "Nick is a marketing guru with a knack for creating compelling brand stories.",
-          },
-          {
-            id: 5,
-            name: "John Fritz",
-            position: "",
-            image:
-              "https://img.freepik.com/premium-photo/cartoon-boy-with-brown-hair-blue-jacket-looking-up-generative-ai_900833-38976.jpg?w=360",
-            details: "Fritz has a strong experience in web programming",
+              "",
           },
         ],
         activeSection: "home",
@@ -1372,15 +1072,11 @@
       };
     },
     computed: {
+      displayedLogos() {
+      return [this.logos[this.currentIndex]];
+    },
       paddingStyles() {
         return this.isMobile ? this.paddingValues.mobile : this.paddingValues.desktop;
-      },
-      displayedLogos() {
-        if (this.showFirstSet) {
-          return this.logos.slice(0, 3);
-        } else {
-          return this.logos.slice(3);
-        }
       },
       footerTitleFontSize() {
         return this.isMobile ? "2.5vw" : "1.5vw"; // Adjust font size based on screen size
@@ -1415,6 +1111,35 @@
       },
     },
     methods: {
+      gotoRoutesite(item){
+        console.log(item);
+        
+        let ftp = item
+        window.open(ftp, "_blank");
+      },
+      updateTimes() {
+        const now = new Date();
+        const utcOffset = -7; // Seattle and SFO (PDT)
+        const chicagoOffset = -5; // Chicago (CDT)
+        const austinOffset = -5; // Austin (CDT)
+        const nycOffset = -4; // NYC (EDT)
+        const londonOffset = 0; // London (GMT)
+        this.seattleTime = this.formatTime(now, utcOffset);
+        this.sfoTime = this.formatTime(now, utcOffset);
+        this.chicagoTime = this.formatTime(now, chicagoOffset);
+        this.austinTime = this.formatTime(now, austinOffset);
+        this.nycTime = this.formatTime(now, nycOffset);
+        this.londonTime = this.formatTime(now, londonOffset);
+    },
+    formatTime(date, offset) {
+      const localTime = new Date(date.getTime() + offset * 60 * 60 * 1000);
+      return localTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    },
+      startLogoRotation() {
+        this.intervalId = setInterval(() => {
+          this.currentIndex = (this.currentIndex + 1) % this.logos.length; // Loop back to the first logo
+        }, 3000); // Change logo every 3 seconds
+      },
       toogle() {
         this.isDarkMode = !this.isDarkMode;
         localStorage.setItem('isDarkMode', this.isDarkMode); // Save the state in localStorage
@@ -1469,9 +1194,6 @@
       },
       checkMobile() {
         this.isMobile = window.innerWidth < 850;
-        // this.countIdeasSpunOut = 0;
-        // this.countIdeasKilled = 0;
-        // this.startCounting();
       },
       handleCardMousemove(e, card) {
         this.hoveredCard = card;
@@ -1484,184 +1206,74 @@
         this.showFloatingText = false;
       },
       createIntersectionObserver() {
-=======
-export default {
-  data() {
-    return {
-      drawer: false,
-      menuItems: [
-        { text: 'HOME', link: '/' },
-        { text: 'HOW WE DO', link: '/how-we-do' },
-        { text: 'HOW WE DO IT', link: '/how-we-do-it' },
-        { text: 'WHERE WE\'VE BEEN', link: '/where-weve-been' },
-        { text: 'WHO ARE WE', link: '/who-are-we' },
-        { text: 'WHEN TO CONTACT', link: '/contact' }
-      ],
-      isMobile: false,
-      hoveredCard: null,
-      cursorX: 0,
-      cursorY: 0,
-      showFloatingText: false,
-      sponsors: [
-      {
-        id: 1,
-        title: 'CSS',
-        image: '../src/image/CSS.png',
-        description: 'Sponsor description',
-        link: '/sponsor-1'
-      },
-      {
-        id: 2,
-        title: 'HTML',
-        image: '../src/image/html.png',
-        description: 'Sponsor description',
-        link: '/sponsor-2'
-      },
-      {
-        id: 3,
-        title: 'Vuetify',
-        image: '../src/image/Vuetify.png',
-        description: 'Sponsor description',
-        link: '/sponsor-3'
-      },
-      {
-        id: 4,
-        title: 'Laravel',
-        image: '../src/image/Laravel.png',
-        description: 'Sponsor description',
-        link: '/sponsor-4'
-      },
-      {
-        id: 5,
-        title: 'PHP',
-        image: '../src/image/php.png',
-        description: 'Sponsor description',
-        link: '/sponsor-5'
-      },
-      {
-        id: 6,
-        title: 'NODE JS',
-        image: '../src/image/Node JS.png',
-        description: 'Sponsor description',
-        link: '/sponsor-6'
-      },
-      ],
-      valid: true,
-    name: '',
-    email: '',
-    message: '',
-    nameRules: [
-      v => !!v || 'Name is required',
-      v => (v && v.length >= 2) || 'Name must be at least 2 characters'
-    ],
-    emailRules: [
-      v => !!v || 'Email is required',
-      v => /.+@.+\..+/.test(v) || 'Email must be valid'
-    ],
-    messageRules: [
-      v => !!v || 'Message is required',
-      v => (v && v.length >= 10) || 'Message must be at least 10 characters'
-    ],
-    contactInfo: [
-      {
-        icon: 'mdi-phone',
-        title: 'Phone',
-        content: '+1 (555) 123-4567'
-      },
-      {
-        icon: 'mdi-email',
-        title: 'Email',
-        content: 'contact@example.com'
-      },
-      {
-        icon: 'mdi-map-marker',
-        title: 'Location',
-        content: '123 Main St, New York, NY 10001'
-      }
-    ]
-      
-    };
-  },
-  computed: {
-    floatingX() {
-      return this.cursorX - 74; // Adjusts the X position to center the text above the cursor
-    },
-    floatingY() {
-      return this.cursorY - 66; // Adjusts the Y position to place the text above the cursor
-    },
-    cardHeight() {
-      return this.isMobile ? '45vh' : '86vh';
-    },
-    cardHeightsponsort() {
-      return this.isMobile ? '25vh' : '35vh';
-    },
-    floatingText() {
-      return this.hoveredCard ? this.hoveredCard.text : '';
-    },
-    
-  },
-  methods: {
-    handleSponsorClick (sponsor){
-      console.log(sponsor);
-      
-    },
-    setCustomCursor(type) {
-      const cursorUrl = type === 'dark'
-        ? 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="green"/></svg>'
-        : 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="white"/></svg>';
-      document.body.style.cursor = `url('${cursorUrl}') 10 10, auto`;
-    },
-    handleMenuItemClick(item) {
-      console.log('Navigating to:', item.link);
-      this.drawer = false;
-    },
-    checkMobile() {
-      this.isMobile = window.innerWidth < 768;
-    },
-    handleCardMousemove(e, card) {
-      this.hoveredCard = card;
-      this.cursorX = e.clientX;
-      this.cursorY = e.clientY;
-      this.showFloatingText = true;
-    },
-    handleCardMouseleave() {
-      this.hoveredCard = null;
-      this.showFloatingText = false;
-    },
-    createIntersectionObserver() {
->>>>>>> 27cd86e284c86f8b8b1fadd24519154b025bbb83
       const observer = new IntersectionObserver(
         (entries) => {
-          entries.forEach(entry => {
+          entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('visible')
+              const sectionId = entry.target.id;
+              this.activeSection = sectionId;
+              // Add visible class to text elements
+              const textElements = entry.target.querySelectorAll(".fade-up");
+              textElements.forEach((el) => el.classList.add("visible"));
+              console.log(sectionId , 'here');
+              if (entry.isIntersecting) {
+              this.sectionVisible[sectionId] = true;
             } else {
-              // Optional: remove visible class when scrolling up
-              // entry.target.classList.remove('visible')
+              this.sectionVisible[sectionId] = false;
             }
-          })
+              // Existing logic for counting
+              if (sectionId === "milesran" && !this.hasStartedCounting) {
+                console.log('ey');
+                
+                this.countIdeasSpunOut = 0;
+                this.countIdeasKilled = 0;
+                this.startCounting();
+                this.hasStartedCounting = true; // Set the flag to true
+              }
+              else{
+                  this.ColorFooter = '#b7e3b6'
+              }
+            } else {
+              // Remove visible class when out of view
+              const textElements = entry.target.querySelectorAll(".fade-up");
+              textElements.forEach((el) => el.classList.remove("visible"));
+            }
+          });
         },
         {
-          threshold: 0.2,
-          rootMargin: '0px'
+          threshold: 0.5,
         }
-      )
-
+      );
       // Observe all sections
-      document.querySelectorAll('.section').forEach(section => {
-        observer.observe(section)
-        this.observers.push(observer)
-      })
+      document.querySelectorAll("section").forEach((section) => {
+        observer.observe(section);
+      });
     },
-    submitForm() {
-      if (this.$refs.form.validate()) {
-        // Handle form submission
-        console.log('Form submitted:', {
-          name: this.name,
-          email: this.email,
-          message: this.message
+      resetCounting() {
+        localStorage.removeItem("countingStarted");
+      },
+      submitForm() {
+        if (this.$refs.form.validate()) {
+          // Handle form submission
+          console.log("Form submitted:", {
+            name: this.name,
+            email: this.email,
+            message: this.message,
+          });
+
+          // Reset form
+          this.$refs.form.reset();
+        }
+      },
+      loadLottieAnimation() {
+        this.animationInstance = lottie.loadAnimation({
+          container: this.$refs.lottieContainer,
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          path:
+            "https://cdn.prod.website-files.com/5d2f74fb3cba1f3a752e2046/5d916146d12b5b7a3da48d14_Ideation.json",
         });
-<<<<<<< HEAD
       },
       loadLottieAnimation1() {
         this.animationInstance = lottie.loadAnimation({
@@ -1728,59 +1340,73 @@ export default {
         });
       },
       startCounting() {
-        const duration = 1000; // Duration of the counting animation in milliseconds
-        const startTime = performance.now(); // Get the current time
-        const initialSpunOut = this.countIdeasSpunOut; // Initial value for spun out
-        const initialKilled = this.countIdeasKilled; // Initial value for killed
+    const duration = 1000; // Duration of the counting animation in milliseconds
+    const startTime = performance.now(); // Get the current time
+    const initialSpunOut = this.countIdeasSpunOut; // Initial value for spun out
+    const initialKilled = this.countIdeasKilled; // Initial value for killed
 
-        const updateCount = (timestamp) => {
-          const elapsed = timestamp - startTime; // Calculate elapsed time
-          const progress = Math.min(elapsed / duration, 1); // Normalize progress to [0, 1]
+    // Set the maximum values for the counting
+    this.maxSpunOut = 18000; // Set max spun out to 18k
+    this.maxKilled = 2; // Set max killed to a value greater than 2
 
-          // Calculate the current count based on progress
-          this.countIdeasSpunOut = Math.round(
+    const updateCount = (timestamp) => {
+        const elapsed = timestamp - startTime; // Calculate elapsed time
+        const progress = Math.min(elapsed / duration, 1); // Normalize progress to [0, 1]
+
+        // Calculate the current count based on progress
+        this.countIdeasSpunOut = Math.round(
             initialSpunOut + (this.maxSpunOut - initialSpunOut) * progress
-          );
-          this.countIdeasKilled = Math.round(
+        );
+        this.countIdeasKilled = Math.round(
             initialKilled + (this.maxKilled - initialKilled) * progress
-          );
+        );
 
-          // Continue the animation until the duration is reached
-          if (progress < 1) {
+        // Continue the animation until the duration is reached
+        if (progress < 1) {
             requestAnimationFrame(updateCount);
-          } else {
+        } else {
             // Ensure it ends exactly at max
             this.countIdeasSpunOut = this.maxSpunOut;
             this.countIdeasKilled = this.maxKilled;
-          }
-        };
 
-        // Start the animation
-        requestAnimationFrame(updateCount);
-      },
-      handleScroll() {
-     const contactSection = document.getElementById('contact');
-      const contactSectionTop = contactSection.getBoundingClientRect().top;
+            // Update the display after counting is complete
+            this.updateDisplay();
+        }
+    };
 
-      if (contactSectionTop <= 0) {
-        this.isToolbarVisible = false; // Hide toolbar when scrolling past contact section
-      } else {
-        this.isToolbarVisible = true; // Show toolbar when above contact section
-      }
-        const currentScrollY = window.scrollY;
+    // Start the animation
+    requestAnimationFrame(updateCount);
+},
 
-      if (currentScrollY > this.lastScrollY) {
-        this.isToolbarVisible = false; // Hide toolbar on scroll down
-      } else {
-        this.isToolbarVisible = true; // Show toolbar on scroll up
-      }
-      this.lastScrollY = currentScrollY; // Update last scroll position
-    },
+updateDisplay() {
+    // Format the display for spun out
+    const spunOutDisplay = `${this.countIdeasSpunOut / 1000}k+`;
+    this.countIdeasSpunOut = spunOutDisplay
+    // Format the display for killed
+    const killedDisplay = `> ${this.countIdeasKilled}`;
+    this.countIdeasKilled = killedDisplay
+
+    // Assuming you have elements to display these values
+    document.getElementById('spunOutDisplay').innerText = spunOutDisplay;
+    document.getElementById('killedDisplay').innerText = killedDisplay;
+},
+handleScroll() {
+  const currentScrollY = window.scrollY;
+  if (currentScrollY > this.lastScrollY && currentScrollY > 0) {
+    this.isToolbarVisible = false; // Hide toolbar on scroll down
+  } else {
+    this.isToolbarVisible = true; // Show toolbar on scroll up
+  }
+  this.lastScrollY = currentScrollY; // Update last scroll position
+}
     },
     created() {
       this.checkDarkMode(); // Check dark mode preference on component creation
     },
     mounted() {
+      this.updateTimes(); 
+      setInterval(this.updateTimes, 1000); 
+      this.startLogoRotation();
       const resizeObserver = new ResizeObserver((entries) => {
         const isMobile = entries[0].contentRect.width < 480;
         this.setCustomCursor(isMobile ? "white" : "dark");
@@ -1807,6 +1433,7 @@ export default {
       this.stopAutoSwitch();
       clearInterval(this.intervalIdSpunOut);
       clearInterval(this.intervalIdKilled);
+      clearInterval(this.intervalId);
       window.removeEventListener("scroll", this.handleScroll);
       this.resetCounting();
     },
@@ -1814,34 +1441,40 @@ export default {
       clearInterval(this.intervalId); // Clean up the interval when the component is destroyed
     },
   };
-=======
-        
-        // Reset form
-        this.$refs.form.reset();
-      }
-    }
-  },
-  mounted() {
-    const resizeObserver = new ResizeObserver(entries => {
-      const isMobile = entries[0].contentRect.width < 768;
-      this.setCustomCursor(isMobile ? 'white' : 'dark');
-    });
-    window.addEventListener('resize', this.checkMobile);
-    resizeObserver.observe(document.body);
-    this.createIntersectionObserver();
-    this.setCustomCursor('dark');
-    this.checkMobile();
-  },
-  beforeDestroy() {
-    window.removeEventListener('resize', this.checkMobile);
-    resizeObserver.disconnect();
-  },
-  
-};
->>>>>>> 27cd86e284c86f8b8b1fadd24519154b025bbb83
 </script>
+<style lang="scss">
+  @import "./assets/fonts/fonts.css";
+  // body {
+  //   font-family: 'Aeonik', Arial, sans-serif; /* Fallback to Arial and sans-serif */
+  // }
+  @font-face {
+    font-family: "Aeonik1";
+    src: url("../src/assets/font/AeonikTRIAL-Regular.otf") format("opentype");
+    font-weight: 1000 !important;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Poppins";
+    src: url("../src/assets/font/poppins.medium.ttf") format("opentype");
+    // font-weight: 1000 !important;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "ChaletBook";
+    src: url("../src/assets/font/ChaletBookBold.ttf") format("opentype");
+    // font-weight: 1000 !important;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "ChaletBook1";
+    src: url("../src/assets/font/ChaletBookRegular.ttf") format("opentype");
+    // font-weight: 1000 !important;
+    font-style: normal;
+  }
+</style>
 
 <style scoped>
+
 /* Base Styles */
 .hero-content {
   height: 100%;
@@ -1905,10 +1538,22 @@ export default {
   height: 80px !important;
   z-index: 100;
   width: 100%;
-  padding-top: 0.5em;
-  inset: 0% 0% auto;
-  transition: all 0.3s ease;
+  padding-top: 0.6em;
   position: fixed;
+  top: 0; /* Ensure it starts at the top */
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for smooth sliding */
+}
+
+.tBar.hidden {
+  transform: translateY(-100%); /* Slide up out of view */
+  opacity: 0; /* Optional: Fade out */
+}
+
+.tBar.visible {
+  transform: translateY(0); /* Slide back into view */
+  opacity: 1; /* Optional: Fade in */
 }
 
 /* Card Hover Effects */
@@ -1923,11 +1568,12 @@ export default {
 
 /* Mobile Navigation */
 .mobile-nav {
-  background-color: #212021 !important;
+  background-color: #b7e3b6  !important;
 }
 
 .mobile-nav .v-list-item {
-  color: white !important;
+  color:black !important
+
 }
 
 .mobile-nav .v-list-item:hover {
@@ -1965,14 +1611,13 @@ export default {
   pointer-events: none;
   z-index: 999;
   padding: 8px 16px;
-  color: white;
+  color:  #FFD700  ;
   font-size: 20px;
   transform-origin: center bottom;
   animation: fadeIn 0.2s ease-out;
   display: inline-flex;
   gap: 2px;
-  background: none;
-  padding: 16px 16px;
+  border-radius: 4px; /* Optional: Add some border radius */
 }
 
 /* Animations */
@@ -2041,172 +1686,10 @@ export default {
 
   .menu-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+    box-shadow: 0 5px 15px  #FFD700;
   }
 }
 
-/* Enhanced Button Styles */
-.enhanced-button {
-  border: 2px solid currentColor !important;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  z-index: 1;
-}
-
-.enhanced-button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  border: 2px solid transparent;
-  box-shadow: 0 0 0 0 rgba(255, 105, 180, 0.5);
-  transition: box-shadow 0.4s ease;
-}
-
-.enhanced-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
-}
-
-.enhanced-button:hover::before {
-  box-shadow: 0 0 0 10px rgba(255, 105, 180, 0.2);
-}
-
-.enhanced-button .v-icon {
-  transition: transform 0.3s ease;
-}
-
-.enhanced-button:hover .v-icon {
-  transform: translateX(10px);
-}
-
-/* Enhanced Card Styles */
-.card-hover {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.card-how-we-do::before,
-.card-how-we-do-it::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-  z-index: 0;
-}
-
-.card-how-we-do::before {
-  background-image: url('../src/image/laptop-1478822.jpg');
-}
-
-.card-how-we-do:hover::before {
-  opacity: 1;
-}
-
-.card-how-we-do-it::before {
-  background-image: url('../src/image/office-1834294.jpg');
-}
-
-.card-how-we-do-it:hover::before {
-  opacity: 1;
-}
-
-/* Ensure card content is above the background */
-.card-how-we-do .v-card-title,
-.card-how-we-do .v-card-text,
-.card-how-we-do .v-card-actions,
-.card-how-we-do-it .v-card-title,
-.card-how-we-do-it .v-card-text,
-.card-how-we-do-it .v-card-actions {
-  position: relative;
-  z-index: 1;
-}
-
-/* Override any element-specific cursors */
-.v-application * {
-  cursor: inherit !important;
-}
-
-.visible-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-grow-1 {
-  overflow-y: auto;
-}
-
-.button-enhanced {
-  border: 2px solid !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-.button-enhanced:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
-  border-color: rgba(255, 105, 180, 0.8);
-  background-color: rgba(255, 105, 180, 0.1);
-}
-
-.button-enhanced:hover::before {
-  opacity: 0.08;
-}
-
-.button-enhanced:active {
-  transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
-  background-color: rgba(236, 213, 225, 0.2);
-}
-
-.button-enhanced:hover .v-icon {
-  transform: translateX(5px);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Enhanced Typography */
-.card-title {
-  font-weight: 700;
-  letter-spacing: 2px;
-  transition: color 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .card-hover:hover::before {
-    opacity: 0.7;
-  }
-  .enhanced-button:hover {
-    transform: scale(1.05);
-  }
-}
-/* Sponsorship Section Styles */
-.sponsorship-container {
-  padding: 0 !important;
-  max-width: none !important;
-}
-
-.section-header {
-  margin-bottom: 64px;
-}
-
-.card-sponsor {
-  transition: transform 0.3s ease;
-}
-
-.card-sponsor:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
-}
-
-.card-sponsor:hover .v-card-title {
-  color: rgba(255, 105, 180, 0.8);
-}
 
 .image-cover {
   width: 100%;
@@ -2254,147 +1737,97 @@ html {
   transform: none;
   transition: opacity 6s ease-in;
 }
-/* Contact Section Styles */
-.contact-section {
-  position: relative;
-  overflow: hidden;
+
+
+/* SECOND SECTION */
+
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column for small screens */
+  }
 }
 
-.contact-container {
-  max-width: 1200px !important;
-}
-
-/* Contact Information Styles */
-.contact-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-  margin-bottom: 48px;
-}
-
-.info-card {
-  background: white;
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.info-card:hover {
-  transform: translateY(-4px);
-}
-
-.info-icon {
+/* 4TH SECTION */
+.svg-animation {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-/* Contact Section Styles */
-.contact-section {
-  position: relative;
-  overflow: hidden;
-}
-
-.contact-container {
-  padding: 0 !important;
-  max-width: none !important;
+.box-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Contact Information Cards */
-.info-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 24px;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-  border: 1px solid rgba(255, 105, 180, 0.2);
+/* Right Column - PSL Typography */
+.ideation-text {
+  color: white;
+  text-align: left;
+  max-width: 600px;
+  display: block;
+  line-height: 1.15;
 }
 
-.info-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
-.icon-hover {
-  transition: transform 0.3s ease;
+.section-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.625;
 }
 
-.info-card:hover .icon-hover {
-  transform: scale(1.1);
-}
-
-/* Contact Form Styles */
-.contact-form {
-  margin-top: 48px;
-}
-
-.input-hover {
-  transition: all 0.3s ease;
-}
-
-.input-hover:hover {
-  transform: translateY(-2px);
-}
-
-.input-hover:hover .v-input__slot {
-  border-color: rgba(255, 105, 180, 0.8);
-}
-
-.submit-button {
-  width: 100%;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.submit-button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  border: 2px solid transparent;
-  box-shadow: 0 0 0 0 rgba(255, 105, 180, 0.5);
-  transition: box-shadow 0.4s ease;
-}
-
-.submit-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
-}
-
-.submit-button:hover::before {
-  box-shadow: 0 0 0 10px rgba(255, 105, 180, 0.2);
-}
-
-.submit-button .v-icon {
-  transition: transform 0.3s ease;
-}
-
-.submit-button:hover .v-icon {
-  transform: translateX(10px);
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-  .info-card {
-    margin-bottom: 24px;
+  .card-hover:hover::before {
+    opacity: 0.7;
   }
-  
-  .input-hover:hover {
-    transform: scale(1.02);
-  }
-  
-  .submit-button:hover {
+  .enhanced-button:hover {
     transform: scale(1.05);
   }
 }
+.card-hover {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
 
-/* Footer Styles */
-.footer-section {
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.color-slate {
+    color: #636363 !important;
+    font-family: Aeonik, Arial, sans-serif !important;
+}
+@media (max-width: 768px) {
+  .section {
+    height: 200vh; /* Set height to 200vh for mobile */
+  }
+}
+
+.team-members-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 20px 0;
   position: relative;
 }
 
-<<<<<<< HEAD
 .team-members-container::-webkit-scrollbar {
   display: none;
 }
@@ -2554,10 +1987,8 @@ animation: marquee 15s linear infinite;
 
 .custom-paddingMV{
   padding-left: 8% !important; 
-  padding-RIGHT: 8% !important; 
-
+  padding-right: 7% !important; 
   text-align: left;
-
 }
 
 /* //LIST GRID */
@@ -2624,6 +2055,19 @@ animation: marquee 15s linear infinite;
 
 .large-number {
   font-size: 180px !important;
+  font-weight: bold !important;
+  text-align: left; /* Align text to the left */
+  /* -webkit-text-stroke: 1px #fffbe9; */
+  /* color: #0000;  */
+  margin-bottom: .25em;
+  padding-bottom: .2em;
+  padding-right: .2em;
+  /* font-family: Aeonik, Arial, sans-serif; */
+  line-height: 1.15;
+  border-bottom: 1px solid #636363 !important;
+}
+.large-numberMV {
+  font-size: 130px !important;
   font-weight: bold !important;
   text-align: left; /* Align text to the left */
   /* -webkit-text-stroke: 1px #fffbe9; */
@@ -3111,29 +2555,33 @@ flex: 1;
   transition: 0.3s ease-in-out;
   width: 80%;
   max-width: 400px;
-=======
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
->>>>>>> 27cd86e284c86f8b8b1fadd24519154b025bbb83
   margin-bottom: 20px;
 }
 
-.social-link {
-  text-decoration: none;
-  transition: transform 0.3s ease;
+.input-field:focus {
+  border-color: #e2bdb9;
+  box-shadow: 0 0 5px rgba(210, 194, 192, 0.6);
 }
 
-.social-link:hover {
-  transform: translateY(-5px);
+.join-button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.social-link:hover .v-icon {
-  color: rgba(255, 255, 255, 0.8) !important;
+.join-button:hover {
+  background-color: #ffd700;
+  transform: scale(1.05);
+}
+.social-icons {
+  margin-top: 30px;
 }
 
-<<<<<<< HEAD
 .social-icon {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
@@ -3253,13 +2701,10 @@ transform: translateZ(0);
 }
 
 /* Responsive font size adjustments */
-=======
->>>>>>> 27cd86e284c86f8b8b1fadd24519154b025bbb83
 @media (max-width: 768px) {
-  .social-links {
-    gap: 15px;
+  .footer-mobile {
+    font-size: 14px; /* Minimum font size for mobile */
   }
-<<<<<<< HEAD
 }
 
 @media (min-width: 769px) {
@@ -3391,13 +2836,53 @@ padding-top: 20px;
 border-top: 1px solid #000;
 padding-top: 20px;
 }
+section {
+transition: opacity 0.5s ease;
+}
+.responsive-text {
+  font-family: 'ChaletBook1';
+  font-size: 3.5vw;
+  transition: all 0.5s ease; 
+  letter-spacing: 0.1; 
+}
 
-</style>  
-=======
-  
-  .social-link:hover {
-    transform: scale(1.1);
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .responsive-text {
+    font-size: 4vw; /* Adjust font size for tablets */
+    line-height: 1;
   }
 }
-</style>
->>>>>>> 27cd86e284c86f8b8b1fadd24519154b025bbb83
+
+@media (max-width: 768px) {
+  .responsive-text {
+    font-size: 3vw; /* Adjust font size for mobile devices */
+    line-height: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-text {
+    font-size: 4vw; /* Further adjust for smaller screens */
+    line-height: 1;
+  }
+}
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  height: 48px; /* Adjust based on your design */
+}
+
+.marquee-text1 {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+  padding-left: 100%;
+  font-size: 3vw; /* Adjust font size as needed */
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+</style> 
