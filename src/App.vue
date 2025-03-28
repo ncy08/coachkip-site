@@ -56,8 +56,8 @@
                   >Kip</a>
                 <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#milesran' })"  class="side-nav-link-large mt-n2"
                   >About</a>
-                <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#team' })" class="side-nav-link-large mt-n2"
-                  >Team</a>
+                <!-- <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#team' })" class="side-nav-link-large mt-n2"
+                  >Team</a> -->
                 <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#contact' })"  class="side-nav-link-large mt-n2"
                   >Contact</a>
               </ul>
@@ -600,7 +600,7 @@
   </v-container>
 </v-parallax>
 </section>
-<section id="partners" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '80vh' : '100vh'}">
+<section class="shadow-bottom" id="partners" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '80vh' : '100vh'}">
   <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '80vh ' : '100vh'}"
     :color="isDarkMode ? '#252423' : '#fffbe9'">
     <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
@@ -624,19 +624,39 @@
       <v-row 
         :class="isMobile ? 'mt-n3' : 'justify-center'" class="logo-container" 
         :style="{ opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
-        <transition-group name="fade">
-          <v-col v-for="(logo, index) in logos.slice(0, 3)" :key="index" cols="12" 
-            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : ''">
-            <img :src="logo.src" alt="Logo" 
-              :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '100%', height: 'auto' }" 
-            />
+        <transition-group name="fade" v-if="!isMobile">
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
+          </v-col>
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '100%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
+          </v-col>
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
+          </v-col>
+        </transition-group>
+        <transition-group name="fade" v-if="isMobile">
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '80%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
+          </v-col>
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center mt-n12" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '100%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
+          </v-col>
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center mt-n8 mb-10" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '58%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
           </v-col>
         </transition-group>
       </v-row>
     </v-container>
   </v-parallax>
 </section>
-<section class="fade-in shadow-bottom" id="team" style="position: relative; z-index: 999; min-height: 80vh">
+<!-- <section class="fade-in shadow-bottom" id="team" style="position: relative; z-index: 999; min-height: 80vh">
   <v-card :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; border-radius: 0% !important; min-height: 80vh">
     <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
       <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
@@ -690,7 +710,7 @@
       </div>
     </v-container>
   </v-card>
-</section>
+</section> -->
 </section>
 
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="!isMobile" id="contact">
@@ -805,144 +825,113 @@
 
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 26%; margin-bottom: 5% !important;">
-    <div style="flex-grow: 1; height: auto; display: grid;margin-top:15%">
-      <v-row style="background: #b7e3b6; margin-left: 3%;">
+    <div style="flex-grow: 1; height: auto; display: grid;margin-top:20%">
+      <v-row style="background: #b7e3b6; margin-left: 1%;">
         <v-col>
-        <p class="responsive-text">ADDRESS</p>
-        <p class="responsive-text">&nbsp;</p>
-        <p class="responsive-text">&nbsp;</p>
-        <p class="responsive-text">&nbsp; </p>
-      </v-col>
+          <p class="responsive-text text-center mr-12">ADDRESS</p>
+        </v-col>
         <v-col class="ml-n10">
           <p class="responsive-text">KIP HEADQUARTERS</p>
           <p class="responsive-text">1 N 4 Pl.</p>
           <p class="responsive-text">Brooklyn, NY 11249</p>
           <p class="responsive-text">United States</p>
           <p class="responsive-text">
-            <a  href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank">
-            <u style="color:black !important">Map
-              <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-            </u>
-          </a>
+            <button @click="gotoRoutesite('https://maps.app.goo.gl/XiNdKjy83swH1nWu5')" style="background: none; border: none; color: black; text-decoration: underline; cursor: pointer;">
+              Map <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+            </button>
           </p>
         </v-col>
       </v-row>
       <br>
       <hr/>
       <br>
-      <v-row style="background: #b7e3b6; margin-left: 3%;padding-top:12px;padding-bottom:10px">
+      <v-row style="background: #b7e3b6; margin-left: 1%;padding-top:12px;padding-bottom:10px">
         <v-col>
-          <p class="responsive-text">INQUIRIES</p>
+          <p class="responsive-text text-center mr-12">INQUIRIES</p>
         </v-col>
         <v-col class="ml-n10">
           <p class="responsive-text">
-            <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
-              <span >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+            <button @click="gotoRoutesite('tel:+1 206 395 9662')" style="background: none; border: none; color: black; cursor: pointer;">
+
+              <span style="text-decoration: underline;" >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+            </button>
           </p>
         </v-col>
       </v-row>
       <br>
       <hr/>
       <br>
-      <v-row style="background: #b7e3b6; margin-left: 3%;padding-top:12px;padding-bottom:10px">
+      <v-row style="background: #b7e3b6; margin-left: 1%;padding-top:12px;padding-bottom:10px">
         <v-col>
-          <p class="responsive-text">INFO</p>
+          <p class="responsive-text text-center mr-12">INFO</p>
         </v-col>
         <v-col class="ml-n10">
           <p class="responsive-text">
-            <a style="color:black" href="mailto:hello@kip.coach" class="b2">
-          <span>hello(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
-          </a>
+            <button @click="gotoRoutesite('mailto:hello@kip.coach')" style="background: none; border: none; color: black; cursor: pointer;">
+              <span style="text-decoration: underline;" >hello(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+            </button>
           </p>
         </v-col>
       </v-row>
       <br>
       <hr/>
       <br>
-      <v-row style="background: #b7e3b6; margin-left: 3%;padding-top:12px;padding-bottom:10px">
+      <v-row style="background: #b7e3b6; margin-left: 1%;padding-top:12px;padding-bottom:10px">
         <v-col>
-          <p class="responsive-text">FOLLOW US</p>
+          <p class="responsive-text text-center mr-12">FOLLOW US</p>
         </v-col>
         <v-col class="ml-n10">
           <p class="responsive-text">
-            <a style="color:black" href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="b2">
-              <span >Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+            <button @click="gotoRoutesite('https://instagram.com')" style="background: none; border: none; color: black; cursor: pointer;">
+              <span style="text-decoration: underline;" >Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+            </button>
           </p>
           <p class="responsive-text">&nbsp;</p>
           <p class="responsive-text">
-            <a style="color:black" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="b2">
-              <span >Linkedin<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
+            <button @click="gotoRoutesite('https://linkedin.com')" style="background: none; border: none; color: black; cursor: pointer;">
+              <span style="text-decoration: underline;" >LinkedIn<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+            </button>
           </p>
         </v-col>
       </v-row>
       <br>
       <hr/>
       <br>
-      <v-row style="background: #b7e3b6; margin-left: 3%;">
-        <v-col cols="6">
-          <p class="responsive-text">NEWS LETTER</p>
+      <v-row style="background: #b7e3b6; margin-left: 1%;">
+        <v-col cols="5">
+          <p class="responsive-text text-center ml-4">WAITLIST</p>
           <p class="responsive-text">&nbsp;</p>
-          <p class="responsive-text">
-            <input 
-                type="email" 
-                class="responsive-text"
-                placeholder="Email address" 
-                :style="{
-                  border: 'none',
-                  backgroundColor: 'transparent', 
-                  color: black, 
-                  outline: 'none', 
-                  width: '100%',
-                }"
-              />
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31">
-                <g id="Layer_2" data-name="Layer 2">
-                  <g id="Design_System" data-name="Design System">
-                    <path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path>
-                  </g>
-                </g>
-              </svg>
-          </p>
         </v-col>
-        <v-col class="ml-n9">
-          <p class="responsive-text">&nbsp;</p>
-          <p class="responsive-text">&nbsp;</p>
-          <p class="responsive-text ml-4">
-            <button class="b2 decoration active green">Submit</button>
+        <v-col cols="5">
+          <p class="responsive-text">
+            <v-text-field variant="underlined" hide-details="auto" class="responsive-text ml-n4" placeholder="Email Address"/>
+            <v-btn variant="text" size="small" rounded="0" class="b2 decoration active green ml-7 mt-4">Submit</v-btn>
           </p>
         </v-col>
       </v-row>
       <br>
       <br>
     </div>
-    <div
-        class="marquee"
-        style="
-          position: fixed;
-          bottom: 0;
-          width: 100%;
-          background-color: rgba(183, 227, 182, 0.8);
-        "
-      >
-        <v-row>
-          <v-col>
-            <div class="marquee-container" >
-              <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
-              <span v-else class="marquee-label1" ><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
-              <div class="marquee-content1">
-                <div class="marquee-text1">
-                      SEATTLE <span> ({{ seattleTime }}),</span> 
-                      SFO <span> ({{ sfoTime }}),</span> 
-                      CHICAGO <span> ({{ chicagoTime }}),</span> 
-                      AUSTIN <span> ({{ austinTime }}),</span> 
-                      NYC <span> ({{ nycTime }}),</span> 
-                      LONDON <span> ({{ londonTime }})</span>
-                </div>
+    <div class="marquee" style="position: fixed; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8);">
+      <v-row>
+        <v-col>
+          <div class="marquee-container">
+            <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
+            <span v-else class="marquee-label1"><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
+            <div class="marquee-content1">
+              <div class="marquee-text1">
+                SEATTLE <span> ({{ seattleTime }}),</span>
+                SFO <span> ({{ sfoTime }}),</span>
+                CHICAGO <span> ({{ chicagoTime }}),</span>
+                AUSTIN <span> ({{ austinTime }}),</span>
+                NYC <span> ({{ nycTime }}),</span>
+                LONDON <span> ({{ londonTime }})</span>
               </div>
             </div>
-          </v-col>
-        </v-row>
-      </div>
+          </div>
+        </v-col>
+      </v-row>
+    </div>
   </div>
 </footer>
 
@@ -1027,7 +1016,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
           { text: "Mission", link: "#whatwedo" },
           { text: "KIP", link: "#kip" },
           { text: "ABOUT", link: "#milesran" },
-          { text: "TEAM", link: "#team" },
+          // { text: "TEAM", link: "#team" },
           { text: "CONTACT", link: "#contact" },
         ],
         hoveredMember: null,
@@ -1126,7 +1115,6 @@ import JamesJackson from '../src/image/JamesJackson.png'
     },
     methods: {
       gotoRoutesite(item){
-        console.log(item);
         
         let ftp = item
         window.open(ftp, "_blank");
@@ -1913,7 +1901,10 @@ style attribute {
 .team-section {
     position: relative; /* Ensure it can be layered above the footer */
   }
-#team {
+/* #team {
+    margin-bottom: 1000px; 
+} */
+#partners {
     margin-bottom: 1000px; 
 }
 .my-custom-row {
@@ -2904,4 +2895,38 @@ transition: opacity 0.5s ease;
   object-fit: cover; /* Cover the container while maintaining aspect ratio */
   max-height: 900px; /* Set a maximum height for larger screens */
 }
+
+.logo-item1.fade-enter-active {
+    transition: all 400ms cubic-bezier(0.7, 0, 0.3, 1);
+  }
+
+  .logo-item1.fade-enter-to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .logo-item1.fade-leave-from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .logo-item1.fade-leave-active {
+    transition: all 400ms cubic-bezier(0.7, 0, 0.3, 1);
+  }
+
+  .logo-item1.fade-leave-to {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  .logo-item1 {
+    transition: all 400mscubic-bezier(0.7, 0, 0.3, 1);
+    transform: translateY(30px);
+  }
+  .logo-item1 img {
+    transition: filter 0.3s ease-in-out;
+  }
+
+  .logo-item1:hover img {
+    filter: none;
+  }
 </style> 
