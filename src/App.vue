@@ -656,7 +656,7 @@
       <div class="team-members-container mt-n15" ref="teamMembersContainer" @mousedown="startDrag" 
           @mouseup="stopDrag" @mouseleave="stopDrag" @mousemove="drag"
           :style="{ overflowX: isMobile ? 'auto' : 'hidden', whiteSpace: 'nowrap' }">
-          <br v-if="!isMobile"/>
+           <br v-if="!isMobile"/>
               <br v-if="!isMobile"/>
               <br v-if="!isMobile"/>
               <br v-if="isMobile"/>
@@ -953,6 +953,7 @@
 
 <script>
 import NickYebra from '../src/image/NickYebra.jpg'
+import JamesJackson from '../src/image/JamesJackson.png'
   import lottie from "lottie-web";
   export default {
     data() {
@@ -1060,8 +1061,7 @@ import NickYebra from '../src/image/NickYebra.jpg'
             id: 2,
             name: "James Jackson",
             position: "Second Founder",
-            image:
-              "https://img.freepik.com/premium-photo/3d-cartoon-business-character_839035-120901.jpg",
+            image:JamesJackson,
             details:
               "",
           },
@@ -2902,6 +2902,6 @@ transition: opacity 0.5s ease;
   width: 100%; /* Make the image take the full width of its container */
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Cover the container while maintaining aspect ratio */
-  max-height: 700px; /* Set a maximum height for larger screens */
+  max-height: 900px; /* Set a maximum height for larger screens */
 }
 </style> 
