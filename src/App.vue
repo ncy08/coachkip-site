@@ -1000,13 +1000,13 @@ import JamesJackson from '../src/image/JamesJackson.png'
         isDarkMode:false,
         logos: [
           { src:
-              "https://testlio.com/wp-content/uploads/2022/04/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png",
+              "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png",
           },
           { src:
               "https://singaporecycling.org.sg/cdn/shop/files/trainingpeaks_logo_vertical_2-color.png?v=1703918725&width=1500",
           },
           {src:
-              "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Garmin_logo_2006.svg/1200px-Garmin_logo_2006.svg.png",
+              "https://www.golfworld.com.au/assets/images/Garmin.png",
           },
           // {src:
           //     "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ebafce2edf7ddb8cf58_VolumeDark.svg",
