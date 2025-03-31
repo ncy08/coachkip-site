@@ -4,4 +4,10 @@
     font-weight: 600;
     font-style: normal;
   }
-  
+ @font-face {
+   font-family: "ChaletBook1";
+   src: url("../src/assets/font/ChaletBookRegular.ttf") format("opentype");
+   /* font-weight: 400 !important; */
+   color:black !important;
+   font-style: normal;
+ }

@@ -785,7 +785,7 @@
           </svg>
         </v-col>
         <v-col>
-           <button class="b2 decoration active green" style="flex-shrink: 0;">Submit</button>
+           <button class="b2 decoration active green" style="flex-shrink: 0;"><v-icon size="x-small">mdi-circle</v-icon>Submit</button>
          </v-col>
         </v-row>
      </div>
@@ -800,9 +800,9 @@
     style=" position: absolute; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8); ">
       <v-row>
         <v-col>
-          <div class="marquee-container" >
-            <span v-if="!isMobile"  style="font-size:32px">Currently Working in:</span>
-            <span v-else style="font-size:32px"><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
+          <div class="marquee-container">
+            <span style="font-size:32px">
+              <span >WORKING IN:</span></span>
             <div class="marquee-content">
               <div class="marquee-container">
                 <div class="marquee-text1">
@@ -823,94 +823,110 @@
 </div>
 </footer>
 
-<footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 26%; margin-bottom: 5% !important;">
-    <div style="flex-grow: 1; height: auto; display: grid;margin-top:20%">
-      <v-row style="background: #b7e3b6; margin-left: 1%;">
-        <v-col>
-          <p class="responsive-text text-center mr-12">ADDRESS</p>
-        </v-col>
-        <v-col class="ml-n10">
-          <p class="responsive-text">KIP HEADQUARTERS</p>
-          <p class="responsive-text">1 N 4 Pl.</p>
-          <p class="responsive-text">Brooklyn, NY 11249</p>
-          <p class="responsive-text">United States</p>
-          <p class="responsive-text">
-            <button @click="gotoRoutesite('https://maps.app.goo.gl/XiNdKjy83swH1nWu5')" style="background: none; border: none; color: black; text-decoration: underline; cursor: pointer;">
-              Map <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-            </button>
-          </p>
-        </v-col>
-      </v-row>
-      <br>
-      <hr/>
-      <br>
-      <v-row style="background: #b7e3b6; margin-left: 1%;padding-top:12px;padding-bottom:10px">
-        <v-col>
-          <p class="responsive-text text-center mr-12">INQUIRIES</p>
-        </v-col>
-        <v-col class="ml-n10">
-          <p class="responsive-text">
-            <button @click="gotoRoutesite('tel:+1 206 395 9662')" style="background: none; border: none; color: black; cursor: pointer;">
-
-              <span style="text-decoration: underline;" >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
-            </button>
-          </p>
-        </v-col>
-      </v-row>
-      <br>
-      <hr/>
-      <br>
-      <v-row style="background: #b7e3b6; margin-left: 1%;padding-top:12px;padding-bottom:10px">
-        <v-col>
-          <p class="responsive-text text-center mr-12">INFO</p>
-        </v-col>
-        <v-col class="ml-n10">
-          <p class="responsive-text">
-            <button @click="gotoRoutesite('mailto:hello@kip.coach')" style="background: none; border: none; color: black; cursor: pointer;">
-              <span style="text-decoration: underline;" >hello(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
-            </button>
-          </p>
-        </v-col>
-      </v-row>
-      <br>
-      <hr/>
-      <br>
-      <v-row style="background: #b7e3b6; margin-left: 1%;padding-top:12px;padding-bottom:10px">
-        <v-col>
-          <p class="responsive-text text-center mr-12">FOLLOW US</p>
-        </v-col>
-        <v-col class="ml-n10">
-          <p class="responsive-text">
-            <button @click="gotoRoutesite('https://instagram.com')" style="background: none; border: none; color: black; cursor: pointer;">
-              <span style="text-decoration: underline;" >Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
-            </button>
-          </p>
-          <p class="responsive-text">&nbsp;</p>
-          <p class="responsive-text">
-            <button @click="gotoRoutesite('https://linkedin.com')" style="background: none; border: none; color: black; cursor: pointer;">
-              <span style="text-decoration: underline;" >LinkedIn<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
-            </button>
-          </p>
-        </v-col>
-      </v-row>
-      <br>
-      <hr/>
-      <br>
-      <v-row style="background: #b7e3b6; margin-left: 1%;">
+<footer style="background: #b7e3b6; min-height: 90vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 24%; margin-bottom: 5% !important;">
+    <div style="flex-grow: 1; height: auto; display: grid;margin-top:19% !important">
+      <v-row class="ml-8 " style="line-height:1.1">
         <v-col cols="5">
-          <p class="responsive-text text-center ml-4">WAITLIST</p>
-          <p class="responsive-text">&nbsp;</p>
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black; text-shadow: 1 1 0 black;">
+            ADDRESS
+          </div>
         </v-col>
-        <v-col cols="5">
-          <p class="responsive-text">
-            <v-text-field variant="underlined" hide-details="auto" class="responsive-text ml-n4" placeholder="Email Address"/>
-            <v-btn variant="text" size="small" rounded="0" class="b2 decoration active green ml-7 mt-4">Submit</v-btn>
-          </p>
+        <v-col>
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">KIP HEADQUARTERS
+          </div>
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">1 N 4 Pl.
+          </div> 
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">Brooklyn, NY 11249
+          </div>
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">United States
+          </div> 
+          <a href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">Map
+            <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+          </a>
         </v-col>
       </v-row>
-      <br>
-      <br>
+      <v-divider style="border:1px solid black" class="mt-5"></v-divider>
+      <v-row class="ml-8 mt-1" style="line-height:1.1">
+        <v-col cols="5">
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
+           </div>
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">
+            INQUIRIES
+          </div>
+        </v-col>
+        <v-col>
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
+        </div>
+        <div href="tel:+1 770 364 4726" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">+1 770 364 4726
+            <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+        </div>
+        </v-col>
+      </v-row>
+      <v-divider style="border:1px solid black" class="mt-7"></v-divider>
+      <v-row class="ml-8 mt-1" style="line-height:1.1">
+        <v-col cols="5">
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
+           </div>
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">
+            INFO
+          </div>
+        </v-col>
+        <v-col>
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
+        </div>
+        <div href="mailto:hello@kip.coach" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">
+          hello(at)kip.coach
+            <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+        </div>
+        </v-col>
+      </v-row>
+      <v-divider style="border:1px solid black" class="mt-7"></v-divider>
+      <v-row class="ml-8 mt-1" style="line-height:1.1">
+        <v-col cols="5">
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
+           </div>
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">
+            FOLLOW US
+          </div>
+        </v-col>
+        <v-col>
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
+        </div>
+        <a href="https://instagram.com" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">
+          Instagram
+            <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+        </a>
+        <br/>
+        <a href="https://tumblr.com" target="_blank" class="mt-3" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">
+          Tumblr
+            <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+        </a>
+        </v-col>
+      </v-row>
+      <v-divider style="border:1px solid black" class="mt-7"></v-divider>
+      <v-row class="ml-8 mt-1" style="line-height:1.1">
+        <v-col cols="8">
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
+           </div>
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">
+            WAITLIST
+          </div>
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">
+            <br/>
+            <input placeholder="Email Address" style="border:none;outline:none"/>
+            <svg class="mt-n10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31"><g id="Layer_2" data-name="Layer 2"><g id="Design_System" data-name="Design System"><path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path></g></g></svg>
+          </div>
+        </v-col>
+        <v-col>
+          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
+        </div>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;</div>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;</div>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;"><v-icon size="x-small">mdi-circle</v-icon> SUBMIT</div>
+        </v-col>
+      </v-row>
+      
     </div>
     <div class="marquee" style="position: fixed; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8);">
       <v-row>
@@ -1395,7 +1411,11 @@ updateDisplay() {
 handleScroll() {
   const currentScrollY = window.scrollY;
   if (currentScrollY > this.lastScrollY && currentScrollY > 0) {
-    this.isToolbarVisible = false; // Hide toolbar on scroll down
+    if (this.activeSection !== 'contact') {
+      this.isToolbarVisible = false; // Hide toolbar on scroll down
+    }else{
+      this.isToolbarVisible = true; // Hide toolbar on scroll down
+    }
   } else {
     this.isToolbarVisible = true; // Show toolbar on scroll up
   }
@@ -1469,8 +1489,9 @@ handleScroll() {
   }
   @font-face {
     font-family: "ChaletBook1";
-    src: url("../src/assets/font/ChaletBookRegular.ttf") format("opentype");
-    // font-weight: 1000 !important;
+    src: url("../src/assets/font/ChaletBookOriginal.woff2") format("opentype");
+    font-weight: 800 !important;
+    color:black !important;
     font-style: normal;
   }
 </style>
@@ -2882,7 +2903,7 @@ transition: opacity 0.5s ease;
   white-space: nowrap;
   animation: marquee 20s linear infinite;
   padding-left: 100%;
-  font-size: 3vw; 
+  font-size: 6vw; 
 }
 
 @keyframes marquee {
