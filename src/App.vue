@@ -805,7 +805,7 @@
               <span >WORKING IN:</span></span>
             <div class="marquee-content">
               <div class="marquee-container">
-                <div class="marquee-text1">
+                <div class="marquee-text">
                   SEATTLE <span> ({{ seattleTime }}),</span> 
                   SFO <span> ({{ sfoTime }}),</span> 
                   CHICAGO <span> ({{ chicagoTime }}),</span> 
