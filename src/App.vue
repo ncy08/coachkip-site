@@ -1382,6 +1382,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
     this.fixedScroll = true
     this.isToolbarVisible = true; 
     if (this.activeSection === 'contact') {
+      this.fixedScroll = true
       console.log('You are now viewing the contact section and have scrolled to the bottom of the page');
     }
   } else {
