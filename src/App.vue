@@ -821,17 +821,17 @@
 </footer>
 
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
-  <div style="padding-top:28%" class="center align-center">
-    <div style="flex-grow: 1; height: auto; display: grid">
-    <v-row style="line-height:1.2" class="ml-8 mt-3" no-gutters>
-      <v-col >
+  <div style="padding-top:25% !important">
+
+    <v-row class="ml-8" style="line-height:1.2">
+       <v-col>
         <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
             ADDRESS
         </div>
        </v-col>
        <v-col class="ml-n16">
         <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
-          KIP HEADQUARTERS  
+          KIP HEADQUARTERS
         </div>
         <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
           1 N 4 Pl.
@@ -848,9 +848,10 @@
           </a>
         </div>
        </v-col>
-    </v-row>
-    <v-divider style="border:1px solid black"  class="mt-8"></v-divider>
-    <v-row class="ml-8 mt-3 " style="line-height:1.2" no-gutters  >
+      </v-row>
+    <v-divider style="border:1px solid black"  class="mt-12"></v-divider>
+
+    <v-row class="ml-8 mt-3 " style="line-height:1.2">
        <v-col>
         <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
             INQUIRIES
@@ -864,9 +865,28 @@
         </div>
        </v-col>
       </v-row>
-    <v-divider width="100%" style="border:1px solid black"  class="mt-8"></v-divider>
-    </div>
+      <v-divider style="border:1px solid black" class="mt-12"></v-divider>
   </div>
+  <div class="marquee" style="position: fixed; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8);">
+      <v-row>
+        <v-col>
+          <div class="marquee-container">
+            <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
+            <span v-else class="marquee-label1"><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
+            <div class="marquee-content1">
+              <div class="marquee-text1">
+                SEATTLE <span> ({{ seattleTime }}),</span>
+                SFO <span> ({{ sfoTime }}),</span>
+                CHICAGO <span> ({{ chicagoTime }}),</span>
+                AUSTIN <span> ({{ austinTime }}),</span>
+                NYC <span> ({{ nycTime }}),</span>
+                LONDON <span> ({{ londonTime }})</span>
+              </div>
+            </div>
+          </div>
+        </v-col>
+      </v-row>
+    </div>
 </footer>
 
 
@@ -2838,10 +2858,7 @@ transition: opacity 0.5s ease;
     filter: none;
   }
   @media (max-width: 768px) {
-  footer {
-    min-height: auto; /* Allow footer to adjust height */
-    padding: 10px; /* Adjust padding */
-  }
+  
 
   .marquee {
     font-size: 2.5vw; /* Smaller font size for mobile */
