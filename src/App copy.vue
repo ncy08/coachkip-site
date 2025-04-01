@@ -821,7 +821,7 @@
 </footer>
 
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 14%; margin-bottom: 5% !important;">
+  <div style="display: flex;  align-items: flex-start; padding-top: 14%; margin-bottom: 5% !important;">
     <div style="flex-grow: 1; height: auto; display: grid;margin-top:20% !important">
       <v-row class="ml-8" style="line-height:1.2">
        <v-col>
@@ -900,6 +900,27 @@
        </v-col>
       </v-row>
       <v-divider style="border:1px solid black"  class="mt-12"></v-divider>
+      <v-row class="ml-8 mt-3 " style="line-height:1.2">
+       <v-col cols="8">
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          WAITLIST
+        </div>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          <br/>
+            <input placeholder="Email Address" style="border:none;outline:none"/>
+            <svg class="mt-n10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31"><g id="Layer_2" data-name="Layer 2"><g id="Design_System" data-name="Design System"><path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path></g></g></svg>
+        </div>
+       </v-col>
+       <v-col class="ml-n5">
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          &nbsp;
+        </div>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          &nbsp;
+        </div>
+        <div class="mt-2" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;"><v-icon size="x-small">mdi-circle</v-icon> SUBMIT</div>
+       </v-col>
+      </v-row>
       <v-row class="ml-8 mt-3 " style="line-height:1.2">
        <v-col cols="8">
         <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">

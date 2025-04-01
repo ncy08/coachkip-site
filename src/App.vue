@@ -820,54 +820,93 @@
 </div>
 </footer>
 
-<footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
-  <div style="padding-top:25% !important">
-
-    <v-row class="ml-8" style="line-height:1.2">
-       <v-col>
-        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
-            ADDRESS
-        </div>
-       </v-col>
-       <v-col class="ml-n16">
-        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
-          KIP HEADQUARTERS
-        </div>
-        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
-          1 N 4 Pl.
-        </div>
-        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
-          Brooklyn, NY 11249
-        </div>
-        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
-          United States
-        </div>
-        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
-          <a href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">Map
-            <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+<footer  style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;"  v-if="isMobile" id="contact"
+>
+    <v-row class="pt-8" style="margin-top:20% !important">
+      <v-col cols="6" md="4" >
+        <div class="header-text ml-10" >ADDRESS</div>
+      </v-col>
+      <v-col cols="6" md="4">
+        <div class="header-text">KIP HEADQUARTERS</div>
+        <div class="header-text">1 N 4 Pl.</div>
+        <div class="header-text">Brooklyn, NY 11249</div>
+        <div class="header-text">United States</div>
+        <div class="header-text">
+          <a href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
+            Map <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
           </a>
         </div>
-       </v-col>
-      </v-row>
-    <v-divider style="border:1px solid black"  class="mt-12"></v-divider>
-
-    <v-row class="ml-8 mt-3 " style="line-height:1.2">
-       <v-col>
-        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
-            INQUIRIES
-        </div>
-       </v-col>
-       <v-col class="ml-n16">
+      </v-col>
+    </v-row>
+    <v-divider width="100%" style="border:1px solid black"  class="mt-12"></v-divider>
+    <v-row class="pt-8">
+      <v-col cols="6" md="4">
+        <div class="header-text ml-10">INQUIRIES</div>
+      </v-col>
+      <v-col cols="6" md="4">
         <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
           <a href="tel:+1 770 364 4726" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">+1 770 364 4726
             <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
           </a>
         </div>
+      </v-col>
+    </v-row>
+    <v-divider width="100%" style="border:1px solid black"  class="mt-10  "></v-divider>
+    <v-row class="pt-8">
+      <v-col cols="6" md="4">
+        <div class="header-text ml-10">INFO</div>
+      </v-col>
+      <v-col cols="6" md="4">
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          <a href="mailto:hello@kip.coach" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">hello(at)kip.coach
+            <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+          </a> 
+        </div>
+      </v-col>
+    </v-row>
+    <v-divider width="100%" style="border:1px solid black"  class="mt-10  "></v-divider>
+    <v-row class="pt-8">
+      <v-col cols="6" md="4">
+        <div class="header-text ml-10">FOLLOW US</div>
+      </v-col>
+      <v-col cols="6" md="4">
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          <a href="https://linkedin.com" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">Linked
+            <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+          </a> 
+        </div>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          <a href="https://instagram.com" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">Instagram
+            <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+          </a> 
+        </div>
+      </v-col>
+    </v-row>
+    <v-divider width="100%" style="border:1px solid black"  class="mt-12"></v-divider>
+
+    <v-row class="ml-8 mt-3 " style="line-height:1.2">
+       <v-col cols="8">
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          WAITLIST
+        </div>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          <br/>
+            <input placeholder="Email Address" style="border:none;outline:none"/>
+            <svg class="mt-n10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31"><g id="Layer_2" data-name="Layer 2"><g id="Design_System" data-name="Design System"><path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path></g></g></svg>
+        </div>
+       </v-col>
+       <v-col class="ml-n5">
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          &nbsp;
+        </div>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          &nbsp;
+        </div>
+        <div class="mt-2" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;"><v-icon size="x-small">mdi-circle</v-icon> SUBMIT</div>
        </v-col>
       </v-row>
-      <v-divider style="border:1px solid black" class="mt-12"></v-divider>
-  </div>
-  <div class="marquee" style="position: fixed; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8);">
+
+    <div class="marquee">
       <v-row>
         <v-col>
           <div class="marquee-container">
@@ -888,7 +927,6 @@
       </v-row>
     </div>
 </footer>
-
 
 
   </div>
@@ -1322,11 +1360,10 @@ import JamesJackson from '../src/image/JamesJackson.png'
     this.isToolbarVisible = true; 
   }
 
-  if (currentScrollY + viewportHeight >= document.body.offsetHeight ) {
-    this.fixedScroll = true
+  if (currentScrollY + viewportHeight >= document.body.offsetHeight) {
     this.isToolbarVisible = true; 
     if (this.activeSection === 'contact') {
-      // this.fixedScroll = true
+    this.fixedScroll = true
       console.log('You are now viewing the contact section and have scrolled to the bottom of the page');
     }
   } else {
@@ -2858,7 +2895,9 @@ transition: opacity 0.5s ease;
     filter: none;
   }
   @media (max-width: 768px) {
-  
+  footer {
+    min-height: auto; /* Allow footer to adjust height */
+  }
 
   .marquee {
     font-size: 2.5vw; /* Smaller font size for mobile */
@@ -2880,5 +2919,41 @@ transition: opacity 0.5s ease;
     width: 100%; /* Full width input */
     font-size: 3vw; /* Responsive font size */
   }
+}
+.header-text {
+  font-family: 'ChaletBook1', sans-serif;
+  font-size: 3.8vw;
+  color: black;
+  transition: font-size 0.5s ease-out;
+}
+
+.map-link {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  color: inherit;
+  text-decoration-color: #849f80;
+}
+.header-text {
+  font-family: 'ChaletBook1';
+  font-size: 3.8vw;
+  color: black;
+  transition: font-size 0.5s ease-out;
+  font-weight: 400;
+}
+
+.map-link {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  color: inherit;
+  text-decoration-color: #849f80;
+}
+
+.marquee {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(183, 227, 182, 0.8);
 }
 </style> 
