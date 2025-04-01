@@ -849,7 +849,7 @@
         </div>
        </v-col>
       </v-row>
-      <v-divider style="border:1px solid black"  class="mt-15"></v-divider>
+      <v-divider style="border:1px solid black"  class="mt-12"></v-divider>
       <v-row class="ml-8 mt-3 " style="line-height:1.2">
        <v-col>
         <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
@@ -864,7 +864,7 @@
         </div>
        </v-col>
       </v-row>
-      <v-divider style="border:1px solid black" class="mt-15"></v-divider>
+      <v-divider style="border:1px solid black" class="mt-12"></v-divider>
       <v-row class="ml-8 mt-3 " style="line-height:1.2">
        <v-col>
         <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
@@ -879,7 +879,7 @@
         </div>
        </v-col>
       </v-row>
-      <v-divider style="border:1px solid black"  class="mt-15"></v-divider>
+      <v-divider style="border:1px solid black"  class="mt-12"></v-divider>
       <v-row class="ml-8  mt-3 " style="line-height:1.2">
        <v-col>
         <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
@@ -899,7 +899,7 @@
         </div>
        </v-col>
       </v-row>
-      <v-divider style="border:1px solid black"  class="mt-15"></v-divider>
+      <v-divider style="border:1px solid black"  class="mt-12"></v-divider>
       <v-row class="ml-8 mt-3 " style="line-height:1.2">
        <v-col cols="8">
         <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
@@ -2940,18 +2940,4 @@ transition: opacity 0.5s ease;
     font-size: 3vw; /* Responsive font size */
   }
 }
-#contact {
-  position: fixed;
-  overflow-y: auto;
-  padding-bottom: 80px; /* Space for marquee */
-}
-
-.marquee {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(183, 227, 182, 0.8);
-  z-index: 2;
-  padding: 15px;
-} 
 </style> 
