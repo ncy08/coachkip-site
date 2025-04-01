@@ -921,7 +921,8 @@
         <div class="mt-2" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;"><v-icon size="x-small">mdi-circle</v-icon> SUBMIT</div>
        </v-col>
       </v-row>
-      <div class="marquee" style="position: fixed; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8);">
+    </div>
+    <div class="marquee" style="position: fixed; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8);">
       <v-row>
         <v-col>
           <div class="marquee-container">
@@ -941,8 +942,6 @@
         </v-col>
       </v-row>
     </div>
-    </div>
-   
   </div>
 </footer>
 
@@ -2941,4 +2940,18 @@ transition: opacity 0.5s ease;
     font-size: 3vw; /* Responsive font size */
   }
 }
+#contact {
+  position: fixed;
+  overflow-y: auto;
+  padding-bottom: 80px; /* Space for marquee */
+}
+
+.marquee {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(183, 227, 182, 0.8);
+  z-index: 2;
+  padding: 15px;
+} 
 </style> 
