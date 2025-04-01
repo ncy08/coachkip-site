@@ -821,8 +821,9 @@
 </footer>
 
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
-  <div style="padding-top:28%" class="  center align-center">
-    <v-row style="line-height:1.2" class="ml-8 mt-3">
+  <div style="padding-top:28%" class="center align-center">
+    <div style="flex-grow: 1; height: auto; display: grid">
+    <v-row style="line-height:1.2" class="ml-8 mt-3" no-gutters>
       <v-col >
         <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
             ADDRESS
@@ -830,7 +831,7 @@
        </v-col>
        <v-col class="ml-n16">
         <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
-          KIP HEADQUARTERS
+          KIP HEADQUARTERS  
         </div>
         <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
           1 N 4 Pl.
@@ -848,8 +849,8 @@
         </div>
        </v-col>
     </v-row>
-    <v-divider style="border:1px solid black"  class="mt-12"></v-divider>
-    <v-row class="ml-8 mt-3 " style="line-height:1.2">
+    <v-divider style="border:1px solid black"  class="mt-8"></v-divider>
+    <v-row class="ml-8 mt-3 " style="line-height:1.2" no-gutters  >
        <v-col>
         <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
             INQUIRIES
@@ -863,7 +864,8 @@
         </div>
        </v-col>
       </v-row>
-    <v-divider style="border:1px solid black"  class="mt-12"></v-divider>
+    <v-divider width="100%" style="border:1px solid black"  class="mt-8"></v-divider>
+    </div>
   </div>
 </footer>
 
