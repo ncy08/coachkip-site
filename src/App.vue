@@ -2,36 +2,37 @@
 <template>
   <v-app  :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }">
     <div  :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }">
-      <v-btn   @click="toogle"  class="dark-mode-toggle"  icon  :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }">
-        <v-icon :style="{ color: isDarkMode ? 'black' : 'white', }">{{ isDarkMode ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
+ <v-btn   @click="toogle"  class="dark-mode-toggle"  icon  :style="{ backgroundColor: isDarkMode ? 'white' : 'black'}">
+   <v-icon :style="{ color: isDarkMode ? 'black' : 'white', }">{{ isDarkMode ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
+ </v-btn>
+
+ <div style="z-index:1999;font-family:'Aeonik"  v-if="showFloatingText"
+   class="floating-text"  :style="{ left: floatingX + 'px', top: floatingY + 'px' }">
+   <span>{{ hoveredMember.name ? hoveredMember.name : hoveredMember }}</span>
+ </div>
+
+<transition name="fade">
+  <v-toolbar v-show="isToolbarVisible" :color="isDarkMode ? '#252423' : '#fffbe9'" :class="fixedScroll == false ? 'tBar' : 'tBarFoxed'" class="tBar" style="z-index: 1999">
+    <v-toolbar-title v-on:click="handleMenuItemClick({ link: '#home' })" :style="{color : isDarkMode ? 'white' : 'black'}"> 
+      COACH KIP</v-toolbar-title>
+    <v-spacer></v-spacer>
+    <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" 
+      @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 20px; padding: 2px 22px 3px; display: block;" 
+      class="mr-6 hidden-md-and-up mt-n1" @click="drawer = true"> Menu
+    </button>
+  <v-toolbar-items class="hidden-sm-and-down">
+    <template v-for="(item, index) in menuItems" :key="index">
+      <v-btn :style="{color:isDarkMode ? 'white' : 'black'}" flat :class="{ 'active-line': activeSection === item.link.substring(1) }"
+        :color="activeSection === item.link.substring(1) ? '#FFD700' : '#FFFFFF'"
+        class="menu-button" @click="handleMenuItemClick(item)">
+        {{ item.text }}
       </v-btn>
-      <!-- Floating Text Overlay -->
-      <div style="z-index:1999;font-family:'Aeonik"  v-if="showFloatingText"
-        class="floating-text"  :style="{ left: floatingX + 'px', top: floatingY + 'px' }">
-        <span>{{ hoveredMember.name ? hoveredMember.name : hoveredMember }}</span>
-      </div>
+    </template>
+  </v-toolbar-items>
+  </v-toolbar>
+</transition>
 
-      <transition name="fade">
-        <v-toolbar v-show="isToolbarVisible" :color="isDarkMode ? '#252423' : '#fffbe9'" class="tBar" style="z-index: 1999">
-          <v-toolbar-title v-on:click="handleMenuItemClick({ link: '#home' })" :style="{color : isDarkMode ? 'white' : 'black'}"> COACH KIP</v-toolbar-title>
-          <v-spacer></v-spacer>
-          <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" 
-            @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 20px; padding: 2px 22px 3px; display: block;" 
-            class="mr-6 hidden-md-and-up mt-n1" @click="drawer = true"> Menu
-          </button>
-        <v-toolbar-items class="hidden-sm-and-down">
-          <template v-for="(item, index) in menuItems" :key="index">
-            <v-btn :style="{color:isDarkMode ? 'white' : 'black'}" flat :class="{ 'active-line': activeSection === item.link.substring(1) }"
-              :color="activeSection === item.link.substring(1) ? '#FFD700' : '#FFFFFF'"
-              class="menu-button" @click="handleMenuItemClick(item)">
-              {{ item.text }}
-            </v-btn>
-          </template>
-        </v-toolbar-items>
-        </v-toolbar>
-      </transition>
-
-      <v-navigation-drawer style="z-index: 10000"  location="right" v-model="drawer" fixed  temporary  class="mobile-nav fullscreen-drawer" width="490">
+<v-navigation-drawer style="z-index: 10000"  location="right" v-model="drawer" fixed  temporary  class="mobile-nav fullscreen-drawer" width="490">
         <v-card style="width: 50% !important"></v-card>
         <v-toolbar style="background-color: transparent" class="mt-1">
           <v-icon  size="small"  color="black"  class="mb-n1 ml-5"   v-on:click="handleMenuItemClick({ link: '#home' })" >mdi-arrow-left</v-icon >
@@ -93,11 +94,9 @@
             </ul>
           </v-col>
         </v-row>
-      </v-navigation-drawer>
+</v-navigation-drawer>
 
-<section>
-
-<section  style="position: relative; min-height: 100vh; z-index: 999;" id="home">
+<section id="home" :style="{ minHeight: isMobile ? '50vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; z-index: 999;" >
 <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; min-height: 100vh;">
   <div class="hero-content" :style="{paddingTop: isMobile ? '4% !important' : ''}">
     <div class="title-wrapper">
@@ -194,8 +193,7 @@
   </div>
 </v-parallax>
 </section>
-<section id="home1"  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
-  style="position: relative; border-radius: 0% !important; z-index: 999;">
+<section id="home1" :style="{ minHeight: isMobile ? '50vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; z-index: 999;">
 <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
   style="position: relative; border-radius: 0% !important;">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
@@ -711,7 +709,6 @@
     </v-container>
   </v-card>
 </section> -->
-</section>
 
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="!isMobile" id="contact">
 <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 30px;padding-top:6%">
@@ -823,110 +820,107 @@
 </div>
 </footer>
 
-<footer style="background: #b7e3b6; min-height: 90vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 24%; margin-bottom: 5% !important;">
-    <div style="flex-grow: 1; height: auto; display: grid;margin-top:19% !important">
-      <v-row class="ml-8 " style="line-height:1.1">
-        <v-col cols="5">
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black; text-shadow: 1 1 0 black;">
+<footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 14%; margin-bottom: 5% !important;">
+    <div style="flex-grow: 1; height: auto; display: grid;margin-top:12% !important">
+      <v-row class="ml-8" style="line-height:1.2">
+       <v-col>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
             ADDRESS
-          </div>
-        </v-col>
-        <v-col>
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">KIP HEADQUARTERS
-          </div>
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">1 N 4 Pl.
-          </div> 
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">Brooklyn, NY 11249
-          </div>
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">United States
-          </div> 
-          <a href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">Map
+        </div>
+       </v-col>
+       <v-col class="ml-n16">
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          KIP HEADQUARTERS
+        </div>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          1 N 4 Pl.
+        </div>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          Brooklyn, NY 11249
+        </div>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          United States
+        </div>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          <a href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">Map
             <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
           </a>
-        </v-col>
+        </div>
+       </v-col>
       </v-row>
-      <v-divider style="border:1px solid black" class="mt-5"></v-divider>
-      <v-row class="ml-8 mt-1" style="line-height:1.1">
-        <v-col cols="5">
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
-           </div>
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">
+      <v-divider style="border:1px solid black"  class="mt-15"></v-divider>
+      <v-row class="ml-8 mt-3 " style="line-height:1.2">
+       <v-col>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
             INQUIRIES
-          </div>
-        </v-col>
-        <v-col>
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
         </div>
-        <div href="tel:+1 770 364 4726" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">+1 770 364 4726
+       </v-col>
+       <v-col class="ml-n16">
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          <a href="tel:+1 770 364 4726" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">+1 770 364 4726
             <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+          </a>
         </div>
-        </v-col>
+       </v-col>
       </v-row>
-      <v-divider style="border:1px solid black" class="mt-7"></v-divider>
-      <v-row class="ml-8 mt-1" style="line-height:1.1">
-        <v-col cols="5">
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
-           </div>
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">
-            INFO
-          </div>
-        </v-col>
-        <v-col>
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
+      <v-divider style="border:1px solid black" class="mt-15"></v-divider>
+      <v-row class="ml-8 mt-3 " style="line-height:1.2">
+       <v-col>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          INFO
         </div>
-        <div href="mailto:hello@kip.coach" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">
-          hello(at)kip.coach
+       </v-col>
+       <v-col class="ml-n16">
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          <a href="mailto:hello@kip.coach" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">hello(at)kip.coach
             <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+          </a> 
         </div>
-        </v-col>
+       </v-col>
       </v-row>
-      <v-divider style="border:1px solid black" class="mt-7"></v-divider>
-      <v-row class="ml-8 mt-1" style="line-height:1.1">
-        <v-col cols="5">
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
-           </div>
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">
-            FOLLOW US
-          </div>
-        </v-col>
-        <v-col>
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
+      <v-divider style="border:1px solid black"  class="mt-15"></v-divider>
+      <v-row class="ml-8  mt-3 " style="line-height:1.2">
+       <v-col>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          FOLLOW US
         </div>
-        <a href="https://instagram.com" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">
-          Instagram
+       </v-col>
+       <v-col class="ml-n16">
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          <a href="https://linkedin.com" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">Linkedin
+            <v-icon  size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+          </a> 
+        </div>
+        <div class="mt-3" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          <a href="https://instagram.com" target="_blank" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">Instagram
             <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-        </a>
-        <br/>
-        <a href="https://tumblr.com" target="_blank" class="mt-3" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;">
-          Tumblr
-            <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-        </a>
-        </v-col>
+          </a> 
+        </div>
+       </v-col>
       </v-row>
-      <v-divider style="border:1px solid black" class="mt-7"></v-divider>
-      <v-row class="ml-8 mt-1" style="line-height:1.1">
-        <v-col cols="8">
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
-           </div>
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">
-            WAITLIST
-          </div>
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">
-            <br/>
+      <v-divider style="border:1px solid black"  class="mt-15"></v-divider>
+      <v-row class="ml-8 mt-3 " style="line-height:1.2">
+       <v-col cols="8">
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          WAITLIST
+        </div>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          <br/>
             <input placeholder="Email Address" style="border:none;outline:none"/>
             <svg class="mt-n10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31"><g id="Layer_2" data-name="Layer 2"><g id="Design_System" data-name="Design System"><path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path></g></g></svg>
-          </div>
-        </v-col>
-        <v-col>
-          <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;
         </div>
-        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;</div>
-        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;">&nbsp;</div>
-        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.7vw;color:black;"><v-icon size="x-small">mdi-circle</v-icon> SUBMIT</div>
-        </v-col>
+       </v-col>
+       <v-col class="ml-n5">
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          &nbsp;
+        </div>
+        <div style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black; text-shadow: 1 1 0 black;">
+          &nbsp;
+        </div>
+        <div class="mt-2" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;"><v-icon size="x-small">mdi-circle</v-icon> SUBMIT</div>
+       </v-col>
       </v-row>
-      
     </div>
     <div class="marquee" style="position: fixed; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8);">
       <v-row>
@@ -950,6 +944,7 @@
     </div>
   </div>
 </footer>
+
 
 
   </div>
@@ -1013,15 +1008,6 @@ import JamesJackson from '../src/image/JamesJackson.png'
           {src:
               "https://www.golfworld.com.au/assets/images/Garmin.png",
           },
-          // {src:
-          //     "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ebafce2edf7ddb8cf58_VolumeDark.svg",
-          // },
-          // {src:
-          //     "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73563dba154dad_SitemarkDark.svg",
-          // },
-          // {src:
-          //     "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ec2e784a68c2fbf43fc_WavelessDark.svg",
-          // },
         ],
         showFirstSet: true,
         intervalId: null,
@@ -1032,7 +1018,6 @@ import JamesJackson from '../src/image/JamesJackson.png'
           { text: "Mission", link: "#whatwedo" },
           { text: "KIP", link: "#kip" },
           { text: "ABOUT", link: "#milesran" },
-          // { text: "TEAM", link: "#team" },
           { text: "CONTACT", link: "#contact" },
         ],
         hoveredMember: null,
@@ -1088,6 +1073,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
         duration: 2000,
         isAtBottom: false,
         lastScrollPosition: 0,
+        fixedScroll:false
       };
     },
     computed: {
@@ -1098,22 +1084,22 @@ import JamesJackson from '../src/image/JamesJackson.png'
         return this.isMobile ? this.paddingValues.mobile : this.paddingValues.desktop;
       },
       footerTitleFontSize() {
-        return this.isMobile ? "2.5vw" : "1.5vw"; // Adjust font size based on screen size
+        return this.isMobile ? "2.5vw" : "1.5vw";
       },
       addressDetailsFontSize() {
-        return this.isMobile ? "2.2vw" : "1.2vw"; // Adjust font size based on screen size
+        return this.isMobile ? "2.2vw" : "1.2vw";
       },
       marqueeTextFontSize() {
-        return this.isMobile ? "2.2vw" : "1.2vw"; // Adjust font size based on screen size
+        return this.isMobile ? "2.2vw" : "1.2vw";
       },
       marqueeLabelFontSize() {
-        return this.isMobile ? "2.2vw" : "1.2vw"; // Adjust font size based on screen size
+        return this.isMobile ? "2.2vw" : "1.2vw";
       },
       floatingX() {
-        return this.cursorX - 66; // Adjusts the X position to center the text above the cursor
+        return this.cursorX - 66; 
       },
       floatingY() {
-        return this.cursorY - 56; // Adjusts the Y position to place the text above the cursor
+        return this.cursorY - 56; 
       },
       cardHeight() {
         return this.isMobile ? "45vh" : "86vh";
@@ -1137,11 +1123,11 @@ import JamesJackson from '../src/image/JamesJackson.png'
       },
       updateTimes() {
         const now = new Date();
-        const utcOffset = -7; // Seattle and SFO (PDT)
-        const chicagoOffset = -5; // Chicago (CDT)
-        const austinOffset = -5; // Austin (CDT)
-        const nycOffset = -4; // NYC (EDT)
-        const londonOffset = 0; // London (GMT)
+        const utcOffset = -7; 
+        const chicagoOffset = -5; 
+        const austinOffset = -5; 
+        const nycOffset = -4; 
+        const londonOffset = 0;
         this.seattleTime = this.formatTime(now, utcOffset);
         this.sfoTime = this.formatTime(now, utcOffset);
         this.chicagoTime = this.formatTime(now, chicagoOffset);
@@ -1155,22 +1141,22 @@ import JamesJackson from '../src/image/JamesJackson.png'
     },
       startLogoRotation() {
         this.intervalId = setInterval(() => {
-          this.currentIndex = (this.currentIndex + 1) % this.logos.length; // Loop back to the first logo
+          this.currentIndex = (this.currentIndex + 1) % this.logos.length; 
         }, 3000); // Change logo every 3 seconds
       },
       toogle() {
         this.isDarkMode = !this.isDarkMode;
-        localStorage.setItem('isDarkMode', this.isDarkMode); // Save the state in localStorage
+        localStorage.setItem('isDarkMode', this.isDarkMode); 
       },
       checkDarkMode() {
         const darkModePreference = localStorage.getItem('isDarkMode');
         if (darkModePreference !== null) {
-          this.isDarkMode = JSON.parse(darkModePreference); // Load the state from localStorage
+          this.isDarkMode = JSON.parse(darkModePreference); 
         }
       },
       handleMouseMove(event, member) {
-        this.cursorX = event.clientX; // Use the mouse's X position directly
-        this.cursorY = event.clientY; // Use the mouse's Y position directly
+        this.cursorX = event.clientX;
+        this.cursorY = event.clientY; 
         this.hoveredMember = member;
         this.showFloatingText = true;
       },
@@ -1193,16 +1179,13 @@ import JamesJackson from '../src/image/JamesJackson.png'
           const section = document.querySelector(item.link);
           if (section) {
             if (item.link === "#contact") {
-              // Scroll to bottom of page
               window.scrollTo({
                 top: document.documentElement.scrollHeight,
                 behavior: "smooth",
               });
             } else {
-              // For other sections, use existing behavior
               section.scrollIntoView({ behavior: "smooth" });
             }
-
             section.scrollIntoView({ behavior: "smooth" });
           }
         } else {
@@ -1230,29 +1213,23 @@ import JamesJackson from '../src/image/JamesJackson.png'
             if (entry.isIntersecting) {
               const sectionId = entry.target.id;
               this.activeSection = sectionId;
-              // Add visible class to text elements
               const textElements = entry.target.querySelectorAll(".fade-up");
               textElements.forEach((el) => el.classList.add("visible"));
-              console.log(sectionId , 'here');
               if (entry.isIntersecting) {
               this.sectionVisible[sectionId] = true;
             } else {
               this.sectionVisible[sectionId] = false;
             }
-              // Existing logic for counting
               if (sectionId === "milesran" && !this.hasStartedCounting) {
-                console.log('ey');
-                
                 this.countIdeasSpunOut = 0;
                 this.countIdeasKilled = 0;
                 this.startCounting();
-                this.hasStartedCounting = true; // Set the flag to true
+                this.hasStartedCounting = true; 
               }
               else{
                   this.ColorFooter = '#b7e3b6'
               }
             } else {
-              // Remove visible class when out of view
               const textElements = entry.target.querySelectorAll(".fade-up");
               textElements.forEach((el) => el.classList.remove("visible"));
             }
@@ -1262,7 +1239,6 @@ import JamesJackson from '../src/image/JamesJackson.png'
           threshold: 0.5,
         }
       );
-      // Observe all sections
       document.querySelectorAll("section").forEach((section) => {
         observer.observe(section);
       });
@@ -1272,14 +1248,11 @@ import JamesJackson from '../src/image/JamesJackson.png'
       },
       submitForm() {
         if (this.$refs.form.validate()) {
-          // Handle form submission
           console.log("Form submitted:", {
             name: this.name,
             email: this.email,
             message: this.message,
           });
-
-          // Reset form
           this.$refs.form.reset();
         }
       },
@@ -1340,7 +1313,6 @@ import JamesJackson from '../src/image/JamesJackson.png'
         this.$refs.teamMembersContainer.classList.add("dragging");
         event.preventDefault();
       },
-
       stopDrag() {
         this.isDragging = false;
         this.$refs.teamMembersContainer.classList.remove("dragging");
@@ -1348,82 +1320,79 @@ import JamesJackson from '../src/image/JamesJackson.png'
 
       drag(event) {
         if (!this.isDragging) return;
-
         event.preventDefault();
         const x = event.pageX - this.$refs.teamMembersContainer.offsetLeft;
         const walk = (x - this.startX) * 2;
-
         requestAnimationFrame(() => {
           this.$refs.teamMembersContainer.scrollLeft = this.scrollLeft - walk;
         });
       },
       startCounting() {
-    const duration = 1000; // Duration of the counting animation in milliseconds
-    const startTime = performance.now(); // Get the current time
-    const initialSpunOut = this.countIdeasSpunOut; // Initial value for spun out
-    const initialKilled = this.countIdeasKilled; // Initial value for killed
-
-    // Set the maximum values for the counting
-    this.maxSpunOut = 18000; // Set max spun out to 18k
-    this.maxKilled = 2; // Set max killed to a value greater than 2
-
-    const updateCount = (timestamp) => {
-        const elapsed = timestamp - startTime; // Calculate elapsed time
-        const progress = Math.min(elapsed / duration, 1); // Normalize progress to [0, 1]
-
-        // Calculate the current count based on progress
-        this.countIdeasSpunOut = Math.round(
-            initialSpunOut + (this.maxSpunOut - initialSpunOut) * progress
-        );
-        this.countIdeasKilled = Math.round(
-            initialKilled + (this.maxKilled - initialKilled) * progress
-        );
-
-        // Continue the animation until the duration is reached
-        if (progress < 1) {
-            requestAnimationFrame(updateCount);
-        } else {
-            // Ensure it ends exactly at max
-            this.countIdeasSpunOut = this.maxSpunOut;
-            this.countIdeasKilled = this.maxKilled;
-
-            // Update the display after counting is complete
-            this.updateDisplay();
-        }
-    };
-
-    // Start the animation
-    requestAnimationFrame(updateCount);
-},
-
-updateDisplay() {
-    // Format the display for spun out
-    const spunOutDisplay = `${this.countIdeasSpunOut / 1000}k+`;
-    this.countIdeasSpunOut = spunOutDisplay
-    // Format the display for killed
-    const killedDisplay = `> ${this.countIdeasKilled}`;
-    this.countIdeasKilled = killedDisplay
-
-    // Assuming you have elements to display these values
-    document.getElementById('spunOutDisplay').innerText = spunOutDisplay;
-    document.getElementById('killedDisplay').innerText = killedDisplay;
-},
-handleScroll() {
+      const duration = 1000; 
+      const startTime = performance.now(); 
+      const initialSpunOut = this.countIdeasSpunOut; 
+      const initialKilled = this.countIdeasKilled; 
+      this.maxSpunOut = 18000; 
+      this.maxKilled = 2; 
+      const updateCount = (timestamp) => {
+          const elapsed = timestamp - startTime; 
+          const progress = Math.min(elapsed / duration, 1);
+          this.countIdeasSpunOut = Math.round(
+              initialSpunOut + (this.maxSpunOut - initialSpunOut) * progress
+          );
+          this.countIdeasKilled = Math.round(
+              initialKilled + (this.maxKilled - initialKilled) * progress
+          );
+          if (progress < 1) {
+              requestAnimationFrame(updateCount);
+          } else {
+              this.countIdeasSpunOut = this.maxSpunOut;
+              this.countIdeasKilled = this.maxKilled;
+              this.updateDisplay();
+          }
+      };
+      requestAnimationFrame(updateCount);
+  },
+  updateDisplay() {
+      const spunOutDisplay = `${this.countIdeasSpunOut / 1000}k+`;
+      this.countIdeasSpunOut = spunOutDisplay
+      const killedDisplay = `> ${this.countIdeasKilled}`;
+      this.countIdeasKilled = killedDisplay
+      document.getElementById('spunOutDisplay').innerText = spunOutDisplay;
+      document.getElementById('killedDisplay').innerText = killedDisplay;
+  },
+  handleScroll() {
   const currentScrollY = window.scrollY;
+  const contactSection = document.getElementById('contact');
+  const contactSectionTop = contactSection.offsetTop;
+  const contactSectionHeight = contactSection.offsetHeight;
+  const viewportHeight = window.innerHeight;
+
   if (currentScrollY > this.lastScrollY && currentScrollY > 0) {
     if (this.activeSection !== 'contact') {
-      this.isToolbarVisible = false; // Hide toolbar on scroll down
-    }else{
-      this.isToolbarVisible = true; // Hide toolbar on scroll down
+      this.isToolbarVisible = false; 
+    } else {
+      this.isToolbarVisible = true; 
     }
   } else {
-    this.isToolbarVisible = true; // Show toolbar on scroll up
+    this.isToolbarVisible = true; 
   }
-  this.lastScrollY = currentScrollY; // Update last scroll position
+
+  if (currentScrollY + viewportHeight >= document.body.offsetHeight) {
+    this.fixedScroll = true
+    this.isToolbarVisible = true; 
+    if (this.activeSection === 'contact') {
+      console.log('You are now viewing the contact section and have scrolled to the bottom of the page');
+    }
+  } else {
+    this.fixedScroll = false
+  }
+
+  this.lastScrollY = currentScrollY; 
 }
     },
     created() {
-      this.checkDarkMode(); // Check dark mode preference on component creation
+      this.checkDarkMode(); 
     },
     mounted() {
       this.updateTimes(); 
@@ -1460,15 +1429,12 @@ handleScroll() {
       this.resetCounting();
     },
     beforeUnmount() {
-      clearInterval(this.intervalId); // Clean up the interval when the component is destroyed
+      clearInterval(this.intervalId); 
     },
   };
 </script>
 <style lang="scss">
   @import "./assets/fonts/fonts.css";
-  // body {
-  //   font-family: 'Aeonik', Arial, sans-serif; /* Fallback to Arial and sans-serif */
-  // }
   @font-face {
     font-family: "Aeonik1";
     src: url("../src/assets/font/AeonikTRIAL-Regular.otf") format("opentype");
@@ -1478,13 +1444,11 @@ handleScroll() {
   @font-face {
     font-family: "Poppins";
     src: url("../src/assets/font/poppins.medium.ttf") format("opentype");
-    // font-weight: 1000 !important;
     font-style: normal;
   }
   @font-face {
     font-family: "ChaletBook";
     src: url("../src/assets/font/ChaletBookBold.ttf") format("opentype");
-    // font-weight: 1000 !important;
     font-style: normal;
   }
   @font-face {
@@ -1498,7 +1462,6 @@ handleScroll() {
 
 <style scoped>
 
-/* Base Styles */
 .hero-content {
   height: 100%;
   display: flex;
@@ -1507,7 +1470,6 @@ handleScroll() {
   text-align: center;
 }
 
-/* Title Animations */
 .main-title {
   font-size: 8rem;
   margin: 0;
@@ -2950,4 +2912,31 @@ transition: opacity 0.5s ease;
   .logo-item1:hover img {
     filter: none;
   }
+  @media (max-width: 768px) {
+  footer {
+    min-height: auto; /* Allow footer to adjust height */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .marquee {
+    font-size: 2.5vw; /* Smaller font size for mobile */
+  }
+
+  .ml-8 {
+    margin-left: 0; /* Remove left margin on mobile */
+  }
+
+  .ml-n16 {
+    margin-left: 0; /* Remove negative margin on mobile */
+  }
+
+  .mt-15 {
+    margin-top: 10px; /* Adjust top margin */
+  }
+
+  input {
+    width: 100%; /* Full width input */
+    font-size: 3vw; /* Responsive font size */
+  }
+}
 </style> 
