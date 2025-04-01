@@ -921,8 +921,7 @@
         <div class="mt-2" style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 3.8vw;color:black;"><v-icon size="x-small">mdi-circle</v-icon> SUBMIT</div>
        </v-col>
       </v-row>
-    </div>
-    <div class="marquee" style="position: fixed; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8);">
+      <div class="marquee" style="position: fixed; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8);">
       <v-row>
         <v-col>
           <div class="marquee-container">
@@ -942,6 +941,8 @@
         </v-col>
       </v-row>
     </div>
+    </div>
+   
   </div>
 </footer>
 
