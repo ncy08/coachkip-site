@@ -72,23 +72,23 @@
             <ul class="side-nav-list" style="list-style-type: none; padding: 0">
               <li>
                 <a class="side-nav-link-large"  href="https://x.com" target="_blank"
-                  style="  font-family: 'Aeonik1'; font-size: 16px !important; line-height: 25px !important;  color: black !important; "  >
+                  style="  font-family: 'Aeonik1'; font-size: 18px !important; line-height: 25px !important;  color: black !important; "  >
                   <v-icon  class="mr-1">mdi-twitter</v-icon>Twitter</a>
               </li>
               <li>
                 <a class="side-nav-link-large"  href="https://linkedin.com" target="_blank"
-                  style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; "  >
+                  style="  font-family: 'Aeonik1';  font-size: 18px !important; line-height: 25px !important; color: black !important; "  >
                   <v-icon class="mr-1">mdi-linkedin</v-icon>LinkedIn</a
                 >
               </li>
               <li>
                 <a  class="side-nav-link-large"  href="https://instagram.com" target="_blank"
-                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " >
+                style="  font-family: 'Aeonik1';  font-size: 18px !important; line-height: 25px !important; color: black !important; " >
                 <v-icon class="mr-1">mdi-instagram</v-icon>Instagram</a>
               </li>
               <li>
                 <a  class="side-nav-link-large"  href="https://vimeo.com" target="_blank"
-                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; "  >
+                style="  font-family: 'Aeonik1';  font-size: 18px !important; line-height: 25px !important; color: black !important; "  >
                 <v-icon class="mr-1">mdi-vimeo</v-icon>Vimeo</a >
               </li>
             </ul>
@@ -211,7 +211,7 @@
          <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; 
            font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
-            'font-size': !isMobile ? '32px' : '16px',  letterSpacing: '0.12px',  textAlign: 'left', 
+            'font-size': !isMobile ? '32px' : '18px',  letterSpacing: '0.12px',  textAlign: 'left', 
              color: isDarkMode ? '#fffbe9' : '#252423', transition: 'font-size 0.5s ease-out' ,
              opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
           }">
@@ -241,7 +241,7 @@
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
-            'font-size': !isMobile ? '32px' : '16px',
+            'font-size': !isMobile ? '32px' : '18px',
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
@@ -273,7 +273,7 @@
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
-            'font-size': !isMobile ? '32px' : '16px',
+            'font-size': !isMobile ? '32px' : '18px',
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
@@ -324,7 +324,7 @@
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
-            'font-size': !isMobile ? '21px' : '16px',
+            'font-size': !isMobile ? '21px' : '18px',
             'border-bottom': isMobile ? '1px solid #636363 !important' : '',
             letterSpacing: '0.2px',
             textAlign: 'left',
@@ -378,7 +378,7 @@
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
-            'font-size': !isMobile ? '21px' : '16px',
+            'font-size': !isMobile ? '21px' : '18px',
             'border-bottom': isMobile ? '1px solid #636363 !important' : '',
             letterSpacing: '0.2px',
             textAlign: 'left',
@@ -427,7 +427,7 @@
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
-            'font-size': !isMobile ? '21px' : '16px',
+            'font-size': !isMobile ? '21px' : '18px',
             'border-bottom': isMobile ? '1px solid #636363 !important' : '',
             letterSpacing: '0.2px',
             textAlign: 'left',
@@ -476,7 +476,7 @@
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
-            'font-size': !isMobile ? '21px' : '16px',
+            'font-size': !isMobile ? '21px' : '18px',
             'border-bottom': isMobile ? '1px solid #636363 !important' : '',
             letterSpacing: '0.2px',
             textAlign: 'left',
@@ -524,7 +524,7 @@
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
-            'font-size': !isMobile ? '21px' : '16px',
+            'font-size': !isMobile ? '21px' : '18px',
             'border-bottom': isMobile ? '1px solid #636363 !important' : '',
             letterSpacing: '0.2px',
             textAlign: 'left',
@@ -598,8 +598,8 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="shadow-bottom" id="partners" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '80vh' : '100vh'}">
-  <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '80vh ' : '100vh'}"
+<section class="shadow-bottom" id="partners" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '40vh' : '100vh'}">
+  <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '40vh ' : '100vh'}"
     :color="isDarkMode ? '#252423' : '#fffbe9'">
     <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
       <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
@@ -616,99 +616,38 @@
           </p>
         </v-col>
       </v-row>
-      <br>
       <br v-if="!isMobile">
       <br v-if="!isMobile">
       <v-row 
         :class="isMobile ? 'mt-n3' : 'justify-center'" class="logo-container" 
         :style="{ opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
-        <transition-group name="fade" v-if="!isMobile">
-          <v-col cols="12" 
-            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
+        <transition-group name="fade" >
+          <br v-if="isMobile"/>
+          <br  v-if="isMobile"/>
+          <br  v-if="isMobile"/>
+         <v-row no-gutters>
+          <v-col>
+            <img v-if="!isMobile" class="mt-6"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
+            <img v-else :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
           </v-col>
-          <v-col cols="12" 
-            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '100%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
+          <v-col>
+            <img v-if="!isMobile" class="mt-n16 ml-n1"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
+            <img v-else  class="mt-n6 ml-n1"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
+          </v-col> 
+          <v-col >
+            <img v-if="!isMobile" class="mt-10 ml-13" :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
+            <img v-else class="mb-n5" :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
           </v-col>
-          <v-col cols="12" 
-            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
-          </v-col>
-        </transition-group>
-        <transition-group name="fade" v-if="isMobile">
-          <v-col cols="12" 
-            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '80%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
-          </v-col>
-          <v-col cols="12" 
-            md="4" class="d-flex justify-center align-center mt-n12" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '100%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
-          </v-col>
-          <v-col cols="12" 
-            md="4" class="d-flex justify-center align-center mt-n8 mb-10" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '58%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
-          </v-col>
+         </v-row>
+          <br v-if="isMobile">
+          <br v-if="isMobile">
+
         </transition-group>
       </v-row>
     </v-container>
   </v-parallax>
 </section>
-<!-- <section class="fade-in shadow-bottom" id="team" style="position: relative; z-index: 999; min-height: 80vh">
-  <v-card :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; border-radius: 0% !important; min-height: 80vh">
-    <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
-      <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
-        <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
-          :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
-          <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
-            :style="{ 
-              'font-size': !isMobile ? '48px' : '30px', 
-              lineHeight: 1.15, 
-              color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.team ? 1 : 0, transition: 'opacity 1s ease'
-            }">
-            Team
-          </p>
-        </v-col>
-      </v-row>
-      <div class="team-members-container mt-n15" ref="teamMembersContainer" @mousedown="startDrag" 
-          @mouseup="stopDrag" @mouseleave="stopDrag" @mousemove="drag"
-          :style="{ overflowX: isMobile ? 'auto' : 'hidden', whiteSpace: 'nowrap' }">
-           <br v-if="!isMobile"/>
-              <br v-if="!isMobile"/>
-              <br v-if="!isMobile"/>
-              <br v-if="isMobile"/>
-              <br v-if="isMobile"/>
-        <div class="team-members-row" style="display: flex; flex-direction: row;">
-          <v-col v-for="member in teamMembers" :key="member.id" :cols="isMobile ? 9 : 5" class="d-flex flex-column align-center fade-up">
-            <v-img 
-              :src="member.image" 
-              class="team-image" 
-              :style="{ 
-                width: '100%', 
-                height: isMobile ? '220px' : 'auto', 
-                objectFit: 'cover' 
-              }" 
-              @mousemove="handleMouseMove($event, member.name)" 
-              @mouseleave="handleMouseLeave" 
-            />
-            <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
-                :class="isDarkMode ? 'text-white' : 'text-black'" 
-                :style="{ fontSize: isMobile ? '24px' : '32px', opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
-              {{ member.name }}
-            </h3>
-            <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
-                :class="isDarkMode ? 'text-white' : 'text-black'" 
-                :style="{ fontSize : isMobile ? '14px' : '22px', 
-                opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
-              {{ member.position }}
-            </h3>
-          </v-col>
-        </div>
-      </div>
-    </v-container>
-  </v-card>
-</section> -->
+
 
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="!isMobile" id="contact">
 <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 30px;padding-top:6%">
@@ -1639,7 +1578,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
   position: fixed;
   pointer-events: none;
   z-index: 999;
-  padding: 8px 16px;
+  padding: 8px 18px;
   color:  #FFD700  ;
   font-size: 20px;
   transform-origin: center bottom;
@@ -2080,7 +2019,7 @@ animation: marquee 15s linear infinite;
 }
 @media screen and (max-width: 767px) {
   .p-large {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.5;
   }
 }
@@ -2304,7 +2243,7 @@ flex: 1;
 }
 
 .address-content p {
-  font-size: 16px !important; /* Adjust the size as needed */
+  font-size: 18px !important; /* Adjust the size as needed */
   white-space: nowrap; /* Prevents line breaks */
 }
 
@@ -3043,7 +2982,7 @@ transition: opacity 0.5s ease;
   outline: none;
   width: 100%;
   padding: 10px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .footer-input::placeholder {
