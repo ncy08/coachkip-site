@@ -623,9 +623,6 @@
         :class="isMobile ? 'mt-n3' : 'justify-center'" class="logo-container" 
         :style="{ opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
         <transition-group name="fade" >
-          <br v-if="isMobile"/>
-          <br  v-if="isMobile"/>
-          <br  v-if="isMobile"/>
          <v-row no-gutters>
           <v-col  :class="isDarkMode ? 'logo-item' : 'logo-item1'">
             <img v-if="!isMobile" class="mt-6"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
@@ -642,35 +639,8 @@
          </v-row>
           <br v-if="isMobile">
           <br v-if="isMobile">
+          <br v-if="isMobile"/>
         </transition-group>
-        <!-- <transition-group name="fade" v-if="!isMobile">
-          <v-col cols="12" 
-            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
-          </v-col>
-          <v-col cols="12" 
-            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '100%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
-          </v-col>
-          <v-col cols="12" 
-            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
-          </v-col>
-        </transition-group>
-        <transition-group name="fade" v-if="isMobile">
-          <v-col cols="4" 
-              :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '50%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
-          </v-col>
-          <v-col cols="4" 
-              :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '50%' : '100%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
-          </v-col>
-          <v-col cols="4" 
-              :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
-          </v-col>
-        </transition-group> -->
       </v-row>
     </v-container>
   </v-parallax>
@@ -787,7 +757,7 @@
 </div>
 </footer>
 
-<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0;top:0" v-if="isMobile" id="contact">
+<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0 ;height:77vh" v-if="isMobile" id="contact">
   <v-row class="pt-4" style="margin-top: 24% !important;line-height:1.2">
     <v-col cols="6" md="4">
       <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;" class="header-text ml-10">ADDRESS</div>
@@ -808,8 +778,8 @@
       </div>
     </v-col>
   </v-row>
-  <hr class="mt-8" />
-  <v-row class="pt-3">
+  <hr class="mt-2" />
+  <v-row>
     <v-col cols="6" md="4">
       <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;" class="header-text ml-10">INQUIRIES</div>
     </v-col>
@@ -827,8 +797,8 @@
       </div>
     </v-col>
   </v-row>
-  <hr class="mt-8" />
-  <v-row class="pt-3">
+  <hr class="mt-2" />
+  <v-row>
     <v-col cols="6" md="4">
       <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;" class="header-text ml-10" >INFO</div>
     </v-col>
@@ -841,8 +811,8 @@
       </div>
     </v-col>
   </v-row>
-  <hr class="mt-8" />
-  <v-row class="pt-3">
+  <hr class="mt-2" />
+  <v-row>
     <v-col cols="6" md="4">
       <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;" class="header-text ml-10">FOLLOW US</div>
     </v-col>
@@ -870,7 +840,7 @@
       </div>
     </v-col>
   </v-row>
-  <hr class="mt-12" />
+  <hr class="mt-2" />
   <v-row class="ml-8 mt-3" style="line-height: 1.2;">
     <v-col cols="8">
       <div  style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;" >
@@ -1899,7 +1869,7 @@ style attribute {
     margin-bottom: 1000px; 
 } */
 #partners {
-    margin-bottom: 1000px; 
+    margin-bottom: 500px; 
 }
 .my-custom-row {
     min-height: 95px !important; /* Adjust as needed */
