@@ -598,8 +598,8 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="shadow-bottom" id="partners" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '40vh' : '100vh'}">
-  <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '40vh ' : '100vh'}"
+<section class="shadow-bottom" id="partners" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '80vh' : '100vh'}">
+  <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '80vh ' : '100vh'}"
     :color="isDarkMode ? '#252423' : '#fffbe9'">
     <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
       <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
@@ -616,6 +616,7 @@
           </p>
         </v-col>
       </v-row>
+      <br>
       <br v-if="!isMobile">
       <br v-if="!isMobile">
       <v-row 
@@ -626,23 +627,50 @@
           <br  v-if="isMobile"/>
           <br  v-if="isMobile"/>
          <v-row no-gutters>
-          <v-col>
+          <v-col  :class="isDarkMode ? 'logo-item' : 'logo-item1'">
             <img v-if="!isMobile" class="mt-6"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
             <img v-else :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
           </v-col>
-          <v-col>
+          <v-col  :class="isDarkMode ? 'logo-item' : 'logo-item1'">
             <img v-if="!isMobile" class="mt-n16 ml-n1"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
             <img v-else  class="mt-n6 ml-n1"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
           </v-col> 
-          <v-col >
+          <v-col :class="isDarkMode ? 'logo-item' : 'logo-item1'" >
             <img v-if="!isMobile" class="mt-10 ml-13" :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
             <img v-else class="mb-n5" :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
           </v-col>
          </v-row>
           <br v-if="isMobile">
           <br v-if="isMobile">
-
         </transition-group>
+        <!-- <transition-group name="fade" v-if="!isMobile">
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
+          </v-col>
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '100%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
+          </v-col>
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
+          </v-col>
+        </transition-group>
+        <transition-group name="fade" v-if="isMobile">
+          <v-col cols="4" 
+              :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '50%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
+          </v-col>
+          <v-col cols="4" 
+              :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '50%' : '100%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
+          </v-col>
+          <v-col cols="4" 
+              :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
+          </v-col>
+        </transition-group> -->
       </v-row>
     </v-container>
   </v-parallax>
