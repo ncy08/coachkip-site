@@ -727,11 +727,11 @@
       ADDRESS
     </div>
     <div style="background: #b7e3b6; padding: 10px;">
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">KIP HEADQUARTERS</P> <!-- Responsive font size -->
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">1 N 4 Pl.</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Brooklyn, NY 11249</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">United States</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1' !important'; font-size: 1.2vw;">KIP HEADQUARTERS</P> <!-- Responsive font size -->
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1' !important'; font-size: 1.2vw;">1 N 4 Pl.</P>
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1' !important'; font-size: 1.2vw;">Brooklyn, NY 11249</P>
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1' !important'; font-size: 1.2vw;">United States</P>
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1' !important'; font-size: 1.2vw;">
         <a  href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank">
             <u style="color:black !important">Map
               <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
@@ -823,117 +823,154 @@
 </div>
 </footer>
 
-<footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 26%; margin-bottom: 5% !important;">
-    <div style="flex-grow: 1; height: auto; display: grid;margin-top:20%">
-      <v-row style="background: #b7e3b6; margin-left: 1%;">
-        <v-col>
-          <p class="responsive-text text-center mr-12">ADDRESS</p>
-        </v-col>
-        <v-col class="ml-n10">
-          <p class="responsive-text">KIP HEADQUARTERS</p>
-          <p class="responsive-text">1 N 4 Pl.</p>
-          <p class="responsive-text">Brooklyn, NY 11249</p>
-          <p class="responsive-text">United States</p>
-          <p class="responsive-text">
-            <button @click="gotoRoutesite('https://maps.app.goo.gl/XiNdKjy83swH1nWu5')" style="background: none; border: none; color: black; text-decoration: underline; cursor: pointer;">
-              Map <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-            </button>
-          </p>
-        </v-col>
-      </v-row>
-      <br>
+<footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="isMobile"  id="contact">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start;padding-top:22%;margin-bottom:5% !important">
+    <div style="flex-grow: 1; height: 92vh; display: grid; grid-template-columns: repeat(2, 1fr); ">
+      <div style="background: #b7e3b6;line-height:0.9" class="ml-4">
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400;">ADDRESS</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400;">&nbsp;</P>
+      </div>
+      <div style="background: #b7e3b6; line-height:0.9">
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">KIP HEADQUARTERS</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">1 N 4 Pl.</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">Brooklyn, NY 11249</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">United States</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;    position: relative;
+          text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit;
+          text-decoration-color: #849f80;">Map
+          <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+        </P>
+      </div>
       <hr/>
-      <br>
-      <v-row style="background: #b7e3b6; margin-left: 1%;padding-top:12px;padding-bottom:10px">
-        <v-col>
-          <p class="responsive-text text-center mr-12">INQUIRIES</p>
-        </v-col>
-        <v-col class="ml-n10">
-          <p class="responsive-text">
-            <button @click="gotoRoutesite('tel:+1 206 395 9662')" style="background: none; border: none; color: black; cursor: pointer;">
-
-              <span style="text-decoration: underline;" >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
-            </button>
-          </p>
-        </v-col>
-      </v-row>
-      <br>
       <hr/>
-      <br>
-      <v-row style="background: #b7e3b6; margin-left: 1%;padding-top:12px;padding-bottom:10px">
-        <v-col>
-          <p class="responsive-text text-center mr-12">INFO</p>
-        </v-col>
-        <v-col class="ml-n10">
-          <p class="responsive-text">
-            <button @click="gotoRoutesite('mailto:hello@kip.coach')" style="background: none; border: none; color: black; cursor: pointer;">
-              <span style="text-decoration: underline;" >hello(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
-            </button>
-          </p>
-        </v-col>
-      </v-row>
-      <br>
+      <div style="background: #b7e3b6;line-height:0.9" class="ml-4">
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400">INQUIRIES</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400">&nbsp;</P>
+      </div>
+      <div style="background: #b7e3b6;line-height:0.9">
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;    position: relative;
+          text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit;
+          text-decoration-color: #849f80;"> +1 770 364 4726
+          <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+        </P>
+      </div>
       <hr/>
-      <br>
-      <v-row style="background: #b7e3b6; margin-left: 1%;padding-top:12px;padding-bottom:10px">
-        <v-col>
-          <p class="responsive-text text-center mr-12">FOLLOW US</p>
-        </v-col>
-        <v-col class="ml-n10">
-          <p class="responsive-text">
-            <button @click="gotoRoutesite('https://instagram.com')" style="background: none; border: none; color: black; cursor: pointer;">
-              <span style="text-decoration: underline;" >Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
-            </button>
-          </p>
-          <p class="responsive-text">&nbsp;</p>
-          <p class="responsive-text">
-            <button @click="gotoRoutesite('https://linkedin.com')" style="background: none; border: none; color: black; cursor: pointer;">
-              <span style="text-decoration: underline;" >LinkedIn<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
-            </button>
-          </p>
-        </v-col>
-      </v-row>
-      <br>
       <hr/>
-      <br>
-      <v-row style="background: #b7e3b6; margin-left: 1%;">
-        <v-col cols="5">
-          <p class="responsive-text text-center ml-4">WAITLIST</p>
-          <p class="responsive-text">&nbsp;</p>
-        </v-col>
-        <v-col cols="5">
-          <p class="responsive-text">
-            <v-text-field variant="underlined" hide-details="auto" class="responsive-text ml-n4" placeholder="Email Address"/>
-            <v-btn variant="text" size="small" rounded="0" class="b2 decoration active green ml-7 mt-4">Submit</v-btn>
-          </p>
-        </v-col>
-      </v-row>
-      <br>
-      <br>
-    </div>
-    <div class="marquee" style="position: fixed; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8);">
-      <v-row>
-        <v-col>
-          <div class="marquee-container">
-            <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
-            <span v-else class="marquee-label1"><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
-            <div class="marquee-content1">
-              <div class="marquee-text1">
-                SEATTLE <span> ({{ seattleTime }}),</span>
-                SFO <span> ({{ sfoTime }}),</span>
-                CHICAGO <span> ({{ chicagoTime }}),</span>
-                AUSTIN <span> ({{ austinTime }}),</span>
-                NYC <span> ({{ nycTime }}),</span>
-                LONDON <span> ({{ londonTime }})</span>
-              </div>
+      <div style="background: #b7e3b6;line-height:0.9"  class="ml-4">
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">CAREER INTERNSHIPS</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400">&nbsp;</P>
+      </div>
+      <div style="background: #b7e3b6;line-height:0.9">
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;    position: relative;
+          text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit;
+          text-decoration-color: #849f80;"> hello(at)kip.coach
+          <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+        </P>
+      </div>
+      <hr/>
+      <hr/>
+      <div style="background: #b7e3b6;line-height:0.9"  class="ml-4">
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">FOLLOW US</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;font-weight:400">&nbsp;</P>
+      </div>
+      <div style="background: #b7e3b6;line-height:0.9">
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;    position: relative;
+          text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit;
+          text-decoration-color: #849f80;">Instagram
+          <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+        </P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;    position: relative;
+          text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit;
+          text-decoration-color: #849f80;" class="mt-1">Tumblr
+          <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+        </P>
+      </div>
+      <hr/>
+      <hr/>
+      <div style="background: #b7e3b6;line-height:0.9"  class="ml-4"  >
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">WAITLIST</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">&nbsp;</P>
+        <div class="contact__information__detail__form__input">
+              <input 
+                type="email" 
+                placeholder="Email address" 
+                :style="{
+                  border: 'none', /* Remove border */
+                  backgroundColor: 'transparent', /* Make background transparent */
+                  color: black, /* Text color based on dark mode */
+                  outline: 'none', /* Remove outline on focus */
+                  width: '110%', /* Full width */
+                  fontSize: '16px' /* Adjust font size as needed */
+                }"
+              />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31">
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Design_System" data-name="Design System">
+                    <path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path>
+                  </g>
+                </g>
+              </svg>
             </div>
-          </div>
-        </v-col>
-      </v-row>
-    </div>
+      </div>
+      <div style="background: #b7e3b6;" class="ml-16">
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">&nbsp;</P>
+        <P style="font-family:'ChaletBook1' !important'; font-size: 3.5vw;">&nbsp;</P>
+        <button class="b2 decoration active green">Submit</button>
+      </div>
+      <br/>
+      <br/>
+   </div>
+    
+    <div
+          class="marquee"
+          style="
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(183, 227, 182, 0.8);
+          "
+        >
+          <v-row>
+            <v-col>
+              <div class="marquee-container" >
+                <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
+                <span v-else class="marquee-label1" ><span class="ml-3 mr-1 mt-1 mb-1">WORKING IN:</span></span>
+                <div class="marquee-content1">
+                  <div class="marquee-text1">
+                    SEATTLE <span> ({{ seattleTime }}),</span> 
+                    SFO <span> ({{ sfoTime }}),</span> 
+                    CHICAGO <span> ({{ chicagoTime }}),</span> 
+                    AUSTIN <span> ({{ austinTime }}),</span> 
+                    NYC <span> ({{ nycTime }}),</span> 
+                    LONDON <span> ({{ londonTime }})</span>
+                  </div>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+        </div>
   </div>
 </footer>
+
 
 
   </div>
@@ -2391,7 +2428,7 @@ flex: 1;
   }
   .marquee-label1 {
     font-family: "ChaletBook1" !important;
-    font-size: 3.5vw;
+    font-size: 3.4vw;
     margin-right: 4px;
     transition: all 0.5s ease; /* Add transition for smooth font size change */
     
@@ -2414,7 +2451,7 @@ flex: 1;
     white-space: nowrap;
     animation: marquee 20s linear infinite;
     padding-left: 100%;
-    font-size: 5vw;
+    font-size: 7vw;
     font-family: "ChaletBook1" !important;
     transition: all 0.5s ease;
   }
@@ -2882,7 +2919,7 @@ transition: opacity 0.5s ease;
   white-space: nowrap;
   animation: marquee 20s linear infinite;
   padding-left: 100%;
-  font-size: 3vw; 
+  font-size: 6vw; 
 }
 
 @keyframes marquee {
@@ -2929,4 +2966,7 @@ transition: opacity 0.5s ease;
   .logo-item1:hover img {
     filter: none;
   }
+  .decoration:not(.opaque).green {
+    text-decoration-color: rgba(132, 159, 128, 0);
+}
 </style> 
