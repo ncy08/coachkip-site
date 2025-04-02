@@ -714,13 +714,13 @@
 <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 30px;padding-top:6%">
   
   <div style="width: 30%; height: 92vh;"> 
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
       CONTACT
     </div>
   </div>  
 
   <div style="flex-grow: 1; height: 92vh; display: grid; grid-template-columns: repeat(2, 1fr);"> 
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
       ADDRESS
     </div>
     <div style="background: #b7e3b6; padding: 10px;">
@@ -738,23 +738,23 @@
     </div>
     <hr/>
     <hr/>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">INQUIRIES</div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">INQUIRIES</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
       <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
         <span >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
     </div>
     <hr/>
     <hr/>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">INFO</div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">INFO</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
       <a style="color:black" href="mailto:hello@kip.coach" target="_blank"  rel="noopener noreferrer"  class="b2">
           <span>hello(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
       </a>
     </div>
     <hr/>
     <hr/>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">FOLLOW US</div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">FOLLOW US</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
       <a style="color:black" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="b2">
         <span >Linkedin<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
         <br/>
@@ -764,8 +764,8 @@
     </div>
     <hr/>
     <hr/> 
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">WAITLIST</div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">WAITLIST</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
       <div class="contact__information__detail__form__input">
        <v-row>
         <v-col cols="9">
@@ -782,11 +782,11 @@
           </svg>
         </v-col>
         <v-col>
-           <button class="b2 decoration active green" style="flex-shrink: 0;"><v-icon size="x-small">mdi-circle</v-icon>Submit</button>
+           <button class="b2 mt-9 decoration active green" style="flex-shrink: 0;"><v-icon size="x-small">mdi-circle</v-icon>Submit</button>
          </v-col>
         </v-row>
      </div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
     </div>
     </div>
     <br/>
