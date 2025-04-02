@@ -757,8 +757,8 @@
 </div>
 </footer>
 
-<footer style="background: #b7e3b6; width: 100%;margin-top: auto; position: fixed; bottom: 0 ;height:77vh" v-if="isMobile" id="contact">
-  <v-row class="pt-4" style="margin-top: 24% !important;line-height:1.2">
+<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0 ;height:75vh" v-if="isMobile" id="contact">
+  <v-row class="pt-4" style="margin-top: 27% !important;line-height:1.2">
     <v-col cols="6" md="4">
       <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;" class="header-text ml-10">ADDRESS</div>
     </v-col>
@@ -887,20 +887,6 @@
       >
         <v-icon class="ml-5" size="x-small">mdi-circle</v-icon> SUBMIT
       </div>
-    </v-col>
-  </v-row>
-
-  <v-row class="ml-8 mt-3" style="line-height: 1.2;">
-    <v-col cols="8">
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;">
-        <br/>
-    </div>
-    </v-col>
-    <v-col class="ml-n5">
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;">&nbsp;</div>
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;">&nbsp;</div>
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;"> &nbsp;</div>
-      <div class="mt-2 mb-10" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;"></div>
     </v-col>
   </v-row>
 
