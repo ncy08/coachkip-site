@@ -36,7 +36,7 @@
         <v-card style="width: 50% !important"></v-card>
         <v-toolbar style="background-color: transparent" class="mt-1">
           <v-icon  size="small"  color="black"  class="mb-n1 ml-5"   v-on:click="handleMenuItemClick({ link: '#home' })" >mdi-arrow-left</v-icon >
-          <a style="font-family: 'Aeonik1'"  v-on:click="handleMenuItemClick({ link: '#home' })"  data-w-id="4a4302b6-6981-f1fa-9bee-92d7404c033a"
+          <a style="font-family: 'Aeonik1'; color:black"  v-on:click="handleMenuItemClick({ link: '#home' })"  data-w-id="4a4302b6-6981-f1fa-9bee-92d7404c033a"
             class="side-nav-link-home">Home</a>
           <v-spacer />
           <button
@@ -821,7 +821,7 @@
 </footer>
 
 <footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0;top:0" v-if="isMobile" id="contact">
-  <v-row class="pt-4" style="margin-top: 24% !important;">
+  <v-row class="pt-4" style="margin-top: 24% !important;line-height:1.2">
     <v-col cols="6" md="4">
       <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;" class="header-text ml-10">ADDRESS</div>
     </v-col>
@@ -948,7 +948,7 @@
         class="mt-2"
         style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;"
       >
-        <v-icon size="x-small">mdi-circle</v-icon> SUBMIT
+        <v-icon class="ml-5" size="x-small">mdi-circle</v-icon> SUBMIT
       </div>
     </v-col>
   </v-row>
@@ -2126,6 +2126,7 @@ animation: marquee 15s linear infinite;
   line-height: 50px !important;
   display: block;
   
+  
 }
 @media screen and (max-width: 479px) {
   .side-nav-link-large {
@@ -2159,7 +2160,7 @@ a:active, a:hover {
 
 .side-nav-link-large {
   text-decoration: none; /* Remove underline */
-  color: #333; /* Change text color */
+  color: black !important; /* Change text color */
   position: relative; /* Position relative for pseudo-element */
 }
 
