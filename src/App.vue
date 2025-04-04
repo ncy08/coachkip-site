@@ -757,7 +757,7 @@
 </div>
 </footer>
 
-<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0; height: 70vh; display: flex; flex-direction: column; justify-content: space-between; padding: 20px; box-sizing: border-box;" v-if="isMobile" id="contact">
+<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0; height: 68vh; display: flex; flex-direction: column; justify-content: space-between; padding: 20px; box-sizing: border-box;" v-if="isMobile" id="contact">
   <!-- First section: Address -->
   <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
     <div style="flex: 1;">
@@ -789,7 +789,7 @@
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">INQUIRIES</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;" href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
         +1 770 364 4726  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
     </div>
@@ -802,7 +802,7 @@
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">INFO</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;" href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;" href="mailto:hello@kip.coach" target="_blank" class="map-link">
         hello(at)kip.coach   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
     </div>
@@ -814,11 +814,11 @@
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">FOLLOW US</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;" href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;" href="https://linkedin.com" target="_blank" class="map-link">
         LinkedIn   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;" href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
-        Instagran   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;" href="https://instagram.com" target="_blank" class="map-link">
+        Instagram   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
     </div>
   </div>
@@ -3073,9 +3073,7 @@ footer {
         transform: translate3d(0, 0, 0);
     }
 }
-#partners {
-  margin-bottom: calc(100vh - 60px); /* Adjust this value to match the footer height */
-}
+
 
 footer {
   position: fixed; /* Fix the footer at the bottom */
@@ -3093,7 +3091,7 @@ footer {
   }
   
   #partners {
-    margin-bottom: calc(78vh - 60px); /* Adjust this value to match the footer height */
+    margin-bottom: calc(75vh - 60px); /* Adjust this value to match the footer height */
   }
 }
 .container {
@@ -3108,6 +3106,7 @@ footer {
 }
 
 footer {
-  flex: 0 0 60px; /* Set a fixed height for the footer */
+  flex: 0 0 70px; /* Set a fixed height for the footer */
 }
+
 </style> 
