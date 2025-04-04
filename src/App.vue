@@ -3073,4 +3073,41 @@ footer {
         transform: translate3d(0, 0, 0);
     }
 }
+#partners {
+  margin-bottom: calc(100vh - 60px); /* Adjust this value to match the footer height */
+}
+
+footer {
+  position: fixed; /* Fix the footer at the bottom */
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set a fixed height for the footer */
+  z-index: 1; /* Ensure it overlaps with other elements */
+}
+
+/* Optional: Adjust font sizes for smaller screens */
+@media (max-width: 480px) {
+  footer {
+    height: 100vh; /* Adjust height for smaller screens */
+    font-size: 14px; /* Adjust font size */
+  }
+  
+  #partners {
+    margin-bottom: calc(78vh - 60px); /* Adjust this value to match the footer height */
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#partners {
+  flex: 1;
+  overflow-y: auto;
+}
+
+footer {
+  flex: 0 0 60px; /* Set a fixed height for the footer */
+}
 </style> 
