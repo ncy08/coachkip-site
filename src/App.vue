@@ -809,6 +809,7 @@
   </div>
 
   <hr class="mt-2 mb-6"/>
+  
   <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
     <div style="flex: 1;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">FOLLOW US</p>
