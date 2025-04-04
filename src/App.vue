@@ -781,7 +781,7 @@
     </div>
   </div>
 
-  <hr class="mt-8"/>
+  <hr class="mt-2 mb-6"/>
 
   <!-- Second section: Inquiries -->
   <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
@@ -794,7 +794,7 @@
       </a>
     </div>
   </div>
-  <hr class="mt-8"/>
+  <hr class="mt-2 mb-6"/>
 
   <!-- Second section: Inquiries -->
   <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
@@ -808,7 +808,7 @@
     </div>
   </div>
 
-  <hr class="mt-8"/>
+  <hr class="mt-2 mb-6"/>
   <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
     <div style="flex: 1;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">FOLLOW US</p>
@@ -823,10 +823,10 @@
     </div>
   </div>
 
-  <hr class="mt-8"/>
+  <hr class="mt-2 mb-6"/>
   <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
     <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">FOLLOW US</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">WISHLIST</p>
       <input placeholder="Email Address" style="border: none; outline: none;" />
         <svg
           class="mt-n10"
@@ -849,7 +849,7 @@
     <div style="flex: 1; text-align: left;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
-      <v-icon class="ml-6" size="x-small">mdi-circle</v-icon> SUBMIT
+      <v-icon class="ml-16" size="x-small">mdi-circle</v-icon> SUBMIT
      </div>
   </div>
 
