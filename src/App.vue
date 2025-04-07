@@ -598,53 +598,86 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="shadow-bottom" id="partners" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '40vh' : '100vh'}">
-  <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '40vh ' : '100vh'}"
-    :color="isDarkMode ? '#252423' : '#fffbe9'">
+<section
+  class="shadow-bottom"
+  :class="!isMobile ? 'BottomMargin' : ' '"
+  id="partners"
+  style="position: relative; z-index: 999;"
+  :style="{ minHeight: isMobile ? '40vh' : '100vh' }"
+>
+  <v-parallax
+    style="position: relative; border-radius: 0% !important;"
+    :style="{ minHeight: isMobile ? '40vh' : '100vh' }"
+    :color="isDarkMode ? '#252423' : '#fffbe9'"
+  >
     <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
       <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
-        <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
-          :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
-          <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
-            :style="{ 
-              'font-size': !isMobile ? '48px' : '30px', 
-              lineHeight: 1.15, 
+        <v-col
+          :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
+          :style="!isMobile
+            ? {
+                marginLeft: '15px',
+                paddingBottom: '5em',
+                paddingLeft: '0',
+                paddingRight: '15px'
+              }
+            : {}"
+        >
+          <p
+            style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1';"
+            :style="{
+              fontSize: !isMobile ? '48px' : '30px',
+              lineHeight: 1.15,
               color: isDarkMode ? '#fffbe9' : '#252423',
-              opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease'
-            }">
+              opacity: sectionVisible.partners ? 1 : 0,
+              transition: 'opacity 1s ease'
+            }"
+          >
             Partners
           </p>
         </v-col>
       </v-row>
-      <br>
-      <br v-if="!isMobile">
-      <br v-if="!isMobile">
-      <v-row 
-        :class="isMobile ? 'mt-n3' : 'justify-center'" class="logo-container" 
-        :style="{ opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
-        <transition-group name="fade" >
-         <v-row no-gutters>
-          <v-col  :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img v-if="!isMobile" class="mt-6"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
-            <img v-else :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
+
+      <v-row
+        class="logo-container"
+        :style="{
+          opacity: sectionVisible.partners ? 1 : 0,
+          transition: 'opacity 1s ease',
+          overflowX: isMobile ? 'auto' : 'unset',
+          whiteSpace: isMobile ? 'nowrap' : 'normal',
+          flexWrap: isMobile ? 'nowrap' : 'wrap'
+        }"
+      >
+        <transition-group name="fade" tag="div" class="d-flex align-center">
+          <v-col
+            v-for="(logo, index) in logos"
+            :key="index"
+            cols="auto"
+            class="d-flex justify-center align-center"
+            :style="{
+              display: isMobile ? 'inline-block' : 'flex',
+              minWidth: isMobile ? '120px' : '150px'
+            }"
+            :class="isDarkMode ? 'logo-item' : 'logo-item1'"
+          >
+           <center>
+            <img
+            :class="isMobile ? 'ml-n5' : 'ml-n2'"
+              :src="logo"
+              :style="{
+                maxWidth: isMobile ? '100px' : '300px',
+                height: 'auto',
+              }"
+            />
+           </center>
           </v-col>
-          <v-col  :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img v-if="!isMobile" class="mt-n16 ml-n1"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
-            <img v-else  class="mt-n6 ml-n1"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
-          </v-col> 
-          <v-col :class="isDarkMode ? 'logo-item' : 'logo-item1'" >
-            <img v-if="!isMobile" class="mt-10 ml-13" :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
-            <img v-else class="mb-n5" :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
-          </v-col>
-         </v-row>
-          <br v-if="isMobile">
-          <br v-if="isMobile">
-          <br v-if="isMobile"/>
         </transition-group>
       </v-row>
     </v-container>
   </v-parallax>
 </section>
+
+
 
 
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="!isMobile" id="contact">
@@ -935,15 +968,9 @@ import JamesJackson from '../src/image/JamesJackson.png'
         hasStartedCounting:false,
         isDarkMode:false,
         logos: [
-          { src:
-              "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png",
-          },
-          { src:
-              "https://singaporecycling.org.sg/cdn/shop/files/trainingpeaks_logo_vertical_2-color.png?v=1703918725&width=1500",
-          },
-          {src:
-              "https://www.golfworld.com.au/assets/images/Garmin.png",
-          },
+        'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png',
+        'https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png',
+        'https://www.golfworld.com.au/assets/images/Garmin.png'
         ],
         showFirstSet: true,
         intervalId: null,
@@ -3108,6 +3135,10 @@ footer {
 
 footer {
   flex: 0 0 70px; /* Set a fixed height for the footer */
+}
+
+.BottomMargin{
+  margin-bottom:550px !important;
 }
 
 </style> 
