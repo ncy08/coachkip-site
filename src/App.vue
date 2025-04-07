@@ -3081,7 +3081,7 @@ footer {
 }
 
 /* Optional: Adjust font sizes for smaller screens */
-@media (max-width: 480px) {
+@media (min-width: 480px) {
   footer {
     height: 100vh; /* Adjust height for smaller screens */
     font-size: 14px; /* Adjust font size */
