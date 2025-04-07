@@ -769,12 +769,12 @@
     
 
     <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;">KIP HEADQUARTERS</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;">1 N 4 Pl.</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;">Brooklyn, NY 11249</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;">United States</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;">
-        <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;" href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">KIP HEADQUARTERS</p>
+      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">1 N 4 Pl.</p>
+      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">Brooklyn, NY 11249</p>
+      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">United States</p>
+      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">
+        <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
           Map <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
         </a>
       </p>
@@ -789,7 +789,7 @@
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">INQUIRIES</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
         +1 770 364 4726  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
     </div>
@@ -802,7 +802,7 @@
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">INFO</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;" href="mailto:hello@kip.coach" target="_blank" class="map-link">
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="mailto:hello@kip.coach" target="_blank" class="map-link">
         hello(at)kip.coach   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
     </div>
@@ -3085,7 +3085,7 @@ footer {
 }
 
 /* Optional: Adjust font sizes for smaller screens */
-@media (max-width: 480px) {
+@media (min-width: 480px) {
   footer {
     height: 100vh; /* Adjust height for smaller screens */
     font-size: 14px; /* Adjust font size */
