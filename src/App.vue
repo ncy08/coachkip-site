@@ -815,10 +815,10 @@
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">FOLLOW US</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;" href="https://linkedin.com" target="_blank" class="map-link">
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="https://linkedin.com" target="_blank" class="map-link">
         LinkedIn   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;" href="https://instagram.com" target="_blank" class="map-link">
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="https://instagram.com" target="_blank" class="map-link">
         Instagram   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
     </div>
