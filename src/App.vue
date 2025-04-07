@@ -598,7 +598,8 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="shadow-bottom" id="partners" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '40vh' : '100vh'}">
+<section class="shadow-bottom" id="partners" style="position: relative; z-index: 999;"
+ :style="{ minHeight: isMobile ? '40vh' : '100vh', marginBottom : !isMobile ? '600px' : ''}">
   <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '40vh ' : '100vh'}"
     :color="isDarkMode ? '#252423' : '#fffbe9'">
     <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
@@ -613,7 +614,7 @@
               opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease'
             }">
             Partners
-          </p>
+          </p>  
         </v-col>
       </v-row>
       <br>
