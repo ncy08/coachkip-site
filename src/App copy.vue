@@ -598,7 +598,8 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="shadow-bottom" id="partners" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '40vh' : '100vh'}">
+<section class="shadow-bottom" id="partners" style="position: relative; z-index: 999;" 
+:style="{ minHeight: isMobile ? '40vh' : '100vh' , marginBottom : !isMobile ? '1000px' : ''}">
   <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '40vh ' : '100vh'}"
     :color="isDarkMode ? '#252423' : '#fffbe9'">
     <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
@@ -625,15 +626,16 @@
         <transition-group name="fade" >
          <v-row no-gutters>
           <v-col  :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img v-if="!isMobile" class="mt-6"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
+            <img v-if="!isMobile" class="mt-6"  :style="{ marginRight: isMobile ? '4%' : '0',
+             maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
             <img v-else :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
           </v-col>
           <v-col  :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img v-if="!isMobile" class="mt-n16 ml-n1"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
+            <img v-if="!isMobile" class="mt-n10 ml-14"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
             <img v-else  class="mt-n6 ml-n1"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
           </v-col> 
           <v-col :class="isDarkMode ? 'logo-item' : 'logo-item1'" >
-            <img v-if="!isMobile" class="mt-10 ml-13" :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
+            <img v-if="!isMobile" class="mt-11 ml-13" :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
             <img v-else class="mb-n5" :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
           </v-col>
          </v-row>
@@ -757,100 +759,78 @@
 </div>
 </footer>
 
-<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0 ;height:75vh" v-if="isMobile" id="contact">
-  <v-row class="pt-4" style="margin-top: 31% !important;line-height:1.1">
-    <v-col cols="6" md="4">
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;" class="header-text ml-10">ADDRESS</div>
-    </v-col>
-    <v-col cols="6" md="4">
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;" class="header-text">KIP HEADQUARTERS</div>
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;">1 N 4 Pl.</div>
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;">Brooklyn, NY 11249</div>
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;">United States</div>
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;">
-        <a style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;"
-          href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5"
-          target="_blank"
-          class="map-link"
-        >
+<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0; height: 68vh; display: flex; flex-direction: column; justify-content: space-between; padding: 20px; box-sizing: border-box;" v-if="isMobile" id="contact">
+  <!-- First section: Address -->
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
+    <div style="flex: 1;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">ADDRESS</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
+    </div>
+    
+
+    <div style="flex: 1; text-align: left;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">KIP HEADQUARTERS</p>
+      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">1 N 4 Pl.</p>
+      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">Brooklyn, NY 11249</p>
+      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">United States</p>
+      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">
+        <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
           Map <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
         </a>
-      </div>
-    </v-col>
-  </v-row>
-  <hr class="mt-2" />
-  <v-row>
-    <v-col cols="6" md="4">
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;" class="header-text ml-10">INQUIRIES</div>
-    </v-col>
-    <v-col cols="6" md="4">
-      <div
-        style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;"
-      >
-        <a 
-          href="tel:+1 770 364 4726"
-          target="_blank"
-          style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;"
-          >+1 770 364 4726
-          <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-        </a>
-      </div>
-    </v-col>
-  </v-row>
-  <hr class="mt-2" />
-  <v-row>
-    <v-col cols="6" md="4">
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;" class="header-text ml-10" >INFO</div>
-    </v-col>
-    <v-col cols="6" md="4">
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;">
-        <a href="mailto:hello@kip.coach"  target="_blank" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;"
-          >hello(at)kip.coach
-          <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-        </a>
-      </div>
-    </v-col>
-  </v-row>
-  <hr class="mt-2" />
-  <v-row>
-    <v-col cols="6" md="4">
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;" class="header-text ml-10">FOLLOW US</div>
-    </v-col>
-    <v-col cols="6" md="4">
-      <div style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;"
-      >
-        <a
-          href="https://linkedin.com"
-          target="_blank"
-          style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;"
-          >Linked
-          <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-        </a>
-      </div>
-      <div
-        style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;"
-      >
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; color: inherit; text-decoration-color: #849f80;"
-          >Instagram
-          <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-        </a>
-      </div>
-    </v-col>
-  </v-row>
-  <hr class="mt-2" />
-  <v-row class="ml-8 mt-3" style="line-height: 1.2;">
-    <v-col cols="8">
-      <div  style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;" >
-        WAITLIST
-      </div>
-      <div
-        style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;"
-      >
-        <br />
-        <input placeholder="Email Address" style="border: none; outline: none;" />
+      </p>
+    </div>
+  </div>
+
+  <hr class="mt-2 mb-6"/>
+
+  <!-- Second section: Inquiries -->
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
+    <div style="flex: 1;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">INQUIRIES</p>
+    </div>
+    <div style="flex: 1; text-align: left;">
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+        +1 770 364 4726  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+      </a>
+    </div>
+  </div>
+  <hr class="mt-2 mb-6"/>
+
+  <!-- Second section: Inquiries -->
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
+    <div style="flex: 1;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">INFO</p>
+    </div>
+    <div style="flex: 1; text-align: left;">
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="mailto:hello@kip.coach" target="_blank" class="map-link">
+        hello(at)kip.coach   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+      </a>
+    </div>
+  </div>
+
+  <hr class="mt-2 mb-6"/>
+  
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
+    <div style="flex: 1;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">FOLLOW US</p>
+    </div>
+    <div style="flex: 1; text-align: left;">
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="https://linkedin.com" target="_blank" class="map-link">
+        LinkedIn   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+      </a>
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="https://instagram.com" target="_blank" class="map-link">
+        Instagram   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+      </a>
+    </div>
+  </div>
+
+  <hr class="mt-2 mb-6"/>
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
+    <div style="flex: 1;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">WISHLIST</p>
+      <input placeholder="Email Address" style="border: none; outline: none;" />
         <svg
           class="mt-n10"
           xmlns="http://www.w3.org/2000/svg"
@@ -868,29 +848,17 @@
             </g>
           </g>
         </svg>
-      </div>
-    </v-col>
-    <v-col class="ml-n5">
-      <div
-        style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;"
-      >
-        &nbsp;
-      </div>
-      <div
-        style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black; text-shadow: 1 1 0 black;"
-      >
-        &nbsp;
-      </div>
-      <div
-        class="mt-2"
-        style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 3.8vw; color: black;"
-      >
-        <v-icon class="ml-5" size="x-small">mdi-circle</v-icon> SUBMIT
-      </div>
-    </v-col>
-  </v-row>
+    </div>
+    <div style="flex: 1; text-align: left;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
+      <v-icon class="ml-16" size="x-small">mdi-circle</v-icon> SUBMIT
+     </div>
+  </div>
 
-  <div class="marquee">
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
+    <div style="flex: 1;">
+      <div class="marquee">
     <v-row>
       <v-col>
         <div class="marquee-container">
@@ -912,7 +880,10 @@
       </v-col>
     </v-row>
   </div>
+    </div>
+  </div>
 </footer>
+
 
   </div>
   </v-app>
@@ -3058,6 +3029,87 @@ input[type="email"] {
   .v-row {
     margin-top: 10px;
   }
+}
+/* General footer styles */
+footer {
+  position: relative; /* Default position for larger screens */
+  background: #b7e3b6;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 1; /* Ensure it overlaps with other elements */
+}
+
+/* Mobile footer styles */
+@media (max-width: 768px) {
+  footer {
+    position: fixed; /* Fix the footer at the bottom */
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set a fixed height for the footer */
+    z-index: 1; /* Ensure it overlaps with other elements */
+  }
+}
+
+/* Adjust the partners section */
+#partners {
+  margin-bottom: 60px; /* Adjust this value to match the footer height */
+}
+
+/* Optional: Adjust font sizes for smaller screens */
+@media (max-width: 480px) {
+  footer {
+    height: 100vh; /* Adjust height for smaller screens */
+    font-size: 14px; /* Adjust font size */
+  }
+  
+  #partners {
+    margin-bottom: 505px; /* Adjust this value to match the footer height */
+  }
+}
+@media only screen and (max-width: 479px) {
+     .contact__information .contact__information__detail__line {
+        position: absolute;
+        top: 0;
+        left: -15px;
+        width: 100vw;
+        height: 1px;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+footer {
+  position: fixed; /* Fix the footer at the bottom */
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set a fixed height for the footer */
+  z-index: 1; /* Ensure it overlaps with other elements */
+}
+
+/* Optional: Adjust font sizes for smaller screens */
+@media (min-width: 480px) {
+  footer {
+    height: 100vh; /* Adjust height for smaller screens */
+    font-size: 14px; /* Adjust font size */
+  }
+  
+  #partners {
+    margin-bottom: calc(75vh - 60px); /* Adjust this value to match the footer height */
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#partners {
+  flex: 1;
+  overflow-y: auto;
+}
+
+footer {
+  flex: 0 0 70px; /* Set a fixed height for the footer */
 }
 
 </style> 
