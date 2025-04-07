@@ -643,9 +643,9 @@
         :style="{
           opacity: sectionVisible.partners ? 1 : 0,
           transition: 'opacity 1s ease',
-          overflowX: isMobile ? 'auto' : 'unset',
           whiteSpace: isMobile ? 'nowrap' : 'normal',
-          flexWrap: isMobile ? 'nowrap' : 'wrap'
+          flexWrap: isMobile ? 'nowrap' : 'wrap',
+          marginBottom:isMobile ? '10px' : ''
         }"
       >
         <transition-group name="fade" tag="div" class="d-flex align-center">
