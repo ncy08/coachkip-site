@@ -694,7 +694,7 @@
       ADDRESS
     </div>
     <div style="background: #b7e3b6; padding: 10px;">
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">KIP HEADQUARTERS</P> <!-- Responsive font size -->
+      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">KIP HEADQUARTERS</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">1 N 4 Pl.</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Brooklyn, NY 11249</P>
       <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">United States</P>
