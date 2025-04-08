@@ -660,16 +660,16 @@
             }"
             :class="isDarkMode ? 'logo-item' : 'logo-item1'"
           >
-           <center>
-            <img
-            :class="isMobile ? 'ml-n5' : 'ml-n2'"
-              :src="logo"
-              :style="{
-                maxWidth: isMobile ? '100px' : '300px',
-                height: 'auto',
-              }"
-            />
-           </center>
+            <center>
+              <img
+                :class="isMobile ? 'ml-n5' : 'ml-n2'"
+                :src="logo"
+                :style="{
+                  maxWidth: isMobile ? '100px' : '300px', /* Set a consistent max width */
+                  height: 'auto', /* Maintain aspect ratio */
+                }"
+              />
+            </center>
           </v-col>
         </transition-group>
       </v-row>
@@ -790,9 +790,10 @@
 </div>
 </footer>
 
-<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0; height: 68vh; display: flex; flex-direction: column; justify-content: space-between; padding: 20px; box-sizing: border-box;" v-if="isMobile" id="contact">
+<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0; height: 68vh; display: flex; 
+flex-direction: column; justify-content: space-between;  box-sizing: border-box;" v-if="isMobile" id="contact">
   <!-- First section: Address -->
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px;padding-top:18px">
     <div style="flex: 1;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">ADDRESS</p>
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
@@ -814,10 +815,9 @@
     </div>
   </div>
 
-  <hr class="mt-2 mb-6"/>
+  <hr width="1000vw"  class="mt-2 mb-6" style="border:1px solid #7da07d;"/>
 
-  <!-- Second section: Inquiries -->
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
     <div style="flex: 1;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">INQUIRIES</p>
     </div>
@@ -827,10 +827,9 @@
       </a>
     </div>
   </div>
-  <hr class="mt-2 mb-6"/>
+  <hr width="1000vw" class="mt-2 mb-6" style="border:1px solid #7da07d;"/>
 
-  <!-- Second section: Inquiries -->
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
     <div style="flex: 1;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">INFO</p>
     </div>
@@ -841,9 +840,9 @@
     </div>
   </div>
 
-  <hr class="mt-2 mb-6"/>
+  <hr width="1000vw" class="mt-2 mb-6" style="border:1px solid #7da07d;"/>
   
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
     <div style="flex: 1;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">FOLLOW US</p>
     </div>
@@ -857,9 +856,9 @@
     </div>
   </div>
 
-  <hr class="mt-2 mb-6"/>
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
-    <div style="flex: 1;">
+  <hr width="1000vw" class="mt-2 mb-6" style="border:1px solid #7da07d;"/>
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
+    <div style="flex: 1.5;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">WISHLIST</p>
       <input placeholder="Email Address" style="border: none; outline: none;" />
         <svg
@@ -887,9 +886,9 @@
      </div>
   </div>
 
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
     <div style="flex: 1;">
-      <div class="marquee">
+      <div class="marquee mb-2">
     <v-row>
       <v-col>
         <div class="marquee-container">
@@ -969,7 +968,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
         isDarkMode:false,
         logos: [
         'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png',
-        'https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png',
+        'https://singaporecycling.org.sg/cdn/shop/files/trainingpeaks_logo_vertical_2-color.png?v=1703918725&width=1500',
         'https://www.golfworld.com.au/assets/images/Garmin.png'
         ],
         showFirstSet: true,
@@ -2961,7 +2960,7 @@ transition: opacity 0.5s ease;
   border: none;
   outline: none;
   width: 100%;
-  padding: 10px;
+  /* padding: 10px; */
   font-size: 18px;
 }
 
@@ -2973,7 +2972,7 @@ footer {
   position: relative;
   bottom: 0;
   background: #b7e3b6;
-  padding: 10px;
+  /* padding: 10px; */
   box-sizing: border-box; /* Ensures padding doesn't affect total width */
 }
 
@@ -3059,7 +3058,7 @@ input[type="email"] {
 footer {
   position: relative; /* Default position for larger screens */
   background: #b7e3b6;
-  padding: 10px;
+  /* padding: 10px; */
   box-sizing: border-box;
   z-index: 1; /* Ensure it overlaps with other elements */
 }
@@ -3138,7 +3137,17 @@ footer {
 }
 
 .BottomMargin{
-  margin-bottom:550px !important;
+  margin-bottom:850px !important;
 }
-
+.logo-container {
+  display: flex;
+  justify-content: center; /* Center logos horizontally */
+  align-items: center; /* Center logos vertically */
+  flex-wrap: wrap; /* Allow logos to wrap to the next line */
+}
+@media (max-width: 768px) {
+  .logo-item {
+    min-width: 100px; /* Adjust for smaller screens */
+  }
+}
 </style> 

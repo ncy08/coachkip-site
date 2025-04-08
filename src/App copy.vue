@@ -2,41 +2,40 @@
 <template>
   <v-app  :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }">
     <div  :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }">
- <v-btn   @click="toogle"  class="dark-mode-toggle"  icon  :style="{ backgroundColor: isDarkMode ? 'white' : 'black'}">
-   <v-icon :style="{ color: isDarkMode ? 'black' : 'white', }">{{ isDarkMode ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
- </v-btn>
-
- <div style="z-index:1999;font-family:'Aeonik"  v-if="showFloatingText"
-   class="floating-text"  :style="{ left: floatingX + 'px', top: floatingY + 'px' }">
-   <span>{{ hoveredMember.name ? hoveredMember.name : hoveredMember }}</span>
- </div>
-
-<transition name="fade">
-  <v-toolbar v-show="isToolbarVisible" :color="isDarkMode ? '#252423' : '#fffbe9'" :class="fixedScroll == false ? 'tBar' : 'tBarFoxed'" class="tBar" style="z-index: 1999">
-    <v-toolbar-title v-on:click="handleMenuItemClick({ link: '#home' })" :style="{color : isDarkMode ? 'white' : 'black'}"> 
-      COACH KIP</v-toolbar-title>
-    <v-spacer></v-spacer>
-    <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" 
-      @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 20px; padding: 2px 22px 3px; display: block;" 
-      class="mr-6 hidden-md-and-up mt-n1" @click="drawer = true"> Menu
-    </button>
-  <v-toolbar-items class="hidden-sm-and-down">
-    <template v-for="(item, index) in menuItems" :key="index">
-      <v-btn :style="{color:isDarkMode ? 'white' : 'black'}" flat :class="{ 'active-line': activeSection === item.link.substring(1) }"
-        :color="activeSection === item.link.substring(1) ? '#FFD700' : '#FFFFFF'"
-        class="menu-button" @click="handleMenuItemClick(item)">
-        {{ item.text }}
+      <v-btn   @click="toogle"  class="dark-mode-toggle"  icon  :style="{ backgroundColor: isDarkMode ? 'white' : 'black', }">
+        <v-icon :style="{ color: isDarkMode ? 'black' : 'white', }">{{ isDarkMode ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
       </v-btn>
-    </template>
-  </v-toolbar-items>
-  </v-toolbar>
-</transition>
+      <!-- Floating Text Overlay -->
+      <div style="z-index:1999;font-family:'Aeonik"  v-if="showFloatingText"
+        class="floating-text"  :style="{ left: floatingX + 'px', top: floatingY + 'px' }">
+        <span>{{ hoveredMember.name ? hoveredMember.name : hoveredMember }}</span>
+      </div>
 
-<v-navigation-drawer style="z-index: 10000"  location="right" v-model="drawer" fixed  temporary  class="mobile-nav fullscreen-drawer" width="490">
+      <transition name="fade">
+        <v-toolbar v-show="isToolbarVisible" :color="isDarkMode ? '#252423' : '#fffbe9'" class="tBar" style="z-index: 1999">
+          <v-toolbar-title v-on:click="handleMenuItemClick({ link: '#home' })" :style="{color : isDarkMode ? 'white' : 'black'}"> COACH KIP</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" 
+            @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 20px; padding: 2px 22px 3px; display: block;" 
+            class="mr-6 hidden-md-and-up mt-n1" @click="drawer = true"> Menu
+          </button>
+        <v-toolbar-items class="hidden-sm-and-down">
+          <template v-for="(item, index) in menuItems" :key="index">
+            <v-btn :style="{color:isDarkMode ? 'white' : 'black'}" flat :class="{ 'active-line': activeSection === item.link.substring(1) }"
+              :color="activeSection === item.link.substring(1) ? '#FFD700' : '#FFFFFF'"
+              class="menu-button" @click="handleMenuItemClick(item)">
+              {{ item.text }}
+            </v-btn>
+          </template>
+        </v-toolbar-items>
+        </v-toolbar>
+      </transition>
+
+      <v-navigation-drawer style="z-index: 10000"  location="right" v-model="drawer" fixed  temporary  class="mobile-nav fullscreen-drawer" width="490">
         <v-card style="width: 50% !important"></v-card>
         <v-toolbar style="background-color: transparent" class="mt-1">
           <v-icon  size="small"  color="black"  class="mb-n1 ml-5"   v-on:click="handleMenuItemClick({ link: '#home' })" >mdi-arrow-left</v-icon >
-          <a style="font-family: 'Aeonik1'; color:black"  v-on:click="handleMenuItemClick({ link: '#home' })"  data-w-id="4a4302b6-6981-f1fa-9bee-92d7404c033a"
+          <a style="font-family: 'Aeonik1'"  v-on:click="handleMenuItemClick({ link: '#home' })"  data-w-id="4a4302b6-6981-f1fa-9bee-92d7404c033a"
             class="side-nav-link-home">Home</a>
           <v-spacer />
           <button
@@ -72,31 +71,33 @@
             <ul class="side-nav-list" style="list-style-type: none; padding: 0">
               <li>
                 <a class="side-nav-link-large"  href="https://x.com" target="_blank"
-                  style="  font-family: 'Aeonik1'; font-size: 18px !important; line-height: 25px !important;  color: black !important; "  >
+                  style="  font-family: 'Aeonik1'; font-size: 16px !important; line-height: 25px !important;  color: black !important; "  >
                   <v-icon  class="mr-1">mdi-twitter</v-icon>Twitter</a>
               </li>
               <li>
                 <a class="side-nav-link-large"  href="https://linkedin.com" target="_blank"
-                  style="  font-family: 'Aeonik1';  font-size: 18px !important; line-height: 25px !important; color: black !important; "  >
+                  style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; "  >
                   <v-icon class="mr-1">mdi-linkedin</v-icon>LinkedIn</a
                 >
               </li>
               <li>
                 <a  class="side-nav-link-large"  href="https://instagram.com" target="_blank"
-                style="  font-family: 'Aeonik1';  font-size: 18px !important; line-height: 25px !important; color: black !important; " >
+                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; " >
                 <v-icon class="mr-1">mdi-instagram</v-icon>Instagram</a>
               </li>
               <li>
                 <a  class="side-nav-link-large"  href="https://vimeo.com" target="_blank"
-                style="  font-family: 'Aeonik1';  font-size: 18px !important; line-height: 25px !important; color: black !important; "  >
+                style="  font-family: 'Aeonik1';  font-size: 16px !important; line-height: 25px !important; color: black !important; "  >
                 <v-icon class="mr-1">mdi-vimeo</v-icon>Vimeo</a >
               </li>
             </ul>
           </v-col>
         </v-row>
-</v-navigation-drawer>
+      </v-navigation-drawer>
 
-<section id="home" :style="{ minHeight: isMobile ? '50vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; z-index: 999;" >
+<section>
+
+<section  style="position: relative; min-height: 100vh; z-index: 999;" id="home">
 <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; min-height: 100vh;">
   <div class="hero-content" :style="{paddingTop: isMobile ? '4% !important' : ''}">
     <div class="title-wrapper">
@@ -193,7 +194,8 @@
   </div>
 </v-parallax>
 </section>
-<section id="home1" :style="{ minHeight: isMobile ? '50vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; z-index: 999;">
+<section id="home1"  :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
+  style="position: relative; border-radius: 0% !important; z-index: 999;">
 <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
   style="position: relative; border-radius: 0% !important;">
   <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
@@ -211,7 +213,7 @@
          <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; 
            font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
-            'font-size': !isMobile ? '32px' : '18px',  letterSpacing: '0.12px',  textAlign: 'left', 
+            'font-size': !isMobile ? '32px' : '16px',  letterSpacing: '0.12px',  textAlign: 'left', 
              color: isDarkMode ? '#fffbe9' : '#252423', transition: 'font-size 0.5s ease-out' ,
              opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
           }">
@@ -241,7 +243,7 @@
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
-            'font-size': !isMobile ? '32px' : '18px',
+            'font-size': !isMobile ? '32px' : '16px',
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
@@ -273,7 +275,7 @@
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
-            'font-size': !isMobile ? '32px' : '18px',
+            'font-size': !isMobile ? '32px' : '16px',
             letterSpacing: '0.2px',
             textAlign: 'left',
             color: isDarkMode ? '#fffbe9' : '#252423',
@@ -324,7 +326,7 @@
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
-            'font-size': !isMobile ? '21px' : '18px',
+            'font-size': !isMobile ? '21px' : '16px',
             'border-bottom': isMobile ? '1px solid #636363 !important' : '',
             letterSpacing: '0.2px',
             textAlign: 'left',
@@ -378,7 +380,7 @@
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
-            'font-size': !isMobile ? '21px' : '18px',
+            'font-size': !isMobile ? '21px' : '16px',
             'border-bottom': isMobile ? '1px solid #636363 !important' : '',
             letterSpacing: '0.2px',
             textAlign: 'left',
@@ -427,7 +429,7 @@
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
-            'font-size': !isMobile ? '21px' : '18px',
+            'font-size': !isMobile ? '21px' : '16px',
             'border-bottom': isMobile ? '1px solid #636363 !important' : '',
             letterSpacing: '0.2px',
             textAlign: 'left',
@@ -476,7 +478,7 @@
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
-            'font-size': !isMobile ? '21px' : '18px',
+            'font-size': !isMobile ? '21px' : '16px',
             'border-bottom': isMobile ? '1px solid #636363 !important' : '',
             letterSpacing: '0.2px',
             textAlign: 'left',
@@ -524,7 +526,7 @@
         </p>
         <p class="color-ivory" style="padding-right: 6% !important; padding-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{
-            'font-size': !isMobile ? '21px' : '18px',
+            'font-size': !isMobile ? '21px' : '16px',
             'border-bottom': isMobile ? '1px solid #636363 !important' : '',
             letterSpacing: '0.2px',
             textAlign: 'left',
@@ -598,9 +600,8 @@
   </v-container>
 </v-parallax>
 </section>
-<section class="shadow-bottom" id="partners" style="position: relative; z-index: 999;"
- :style="{ minHeight: isMobile ? '40vh' : '100vh', marginBottom : !isMobile ? '600px' : ''}">
-  <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '40vh ' : '100vh'}"
+<section class="shadow-bottom" id="partners" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '80vh' : '100vh'}">
+  <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '80vh ' : '100vh'}"
     :color="isDarkMode ? '#252423' : '#fffbe9'">
     <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
       <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
@@ -614,7 +615,7 @@
               opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease'
             }">
             Partners
-          </p>  
+          </p>
         </v-col>
       </v-row>
       <br>
@@ -623,42 +624,106 @@
       <v-row 
         :class="isMobile ? 'mt-n3' : 'justify-center'" class="logo-container" 
         :style="{ opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
-        <transition-group name="fade" >
-         <v-row no-gutters>
-          <v-col  :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img v-if="!isMobile" class="mt-6"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
-            <img v-else :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
+        <transition-group name="fade" v-if="!isMobile">
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
           </v-col>
-          <v-col  :class="isDarkMode ? 'logo-item' : 'logo-item1'">
-            <img v-if="!isMobile" class="mt-n16 ml-n1"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
-            <img v-else  class="mt-n6 ml-n1"  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
-          </v-col> 
-          <v-col :class="isDarkMode ? 'logo-item' : 'logo-item1'" >
-            <img v-if="!isMobile" class="mt-10 ml-13" :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
-            <img v-else class="mb-n5" :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '85%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '100%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
           </v-col>
-         </v-row>
-          <br v-if="isMobile">
-          <br v-if="isMobile">
-          <br v-if="isMobile"/>
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
+          </v-col>
+        </transition-group>
+        <transition-group name="fade" v-if="isMobile">
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '80%' : '110%', height: 'auto' }" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3v6YP0NhqqL5Gr47yfglqOd7NMD9dgtj1jvu2gJntAGe_nUpJ-9R749OiUn48HMe_xV1wABa_JvGTL7CJYS9-P-QAIgKYYZKReLHlwx15gs3wBdS0-0XTfHa-1utH2SafjxHo_w/s1600/18-B-0001-Strava-Logotype-Brand-Assets-V1_Strava_wordmark_black_medium.png"></img>
+          </v-col>
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center mt-n12" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '70%' : '100%', height: 'auto' }" src="https://www.triathlon.org.au/wp-content/uploads/2025/03/TRAININGPEAKS-LOGO-PARTNER-WEB.png"></img>
+          </v-col>
+          <v-col cols="12" 
+            md="4" class="d-flex justify-center align-center mt-n8 mb-10" :class="isDarkMode ? 'logo-item' : 'logo-item1'">
+            <img  :style="{ marginRight: isMobile ? '4%' : '0', maxWidth: isMobile ? '58%' : '110%', height: 'auto' }" src="https://www.golfworld.com.au/assets/images/Garmin.png"></img>
+          </v-col>
         </transition-group>
       </v-row>
     </v-container>
   </v-parallax>
 </section>
-
+<!-- <section class="fade-in shadow-bottom" id="team" style="position: relative; z-index: 999; min-height: 80vh">
+  <v-card :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; border-radius: 0% !important; min-height: 80vh">
+    <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
+      <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
+        <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
+          :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
+          <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
+            :style="{ 
+              'font-size': !isMobile ? '48px' : '30px', 
+              lineHeight: 1.15, 
+              color: isDarkMode ? '#fffbe9' : '#252423',
+              opacity: sectionVisible.team ? 1 : 0, transition: 'opacity 1s ease'
+            }">
+            Team
+          </p>
+        </v-col>
+      </v-row>
+      <div class="team-members-container mt-n15" ref="teamMembersContainer" @mousedown="startDrag" 
+          @mouseup="stopDrag" @mouseleave="stopDrag" @mousemove="drag"
+          :style="{ overflowX: isMobile ? 'auto' : 'hidden', whiteSpace: 'nowrap' }">
+           <br v-if="!isMobile"/>
+              <br v-if="!isMobile"/>
+              <br v-if="!isMobile"/>
+              <br v-if="isMobile"/>
+              <br v-if="isMobile"/>
+        <div class="team-members-row" style="display: flex; flex-direction: row;">
+          <v-col v-for="member in teamMembers" :key="member.id" :cols="isMobile ? 9 : 5" class="d-flex flex-column align-center fade-up">
+            <v-img 
+              :src="member.image" 
+              class="team-image" 
+              :style="{ 
+                width: '100%', 
+                height: isMobile ? '220px' : 'auto', 
+                objectFit: 'cover' 
+              }" 
+              @mousemove="handleMouseMove($event, member.name)" 
+              @mouseleave="handleMouseLeave" 
+            />
+            <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
+                :class="isDarkMode ? 'text-white' : 'text-black'" 
+                :style="{ fontSize: isMobile ? '24px' : '32px', opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
+              {{ member.name }}
+            </h3>
+            <h3 style="font-family: 'Aeonik1'; transition: 'font-size 0.5s ease-out';" 
+                :class="isDarkMode ? 'text-white' : 'text-black'" 
+                :style="{ fontSize : isMobile ? '14px' : '22px', 
+                opacity: sectionVisible.partners ? 1 : 0, transition: 'opacity 1s ease' }">
+              {{ member.position }}
+            </h3>
+          </v-col>
+        </div>
+      </div>
+    </v-container>
+  </v-card>
+</section> -->
+</section>
 
 <footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="!isMobile" id="contact">
 <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 30px;padding-top:6%">
   
   <div style="width: 30%; height: 92vh;"> 
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       CONTACT
     </div>
   </div>  
 
   <div style="flex-grow: 1; height: 92vh; display: grid; grid-template-columns: repeat(2, 1fr);"> 
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       ADDRESS
     </div>
     <div style="background: #b7e3b6; padding: 10px;">
@@ -676,23 +741,23 @@
     </div>
     <hr/>
     <hr/>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">INQUIRIES</div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">INQUIRIES</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
         <span >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
     </div>
     <hr/>
     <hr/>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">INFO</div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">INFO</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <a style="color:black" href="mailto:hello@kip.coach" target="_blank"  rel="noopener noreferrer"  class="b2">
           <span>hello(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
       </a>
     </div>
     <hr/>
     <hr/>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">FOLLOW US</div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">FOLLOW US</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <a style="color:black" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="b2">
         <span >Linkedin<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
         <br/>
@@ -702,8 +767,8 @@
     </div>
     <hr/>
     <hr/> 
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">WAITLIST</div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">WAITLIST</div>
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
       <div class="contact__information__detail__form__input">
        <v-row>
         <v-col cols="9">
@@ -720,11 +785,11 @@
           </svg>
         </v-col>
         <v-col>
-           <button class="b2 mt-9 decoration active green" style="flex-shrink: 0;"><v-icon size="x-small">mdi-circle</v-icon>Submit</button>
+           <button class="b2 decoration active green" style="flex-shrink: 0;">Submit</button>
          </v-col>
         </v-row>
      </div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
+    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;">
     </div>
     </div>
     <br/>
@@ -735,12 +800,12 @@
     style=" position: absolute; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8); ">
       <v-row>
         <v-col>
-          <div class="marquee-container">
-            <span style="font-size:32px">
-              <span >WORKING IN:</span></span>
+          <div class="marquee-container" >
+            <span v-if="!isMobile"  style="font-size:32px">Currently Working in:</span>
+            <span v-else style="font-size:32px"><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
             <div class="marquee-content">
               <div class="marquee-container">
-                <div class="marquee-text">
+                <div class="marquee-text1">
                   SEATTLE <span> ({{ seattleTime }}),</span> 
                   SFO <span> ({{ sfoTime }}),</span> 
                   CHICAGO <span> ({{ chicagoTime }}),</span> 
@@ -758,127 +823,114 @@
 </div>
 </footer>
 
-<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0; height: 68vh; display: flex; flex-direction: column; justify-content: space-between; padding: 20px; box-sizing: border-box;" v-if="isMobile" id="contact">
-  <!-- First section: Address -->
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
-    <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">ADDRESS</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
-    </div>
-    
+<footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%; overflow-y: auto;" v-if="isMobile" id="contact">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; padding-top: 26%; margin-bottom: 5% !important;">
+    <div style="flex-grow: 1; height: auto; display: grid;margin-top:20%">
+      <v-row style="background: #b7e3b6; margin-left: 1%;">
+        <v-col>
+          <p class="responsive-text text-center mr-12">ADDRESS</p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">KIP HEADQUARTERS</p>
+          <p class="responsive-text">1 N 4 Pl.</p>
+          <p class="responsive-text">Brooklyn, NY 11249</p>
+          <p class="responsive-text">United States</p>
+          <p class="responsive-text">
+            <button @click="gotoRoutesite('https://maps.app.goo.gl/XiNdKjy83swH1nWu5')" style="background: none; border: none; color: black; text-decoration: underline; cursor: pointer;">
+              Map <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+            </button>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 1%;padding-top:12px;padding-bottom:10px">
+        <v-col>
+          <p class="responsive-text text-center mr-12">INQUIRIES</p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">
+            <button @click="gotoRoutesite('tel:+1 206 395 9662')" style="background: none; border: none; color: black; cursor: pointer;">
 
-    <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">KIP HEADQUARTERS</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">1 N 4 Pl.</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">Brooklyn, NY 11249</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">United States</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">
-        <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
-          Map <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-        </a>
-      </p>
+              <span style="text-decoration: underline;" >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+            </button>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 1%;padding-top:12px;padding-bottom:10px">
+        <v-col>
+          <p class="responsive-text text-center mr-12">INFO</p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">
+            <button @click="gotoRoutesite('mailto:hello@kip.coach')" style="background: none; border: none; color: black; cursor: pointer;">
+              <span style="text-decoration: underline;" >hello(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+            </button>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 1%;padding-top:12px;padding-bottom:10px">
+        <v-col>
+          <p class="responsive-text text-center mr-12">FOLLOW US</p>
+        </v-col>
+        <v-col class="ml-n10">
+          <p class="responsive-text">
+            <button @click="gotoRoutesite('https://instagram.com')" style="background: none; border: none; color: black; cursor: pointer;">
+              <span style="text-decoration: underline;" >Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+            </button>
+          </p>
+          <p class="responsive-text">&nbsp;</p>
+          <p class="responsive-text">
+            <button @click="gotoRoutesite('https://linkedin.com')" style="background: none; border: none; color: black; cursor: pointer;">
+              <span style="text-decoration: underline;" >LinkedIn<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+            </button>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <hr/>
+      <br>
+      <v-row style="background: #b7e3b6; margin-left: 1%;">
+        <v-col cols="5">
+          <p class="responsive-text text-center ml-4">WAITLIST</p>
+          <p class="responsive-text">&nbsp;</p>
+        </v-col>
+        <v-col cols="5">
+          <p class="responsive-text">
+            <v-text-field variant="underlined" hide-details="auto" class="responsive-text ml-n4" placeholder="Email Address"/>
+            <v-btn variant="text" size="small" rounded="0" class="b2 decoration active green ml-7 mt-4">Submit</v-btn>
+          </p>
+        </v-col>
+      </v-row>
+      <br>
+      <br>
     </div>
-  </div>
-
-  <hr class="mt-2 mb-6"/>
-
-  <!-- Second section: Inquiries -->
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
-    <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">INQUIRIES</p>
-    </div>
-    <div style="flex: 1; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
-        +1 770 364 4726  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-      </a>
-    </div>
-  </div>
-  <hr class="mt-2 mb-6"/>
-
-  <!-- Second section: Inquiries -->
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
-    <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">INFO</p>
-    </div>
-    <div style="flex: 1; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="mailto:hello@kip.coach" target="_blank" class="map-link">
-        hello(at)kip.coach   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-      </a>
-    </div>
-  </div>
-
-  <hr class="mt-2 mb-6"/>
-  
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
-    <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">FOLLOW US</p>
-    </div>
-    <div style="flex: 1; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="https://linkedin.com" target="_blank" class="map-link">
-        LinkedIn   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-      </a>
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="https://instagram.com" target="_blank" class="map-link">
-        Instagram   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-      </a>
-    </div>
-  </div>
-
-  <hr class="mt-2 mb-6"/>
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
-    <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">WISHLIST</p>
-      <input placeholder="Email Address" style="border: none; outline: none;" />
-        <svg
-          class="mt-n10"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 290.78 5.31"
-        >
-          <g id="Layer_2" data-name="Layer 2">
-            <g id="Design_System" data-name="Design System">
-              <path
-                d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5"
-                fill="none"
-                stroke="#000"
-                stroke-miterlimit="10"
-                stroke-width="0.61"
-              ></path>
-            </g>
-          </g>
-        </svg>
-    </div>
-    <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
-      <v-icon class="ml-16" size="x-small">mdi-circle</v-icon> SUBMIT
-     </div>
-  </div>
-
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;">
-    <div style="flex: 1;">
-      <div class="marquee">
-    <v-row>
-      <v-col>
-        <div class="marquee-container">
-          <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
-          <span v-else class="marquee-label1"
-            ><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span
-          >
-          <div class="marquee-content1">
-            <div class="marquee-text1">
-              SEATTLE <span> ({{ seattleTime }}),</span>
-              SFO <span> ({{ sfoTime }}),</span>
-              CHICAGO <span> ({{ chicagoTime }}),</span>
-              AUSTIN <span> ({{ austinTime }}),</span>
-              NYC <span> ({{ nycTime }}),</span>
-              LONDON <span> ({{ londonTime }})</span>
+    <div class="marquee" style="position: fixed; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8);">
+      <v-row>
+        <v-col>
+          <div class="marquee-container">
+            <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
+            <span v-else class="marquee-label1"><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span>
+            <div class="marquee-content1">
+              <div class="marquee-text1">
+                SEATTLE <span> ({{ seattleTime }}),</span>
+                SFO <span> ({{ sfoTime }}),</span>
+                CHICAGO <span> ({{ chicagoTime }}),</span>
+                AUSTIN <span> ({{ austinTime }}),</span>
+                NYC <span> ({{ nycTime }}),</span>
+                LONDON <span> ({{ londonTime }})</span>
+              </div>
             </div>
           </div>
-        </div>
-      </v-col>
-    </v-row>
-  </div>
+        </v-col>
+      </v-row>
     </div>
   </div>
 </footer>
@@ -945,6 +997,15 @@ import JamesJackson from '../src/image/JamesJackson.png'
           {src:
               "https://www.golfworld.com.au/assets/images/Garmin.png",
           },
+          // {src:
+          //     "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ebafce2edf7ddb8cf58_VolumeDark.svg",
+          // },
+          // {src:
+          //     "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73563dba154dad_SitemarkDark.svg",
+          // },
+          // {src:
+          //     "https://cdn.prod.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12ec2e784a68c2fbf43fc_WavelessDark.svg",
+          // },
         ],
         showFirstSet: true,
         intervalId: null,
@@ -955,6 +1016,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
           { text: "Mission", link: "#whatwedo" },
           { text: "KIP", link: "#kip" },
           { text: "ABOUT", link: "#milesran" },
+          // { text: "TEAM", link: "#team" },
           { text: "CONTACT", link: "#contact" },
         ],
         hoveredMember: null,
@@ -1010,7 +1072,6 @@ import JamesJackson from '../src/image/JamesJackson.png'
         duration: 2000,
         isAtBottom: false,
         lastScrollPosition: 0,
-        fixedScroll:false
       };
     },
     computed: {
@@ -1021,22 +1082,22 @@ import JamesJackson from '../src/image/JamesJackson.png'
         return this.isMobile ? this.paddingValues.mobile : this.paddingValues.desktop;
       },
       footerTitleFontSize() {
-        return this.isMobile ? "2.5vw" : "1.5vw";
+        return this.isMobile ? "2.5vw" : "1.5vw"; // Adjust font size based on screen size
       },
       addressDetailsFontSize() {
-        return this.isMobile ? "2.2vw" : "1.2vw";
+        return this.isMobile ? "2.2vw" : "1.2vw"; // Adjust font size based on screen size
       },
       marqueeTextFontSize() {
-        return this.isMobile ? "2.2vw" : "1.2vw";
+        return this.isMobile ? "2.2vw" : "1.2vw"; // Adjust font size based on screen size
       },
       marqueeLabelFontSize() {
-        return this.isMobile ? "2.2vw" : "1.2vw";
+        return this.isMobile ? "2.2vw" : "1.2vw"; // Adjust font size based on screen size
       },
       floatingX() {
-        return this.cursorX - 66; 
+        return this.cursorX - 66; // Adjusts the X position to center the text above the cursor
       },
       floatingY() {
-        return this.cursorY - 56; 
+        return this.cursorY - 56; // Adjusts the Y position to place the text above the cursor
       },
       cardHeight() {
         return this.isMobile ? "45vh" : "86vh";
@@ -1060,11 +1121,11 @@ import JamesJackson from '../src/image/JamesJackson.png'
       },
       updateTimes() {
         const now = new Date();
-        const utcOffset = -7; 
-        const chicagoOffset = -5; 
-        const austinOffset = -5; 
-        const nycOffset = -4; 
-        const londonOffset = 0;
+        const utcOffset = -7; // Seattle and SFO (PDT)
+        const chicagoOffset = -5; // Chicago (CDT)
+        const austinOffset = -5; // Austin (CDT)
+        const nycOffset = -4; // NYC (EDT)
+        const londonOffset = 0; // London (GMT)
         this.seattleTime = this.formatTime(now, utcOffset);
         this.sfoTime = this.formatTime(now, utcOffset);
         this.chicagoTime = this.formatTime(now, chicagoOffset);
@@ -1078,22 +1139,22 @@ import JamesJackson from '../src/image/JamesJackson.png'
     },
       startLogoRotation() {
         this.intervalId = setInterval(() => {
-          this.currentIndex = (this.currentIndex + 1) % this.logos.length; 
+          this.currentIndex = (this.currentIndex + 1) % this.logos.length; // Loop back to the first logo
         }, 3000); // Change logo every 3 seconds
       },
       toogle() {
         this.isDarkMode = !this.isDarkMode;
-        localStorage.setItem('isDarkMode', this.isDarkMode); 
+        localStorage.setItem('isDarkMode', this.isDarkMode); // Save the state in localStorage
       },
       checkDarkMode() {
         const darkModePreference = localStorage.getItem('isDarkMode');
         if (darkModePreference !== null) {
-          this.isDarkMode = JSON.parse(darkModePreference); 
+          this.isDarkMode = JSON.parse(darkModePreference); // Load the state from localStorage
         }
       },
       handleMouseMove(event, member) {
-        this.cursorX = event.clientX;
-        this.cursorY = event.clientY; 
+        this.cursorX = event.clientX; // Use the mouse's X position directly
+        this.cursorY = event.clientY; // Use the mouse's Y position directly
         this.hoveredMember = member;
         this.showFloatingText = true;
       },
@@ -1116,13 +1177,16 @@ import JamesJackson from '../src/image/JamesJackson.png'
           const section = document.querySelector(item.link);
           if (section) {
             if (item.link === "#contact") {
+              // Scroll to bottom of page
               window.scrollTo({
                 top: document.documentElement.scrollHeight,
                 behavior: "smooth",
               });
             } else {
+              // For other sections, use existing behavior
               section.scrollIntoView({ behavior: "smooth" });
             }
+
             section.scrollIntoView({ behavior: "smooth" });
           }
         } else {
@@ -1150,23 +1214,29 @@ import JamesJackson from '../src/image/JamesJackson.png'
             if (entry.isIntersecting) {
               const sectionId = entry.target.id;
               this.activeSection = sectionId;
+              // Add visible class to text elements
               const textElements = entry.target.querySelectorAll(".fade-up");
               textElements.forEach((el) => el.classList.add("visible"));
+              console.log(sectionId , 'here');
               if (entry.isIntersecting) {
               this.sectionVisible[sectionId] = true;
             } else {
               this.sectionVisible[sectionId] = false;
             }
+              // Existing logic for counting
               if (sectionId === "milesran" && !this.hasStartedCounting) {
+                console.log('ey');
+                
                 this.countIdeasSpunOut = 0;
                 this.countIdeasKilled = 0;
                 this.startCounting();
-                this.hasStartedCounting = true; 
+                this.hasStartedCounting = true; // Set the flag to true
               }
               else{
                   this.ColorFooter = '#b7e3b6'
               }
             } else {
+              // Remove visible class when out of view
               const textElements = entry.target.querySelectorAll(".fade-up");
               textElements.forEach((el) => el.classList.remove("visible"));
             }
@@ -1176,6 +1246,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
           threshold: 0.5,
         }
       );
+      // Observe all sections
       document.querySelectorAll("section").forEach((section) => {
         observer.observe(section);
       });
@@ -1185,11 +1256,14 @@ import JamesJackson from '../src/image/JamesJackson.png'
       },
       submitForm() {
         if (this.$refs.form.validate()) {
+          // Handle form submission
           console.log("Form submitted:", {
             name: this.name,
             email: this.email,
             message: this.message,
           });
+
+          // Reset form
           this.$refs.form.reset();
         }
       },
@@ -1250,6 +1324,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
         this.$refs.teamMembersContainer.classList.add("dragging");
         event.preventDefault();
       },
+
       stopDrag() {
         this.isDragging = false;
         this.$refs.teamMembersContainer.classList.remove("dragging");
@@ -1257,79 +1332,78 @@ import JamesJackson from '../src/image/JamesJackson.png'
 
       drag(event) {
         if (!this.isDragging) return;
+
         event.preventDefault();
         const x = event.pageX - this.$refs.teamMembersContainer.offsetLeft;
         const walk = (x - this.startX) * 2;
+
         requestAnimationFrame(() => {
           this.$refs.teamMembersContainer.scrollLeft = this.scrollLeft - walk;
         });
       },
       startCounting() {
-      const duration = 1000; 
-      const startTime = performance.now(); 
-      const initialSpunOut = this.countIdeasSpunOut; 
-      const initialKilled = this.countIdeasKilled; 
-      this.maxSpunOut = 18000; 
-      this.maxKilled = 2; 
-      const updateCount = (timestamp) => {
-          const elapsed = timestamp - startTime; 
-          const progress = Math.min(elapsed / duration, 1);
-          this.countIdeasSpunOut = Math.round(
-              initialSpunOut + (this.maxSpunOut - initialSpunOut) * progress
-          );
-          this.countIdeasKilled = Math.round(
-              initialKilled + (this.maxKilled - initialKilled) * progress
-          );
-          if (progress < 1) {
-              requestAnimationFrame(updateCount);
-          } else {
-              this.countIdeasSpunOut = this.maxSpunOut;
-              this.countIdeasKilled = this.maxKilled;
-              this.updateDisplay();
-          }
-      };
-      requestAnimationFrame(updateCount);
-  },
-  updateDisplay() {
-      const spunOutDisplay = `${this.countIdeasSpunOut / 1000}k+`;
-      this.countIdeasSpunOut = spunOutDisplay
-      const killedDisplay = `> ${this.countIdeasKilled}`;
-      this.countIdeasKilled = killedDisplay
-      document.getElementById('spunOutDisplay').innerText = spunOutDisplay;
-      document.getElementById('killedDisplay').innerText = killedDisplay;
-  },
-  handleScroll() {
+    const duration = 1000; // Duration of the counting animation in milliseconds
+    const startTime = performance.now(); // Get the current time
+    const initialSpunOut = this.countIdeasSpunOut; // Initial value for spun out
+    const initialKilled = this.countIdeasKilled; // Initial value for killed
+
+    // Set the maximum values for the counting
+    this.maxSpunOut = 18000; // Set max spun out to 18k
+    this.maxKilled = 2; // Set max killed to a value greater than 2
+
+    const updateCount = (timestamp) => {
+        const elapsed = timestamp - startTime; // Calculate elapsed time
+        const progress = Math.min(elapsed / duration, 1); // Normalize progress to [0, 1]
+
+        // Calculate the current count based on progress
+        this.countIdeasSpunOut = Math.round(
+            initialSpunOut + (this.maxSpunOut - initialSpunOut) * progress
+        );
+        this.countIdeasKilled = Math.round(
+            initialKilled + (this.maxKilled - initialKilled) * progress
+        );
+
+        // Continue the animation until the duration is reached
+        if (progress < 1) {
+            requestAnimationFrame(updateCount);
+        } else {
+            // Ensure it ends exactly at max
+            this.countIdeasSpunOut = this.maxSpunOut;
+            this.countIdeasKilled = this.maxKilled;
+
+            // Update the display after counting is complete
+            this.updateDisplay();
+        }
+    };
+
+    // Start the animation
+    requestAnimationFrame(updateCount);
+},
+
+updateDisplay() {
+    // Format the display for spun out
+    const spunOutDisplay = `${this.countIdeasSpunOut / 1000}k+`;
+    this.countIdeasSpunOut = spunOutDisplay
+    // Format the display for killed
+    const killedDisplay = `> ${this.countIdeasKilled}`;
+    this.countIdeasKilled = killedDisplay
+
+    // Assuming you have elements to display these values
+    document.getElementById('spunOutDisplay').innerText = spunOutDisplay;
+    document.getElementById('killedDisplay').innerText = killedDisplay;
+},
+handleScroll() {
   const currentScrollY = window.scrollY;
-  const contactSection = document.getElementById('contact');
-  const contactSectionTop = contactSection.offsetTop;
-  const contactSectionHeight = contactSection.offsetHeight;
-  const viewportHeight = window.innerHeight;
-
   if (currentScrollY > this.lastScrollY && currentScrollY > 0) {
-    if (this.activeSection !== 'contact') {
-      this.isToolbarVisible = false; 
-    } else {
-      this.isToolbarVisible = true; 
-    }
+    this.isToolbarVisible = false; // Hide toolbar on scroll down
   } else {
-    this.isToolbarVisible = true; 
+    this.isToolbarVisible = true; // Show toolbar on scroll up
   }
-
-  if (currentScrollY + viewportHeight >= document.body.offsetHeight) {
-    this.isToolbarVisible = true; 
-    if (this.activeSection === 'contact') {
-    this.fixedScroll = true
-      console.log('You are now viewing the contact section and have scrolled to the bottom of the page');
-    }
-  } else {
-    this.fixedScroll = false
-  }
-
-  this.lastScrollY = currentScrollY; 
+  this.lastScrollY = currentScrollY; // Update last scroll position
 }
     },
     created() {
-      this.checkDarkMode(); 
+      this.checkDarkMode(); // Check dark mode preference on component creation
     },
     mounted() {
       this.updateTimes(); 
@@ -1366,12 +1440,15 @@ import JamesJackson from '../src/image/JamesJackson.png'
       this.resetCounting();
     },
     beforeUnmount() {
-      clearInterval(this.intervalId); 
+      clearInterval(this.intervalId); // Clean up the interval when the component is destroyed
     },
   };
 </script>
 <style lang="scss">
   @import "./assets/fonts/fonts.css";
+  // body {
+  //   font-family: 'Aeonik', Arial, sans-serif; /* Fallback to Arial and sans-serif */
+  // }
   @font-face {
     font-family: "Aeonik1";
     src: url("../src/assets/font/AeonikTRIAL-Regular.otf") format("opentype");
@@ -1381,24 +1458,26 @@ import JamesJackson from '../src/image/JamesJackson.png'
   @font-face {
     font-family: "Poppins";
     src: url("../src/assets/font/poppins.medium.ttf") format("opentype");
+    // font-weight: 1000 !important;
     font-style: normal;
   }
   @font-face {
     font-family: "ChaletBook";
     src: url("../src/assets/font/ChaletBookBold.ttf") format("opentype");
+    // font-weight: 1000 !important;
     font-style: normal;
   }
   @font-face {
     font-family: "ChaletBook1";
-    src: url("../src/assets/font/ChaletBookOriginal.woff2") format("opentype");
-    font-weight: 800 !important;
-    color:black !important;
+    src: url("../src/assets/font/ChaletBookRegular.ttf") format("opentype");
+    // font-weight: 1000 !important;
     font-style: normal;
   }
 </style>
 
 <style scoped>
 
+/* Base Styles */
 .hero-content {
   height: 100%;
   display: flex;
@@ -1407,6 +1486,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
   text-align: center;
 }
 
+/* Title Animations */
 .main-title {
   font-size: 8rem;
   margin: 0;
@@ -1532,7 +1612,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
   position: fixed;
   pointer-events: none;
   z-index: 999;
-  padding: 8px 18px;
+  padding: 8px 16px;
   color:  #FFD700  ;
   font-size: 20px;
   transform-origin: center bottom;
@@ -1825,7 +1905,7 @@ style attribute {
     margin-bottom: 1000px; 
 } */
 #partners {
-    margin-bottom: 500px; 
+    margin-bottom: 1000px; 
 }
 .my-custom-row {
     min-height: 95px !important; /* Adjust as needed */
@@ -1973,7 +2053,7 @@ animation: marquee 15s linear infinite;
 }
 @media screen and (max-width: 767px) {
   .p-large {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1.5;
   }
 }
@@ -2019,7 +2099,6 @@ animation: marquee 15s linear infinite;
   line-height: 50px !important;
   display: block;
   
-  
 }
 @media screen and (max-width: 479px) {
   .side-nav-link-large {
@@ -2053,7 +2132,7 @@ a:active, a:hover {
 
 .side-nav-link-large {
   text-decoration: none; /* Remove underline */
-  color: black !important; /* Change text color */
+  color: #333; /* Change text color */
   position: relative; /* Position relative for pseudo-element */
 }
 
@@ -2197,7 +2276,7 @@ flex: 1;
 }
 
 .address-content p {
-  font-size: 18px !important; /* Adjust the size as needed */
+  font-size: 16px !important; /* Adjust the size as needed */
   white-space: nowrap; /* Prevents line breaks */
 }
 
@@ -2803,7 +2882,7 @@ transition: opacity 0.5s ease;
   white-space: nowrap;
   animation: marquee 20s linear infinite;
   padding-left: 100%;
-  font-size: 6vw; 
+  font-size: 3vw; 
 }
 
 @keyframes marquee {
@@ -2850,265 +2929,4 @@ transition: opacity 0.5s ease;
   .logo-item1:hover img {
     filter: none;
   }
-  @media (max-width: 768px) {
-  footer {
-    min-height: auto; /* Allow footer to adjust height */
-  }
-
-  .marquee {
-    font-size: 2.5vw; /* Smaller font size for mobile */
-  }
-
-  .ml-8 {
-    margin-left: 0; /* Remove left margin on mobile */
-  }
-
-  .ml-n16 {
-    margin-left: 0; /* Remove negative margin on mobile */
-  }
-
-  .mt-15 {
-    margin-top: 10px; /* Adjust top margin */
-  }
-
-  input {
-    width: 100%; /* Full width input */
-    font-size: 3vw; /* Responsive font size */
-  }
-}
-.header-text {
-  font-family: 'ChaletBook1', sans-serif;
-  font-size: 3.8vw;
-  color: black;
-  transition: font-size 0.5s ease-out;
-}
-
-.map-link {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
-  color: inherit;
-  text-decoration-color: #849f80;
-}
-.header-text {
-  font-family: 'ChaletBook1';
-  font-size: 3.8vw;
-  color: black;
-  transition: font-size 0.5s ease-out;
-  font-weight: 400;
-}
-
-.map-link {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
-  color: inherit;
-  text-decoration-color: #849f80;
-}
-
-.marquee {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(183, 227, 182, 0.8);
-}
-.footer-container {
-  background: #b7e3b6;
-  min-height: 100vh;
-  position: fixed;
-  width: 100%;
-  padding: 5% 2%;
-}
-
-.footer-header {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.footer-link {
-  text-decoration: none;
-  color: black;
-}
-
-.footer-input {
-  border: none;
-  outline: none;
-  width: 100%;
-  padding: 10px;
-  font-size: 18px;
-}
-
-.footer-input::placeholder {
-  color: #ccc;
-}
-footer {
-  width: 100%;
-  position: relative;
-  bottom: 0;
-  background: #b7e3b6;
-  padding: 10px;
-  box-sizing: border-box; /* Ensures padding doesn't affect total width */
-}
-
-v-row {
-  margin: 0;
-  padding: 0;
-}
-
-v-col {
-  padding: 5px;
-}
-
-.header-text {
-  font-size: 3vw;
-  margin-bottom: 5px;
-}
-
-a {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
-  color: inherit;
-}
-
-input[type="email"] {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  border-bottom: 1px solid black;
-}
-
-.marquee {
-  margin-top: 10px;
-}
-
-.marquee-container {
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.marquee-text {
-  display: inline-block;
-  padding-left: 100%;
-  animation: marquee 15s linear infinite;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@media (max-width: 768px) {
-  .header-text {
-    font-size: 5vw;
-  }
-
-  /* Adjust font sizes for smaller screens */
-  .header-text,
-  a,
-  input,
-  .marquee-text {
-    font-size: 3vw; /* Adjust as needed */
-  }
-
-  /* Reduce padding and margins on smaller screens */
-  .v-col {
-    padding: 3px;
-  }
-
-  /* Adjust margin-top for rows if needed */
-  .v-row {
-    margin-top: 10px;
-  }
-}
-/* General footer styles */
-footer {
-  position: relative; /* Default position for larger screens */
-  background: #b7e3b6;
-  padding: 10px;
-  box-sizing: border-box;
-  z-index: 1; /* Ensure it overlaps with other elements */
-}
-
-/* Mobile footer styles */
-@media (max-width: 768px) {
-  footer {
-    position: fixed; /* Fix the footer at the bottom */
-    bottom: 0;
-    width: 100%;
-    height: 60px; /* Set a fixed height for the footer */
-    z-index: 1; /* Ensure it overlaps with other elements */
-  }
-}
-
-/* Adjust the partners section */
-#partners {
-  margin-bottom: 60px; /* Adjust this value to match the footer height */
-}
-
-/* Optional: Adjust font sizes for smaller screens */
-@media (max-width: 480px) {
-  footer {
-    height: 100vh; /* Adjust height for smaller screens */
-    font-size: 14px; /* Adjust font size */
-  }
-  
-  #partners {
-    margin-bottom: 505px; /* Adjust this value to match the footer height */
-  }
-}
-@media only screen and (max-width: 479px) {
-     .contact__information .contact__information__detail__line {
-        position: absolute;
-        top: 0;
-        left: -15px;
-        width: 100vw;
-        height: 1px;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-
-footer {
-  position: fixed; /* Fix the footer at the bottom */
-  bottom: 0;
-  width: 100%;
-  height: 60px; /* Set a fixed height for the footer */
-  z-index: 1; /* Ensure it overlaps with other elements */
-}
-
-/* Optional: Adjust font sizes for smaller screens */
-@media (min-width: 480px) {
-  footer {
-    height: 100vh; /* Adjust height for smaller screens */
-    font-size: 14px; /* Adjust font size */
-  }
-  
-  #partners {
-    margin-bottom: calc(75vh - 60px); /* Adjust this value to match the footer height */
-  }
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-#partners {
-  flex: 1;
-  overflow-y: auto;
-}
-
-footer {
-  flex: 0 0 70px; /* Set a fixed height for the footer */
-}
-
 </style> 
