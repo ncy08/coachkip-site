@@ -603,11 +603,11 @@
   :class="!isMobile ? 'BottomMargin' : ' '"
   id="partners"
   style="position: relative; z-index: 999;"
-  :style="{ minHeight: isMobile ? '40vh' : '100vh' }"
+  :style="{ minHeight: isMobile ? '40vh' : '60vh' }"
 >
   <v-parallax
     style="position: relative; border-radius: 0% !important;"
-    :style="{ minHeight: isMobile ? '40vh' : '100vh' }"
+    :style="{ minHeight: isMobile ? '40vh' : '60vh' }"
     :color="isDarkMode ? '#252423' : '#fffbe9'"
   >
     <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
@@ -678,92 +678,141 @@
 </section>
 
 
+<!-- //DESKTOP FOOTER -->
+<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0; height: 100vh; display: flex; 
+flex-direction: column; justify-content: space-between;  box-sizing: border-box;" v-if="!isMobile" id="contact">
+  <!-- First section: Address -->
+  <div  style="margin-top:  6% !important; display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px;padding-top:18px">
+    
+    <div style="flex: 1.5;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">CONTACT</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+    </div>
 
+    <div style="flex:  1.5;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">ADDRESS</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+    </div>
+    
 
-<footer style="background: #b7e3b6; min-height: 100vh; top: 0; left: 0; bottom: 0; position: fixed; width: 100%;" v-if="!isMobile" id="contact">
-<div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 30px;padding-top:6%">
+    <div style="flex: 1.2; text-align: left;">
+      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">KIP HEADQUARTERS</p>
+      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">1 N 4 Pl.</p>
+      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">Brooklyn, NY 11249</p>
+      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">United States</p>
+      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">
+        <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;" href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
+          Map <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <hr width="1250vw"  class="mt-n2 mb-6" style="border:0.5px solid #7da07d;margin-left:36%"/>
   
-  <div style="width: 30%; height: 92vh;"> 
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
-      CONTACT
-    </div>
-  </div>  
 
-  <div style="flex-grow: 1; height: 92vh; display: grid; grid-template-columns: repeat(2, 1fr);"> 
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
-      ADDRESS
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
+    <div style="flex: 1.5;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
     </div>
-    <div style="background: #b7e3b6; padding: 10px;">
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">KIP HEADQUARTERS</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">1 N 4 Pl.</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">Brooklyn, NY 11249</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">United States</P>
-      <P style="transition:font-size 0.5s ease-out;font-family:'ChaletBook1'; font-size: 1.2vw;">
-        <a  href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank">
-            <u style="color:black !important">Map
-              <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
-            </u>
-          </a>
-      </P>
+
+    <div style="flex: 1.5;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">INQUIRIES</p>
     </div>
-    <hr/>
-    <hr/>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">INQUIRIES</div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
-      <a style="color:black" href="tel:+1 206 395 9662" target="_blank" rel="noopener noreferrer" >
-        <span >+1 770 364 4726<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-    </div>
-    <hr/>
-    <hr/>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">INFO</div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
-      <a style="color:black" href="mailto:hello@kip.coach" target="_blank"  rel="noopener noreferrer"  class="b2">
-          <span>hello(at)kip.coach<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span>
+    <div style="flex: 1.2; text-align: left;">
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+        +1 770 364 4726  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
     </div>
-    <hr/>
-    <hr/>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">FOLLOW US</div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
-      <a style="color:black" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="b2">
-        <span >Linkedin<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-        <br/>
-        <br/>
-        <a style="color:black" href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="b2">
-          <span >Instagram<v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon></span> </a>
-    </div>
-    <hr/>
-    <hr/> 
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">WAITLIST</div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
-      <div class="contact__information__detail__form__input">
-       <v-row>
-        <v-col cols="9">
-          <input  type="email"   placeholder="Email address" 
-            :style="{  border: 'none', backgroundColor: 'transparent',color: black,
-              outline: 'none',  width: '100%',  fontSize: '1.2vw'}"/>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.78 5.31" cka>
-            <g id="Layer_2" data-name="Layer 2">
-              <g id="Design_System" data-name="Design System">
-                <path d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5" fill="none" 
-                stroke="#000" stroke-miterlimit="10" stroke-width="0.61"></path>
-              </g>
-            </g>
-          </svg>
-        </v-col>
-        <v-col>
-           <button class="b2 mt-9 decoration active green" style="flex-shrink: 0;"><v-icon size="x-small">mdi-circle</v-icon>Submit</button>
-         </v-col>
-        </v-row>
-     </div>
-    <div style="background: #b7e3b6; padding: 10px; font-size: 1.2vw;;transition:font-size 0.5s ease-out">
-    </div>
-    </div>
-    <br/>
-    <br/>
-
   </div>
-  <div class="marquee"
+  <hr width="1250vw"  class="mt-n15  mb-6" style="border:0.5px solid #7da07d;margin-left:36%"/>
+
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
+    <div style="flex: 1.5;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+    </div>
+
+    <div style="flex: 1.5;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">INFO</p>
+    </div>
+
+    <div style="flex: 1.2; text-align: left;">
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;" href="mailto:hello@kip.coach" target="_blank" class="map-link">
+        hello(at)kip.coach   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+      </a>
+    </div>
+  </div>
+  <hr width="1250vw"  class="mt-n15  mb-6" style="border:0.5px solid #7da07d;margin-left:36%"/>
+
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
+    <div style="flex: 1.5;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+    </div>
+
+    <div style="flex: 1.5;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">FOLLOW US</p>
+    </div>
+    <div style="flex: 1.2; text-align: left;">
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;" href="https://linkedin.com" target="_blank" class="map-link">
+        LinkedIn   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+      </a>
+      <br/>
+      <br/>
+      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;" href="https://instagram.com" target="_blank" class="map-link">
+        Instagram   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+      </a>
+    </div>
+  </div>
+  <hr width="1250vw"  class="mt-n15  mb-6" style="border:0.5px solid #7da07d;margin-left:36%"/>
+
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px" class="mt-n4">
+    <div style="flex: 1.5;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+    </div>
+
+    <div style="flex: 1.5;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">WISHLIST</p>
+      <input placeholder="Email Address" style="border: none; outline: none;font-size:1vw" class="ml-5" />
+        <svg
+          class="mt-n10"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 290.78 5.31"
+        >
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="Design_System" data-name="Design System">
+              <path
+                d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5"
+                fill="none"
+                stroke="#000"
+                stroke-miterlimit="10"
+                stroke-width="0.61"
+              ></path>
+            </g>
+          </g>
+        </svg>
+    </div>
+    <div style="flex: 1.2; text-align: left;" >
+    <h2 style="font-weight:400; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;" class="mt-8">  <v-icon class="ml-16" size="x-small">mdi-circle</v-icon>  SUBMIT</h2>
+     </div>
+  </div>
+
+  <div class="marquee mb-2"
     style=" position: absolute; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8); ">
       <v-row>
         <v-col>
@@ -785,15 +834,29 @@
           </div>
         </v-col>
       </v-row>
-    </div>
-
-</div>
+  </div>
 </footer>
-
-<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0; height: 68vh; display: flex; 
+<!-- MOBILE FOOTER -->
+<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0; height: 100vh; display: flex; 
 flex-direction: column; justify-content: space-between;  box-sizing: border-box;" v-if="isMobile" id="contact">
   <!-- First section: Address -->
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px;padding-top:18px">
+  <div class="mt-1" style="margin-top:15% !important; display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px;padding-top:18px">
+    <div style="flex: 1;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
+    </div>
+    
+
+    <div style="flex: 1; text-align: left;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
+    </div>
+  </div>
+
+  <div class="mt-1" style="padding: 14px 0 20px 0;margin-top:16% !important; display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px;padding-top:18px">
     <div style="flex: 1;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">ADDRESS</p>
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
@@ -803,63 +866,63 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
     
 
     <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">KIP HEADQUARTERS</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">1 N 4 Pl.</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">Brooklyn, NY 11249</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">United States</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">
-        <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">KIP HEADQUARTERS</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">1 N 4 Pl.</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">Brooklyn, NY 11249</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">United States</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">
+        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;"
+         href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
           Map <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
         </a>
       </p>
     </div>
   </div>
+  <hr width="1000vw"  class="mt-n8 mb-6" style="border:0.5px solid #7da07d;"/>
 
-  <hr width="1000vw"  class="mt-2 mb-6" style="border:1px solid #7da07d;"/>
-
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
+  <div style="padding: 14px 0 20px 0;display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
     <div style="flex: 1;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">INQUIRIES</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+      <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
         +1 770 364 4726  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
     </div>
   </div>
-  <hr width="1000vw" class="mt-2 mb-6" style="border:1px solid #7da07d;"/>
+  <hr width="1000vw" class="mt-n6 mb-6" style="border:0.5px   solid #7da07d;"/>
 
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
+  <div style="padding: 14px 0 20px 0;display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
     <div style="flex: 1;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">INFO</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="mailto:hello@kip.coach" target="_blank" class="map-link">
+      <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="mailto:hello@kip.coach" target="_blank" class="map-link">
         hello(at)kip.coach   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
     </div>
   </div>
-
-  <hr width="1000vw" class="mt-2 mb-6" style="border:1px solid #7da07d;"/>
+  <hr width="1000vw" class="mt-n6 mb-6" style="border:0.5px   solid #7da07d;"/>
   
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
+  <div style="padding: 14px 0 20px 0;display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
     <div style="flex: 1;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">FOLLOW US</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="https://linkedin.com" target="_blank" class="map-link">
+      <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="https://linkedin.com" target="_blank" class="map-link">
         LinkedIn   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="https://instagram.com" target="_blank" class="map-link">
+      <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;" href="https://instagram.com" target="_blank" class="map-link">
         Instagram   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
     </div>
   </div>
+  <hr width="1000vw" class="mt-n6 mb-6" style="border:0.5px  solid #7da07d;"/>
 
-  <hr width="1000vw" class="mt-2 mb-6" style="border:1px solid #7da07d;"/>
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
-    <div style="flex: 1.5;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">WISHLIST</p>
+  <div style="padding: 14px 0 20px 0;display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px" 
+  class="mt-n6">
+    <div style="flex: 1.6;">
+      <p class="mt-n2 mb-3" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">WISHLIST</p>
       <input placeholder="Email Address" style="border: none; outline: none;" />
         <svg
           class="mt-n10"
@@ -879,13 +942,12 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
           </g>
         </svg>
     </div>
-    <div style="flex: 1; text-align: left;">
+    <div style="flex: 1; text-align: left;" class="ml-n10">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
       <v-icon class="ml-16" size="x-small">mdi-circle</v-icon> SUBMIT
      </div>
   </div>
-
   <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
     <div style="flex: 1;">
       <div class="marquee mb-2">
@@ -2209,15 +2271,15 @@ flex: 1;
   position: relative; /* Ensure the shadow is positioned relative to the section */
 }
 
-.shadow-bottom::after {
+.shadow-bottom{
   content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0; /* Position at the bottom */
   height: 10px; /* Adjust height as needed */
-  background: rgba(0, 0, 0, 0.5); /* Shadow color */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  background: rgba(0, 0, 0, 0.5)  !important; /* Shadow color */
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5) !important; /* Shadow effect */
   z-index: -1; /* Ensure it stays behind the content */
 }
 
