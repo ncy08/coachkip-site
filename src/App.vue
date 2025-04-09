@@ -840,7 +840,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
 <footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0; height: 100vh; display: flex; 
 flex-direction: column; justify-content: space-between;  box-sizing: border-box;" v-if="isMobile" id="contact">
   <!-- First section: Address -->
-  <div class="mt-1" style="margin-top:18% !important; display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px;padding-top:18px">
+  <div class="mt-1" style="margin-top:20% !important; display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px;padding-top:18px">
     <div style="flex: 1;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
