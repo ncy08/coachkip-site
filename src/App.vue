@@ -603,11 +603,11 @@
   :class="!isMobile ? 'BottomMargin' : ' '"
   id="partners"
   style="position: relative; z-index: 999;"
-  :style="{ minHeight: isMobile ? '40vh' : '60vh' }"
+  :style="{ minHeight: isMobile ? '40vh' : '70vh' }"
 >
   <v-parallax
     style="position: relative; border-radius: 0% !important;"
-    :style="{ minHeight: isMobile ? '40vh' : '60vh' }"
+    :style="{ minHeight: isMobile ? '40vh' : '70vh' }"
     :color="isDarkMode ? '#252423' : '#fffbe9'"
   >
     <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
