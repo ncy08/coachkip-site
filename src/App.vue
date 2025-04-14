@@ -540,7 +540,7 @@
 </section>
 <section  id="milesran" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '50vh' : '100vh'}">
 <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" :color="isDarkMode ? '#252423' : '#fffbe9'">
-  <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
+  <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
       <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
         :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
@@ -610,7 +610,7 @@
     :style="{ minHeight: isMobile ? '40vh' : '70vh' }"
     :color="isDarkMode ? '#252423' : '#fffbe9'"
   >
-    <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
+    <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
       <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
         <v-col
           :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -665,7 +665,7 @@
                 :class="isMobile ? 'ml-n5' : 'ml-n2'"
                 :src="logo"
                 :style="{
-                  maxWidth: isMobile ? '100px' : '300px', /* Set a consistent max width */
+                  maxWidth: isMobile ? '100px' : '210px', /* Set a consistent max width */
                   height: 'auto', /* Maintain aspect ratio */
                 }"
               />
@@ -679,124 +679,159 @@
 
 
 <!-- //DESKTOP FOOTER -->
-<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0; height: 100vh; display: flex; 
+<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0;top:0; height: auto; display: flex; 
 flex-direction: column; justify-content: space-between;  box-sizing: border-box;" v-if="!isMobile" id="contact">
-  <!-- First section: Address -->
-  <div  style="margin-top:  6% !important; display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px;padding-top:18px">
-    
-    <div style="flex: 1.5;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">CONTACT</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-    </div>
-
-    <div style="flex:  1.5;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">ADDRESS</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-    </div>
-    
-
-    <div style="flex: 1.2; text-align: left;">
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">KIP HEADQUARTERS</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">1 N 4 Pl.</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">Brooklyn, NY 11249</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">United States</p>
-      <p style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">
-        <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;" href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
+<div class="mt-1" style="display: flex; justify-content: space-between; align-items: left; width: 100%; padding-left: 15px;">
+  <div style="flex: 1;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+  </div>
+  <div style="flex: 1; text-align: left;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+  </div>
+  <div style="flex: 1; text-align: left;">
+    <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+  </div>
+</div>
+<div class="mt-1" style="display: flex; justify-content: space-between; align-items: left; width: 100%; padding-left: 15px;">
+  <div style="flex: 1;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">CONTACT</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+  </div>
+  <div style="flex: 1; text-align: left;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">ADDRESS</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+  </div>
+  <div style="flex: 1; text-align: left;">
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">KIP HEADQUARTERS</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">1 N 4 Pl.</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">Brooklyn, NY 11249</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">United States</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">
+        <a style="text-decoration-thickness: 1px; line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;"
+         href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
           Map <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
         </a>
       </p>
-    </div>
   </div>
+</div>
+<hr width="100%" style="border:0.2px solid #7da07d !important; margin-left: 33.33%;"  />
 
-  <hr width="1250vw"  class="mt-n2 mb-6" style="border:0.5px solid #7da07d;margin-left:36%"/>
-  
-
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
-    <div style="flex: 1.5;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+<div class="mt-8" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">
+    <div style="flex: 1;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
     </div>
-
-    <div style="flex: 1.5;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">INQUIRIES</p>
+    <div style="flex: 1; text-align: left;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">INQUIRIES</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
     </div>
-    <div style="flex: 1.2; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+     <div style="flex: 1; text-align: left;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw;; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
         +1 770 364 4726  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
+      </p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
     </div>
-  </div>
-  <hr width="1250vw"  class="mt-n15  mb-6" style="border:0.5px solid #7da07d;margin-left:36%"/>
+</div>
+<hr width="100%" style="border:0.2px solid #7da07d !important; margin-left: 33.33%;"  class="mt-n14" />
 
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
-    <div style="flex: 1.5;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+
+<div class="mt-8" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">
+    <div style="flex: 1;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
     </div>
-
-    <div style="flex: 1.5;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">INFO</p>
+    <div style="flex: 1; text-align: left;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">INFO</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
     </div>
-
-    <div style="flex: 1.2; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;" href="mailto:hello@kip.coach" target="_blank" class="map-link">
-        hello(at)kip.coach   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+     <div style="flex: 1; text-align: left;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;" href="mailto:hello@coach.kip" target="_blank" class="map-link">
+        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw;; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+        hello(at)kip.coach <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
+      </p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
     </div>
-  </div>
-  <hr width="1250vw"  class="mt-n15  mb-6" style="border:0.5px solid #7da07d;margin-left:36%"/>
+</div>
+<hr width="100%" style="border:0.2px solid #7da07d !important; margin-left: 33.33%;" class="mt-n14"/>
 
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
-    <div style="flex: 1.5;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+<div class="mt-8" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">
+    <div style="flex: 1;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
     </div>
-
-    <div style="flex: 1.5;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">FOLLOW US</p>
+    <div style="flex: 1; text-align: left;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">FOLLOW US</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
     </div>
-    <div style="flex: 1.2; text-align: left;">
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;" href="https://linkedin.com" target="_blank" class="map-link">
-        LinkedIn   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+     <div style="flex: 1; text-align: left;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;" href="https://linkedin.com" target="_blank" class="map-link">
+        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw;; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+        LinkedIn <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
-      <br/>
-      <br/>
-      <a style="line-height: 1; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;" href="https://instagram.com" target="_blank" class="map-link">
-        Instagram   <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
+      <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw;; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link ml-5">
+        Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
+      </p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
     </div>
-  </div>
-  <hr width="1250vw"  class="mt-n15  mb-6" style="border:0.5px solid #7da07d;margin-left:36%"/>
+</div>
+<hr width="100%" style="border:0.2px solid #7da07d !important; margin-left: 33.33%;"  class="mt-n8 mb-4" />
 
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px" class="mt-n4">
-    <div style="flex: 1.5;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">&nbsp;</p>
+
+
+<div class="mt-1" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">
+    <div style="flex: 1;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
     </div>
-
-    <div style="flex: 1.5;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;">WISHLIST</p>
-      <input placeholder="Email Address" style="border: none; outline: none;font-size:1vw" class="ml-5" />
-        <svg
-          class="mt-n10"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 290.78 5.31"
-        >
+    <div style="flex: 1; text-align: left;">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">WISHLIST</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+    </div>
+     <div style="flex: 1; text-align: left;">
+     <v-row>
+      <v-col cols="8">
+        <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;"  class="map-link1">
+      <input placeholder="Email Address" style="border: none; outline: none;" /> 
+        <svg  class="mt-n10"  xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 290.78 5.31">
           <g id="Layer_2" data-name="Layer 2">
             <g id="Design_System" data-name="Design System">
-              <path
+              <path 
                 d="M290.48,0a5,5,0,0,1-5,5H5.31a5,5,0,0,1-5-5"
                 fill="none"
                 stroke="#000"
@@ -806,38 +841,41 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
             </g>
           </g>
         </svg>
+      </p>
+      </v-col>
+      <v-col class="mt-4">
+        <v-icon class="ml-n4"  size="x-small" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">mdi-circle</v-icon>
+        <span  style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">SUBMIT</span>
+      </v-col>
+     </v-row>
     </div>
-    <div style="flex: 1.2; text-align: left;" >
-    <h2 style="font-weight:400; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.3vw; color: black;" class="mt-8">  <v-icon class="ml-16" size="x-small">mdi-circle</v-icon>  SUBMIT</h2>
-     </div>
   </div>
-
-  <div class="marquee mb-2"
-    style=" position: absolute; bottom: 0; width: 100%; background-color: rgba(183, 227, 182, 0.8); ">
-      <v-row>
-        <v-col>
-          <div class="marquee-container">
-            <span style="font-size:32px">
-              <span >WORKING IN:</span></span>
-            <div class="marquee-content">
+  
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
+    <div style="flex: 1;">
+      <div class="marquee mb-2">
+        <v-row>
+          <v-col>
+            <div class="marquee-container">
               <div class="marquee-container">
+              <span v-if="!isMobile" class="marquee-label">CURRENTLY WORKING IN:</span>
+              <div class="marquee-content">
                 <div class="marquee-text">
-                  SEATTLE <span> ({{ seattleTime }}),</span> 
-                  SFO <span> ({{ sfoTime }}),</span> 
-                  CHICAGO <span> ({{ chicagoTime }}),</span> 
-                  AUSTIN <span> ({{ austinTime }}),</span> 
-                  NYC <span> ({{ nycTime }}),</span> 
-                  LONDON <span> ({{ londonTime }})</span>
+                  PARIS ({{ seattleTime }}), SFO ({{ sfoTime }}), CHICAGO ({{ chicagoTime }}), AUST IN ({{ austinTime }}), NYC ({{ nycTime }}), LONDON ({{ londonTime }}),
+                  PARIS ({{ seattleTime }}), SFO ({{ sfoTime }}), CHICAGO ({{ chicagoTime }}), AUSTIN ({{ austinTime }}), NYC ({{ nycTime }}), LONDON ({{ londonTime }})
                 </div>
               </div>
             </div>
-          </div>
-        </v-col>
-      </v-row>
+            </div>
+          </v-col>
+        </v-row>
+      </div>
+    </div>
   </div>
 </footer>
+
 <!-- MOBILE FOOTER -->
-<footer style="background: #b7e3b6; width: 100%; position: fixed; bottom: 0; height: 100vh; display: flex; 
+<footer style="background: #b7e3b6;  position: fixed; bottom: 0; height: 100vh; display: flex; 
 flex-direction: column; justify-content: space-between;  box-sizing: border-box;" v-if="isMobile" id="contact">
   <!-- First section: Address -->
   <div class="mt-1" style="margin-top:20% !important; display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px;padding-top:18px">
@@ -949,29 +987,23 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
       <div class="marquee mb-2">
     <v-row>
       <v-col>
-        <div class="marquee-container">
-          <span v-if="!isMobile" class="marquee-label1">Currently Working in:</span>
-          <span v-else class="marquee-label1"
-            ><span class="ml-1 mr-1 mt-1 mb-1">WORKING IN:</span></span
-          >
-          <div class="marquee-content1">
-            <div class="marquee-text1">
-              SEATTLE <span> ({{ seattleTime }}),</span>
-              SFO <span> ({{ sfoTime }}),</span>
-              CHICAGO <span> ({{ chicagoTime }}),</span>
-              AUSTIN <span> ({{ austinTime }}),</span>
-              NYC <span> ({{ nycTime }}),</span>
-              LONDON <span> ({{ londonTime }})</span>
+        <div class="marquee-container1">
+              <div class="marquee-container1">
+              <span v-if="isMobile" class="marquee-label1">WORKING IN:</span>
+              <div class="marquee-content1">
+                <div class="marquee-text1">
+                  PARIS ({{ seattleTime }}), SFO ({{ sfoTime }}), CHICAGO ({{ chicagoTime }}), AUSTIN ({{ austinTime }}), NYC ({{ nycTime }}), LONDON ({{ londonTime }}),
+                  PARIS ({{ seattleTime }}), SFO ({{ sfoTime }}), CHICAGO ({{ chicagoTime }}), AUSTIN ({{ austinTime }}), NYC ({{ nycTime }}), LONDON ({{ londonTime }})
+                </div>
+              </div>
             </div>
           </div>
-        </div>
       </v-col>
     </v-row>
   </div>
     </div>
   </div>
 </footer>
-
 
   </div>
   </v-app>
@@ -1214,7 +1246,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
         this.drawer = false;
       },
       checkMobile() {
-        this.isMobile = window.innerWidth < 850;
+        this.isMobile = window.innerWidth <= 501;
       },
       handleCardMousemove(e, card) {
         this.hoveredCard = card;
@@ -1462,7 +1494,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
     font-style: normal;
   }
   @font-face {
-    font-family: "Poppins";
+    font-family: "ChaletBook1";
     src: url("../src/assets/font/poppins.medium.ttf") format("opentype");
     font-style: normal;
   }
@@ -1702,16 +1734,6 @@ import JamesJackson from '../src/image/JamesJackson.png'
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  .card-sponsor {
-    width: 90%;
-    margin-bottom: 32px;
-  }
-  
-  .card-sponsor:hover {
-    transform: scale(1.05);
-  }
-}
 .section {
   opacity: 0;
   transform: translateY(50px);
@@ -1788,19 +1810,6 @@ html {
   line-height: 1.625;
 }
 
-@media (max-width: 768px) {
-  .card-hover:hover::before {
-    opacity: 0.7;
-  }
-  .enhanced-button:hover {
-    transform: scale(1.05);
-  }
-}
-.card-hover {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
 
 @keyframes fadeIn {
     from {
@@ -1923,7 +1932,7 @@ style attribute {
 
 .contact__marquee__ticker__inner {
   display: flex;
-  animation: marquee 15s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 @keyframes marquee {
@@ -1951,12 +1960,8 @@ style attribute {
       white-space: nowrap; /* Prevent line breaks */
   }
 }
-@media (max-width: 768px) {
-  #results {
-      display: block; /* Ensure it is visible */
-      height: auto; /* Adjust height if necessary */
-  }
-}#app {
+
+#app {
 min-height: 100vh;
 margin: 0;
 display: flex;
@@ -1973,18 +1978,18 @@ position: relative;
 }
 
 .marquee-container {
-overflow: hidden;
-position: absolute;
-bottom: 0;
-width: 100%;
-height: 48px;
-background-color: #b7e3b6;
-z-index: 9;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 48px;
+  background-color: #b7e3b6;
+  z-index: 9;
 }
 
 .contact__marquee__ticker__inner {
 display: flex;
-animation: marquee 15s linear infinite;
+animation: marquee 40s linear infinite;
 }
 
 @keyframes marquee {
@@ -2215,13 +2220,11 @@ a:active, a:hover {
 
 .section-title1{
 font-size: 15px !important;
-/* line-height: 15px !important; */
 font-family: 'ChaletBook1' !important;
 font-weight: 200;
 }
 .section-title2{
 font-size: 26px !important;
-/* line-height: 15px !important; */
 font-family: 'ChaletBook' !important;
 font-weight: 200;
 }
@@ -2235,28 +2238,25 @@ font-weight: 200;
 .blog-content {
 line-height: 1.5;
 font-size:12px !important; 
-/* font-weight: 300 !important; */
-font-family: 'Poppins';
+font-family: 'ChaletBook1';
 }
 
 .address-content1{
 line-height: 1.5;
 font-size:18px !important; 
 /* font-weight: 300 !important; */
-font-family: 'Poppins';
+font-family: 'ChaletBook1';
 }
 .marquee-content {
-overflow: hidden;
-flex: 1;
+  overflow: hidden;
+  flex: 1;
 }
 
 .marquee-text {
   display: inline-block;
   white-space: nowrap;
   animation: marquee 20s linear infinite;
-  padding-left: 100%;
-  font-size: 3vw !important;
-  padding:3% !important;
+  font-size: 2.9vw !important;
 }
 
 @keyframes marquee {
@@ -2321,9 +2321,8 @@ flex: 1;
   }
 
   .marquee-text {
-    font-family: "Poppins" !important;
-    font-size: 1.2vw;
-    transition: all 0.5s ease; /* Add transition for smooth font size change */
+    font-family: "ChaletBook1" !important;
+    transition: all 0.5s ease; 
     font-weight: 200 !important;
   }
 
@@ -2335,10 +2334,11 @@ flex: 1;
   }
 
   .marquee-label {
-    font-family: "Poppins" !important;
-    font-size: 1.2vw;
+    font-family: "ChaletBook1" !important;
+    font-size: 1.3vw;
     margin-right: 4px;
     transition: all 0.5s ease; /* Add transition for smooth font size change */
+    font-weight: 200px !important;
   }
   .footer-text {
     font-weight: 400;
@@ -2417,7 +2417,6 @@ flex: 1;
     display: inline-block;
     white-space: nowrap;
     animation: marquee 20s linear infinite;
-    padding-left: 100%;
     font-size: 5vw;
     font-family: "ChaletBook1" !important;
     transition: all 0.5s ease;
@@ -2748,84 +2747,7 @@ p {
   font-size: 96px;
 }
 /* Adjust font size for smaller screens */
-@media (max-width: 1200px) {
-  p {
-    font-size: 64px;
-  }
-}
-@media (max-width: 768px) {
-  p {
-    font-size: 38px;
-  }
-}
-@media (max-width: 480px) {
-  p {
-    font-size: 28px;
-  }
-}
 
-@media (min-width: 1850px) {
-.custom-padding {
-  padding-left: 17%;
-  padding-right: 17%;
-}
-}
-@media (min-width: 1280px) {
-.custom-padding {
-  padding-left: 10%;
-  padding-right: 10%;
-}
-}
-
-@media (max-width: 958px) {
-.custom-padding {
-  padding-left: 10%;
-  padding-right: 10%;
-}
-.custom-paddingdd {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-}
-
-@media (min-width: 950px) and (max-width: 970px) {
-.custom-padding {
-  padding-left: 10%;
-  padding-right: 10%;
-}
-.custom-paddingdd {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-}
-
-@media (max-width: 480px) {
-.custom-padding {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-}
-.footer-desktop {
-  position: fixed;
-  background-color: #b7e3b6;
-  color: black !important;
-  padding: 1% !important;
-  min-height: 92vh !important;
-  width: 100%;
-  margin-top: auto;   
-}
-
-/* Keep fixed positioning for mobile */
-@media (max-width: 768px) {
-  .footer-mobile {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh !important;
-    font-size: 1rem;
-  }
-}
 
 .footer-grid {
 display: grid;
@@ -2853,39 +2775,15 @@ transition: opacity 0.5s ease;
   transition: all 0.5s ease; 
   letter-spacing: 0.1; 
 }
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .responsive-text {
-    font-size: 4vw; 
-    line-height: 1;
-  }
-}
-
-@media (max-width: 768px) {
-  .responsive-text {
-    font-size: 3vw; 
-    line-height: 1;
-  }
-}
-
-@media (max-width: 480px) {
-  .responsive-text {
-    font-size: 4vw; 
-    line-height: 1;
-  }
-}
 .marquee-container {
   overflow: hidden;
   position: relative;
   height: 48px; 
 }
-
 .marquee-text1 {
   display: inline-block;
   white-space: nowrap;
   animation: marquee 20s linear infinite;
-  padding-left: 100%;
   font-size: 6vw; 
 }
 
@@ -2933,32 +2831,7 @@ transition: opacity 0.5s ease;
   .logo-item1:hover img {
     filter: none;
   }
-  @media (max-width: 768px) {
-  footer {
-    min-height: auto; /* Allow footer to adjust height */
-  }
 
-  .marquee {
-    font-size: 2.5vw; /* Smaller font size for mobile */
-  }
-
-  .ml-8 {
-    margin-left: 0; /* Remove left margin on mobile */
-  }
-
-  .ml-n16 {
-    margin-left: 0; /* Remove negative margin on mobile */
-  }
-
-  .mt-15 {
-    margin-top: 10px; /* Adjust top margin */
-  }
-
-  input {
-    width: 100%; /* Full width input */
-    font-size: 3vw; /* Responsive font size */
-  }
-}
 .header-text {
   font-family: 'ChaletBook1', sans-serif;
   font-size: 3.8vw;
@@ -2981,12 +2854,13 @@ transition: opacity 0.5s ease;
   font-weight: 400;
 }
 
-.map-link {
+.map-link1 {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
   color: inherit;
   text-decoration-color: #849f80;
+  width:90% !important;
 }
 
 .marquee {
@@ -3018,7 +2892,6 @@ transition: opacity 0.5s ease;
   border: none;
   outline: none;
   width: 100%;
-  /* padding: 10px; */
   font-size: 18px;
 }
 
@@ -3030,8 +2903,7 @@ footer {
   position: relative;
   bottom: 0;
   background: #b7e3b6;
-  /* padding: 10px; */
-  box-sizing: border-box; /* Ensures padding doesn't affect total width */
+  box-sizing: border-box; 
 }
 
 v-row {
@@ -3076,8 +2948,93 @@ input[type="email"] {
 
 .marquee-text {
   display: inline-block;
-  padding-left: 100%;
-  animation: marquee 15s linear infinite;
+  animation: marquee 40s linear infinite;
+}
+
+footer {
+  position: relative; 
+  background: #b7e3b6;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+
+footer {
+  position: fixed; 
+  bottom: 0;
+  width: 100%;
+  height: 60px; 
+  z-index: 1; 
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  p {
+    font-size: 64px;
+  }
+}
+@media (max-width: 768px) {
+  p {
+    font-size: 38px;
+  }
+}
+@media (max-width: 480px) {
+  p {
+    font-size: 28px;
+  }
+}
+@media (min-width: 1850px) {
+.custom-padding {
+  padding-left: 17%;
+  padding-right: 17%;
+}
+}
+@media (min-width: 1280px) {
+.custom-padding {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+}
+@media (max-width: 958px) {
+.custom-padding {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.custom-paddingdd {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+}
+@media (max-width: 480px) {
+.custom-padding {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+}
+@media (max-width: 1024px) {
+  .responsive-text {
+    font-size: 4vw; 
+    line-height: 1;
+  }
+}
+@media (max-width: 768px) {
+  .responsive-text {
+    font-size: 3vw; 
+    line-height: 1;
+  }
+}
+@media (max-width: 480px) {
+  .responsive-text {
+    font-size: 4vw; 
+    line-height: 1;
+  }
 }
 
 @keyframes marquee {
@@ -3089,123 +3046,104 @@ input[type="email"] {
   }
 }
 
-@media (max-width: 768px) {
-  .header-text {
-    font-size: 5vw;
-  }
-
-  /* Adjust font sizes for smaller screens */
-  .header-text,
-  a,
-  input,
-  .marquee-text {
-    font-size: 3vw; /* Adjust as needed */
-  }
-
-  /* Reduce padding and margins on smaller screens */
-  .v-col {
-    padding: 3px;
-  }
-
-  /* Adjust margin-top for rows if needed */
-  .v-row {
-    margin-top: 10px;
-  }
-}
-/* General footer styles */
-footer {
-  position: relative; /* Default position for larger screens */
-  background: #b7e3b6;
-  /* padding: 10px; */
-  box-sizing: border-box;
-  z-index: 1; /* Ensure it overlaps with other elements */
-}
-
-/* Mobile footer styles */
-@media (max-width: 768px) {
-  footer {
-    position: fixed; /* Fix the footer at the bottom */
-    bottom: 0;
-    width: 100%;
-    height: 60px; /* Set a fixed height for the footer */
-    z-index: 1; /* Ensure it overlaps with other elements */
-  }
-}
-
-/* Adjust the partners section */
-#partners {
-  margin-bottom: 60px; /* Adjust this value to match the footer height */
-}
-
-/* Optional: Adjust font sizes for smaller screens */
-@media (min-width: 480px) {
-  footer {
-    height: 100vh; /* Adjust height for smaller screens */
-    font-size: 14px; /* Adjust font size */
-  }
-  
-  #partners {
-    margin-bottom: 505px; /* Adjust this value to match the footer height */
-  }
-}
-@media only screen and (max-width: 479px) {
-     .contact__information .contact__information__detail__line {
-        position: absolute;
-        top: 0;
-        left: -15px;
-        width: 100vw;
-        height: 1px;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-
-footer {
-  position: fixed; /* Fix the footer at the bottom */
-  bottom: 0;
-  width: 100%;
-  height: 60px; /* Set a fixed height for the footer */
-  z-index: 1; /* Ensure it overlaps with other elements */
-}
-
-/* Optional: Adjust font sizes for smaller screens */
-@media (max-width: 480px) {
-  footer {
-    height: 100vh; /* Adjust height for smaller screens */
-    font-size: 14px; /* Adjust font size */
-  }
-  
-  #partners {
-    margin-bottom: calc(75vh - 60px); /* Adjust this value to match the footer height */
-  }
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
 
 #partners {
   flex: 1;
   overflow-y: auto;
 }
-
 footer {
-  flex: 0 0 70px; /* Set a fixed height for the footer */
+  flex: 0 0 70px;
 }
-
 .BottomMargin{
   margin-bottom:850px !important;
 }
 .logo-container {
   display: flex;
-  justify-content: center; /* Center logos horizontally */
-  align-items: center; /* Center logos vertically */
-  flex-wrap: wrap; /* Allow logos to wrap to the next line */
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap; 
 }
-@media (max-width: 768px) {
-  .logo-item {
-    min-width: 100px; /* Adjust for smaller screens */
+
+@media (min-width: 500px) {
+  footer {
+    height: 100vh;
+    font-size: 14px; 
   }
+  #partners {
+    margin-bottom: calc(75vh - 60px); 
+  }
+}
+
+
+@media (max-width: 480px) {
+  footer {
+    height: 100vh;
+    font-size: 14px; 
+  }
+  #partners {
+    margin-bottom: calc(75vh - 60px); 
+  }
+}
+
+@media (max-width: 479px) {
+  #mobile-footer {
+    display: block; /* Show only on screens 479px or smaller */
+  }
+}
+
+
+/* //DESKTOP FOOTER */
+.marquee-container {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  height: 48px;
+  background-color: #b7e3b6;
+  z-index: 9;
+}
+
+.marquee-content {
+  overflow: hidden;
+  flex: 0 0 100%;
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 40s linear infinite;
+  font-size: 6vw;
+  font-family: "ChaletBook1" !important;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Changed from -100% to -50% */
+}
+/* //MOBILE FOOTER */
+.marquee-container1 {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  height: 48px;
+  background-color: #b7e3b6;
+  z-index: 9;
+}
+
+.marquee-content1 {
+  overflow: hidden;
+  flex: 0 0 100%;
+}
+
+.marquee-text1 {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+  font-size: 6vw;
+  font-family: "ChaletBook1" !important;
+}
+
+@keyframes marquee1 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Changed from -100% to -50% */
 }
 </style> 
