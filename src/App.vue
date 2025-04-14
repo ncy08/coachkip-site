@@ -683,42 +683,42 @@
 flex-direction: column; justify-content: space-between;  box-sizing: border-box;" v-if="!isMobile" id="contact">
 <div class="mt-1" style="display: flex; justify-content: space-between; align-items: left; width: 100%; padding-left: 15px;">
   <div style="flex: 1;">
-    <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+    <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
   </div>
   <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
   </div>
   <div style="flex: 1; text-align: left;">
-    <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+    <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
   </div>
 </div>
 <div class="mt-1" style="display: flex; justify-content: space-between; align-items: left; width: 100%; padding-left: 15px;">
   <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">CONTACT</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">CONTACT</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
   </div>
   <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">ADDRESS</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">ADDRESS</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
   </div>
   <div style="flex: 1; text-align: left;">
-      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">KIP HEADQUARTERS</p>
-      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">1 N 4 Pl.</p>
-      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">Brooklyn, NY 11249</p>
-      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">United States</p>
-      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">
-        <a style="text-decoration-thickness: 1px; line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;"
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">KIP HEADQUARTERS</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">1 N 4 Pl.</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">Brooklyn, NY 11249</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">United States</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">
+        <a style="text-decoration-thickness: 1px; line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;"
          href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
           Map <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
         </a>
@@ -729,26 +729,26 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
 
 <div class="mt-8" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">
     <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">INQUIRIES</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">INQUIRIES</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
      <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
-        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px);; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px);; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
         +1 770 364 4726  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
       </p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
 </div>
 <hr width="100%" style="border:0.2px solid #7da07d !important; margin-left: 33.33%;"  class="mt-n14" />
@@ -756,55 +756,55 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
 
 <div class="mt-8" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">
     <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">INFO</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">INFO</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
      <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;" href="mailto:hello@coach.kip" target="_blank" class="map-link">
-        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px);; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;" href="mailto:hello@coach.kip" target="_blank" class="map-link">
+        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px);; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
         hello(at)kip.coach <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
       </p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
 </div>
 <hr width="100%" style="border:0.2px solid #7da07d !important; margin-left: 33.33%;" class="mt-n14"/>
 
 <div class="mt-8" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">
     <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">FOLLOW US</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">FOLLOW US</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
      <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;" href="https://linkedin.com" target="_blank" class="map-link">
-        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px);; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;" href="https://linkedin.com" target="_blank" class="map-link">
+        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px);; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
         LinkedIn <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
-      <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px);; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link ml-5">
+      <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px);; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link ml-5">
         Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
       </p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
 </div>
 <hr width="100%" style="border:0.2px solid #7da07d !important; margin-left: 33.33%;"  class="mt-n8 mb-4" />
@@ -813,21 +813,21 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
 
 <div class="mt-1" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">  
     <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">WISHLIST</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">WISHLIST</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
      <div style="flex: 1; text-align: left;">
      <v-row>
       <v-col cols="8">
-        <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;"  class="map-link1">
+        <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;"  class="map-link1">
       <input placeholder="Email Address" style="border: none; outline: none;" /> 
         <svg  class="mt-n10"  xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 290.78 5.31">
           <g id="Layer_2" data-name="Layer 2">
@@ -845,8 +845,8 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
       </p>
       </v-col>
       <v-col class="mt-4">
-        <v-icon class="ml-n4"  size="x-small" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">mdi-circle</v-icon>
-        <span  style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 18px); color: black;">SUBMIT</span>
+        <v-icon class="ml-n4"  size="x-small" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">mdi-circle</v-icon>
+        <span class="mr-6"  style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">SUBMIT</span>
       </v-col>
      </v-row>
     </div>
@@ -2336,7 +2336,7 @@ font-family: 'ChaletBook1';
 
   .marquee-label {
     font-family: "ChaletBook1" !important;
-    font-size: 1.3vw;
+    font-size: 1.6vw;
     margin-right: 4px;
     transition: all 0.5s ease; /* Add transition for smooth font size change */
     font-weight: 200px !important;
