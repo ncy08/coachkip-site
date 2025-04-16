@@ -7,7 +7,7 @@
  </v-btn>
 
  <div style="z-index:1999;font-family:'Aeonik"  v-if="showFloatingText"
-   class="floating-text"  :style="{ left: floatingX + 'px', top: floatingY + 'px' }">
+   :class="isDarkMode ? 'floating-text' : 'floating-text1'"  :style="{ left: floatingX + 'px', top: floatingY + 'px' }">
    <span>{{ hoveredMember.name ? hoveredMember.name : hoveredMember }}</span>
  </div>
 
@@ -292,7 +292,7 @@
 </section>
 <section  id="mission1" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
 <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
-  <v-container :class="!isMobile ? '' : 'custom-paddingMV'">
+  <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <div 
@@ -492,7 +492,7 @@
 </section>
 <section  id="mission5" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
 <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
-  <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
+  <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <div 
@@ -540,7 +540,7 @@
 </section>
 <section  id="milesran" style="position: relative; z-index: 999;" :style="{ minHeight: isMobile ? '50vh' : '100vh'}">
 <v-parallax style="position: relative; border-radius: 0% !important;" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" :color="isDarkMode ? '#252423' : '#fffbe9'">
-  <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
+  <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
     <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
       <v-col :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
         :style="!isMobile ? { marginLeft: '15px', paddingBottom: '5em', paddingLeft: '0', paddingRight: '15px' } : {}">
@@ -610,7 +610,7 @@
     :style="{ minHeight: isMobile ? '40vh' : '70vh' }"
     :color="isDarkMode ? '#252423' : '#fffbe9'"
   >
-    <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
+    <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
       <v-row :class="isMobile ? 'mt-15' : 'mt-10'">
         <v-col
           :class="{ 'col-8': !isMobile, 'col-m-10': !isMobile, 'col-xs-12': true }"
@@ -683,41 +683,42 @@
 flex-direction: column; justify-content: space-between;  box-sizing: border-box;" v-if="!isMobile" id="contact">
 <div class="mt-1" style="display: flex; justify-content: space-between; align-items: left; width: 100%; padding-left: 15px;">
   <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+    <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
   </div>
   <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
   </div>
   <div style="flex: 1; text-align: left;">
-    <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+    <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
   </div>
 </div>
 <div class="mt-1" style="display: flex; justify-content: space-between; align-items: left; width: 100%; padding-left: 15px;">
   <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">CONTACT</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">CONTACT</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
   </div>
   <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">ADDRESS</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">ADDRESS</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
   </div>
   <div style="flex: 1; text-align: left;">
-      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">KIP HEADQUARTERS</p>
-      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">1 N 4 Pl.</p>
-      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">Brooklyn, NY 11249</p>
-      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">United States</p>
-      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">
-        <a style="text-decoration-thickness: 1px; line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;"
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">KIP HEADQUARTERS</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">1 N 4 Pl.</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">Brooklyn, NY 11249</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">United States</p>
+      <p style="line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">
+        <a style="text-decoration-thickness: 1px; line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;"
          href="https://maps.app.goo.gl/XiNdKjy83swH1nWu5" target="_blank" class="map-link">
           Map <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
         </a>
@@ -728,26 +729,26 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
 
 <div class="mt-8" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">
     <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">INQUIRIES</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">INQUIRIES</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
      <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
-        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw;; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px);; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
         +1 770 364 4726  <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
       </p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
 </div>
 <hr width="100%" style="border:0.2px solid #7da07d !important; margin-left: 33.33%;"  class="mt-n14" />
@@ -755,78 +756,78 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
 
 <div class="mt-8" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">
     <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">INFO</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">INFO</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
      <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;" href="mailto:hello@coach.kip" target="_blank" class="map-link">
-        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw;; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;" href="mailto:hello@coach.kip" target="_blank" class="map-link">
+        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px);; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
         hello(at)kip.coach <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
       </p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
 </div>
 <hr width="100%" style="border:0.2px solid #7da07d !important; margin-left: 33.33%;" class="mt-n14"/>
 
 <div class="mt-8" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">
     <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">FOLLOW US</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">FOLLOW US</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
      <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;" href="https://linkedin.com" target="_blank" class="map-link">
-        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw;; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;" href="https://linkedin.com" target="_blank" class="map-link">
+        <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px);; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link">
         LinkedIn <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
-      <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw;; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link ml-5">
+      <a style="text-decoration-thickness: 1px;line-height: 1.15; transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px);; color: black;" href="tel:+1 770 364 4726" target="_blank" class="map-link ml-5">
         Instagram <v-icon size="x-small" class="ml-n1">mdi-arrow-top-right</v-icon>
       </a>
       </p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
 </div>
 <hr width="100%" style="border:0.2px solid #7da07d !important; margin-left: 33.33%;"  class="mt-n8 mb-4" />
 
 
 
-<div class="mt-1" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">
+<div class="mt-1" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">  
     <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
     <div style="flex: 1; text-align: left;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">WISHLIST</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">WISHLIST</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
     </div>
-     <div style="flex: 1; text-align: left;">
-     <v-row>
-      <v-col cols="8">
-        <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;"  class="map-link1">
+    <div style="flex: 1; text-align: left;" >
+     <v-row >
+      <v-col cols="6">
+        <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;"  class="map-link1">
       <input placeholder="Email Address" style="border: none; outline: none;" /> 
         <svg  class="mt-n10"  xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 290.78 5.31">
           <g id="Layer_2" data-name="Layer 2">
@@ -844,26 +845,28 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
       </p>
       </v-col>
       <v-col class="mt-4">
-        <v-icon class="ml-n4"  size="x-small" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">mdi-circle</v-icon>
-        <span  style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 1.4vw; color: black;">SUBMIT</span>
+        <v-icon class="ml-n4"  size="x-small" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">mdi-circle</v-icon>
+        <span class="mr-6"  style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">SUBMIT</span>
       </v-col>
      </v-row>
     </div>
   </div>
   
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
+  <div  style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
     <div style="flex: 1;">
-      <div class="marquee mb-4">
+      <div class="marquee mb-1">
         <v-row>
           <v-col>
-            <div class="marquee-container">
+            <div class="marquee-container mb-3">
               <div class="marquee-container">
               <span v-if="!isMobile" class="marquee-label">CURRENTLY WORKING IN:</span>
               <div class="marquee-content">
                 <div class="marquee-text">
-                  PARIS ({{ seattleTime }}), SFO ({{ sfoTime }}), CHICAGO ({{ chicagoTime }}), AUST IN ({{ austinTime }}), NYC ({{ nycTime }}), LONDON ({{ londonTime }}),
-                  PARIS ({{ seattleTime }}), SFO ({{ sfoTime }}), CHICAGO ({{ chicagoTime }}), AUSTIN ({{ austinTime }}), NYC ({{ nycTime }}), LONDON ({{ londonTime }})
-                </div>
+                 {{ TickerText }}
+                 {{ TickerText }}
+                 {{ TickerText }}
+                 {{ TickerText }}
+                 </div>
               </div>
             </div>
             </div>
@@ -873,6 +876,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
     </div>
   </div>
 </footer>
+
 
 <!-- MOBILE FOOTER -->
 <footer style="background: #b7e3b6;  position: fixed; bottom: 0; height: 100vh; display: flex; 
@@ -992,8 +996,9 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
               <span v-if="isMobile" class="marquee-label1">WORKING IN:</span>
               <div class="marquee-content1">
                 <div class="marquee-text1">
-                  PARIS ({{ seattleTime }}), SFO ({{ sfoTime }}), CHICAGO ({{ chicagoTime }}), AUSTIN ({{ austinTime }}), NYC ({{ nycTime }}), LONDON ({{ londonTime }}),
-                  PARIS ({{ seattleTime }}), SFO ({{ sfoTime }}), CHICAGO ({{ chicagoTime }}), AUSTIN ({{ austinTime }}), NYC ({{ nycTime }}), LONDON ({{ londonTime }})
+                 {{ TickerText }}
+                 {{ TickerText }}
+                 {{ TickerText }}
                 </div>
               </div>
             </div>
@@ -1125,7 +1130,8 @@ import JamesJackson from '../src/image/JamesJackson.png'
         duration: 2000,
         isAtBottom: false,
         lastScrollPosition: 0,
-        fixedScroll:false
+        fixedScroll:false,
+        TickerText:''
       };
     },
     computed: {
@@ -1148,7 +1154,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
         return this.isMobile ? "2.2vw" : "1.2vw";
       },
       floatingX() {
-        return this.cursorX - 66; 
+        return this.cursorX - 76; 
       },
       floatingY() {
         return this.cursorY - 56; 
@@ -1174,19 +1180,37 @@ import JamesJackson from '../src/image/JamesJackson.png'
         window.open(ftp, "_blank");
       },
       updateTimes() {
-        const now = new Date();
-        const utcOffset = -7; 
-        const chicagoOffset = -5; 
-        const austinOffset = -5; 
-        const nycOffset = -4; 
-        const londonOffset = 0;
-        this.seattleTime = this.formatTime(now, utcOffset);
-        this.sfoTime = this.formatTime(now, utcOffset);
-        this.chicagoTime = this.formatTime(now, chicagoOffset);
-        this.austinTime = this.formatTime(now, austinOffset);
-        this.nycTime = this.formatTime(now, nycOffset);
-        this.londonTime = this.formatTime(now, londonOffset);
-    },
+          const now = new Date();
+
+          const options = {
+              hour: '2-digit',
+              minute: '2-digit',
+              second: '2-digit',
+              hour12: false,
+          };
+
+          this.sfoTime = new Intl.DateTimeFormat('en-US', { ...options, timeZone: 'America/Los_Angeles' }).format(now);
+          this.chicagoTime = new Intl.DateTimeFormat('en-US', { ...options, timeZone: 'America/Chicago' }).format(now);
+          this.austinTime = new Intl.DateTimeFormat('en-US', { ...options, timeZone: 'America/Chicago' }).format(now); 
+          this.nycTime = new Intl.DateTimeFormat('en-US', { ...options, timeZone: 'America/New_York' }).format(now);
+          this.londonTime = new Intl.DateTimeFormat('en-GB', { ...options, timeZone: 'Europe/London' }).format(now);
+          this.seattleTime = new Intl.DateTimeFormat('en-US', { ...options, timeZone: 'America/Los_Angeles' }).format(now);
+
+          // Update the ticker text directly
+          this.TickerText = "PARIS ( " + this.seattleTime + " ), " + 
+                  "SFO ( " + this.sfoTime + " ), " + 
+                  "CHICAGO ( " + this.chicagoTime + " ), " + 
+                  "AUSTIN ( " + this.austinTime + " ), " + 
+                  "NYC ( " + this.nycTime + " ), " + 
+                  "LONDON ( " + this.londonTime + " ),  ";
+          // `
+          // PARIS (${this.seattleTime}),  
+          // SFO (${this.sfoTime}),  
+          // CHICAGO (${this.chicagoTime}),  
+          // AUSTIN (${this.austinTime}),  
+          // NYC (${this.nycTime}),  
+          // LONDON (${this.londonTime}),`;
+        },
     formatTime(date, offset) {
       const localTime = new Date(date.getTime() + offset * 60 * 60 * 1000);
       return localTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
@@ -1649,6 +1673,19 @@ import JamesJackson from '../src/image/JamesJackson.png'
   z-index: 999;
   padding: 8px 18px;
   color:  #FFD700  ;
+  font-size: 20px;
+  transform-origin: center bottom;
+  animation: fadeIn 0.2s ease-out;
+  display: inline-flex;
+  gap: 2px;
+  border-radius: 4px; /* Optional: Add some border radius */
+}
+.floating-text1 {
+  position: fixed;
+  pointer-events: none;
+  z-index: 999;
+  padding: 8px 18px;
+  color:  black  ;
   font-size: 20px;
   transform-origin: center bottom;
   animation: fadeIn 0.2s ease-out;
@@ -3101,23 +3138,20 @@ footer {
   background-color: #b7e3b6;
   z-index: 9;
 }
-
 .marquee-content {
   overflow: hidden;
   flex: 0 0 100%;
 }
-
 .marquee-text {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 40s linear infinite;
+  animation: marquee 35s linear infinite;
   font-size: 6vw;
   font-family: "ChaletBook1" !important;
 }
-
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* Changed from -100% to -50% */
+  0% { transform: translateX(15); }
+  100% { transform: translateX(-70%); } /* Changed from -100% to -50% */
 }
 /* //MOBILE FOOTER */
 .marquee-container1 {
@@ -3137,13 +3171,13 @@ footer {
 .marquee-text1 {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 30s linear infinite;
+  animation: marquee 35s linear infinite;
   font-size: 6vw;
   font-family: "ChaletBook1" !important;
 }
 
 @keyframes marquee1 {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* Changed from -100% to -50% */
+  0% { transform: translateX(15); }
+  100% { transform: translateX(-70%); }
 }
 </style> 
