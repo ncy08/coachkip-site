@@ -1425,9 +1425,9 @@ import JamesJackson from '../src/image/JamesJackson.png'
       requestAnimationFrame(updateCount);
   },
   updateDisplay() {
-      const spunOutDisplay = `${this.countIdeasSpunOut / 1000}k+`;
-      this.countIdeasSpunOut = spunOutDisplay
-      const killedDisplay = `> ${this.countIdeasKilled}%`;
+    const spunOutDisplay = `${this.countIdeasSpunOut / 1000}k+\u00A0\u00A0`;
+        this.countIdeasSpunOut = spunOutDisplay
+      const killedDisplay = `>${this.countIdeasKilled}%`;
       this.countIdeasKilled = killedDisplay
       document.getElementById('spunOutDisplay').innerText = spunOutDisplay;
       document.getElementById('killedDisplay').innerText = killedDisplay;
