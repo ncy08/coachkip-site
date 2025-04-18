@@ -279,19 +279,16 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             opacity: sectionVisible.kip ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          Building a great startup is hard. Really hard. It requires domain
-          expertise, uncommon talent, great execution, great timing, and a little
-          luck. It also requires the ever-elusive great idea. Our team has
-          developed the playbook on how to rapidly validate, refine, and build new
-          businesses.
+         Open the app, upload your workout, and share your goals with Kip. That’s it. While you're running, Kip will be there to help you along the way, either keeping you on pace or giving you some motivation.  
         </p>
       </v-col>
     </v-row>
   </v-container>
 </v-parallax>
 </section>
-<section  id="mission1" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
-<v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
+<section  id="mission1" :style="{ minHeight: isMobile ? '70vh' : '90vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+<v-parallax :style="{ minHeight: isMobile ? '70vh' : '90vh'}" style="position: relative;
+   border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
   <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
@@ -313,7 +310,7 @@
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
-            'font-size': !isMobile ? '48px' : '30px', 
+            'font-size': !isMobile ? '45px' : '30px', 
             lineHeight: 1.15, 
             letterSpacing: '0.1px', 
             paddingRight: '6%',
@@ -367,7 +364,7 @@
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
-            'font-size': !isMobile ? '48px' : '30px', 
+           'font-size': !isMobile ? '45px' : '30px', 
             lineHeight: 1.15, 
             letterSpacing: '0.1px', 
             paddingRight: '6%',
@@ -416,7 +413,7 @@
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
-            'font-size': !isMobile ? '48px' : '30px', 
+           'font-size': !isMobile ? '45px' : '30px', 
             lineHeight: 1.15, 
             letterSpacing: '0.1px', 
             paddingRight: '6%',
@@ -434,8 +431,7 @@
             color: isDarkMode ? '#fffbe9' : '#252423',
             opacity: sectionVisible.mission3 ? 1 : 0, transition: 'opacity 1s ease'
           }">
-          Our team of designers, engineers, data scientists, marketers, and
-          company builders turn a validated concept into a real product in market.
+         Kip tells you precisely what you need to increase your performance. Get more sleep, take a day off, more Zone 2 work, or more volume. Kip takes all of the guesswork out of your training every week. 
         </p>
       </v-col>
     </v-row>
@@ -465,7 +461,7 @@
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
-            'font-size': !isMobile ? '48px' : '30px', 
+           'font-size': !isMobile ? '45px' : '30px', 
             lineHeight: 1.15, 
             letterSpacing: '0.1px', 
             paddingRight: '6%',
@@ -492,7 +488,7 @@
 </section>
 <section  id="mission5" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
 <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
-  <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
+  <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <div 
@@ -513,7 +509,7 @@
         </h4>
         <p style="font-weight: 400; display: block; margin-top: 0.5em; margin-bottom: 1em; font-family: 'Aeonik1'; color: #fffbe9 !important;"
           :style="{ 
-            'font-size': !isMobile ? '48px' : '30px', 
+           'font-size': !isMobile ? '45px' : '30px', 
             lineHeight: 1.15, 
             letterSpacing: '0.1px', 
             paddingRight: '6%',
@@ -576,22 +572,21 @@
         </p>
       </v-col>
 
-      <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%">
-        <h1 class="text-h1 large-number" v-if="!isMobile"
+      <v-col cols="12" md="6" class="d-flex flex-column justify-end align-start" style="height: 100%" >
+        <h1 class="text-h1 large-number ml-4" v-if="!isMobile"
           :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
           v-text="countIdeasKilled" style="margin-bottom: 0.1em">
         </h1>
-        <h1 class="text-h1 large-numberMV" v-if="isMobile"
+        <h1 class="text-h1 large-numberMV  ml-4" v-if="isMobile"
           :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  , paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%' }" 
           v-text="countIdeasKilled" style="margin-bottom: 0.1em">
         </h1>
         <h3 :style="{ opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease'  ,  fontSize: isMobile ? '34px' : '48px', marginTop: '.5em', marginBottom: '1em', fontWeight: 400, lineHeight: 1.625, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }" 
-          class="color-ivory" style="margin-bottom: 0.5em">
+          class="color-ivory  ml-4" style="margin-bottom: 0.5em">
           New Personal Records
         </h3>
-        <p :style="{opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease' , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.15, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
-          In early testing, our research and models have accounted for an average of 2+ PR’s for each of our alpha users. 
-
+        <p class=" ml-4" :style="{opacity: sectionVisible.milesran ? 1 : 0, transition: 'opacity 1s ease' , letterSpacing: '0.2px', fontSize: isMobile ? '18px' : '21px', fontWeight: 400, lineHeight: 1.15, paddingRight: isMobile ? '0' : '3%', paddingLeft: isMobile ? '0' : '3%', fontFamily: 'Aeonik1' }">
+          In early testing, our research and modeling have accounted for PRs for more than 70% of our alpha users. 
         </p>
       </v-col>
     </v-row>
@@ -1409,7 +1404,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
       const initialSpunOut = this.countIdeasSpunOut; 
       const initialKilled = this.countIdeasKilled; 
       this.maxSpunOut = 18000; 
-      this.maxKilled = 2; 
+      this.maxKilled = 70; 
       const updateCount = (timestamp) => {
           const elapsed = timestamp - startTime; 
           const progress = Math.min(elapsed / duration, 1);
@@ -1432,7 +1427,7 @@ import JamesJackson from '../src/image/JamesJackson.png'
   updateDisplay() {
       const spunOutDisplay = `${this.countIdeasSpunOut / 1000}k+`;
       this.countIdeasSpunOut = spunOutDisplay
-      const killedDisplay = `> ${this.countIdeasKilled}`;
+      const killedDisplay = `> ${this.countIdeasKilled}%`;
       this.countIdeasKilled = killedDisplay
       document.getElementById('spunOutDisplay').innerText = spunOutDisplay;
       document.getElementById('killedDisplay').innerText = killedDisplay;
@@ -2104,7 +2099,7 @@ animation: marquee 40s linear infinite;
 }
 
 .large-number {
-  font-size: 180px !important;
+  font-size: 145px !important;
   font-weight: bold !important;
   text-align: left; /* Align text to the left */
   /* -webkit-text-stroke: 1px #fffbe9; */
@@ -3045,8 +3040,8 @@ footer {
   padding-right: 10%;
 }
 .custom-paddingdd {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 }
 @media (max-width: 480px) {
