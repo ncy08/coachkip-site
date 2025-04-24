@@ -861,11 +861,23 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
               <div class="marquee-container">
               <span v-if="!isMobile" class="marquee-label">CURRENTLY WORKING IN:</span>
               <div class="marquee-content">
-                <div class="marquee-text">
-                 {{ TickerText }}
-                 {{ TickerText }}
-                 {{ TickerText }}
-                 {{ TickerText }}
+                <div class="ticker">
+                  <span class="item-collection-1">
+                  <span class="item2">PARIS ({{ this.seattleTime }}), </span>
+                  <span class="item2">SFO ({{ this.sfoTime }}), </span>
+                  <span class="item2">CHICAGO ({{ this.chicagoTime }}), </span>
+                  <span class="item2">AUSTIN ({{ this.austinTime }}), </span>
+                  <span class="item2">NYC ({{ this.nycTime }}), </span>
+                  <span class="item2">LONDON ({{ this.londonTime }}), </span>
+                </span>
+                <span class="item-collection-2">  
+                  <span class="item2">PARIS ({{ this.seattleTime }}), </span>
+                  <span class="item2">SFO ({{ this.sfoTime }}), </span>
+                  <span class="item2">CHICAGO ({{ this.chicagoTime }}), </span>
+                  <span class="item2">AUSTIN ({{ this.austinTime }}) ,</span>
+                  <span class="item2">NYC ({{ this.nycTime }}) ,</span>
+                  <span class="item2">LONDON ({{ this.londonTime }}) ,</span>
+                </span>
                  </div>
               </div>
             </div>
@@ -990,19 +1002,28 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
     <div style="flex: 1;">
       <div class="marquee mb-2">
     <v-row>
+        <span v-if="isMobile" class="marquee-label1 mt-n5 ml-1"> WORKING IN:</span>
       <v-col>
-        <div class="marquee-container1">
-              <div class="marquee-container1">
-              <span v-if="isMobile" class="marquee-label1">WORKING IN:</span>
-              <div class="marquee-content1">
-                <div class="marquee-text1">
-                 {{ TickerText }}
-                 {{ TickerText }}
-                 {{ TickerText }}
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="ticker-wrap">
+        <div class="ticker">
+          <span class="item-collection-1">
+            <span class="item">PARIS({{ this.seattleTime }}),</span>
+            <span class="item">SFO({{ this.sfoTime }}),</span>
+            <span class="item">CHICAGO({{ this.chicagoTime }}),</span>
+            <span class="item">AUSTIN({{ this.austinTime }}),</span>
+            <span class="item">NYC({{ this.nycTime }}),</span>
+            <span class="item">LONDON({{ this.londonTime }}),</span>
+          </span>
+          <span class="item-collection-2">  
+            <span class="item">PARIS({{ this.seattleTime }}),</span>
+            <span class="item">SFO({{ this.sfoTime }}),</span>
+            <span class="item">CHICAGO({{ this.chicagoTime }}),</span>
+            <span class="item">AUSTIN({{ this.austinTime }}),</span>
+            <span class="item">NYC({{ this.nycTime }}),</span>
+            <span class="item">LONDON({{ this.londonTime }}),</span>
+          </span>
+        </div>
+        </div>
       </v-col>
     </v-row>
   </div>
@@ -2371,7 +2392,7 @@ font-family: 'ChaletBook1';
   }
 
   .marquee-label {
-    font-family: "ChaletBook1" !important;
+    font-family: sans-serif;
     font-size: 1.3vw;
     margin-right: 4px;
     transition: all 0.5s ease; /* Add transition for smooth font size change */
@@ -3179,5 +3200,60 @@ footer {
 @keyframes marquee1 {
   0% { transform: translateX(15); }
   100% { transform: translateX(-70%); }
+}
+
+.ticker-wrap {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  position: fixed;
+  bottom: 0;
+  height: 3.1rem;
+  background-color: #b7e3b6; 
+}
+.ticker {
+  display: inline-block;
+  margin-top: 5px;
+  animation: marquee 35s linear infinite;
+}
+.item-collection-1 {
+  position: relative;
+  animation: swap 35s linear infinite;
+}
+
+.item {
+  display: inline-block;
+  padding: 0 0.4rem;
+  font-size: 6vw;
+  color: black;   
+  font-weight: 20;
+  font-family: sans-serif;
+}
+.item2 {
+  display: inline-block;
+  font-size: 2.8vw;
+  color: black;   
+  font-weight: 20;
+  font-family: sans-serif;
+  padding-bottom:2px ;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0)
+  }
+  100% {
+    transform: translateX(-100%)
+  }
+}
+@keyframes swap {
+  0%, 50% {
+    left: 0%;
+  }
+  50.01%,
+  100% {
+    left: 100%;
+  }
 }
 </style> 
