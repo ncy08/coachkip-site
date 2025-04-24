@@ -966,7 +966,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
   <hr width="1000vw" class="mt-n6 mb-6" style="border:0.5px  solid #7da07d;"/>
   <div style="padding: 14px 0 20px 0;display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px" 
   class="mt-n6">
-    <div style="flex: 1.6;" class="mt-n1">
+    <div style="flex: 1.6;">
       <p class="mt-n2 mb-3" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">WISHLIST</p>
       <input placeholder="Email Address" style="border: none; outline: none;" />
         <svg
@@ -997,7 +997,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
     <div style="flex: 1;">
       <div class="marquee mb-2">
     <v-row>
-        <span v-if="isMobile" class="marquee-label1 mt-n4 ml-1"> WORKING IN:</span>
+        <span v-if="isMobile" class="marquee-label1 mt-n3  ml-1"> WORKING IN:</span>
       <v-col>
         <div class="ticker-wrap">
         <div class="ticker">
@@ -3219,6 +3219,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
 .item {
   display: inline-block;
   padding: 0 0.4rem;
+  margin-top:5px !important;
   font-size: 6vw;
   color: black;   
   font-weight: 20;
