@@ -8,7 +8,7 @@ const routes = [
     name: 'Home',
     component: HomeView,
     meta: {
-      title: 'Home Page',
+      title: 'COACH KIP',
       description: 'Welcome to the home page of our website.',
     },
   },
