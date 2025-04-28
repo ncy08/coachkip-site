@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import AboutView from '../views/AboutView.vue'; // Import additional views as needed
+import Sitemap from '../components/Sitemap.vue';
 
 const routes = [
   {
@@ -19,6 +20,14 @@ const routes = [
     meta: {
       title: 'About Us',
       description: 'Learn more about us on this page.',
+    },
+  },{
+    path: '/sitemap.xml', // Route for the sitemap
+    name: 'Sitemap',
+    component: Sitemap,
+    meta: {
+      title: 'Sitemap',
+      description: 'A list of all pages on our website.',
     },
   },
 ];
