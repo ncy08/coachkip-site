@@ -30,5 +30,5 @@ export default defineConfig({
       'this-is-undefined-in-esm': 'silent' // Suppress specific warnings
     }
   },
-  assetsInclude: ['**/*.lottie', '**/*.json'] // Include .lottie and .json files in the build
+  assetsInclude: ['**/*.lottie', '**/*.json','**/*.xml'] // Include .lottie and .json files in the build
 });
