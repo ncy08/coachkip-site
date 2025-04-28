@@ -6,22 +6,6 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  // Commenting out the server configuration for production deployment
-  // server: {
-  //   host: '10.169.141.193',
-  //   port: 5173,
-  //   proxy: {
-  //     '/api': {
-  //       target: 'http://10.169.141.193:8001',
-  //       changeOrigin: true,
-  //       rewrite: (path) => path.replace(/^\/api/, '')
-  //     }
-  //   },
-  //   cors: {
-  //     origin: ['http://10.169.141.193:5173'],
-  //     credentials: true
-  //   }
-  // },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
