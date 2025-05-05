@@ -110,12 +110,12 @@
       <div class="separator word" :style="{ backgroundColor: isDarkMode ? '#887C5C' : 'black', '--i': 7 }"></div>
       <div v-if="!isMobile" class="form-container word" :style="{ '--i': 8 }">
         <div class="input-form" >
-          <v-text-field rounded placeholder="Enter email" class="mb-4" 
+          <v-text-field rounded placeholder="Enter email" class="mb-4"  v-model="email"
           :width="isMobile ? '205px' : '350px'" hide-details  :style="{
             border: !isDarkMode ? '1px solid black' : '1px solid #ccc',
             color: isDarkMode ? 'white' : 'black' , borderRadius:'30px',  }">
           </v-text-field>
-          <button :class="isMobile ? 'join-button1' : 'join-button'" class="mt-n9">
+          <button :class="isMobile ? 'join-button1' : 'join-button'" class="mt-n9" @click="sendEmail()">
             Join Waitlist
           </button>
         </div>
@@ -158,13 +158,13 @@
         <div class="form-container word " :style="{ '--i': 8 }">
         <div class="input-form"  :style="{marginBottom: isMobile ? '53%': '',
           paddingTop: isMobile ? '15% !important' : ''}">
-          <v-text-field rounded placeholder="Enter email" 
+          <v-text-field rounded placeholder="Enter email"  v-model="email"
           :width="isMobile ? '205px' : '280px'" hide-details  :style="{
                 border: !isDarkMode ? '1px solid black' : '1px solid #ccc',
                 color: isDarkMode ? 'white' : 'black' , borderRadius:'30px',  }">
           </v-text-field>
           <v-btn  :color="isDarkMode ? 'white' : 'black'" variant="elevated" class="mt-3" 
-          style="border-radius:30px" size="small">Join Waitlist</v-btn>
+          style="border-radius:30px" size="small" @click="sendEmail()">Join Waitlist</v-btn>
           <v-row no-gutters class="social-row mt-2" style="justify-content: center">
             <v-icon
               @mousemove="handleMouseMove($event, 'Twitter')"
@@ -823,7 +823,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
      <v-row >
       <v-col cols="6">
         <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;"  class="map-link1">
-      <input placeholder="Email Address" style="border: none; outline: none;" /> 
+      <input placeholder="Email Address" style="border: none; outline: none;" v-model="email" /> 
         <svg  class="mt-n10"  xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 290.78 5.31">
           <g id="Layer_2" data-name="Layer 2">
             <g id="Design_System" data-name="Design System">
@@ -840,8 +840,8 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
       </p>
       </v-col>
       <v-col class="mt-4">
-        <v-icon class="ml-n4"  size="x-small" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">mdi-circle</v-icon>
-        <span class="mr-6"  style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">SUBMIT</span>
+        <v-icon @click="sendEmail()" class="ml-n4"  size="x-small" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">mdi-circle</v-icon>
+        <span @click="sendEmail()"  class="mr-6"  style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">SUBMIT</span>
       </v-col>
      </v-row>
     </div>
@@ -968,7 +968,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
   class="mt-n6">
     <div style="flex: 1.6;">
       <p class="mt-n2 mb-3" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">WISHLIST</p>
-      <input placeholder="Email Address" style="border: none; outline: none;" />
+      <input v-model="email" placeholder="Email Address" style="border: none; outline: none;" />
         <svg
           class="mt-n10"
           xmlns="http://www.w3.org/2000/svg"
@@ -987,7 +987,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
           </g>
         </svg>
     </div>
-    <div style="flex: 1; text-align: left;" class="ml-n10">
+    <div style="flex: 1; text-align: left;" class="ml-n10"  @click="sendEmail()" >
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">&nbsp;</p>
       <v-icon class="ml-16" size="x-small">mdi-circle</v-icon> SUBMIT
@@ -1026,17 +1026,25 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
   </div>
 </footer>
 
+<div class="overlay" v-if="loading == true">
+  <div class="loader"></div>
+</div>
   
-    </div>
-    </v-app>
-  </template>
-  <script>
-  import NickYebra from '../src/image/NickYebra.jpg'
-  import JamesJackson from '../src/image/JamesJackson.png'
-    import lottie from "lottie-web";
+ </div>
+ </v-app>
+</template>
+<script>
+import NickYebra from '../src/image/NickYebra.jpg'
+import { toast } from 'vue3-toastify';
+import Swal from 'sweetalert2';
+import JamesJackson from '../src/image/JamesJackson.png'
+import lottie from "lottie-web";
+  import emailjs from 'emailjs-com';
+
     export default {
       data() {
         return {
+          loading:false,
           seattleTime: '',
           sfoTime: '',
           chicagoTime: '',
@@ -1189,6 +1197,56 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
         },
       },
       methods: {
+        sendEmail() {
+        this.loading = true
+        if (this.validateEmail(this.email)) {
+          emailjs.send("service_tkswldt", "template_6b1b21r", {
+            email: this.email, // This should match the variable in your template
+          })
+          .then((response) => {
+            emailjs.send("service_tkswldt", "template_axf817f", {
+              email: this.email, // This should match the variable in your template
+            })
+            console.log("Email sent successfully!", response.status, response.text);
+            Swal.fire({
+              toast:true,
+              position: 'center',
+              icon: 'success',
+              title: 'Thank you for joining the waitlist!',
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            this.email = ""; 
+            this.loading = false
+          })
+          .catch((error) => {
+            console.error("Error sending email:", error);
+            Swal.fire({
+              toast:true,
+              position: 'center',
+              icon: 'warning',
+              title: 'Failed to send email. Please try again later.',
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          });
+        } else {
+          Swal.fire({
+              toast:true,
+              position: 'center',
+              icon: 'error',
+              title: 'Please enter a valid email address',
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          this.loading = false
+        }
+      },
+
+      validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+      },
         gotoRoutesite(item){
           
           let ftp = item
@@ -1486,6 +1544,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
         this.checkDarkMode(); 
       },
       mounted() {
+        emailjs.init("Z1rlaTLQEjhrWQFY8");//API keys  
         this.updateTimes(); 
         setInterval(this.updateTimes, 1000); 
         this.startLogoRotation();
@@ -3249,4 +3308,72 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
     left: 100%;
   }
 }
-  </style> 
+
+.overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(46, 37, 37, 0.379);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 9999;
+ }
+ .loader {
+  position: relative;
+  border-style: solid;
+  box-sizing: border-box;
+  border-width: 40px 60px 30px 60px;
+  border-color: #3a3d42 #96DDFC #96DDFC #36BBF7;
+  animation: envFloating 1s ease-in infinite alternate;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  right: 62px;
+  top: -40px;
+  height: 70px;
+  width: 50px;
+  background-image: linear-gradient(#fff 45px, transparent 0),
+            linear-gradient(#fff 45px, transparent 0),
+            linear-gradient(#fff 45px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 30px 4px;
+  background-position: 0px 11px , 8px 35px, 0px 60px;
+  animation: envDropping 0.75s linear infinite;
+}
+
+@keyframes envFloating {
+  0% {
+    transform: translate(-2px, -5px)
+  }
+
+  100% {
+    transform: translate(0, 5px)
+  }
+}
+
+@keyframes envDropping {
+  0% {
+    background-position: 100px 11px , 115px 35px, 105px 60px;
+    opacity: 1;
+  }
+
+  50% {
+    background-position: 0px 11px , 20px 35px, 5px 60px;
+  }
+
+  60% {
+    background-position: -30px 11px , 0px 35px, -10px 60px;
+  }
+
+  75%, 100% {
+    background-position: -30px 11px , -30px 35px, -30px 60px;
+    opacity: 0;
+  }
+}
+  
+</style> 
