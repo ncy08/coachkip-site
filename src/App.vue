@@ -3315,7 +3315,7 @@ import lottie from "lottie-web";
      left: 0;
      width: 100%;
      height: 100%;
-     background-color: rgba(46, 37, 37, 0.379);
+     background-color: rgba(1, 1, 1, 0.379);
      display: flex;
      justify-content: center;
      align-items: center;
