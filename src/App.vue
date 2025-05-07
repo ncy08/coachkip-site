@@ -1034,14 +1034,23 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
  </v-app>
 </template>
 <script>
+import { useHead  } from '@vueuse/head';
 import NickYebra from '../src/image/NickYebra.jpg'
-import { toast } from 'vue3-toastify';
 import Swal from 'sweetalert2';
 import JamesJackson from '../src/image/JamesJackson.png'
 import lottie from "lottie-web";
-  import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 
     export default {
+      setup() {
+        useHead({
+          meta: [
+            { name: 'description', content: 'Kip Coach: Your AI-driven running coach, providing personalized training insights and real-time guidance to help you achieve your running goals.' },
+            { name: 'keywords', content: 'Kip Coach, running coach, AI coach, personalized training, running insights, fitness, marathon training, performance analysis' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+          ],
+        });
+      },
       data() {
         return {
           loading:false,

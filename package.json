@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "@vueuse/head": "^2.0.0",
     "axios": "^1.7.9",
     "emailjs-com": "^3.2.0",
     "lottie-web": "^5.12.2",
@@ -20,6 +21,7 @@
     "sweetalert2": "^11.21.0",
     "vue": "^3.4.29",
     "vue-lottie": "^0.2.1",
+    "vue-meta": "^2.4.0",
     "vue-router": "^4.3.3",
     "vue3-toastify": "^0.2.8"
   },
