@@ -15,13 +15,21 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20'  # Use Node.js version 20 or higher
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build app
+        run: npm run build
 
       - name: Install Firebase Tools
         run: npm install -g firebase-tools
 
       - name: Deploy to Firebase Hosting
         env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+          # Or for now if you still use FIREBASE_TOKEN:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: |
-          firebase deploy --project coach-kip-d6793 --token $FIREBASE_TOKEN
+          firebase deploy --project coach-kip-d6793
