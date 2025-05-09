@@ -4,6 +4,7 @@ import piniaPluginPersistedState from 'pinia-plugin-persistedstate';
 import App from './App.vue';
 import router from './router';
 import Vuetify from './plugins/vuetify';
+import './../firebase-config';
 
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedState);

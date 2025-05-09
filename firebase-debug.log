@@ -1,0 +1,187 @@
+[debug] [2025-05-09T04:49:33.048Z] ----------------------------------------------------------------------
+[debug] [2025-05-09T04:49:33.052Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-05-09T04:49:33.053Z] CLI Version:   14.3.0
+[debug] [2025-05-09T04:49:33.053Z] Platform:      win32
+[debug] [2025-05-09T04:49:33.053Z] Node Version:  v20.18.1
+[debug] [2025-05-09T04:49:33.053Z] Time:          Fri May 09 2025 12:49:33 GMT+0800 (中国標準時)
+[debug] [2025-05-09T04:49:33.054Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-09T04:49:33.060Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-09T04:49:33.061Z] > authorizing via signed-in user (johnfritzizar35@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\support050\Desktop\Projects\COACH-KIP
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-05-09T04:49:57.707Z] Checked if tokens are valid: false, expires at: 1746765349329
+[debug] [2025-05-09T04:49:57.707Z] Checked if tokens are valid: false, expires at: 1746765349329
+[debug] [2025-05-09T04:49:57.708Z] > refreshing access token with scopes: []
+[debug] [2025-05-09T04:49:57.711Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-05-09T04:49:57.711Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-09T04:49:58.045Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-05-09T04:49:58.045Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-09T04:49:58.064Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2025-05-09T04:49:58.953Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 200
+[debug] [2025-05-09T04:49:58.953Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2025-05-09T04:50:02.517Z] Checked if tokens are valid: true, expires at: 1746769797045
+[debug] [2025-05-09T04:50:02.517Z] Checked if tokens are valid: true, expires at: 1746769797045
+[debug] [2025-05-09T04:50:02.518Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/coach-kip:addFirebase [none]
+[debug] [2025-05-09T04:50:04.759Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/coach-kip:addFirebase 200
+[debug] [2025-05-09T04:50:04.760Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/coach-kip:addFirebase {"name":"operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj"}
+[debug] [2025-05-09T04:50:04.763Z] Checked if tokens are valid: true, expires at: 1746769797045
+[debug] [2025-05-09T04:50:04.764Z] Checked if tokens are valid: true, expires at: 1746769797045
+[debug] [2025-05-09T04:50:04.765Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj [none]
+[debug] [2025-05-09T04:50:07.092Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj 200
+[debug] [2025-05-09T04:50:07.092Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj {"name":"operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj"}
+[debug] [2025-05-09T04:50:07.599Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-05-09T04:50:07.599Z] Checked if tokens are valid: true, expires at: 1746769797045
+[debug] [2025-05-09T04:50:07.599Z] Checked if tokens are valid: true, expires at: 1746769797045
+[debug] [2025-05-09T04:50:07.600Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj [none]
+[debug] [2025-05-09T04:50:08.193Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj 200
+[debug] [2025-05-09T04:50:08.194Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj {"name":"operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj"}
+[debug] [2025-05-09T04:50:09.202Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-05-09T04:50:09.202Z] Checked if tokens are valid: true, expires at: 1746769797045
+[debug] [2025-05-09T04:50:09.202Z] Checked if tokens are valid: true, expires at: 1746769797045
+[debug] [2025-05-09T04:50:09.203Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj [none]
+[debug] [2025-05-09T04:50:10.178Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj 200
+[debug] [2025-05-09T04:50:10.179Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj {"name":"operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj"}
+[debug] [2025-05-09T04:50:12.190Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-05-09T04:50:12.192Z] Checked if tokens are valid: true, expires at: 1746769797045
+[debug] [2025-05-09T04:50:12.192Z] Checked if tokens are valid: true, expires at: 1746769797045
+[debug] [2025-05-09T04:50:12.193Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj [none]
+[debug] [2025-05-09T04:50:12.806Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj 200
+[debug] [2025-05-09T04:50:12.806Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj {"name":"operations/workflows/ZDkzM2EzM2QtNjdhYy00ZmJlLTkxN2ItMDEwMjg0MmZjZTBj","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"coach-kip","projectNumber":"760359144746","displayName":"Coach Kip","name":"projects/coach-kip","resources":{"hostingSite":"coach-kip"}}}
+[info] 
+[info] === Your Firebase project is ready! ===
+[info] 
+[info] Project information:
+[info]    - Project ID: coach-kip
+[info]    - Project Name: Coach Kip
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/coach-kip/overview
+[info] i  Using project coach-kip (Coach Kip) 
+[info] 
+=== Hosting Setup
+[debug] [2025-05-09T04:50:12.838Z] Checked if tokens are valid: true, expires at: 1746769797045
+[debug] [2025-05-09T04:50:12.838Z] Checked if tokens are valid: true, expires at: 1746769797045
+[debug] [2025-05-09T04:50:12.839Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/coach-kip [none]
+[debug] [2025-05-09T04:50:13.187Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/coach-kip 200
+[debug] [2025-05-09T04:50:13.188Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/coach-kip {"projectId":"coach-kip","projectNumber":"760359144746","displayName":"Coach Kip","name":"projects/coach-kip","resources":{"hostingSite":"coach-kip"},"state":"ACTIVE","etag":"1_0c0ddb3f-206c-4f3b-a39e-c4b651c7a3e4"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2025-05-09T04:50:37.450Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2025-05-09T04:50:37.564Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2025-05-09T04:50:37.564Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"11.7.1","browserURL":"https://www.gstatic.com/firebasejs/11.7.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/11.7.1/firebase.tgz"},"live":{"version":"11.7","browserURL":"https://www.gstatic.com/firebasejs/live/11.7/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/11.7/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/11.7.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/11.7.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/11.7.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/11.7.1/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/11.7.1/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/11.7.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/11.7.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/11.7.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/11.7.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/11.7.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/11.7.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/11.7.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/11.7.1/firebase-database.js","vertexai":"https://www.gstatic.com/firebasejs/11.7.1/firebase-vertexai.js","data-connect":"https://www.gstatic.com/firebasejs/11.7.1/firebase-data-connect.js","firestore.memory":"https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\support050 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=384574970&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2025-05-09T04:50:52.511Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2025-05-09T04:50:52.511Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2025-05-09T04:50:53.010Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2025-05-09T04:50:53.010Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2025-05-09T04:50:53.014Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2025-05-09T04:50:53.508Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2025-05-09T04:50:53.508Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Papitkz","id":201401627,"node_id":"U_kgDODAElGw","avatar_url":"https://avatars.githubusercontent.com/u/201401627?v=4","gravatar_id":"","url":"https://api.github.com/users/Papitkz","html_url":"https://github.com/Papitkz","followers_url":"https://api.github.com/users/Papitkz/followers","following_url":"https://api.github.com/users/Papitkz/following{/other_user}","gists_url":"https://api.github.com/users/Papitkz/gists{/gist_id}","starred_url":"https://api.github.com/users/Papitkz/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Papitkz/subscriptions","organizations_url":"https://api.github.com/users/Papitkz/orgs","repos_url":"https://api.github.com/users/Papitkz/repos","events_url":"https://api.github.com/users/Papitkz/events{/privacy}","received_events_url":"https://api.github.com/users/Papitkz/received_events","type":"User","user_view_type":"private","site_admin":false,"name":"John Fritz Izar","company":null,"blog":"","location":"Phillipines","email":null,"hireable":null,"bio":"Full Stack Web Developer","twitter_username":null,"notification_email":null,"public_repos":2,"public_gists":0,"followers":0,"following":0,"created_at":"2025-03-01T23:31:51Z","updated_at":"2025-05-08T03:11:30Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":9701,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Papitkz 
+[info] 
+[debug] [2025-05-09T04:51:06.312Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2025-05-09T04:51:06.723Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2025-05-09T04:51:06.723Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-05-09T04:52:22.016Z] >>> [apiv2][query] GET https://api.github.com/repos/papitkz/coachkip-site/actions/secrets/public-key type=owner
+[debug] [2025-05-09T04:52:22.461Z] <<< [apiv2][status] GET https://api.github.com/repos/papitkz/coachkip-site/actions/secrets/public-key 200
+[debug] [2025-05-09T04:52:22.461Z] <<< [apiv2][body] GET https://api.github.com/repos/papitkz/coachkip-site/actions/secrets/public-key {"key_id":"3380204578043523366","key":"I6eGHi80FEpEsmvz7lBJYIMR+ZvfQ5lBpnx/qHgO53o="}
+[debug] [2025-05-09T04:52:22.464Z] >>> [apiv2][query] GET https://api.github.com/repos/undefined [none]
+[debug] [2025-05-09T04:52:22.871Z] <<< [apiv2][status] GET https://api.github.com/repos/undefined 404
+[debug] [2025-05-09T04:52:22.872Z] <<< [apiv2][body] GET https://api.github.com/repos/undefined {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[debug] [2025-05-09T04:52:27.886Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\support050\AppData\Roaming\nvm\v20.18.1\node_modules\firebase-tools\lib\utils.js:270:49)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-05-09T04:52:40.787Z] ----------------------------------------------------------------------
+[debug] [2025-05-09T04:52:40.790Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-05-09T04:52:40.790Z] CLI Version:   14.3.0
+[debug] [2025-05-09T04:52:40.790Z] Platform:      win32
+[debug] [2025-05-09T04:52:40.790Z] Node Version:  v20.18.1
+[debug] [2025-05-09T04:52:40.790Z] Time:          Fri May 09 2025 12:52:40 GMT+0800 (中国標準時)
+[debug] [2025-05-09T04:52:40.791Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-09T04:52:40.796Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-09T04:52:40.796Z] > authorizing via signed-in user (johnfritzizar35@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\support050\Desktop\Projects\COACH-KIP
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-05-09T04:52:50.172Z] Checked if tokens are valid: true, expires at: 1746769797045
+[debug] [2025-05-09T04:52:50.172Z] Checked if tokens are valid: true, expires at: 1746769797045
+[debug] [2025-05-09T04:52:50.175Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2025-05-09T04:52:51.068Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 200
+[debug] [2025-05-09T04:52:51.068Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2025-05-09T04:54:26.974Z] ----------------------------------------------------------------------
+[debug] [2025-05-09T04:54:26.976Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-05-09T04:54:26.976Z] CLI Version:   14.3.0
+[debug] [2025-05-09T04:54:26.977Z] Platform:      win32
+[debug] [2025-05-09T04:54:26.977Z] Node Version:  v20.18.1
+[debug] [2025-05-09T04:54:26.977Z] Time:          Fri May 09 2025 12:54:26 GMT+0800 (中国標準時)
+[debug] [2025-05-09T04:54:26.977Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-09T04:54:37.074Z] ----------------------------------------------------------------------
+[debug] [2025-05-09T04:54:37.081Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-05-09T04:54:37.082Z] CLI Version:   14.3.0
+[debug] [2025-05-09T04:54:37.083Z] Platform:      win32
+[debug] [2025-05-09T04:54:37.083Z] Node Version:  v20.18.1
+[debug] [2025-05-09T04:54:37.083Z] Time:          Fri May 09 2025 12:54:37 GMT+0800 (中国標準時)
+[debug] [2025-05-09T04:54:37.084Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-09T04:54:42.149Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\support050\AppData\Roaming\nvm\v20.18.1\node_modules\firebase-tools\lib\utils.js:270:49)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+[error] 
+[error] Error: An unexpected error has occurred.

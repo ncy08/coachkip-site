@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://kip.coach/sitemap.xml
