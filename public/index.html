@@ -8,7 +8,100 @@
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/11.7.1/firebase-app-compat.js"></script>
     <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.7.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/11.7.1/firebase-auth-compat.js"<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the latest coaching tips and strategies with COACH KIP. Join us for expert advice, personalized training, and tools to enhance your running." />
+  <meta name="keywords" content="kip coach, running coach, AI training, personalized running plan, fitness tips, coaching strategies" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Coach Kip" />
+  <link rel="icon" href="https://t3.ftcdn.net/jpg/03/56/02/78/360_F_356027876_3RZQuD7S6ldVaGlW4sovtL1n3RTXptSi.jpg" />
+  <link rel="canonical" href="https://kip.coach/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="COACH KIP | AI Running Coach" />
+  <meta property="og:description" content="Your AI-driven running coach providing personalized training insights and expert advice." />
+  <meta property="og:image" content="https://t3.ftcdn.net/jpg/03/56/02/78/360_F_356027876_3RZQuD7S6ldVaGlW4sovtL1n3RTXptSi.jpg" />
+  <meta property="og:url" content="https://kip.coach" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="COACH KIP | AI Running Coach" />
+  <meta name="twitter:description" content="Your AI-driven running coach providing personalized training insights and expert advice." />
+  <meta name="twitter:image" content="https://t3.ftcdn.net/jpg/03/56/02/78/360_F_356027876_3RZQuD7S6ldVaGlW4sovtL1n3RTXptSi.jpg" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1HJ1T0T34M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1HJ1T0T34M');
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "COACH KIP",
+      "url": "https://kip.coach",
+      "description": "Your AI-driven running coach providing personalized training insights and expert advice."
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Coach Kip",
+      "url": "https://kip.coach",
+      "logo": "https://t3.ftcdn.net/jpg/03/56/02/78/360_F_356027876_3RZQuD7S6ldVaGlW4sovtL1n3RTXptSi.jpg",
+      "sameAs": [
+        "https://www.instagram.com/YOUR_HANDLE",
+        "https://www.linkedin.com/in/YOUR_PROFILE"
+      ]
+    }
+  </script>
+
+  <title>COACH KIP</title>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="firebase-load-status" style="text-align:center; font-size:0.9rem; color:gray; margin-top:1rem;"></div>
+
+  <!-- Main App JS -->
+  <script type="module" src="/src/main.js"></script>
+
+  <!-- Firebase SDK Detection Script -->
+  <script>
+    window.addEventListener('load', () => {
+      const loadEl = document.getElementById('firebase-load-status');
+      try {
+        const features = [
+          'auth',
+          'database',
+          'firestore',
+          'functions',
+          'messaging',
+          'storage',
+          'analytics',
+          'remoteConfig',
+          'performance'
+        ].filter(feature => typeof firebase?.[feature] === 'function');
+
+        loadEl.textContent = `Firebase SDK loaded with: ${features.join(', ')}`;
+      } catch (e) {
+        console.error(e);
+        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+      }
+    });
+  </script>
+</body>
+</html>
+></script>
     <script defer src="/__/firebase/11.7.1/firebase-database-compat.js"></script>
     <script defer src="/__/firebase/11.7.1/firebase-firestore-compat.js"></script>
     <script defer src="/__/firebase/11.7.1/firebase-functions-compat.js"></script>
