@@ -1026,7 +1026,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
   </div>
 </footer>
 
-<div class="overlay" v-if="loading == true">
+<div class="overlay" v-if="loading == true" style="z-index:1050">
   <div class="loader"></div>
 </div>
   
