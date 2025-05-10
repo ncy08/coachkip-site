@@ -5,12 +5,12 @@ import App from './App.vue';
 import router from './router';
 import Vuetify from './plugins/vuetify';
 import './../firebase-config';
-
+import { createHead } from '@vueuse/head'; 
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedState);
 
 const app = createApp(App);
-
+const head = createHead(); 
 // Set up the router to update the document title and meta description
 router.afterEach((to) => {
   // Set the document title
@@ -25,6 +25,8 @@ router.afterEach((to) => {
   }
 });
 
+
+app.use(head)
 app.use(router);
 app.use(Vuetify);
 app.use(pinia);
