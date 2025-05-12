@@ -36,7 +36,7 @@
           <v-card style="width: 50% !important"></v-card>
           <v-toolbar style="background-color: transparent" class="mt-1">
             <v-icon  size="small"  color="black"  class="mb-n1 ml-5"   v-on:click="handleMenuItemClick({ link: '#home' })" >mdi-arrow-left</v-icon >
-            <a style="font-family: 'Aeonik1'; color:black"  v-on:click="handleMenuItemClick({ link: '#home' })"  data-w-id="4a4302b6-6981-f1fa-9bee-92d7404c033a"
+            <a style="font-family: 'Aeonik1'; color:black"  v-on:click="handleMenuItemClick({ link: '#home' })"  
               class="side-nav-link-home">Home</a>
             <v-spacer />
             <button
@@ -96,7 +96,7 @@
           </v-row>
   </v-navigation-drawer>
   
-  <section id="home" :style="{ minHeight: isMobile ? '50vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; z-index: 999;" >
+  <section href="#home" id="home" :style="{ minHeight: isMobile ? '50vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; z-index: 999;" >
   <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; min-height: 100vh;">
     <div class="hero-content" :style="{paddingTop: isMobile ? '4% !important' : ''}">
       <div class="title-wrapper">
@@ -128,6 +128,7 @@
               :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
               class="mr-2 social-icon"
               @click="gotoRoutesite('http://x.com')"
+              href="https://x.com/coachkip"
             >
               mdi-twitter
             </v-icon>
@@ -138,6 +139,7 @@
               :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
               class="mr-2 social-icon"
               @click="gotoRoutesite('http://instagram.com')"
+              href="https://instagram.com/coachkip"
             >
               mdi-instagram
             </v-icon>
@@ -147,6 +149,7 @@
               size="x-large"
               :style="{ color: !isDarkMode ? 'black' : '#e4dbcc' }"
               class="ml-2 social-icon"
+              href="https://message.com/coachkip"
               @click="gotoRoutesite('http://message.com')"
             >
               mdi-message
@@ -193,7 +196,7 @@
     </div>
   </v-parallax>
   </section>
-  <section id="home1" :style="{ minHeight: isMobile ? '50vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; z-index: 999;">
+  <section href="#home1" id="home1" :style="{ minHeight: isMobile ? '50vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; z-index: 999;">
   <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '50vh' : '100vh'}" 
     style="position: relative; border-radius: 0% !important;">
     <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
@@ -223,7 +226,7 @@
     </v-container>
   </v-parallax>
   </section>
-  <section id="whatwedo" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;" 
+  <section  href="#whatwedo"  id="whatwedo" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;" 
   @mousemove="handleMouseMove($event, 'Who is Kip?')" @mouseleave="handleMouseLeave">
   <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '20vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
     <v-container :class="!isMobile ? 'custom-padding' : 'custom-paddingMV'">
@@ -254,7 +257,7 @@
     </v-container>
   </v-parallax>
   </section>
-  <section  id="kip" :style="{ minHeight: isMobile ? '40vh' : '100vh'}"
+  <section href="#kip" id="kip" :style="{ minHeight: isMobile ? '40vh' : '100vh'}"
           style="position: relative; border-radius: 0% !important; z-index: 999;"
            @mousemove="handleMouseMove($event, 'How Kip Works')" @mouseleave="handleMouseLeave">
   <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" :style="{ minHeight: isMobile ? '40vh' : '100vh'}" style="position: relative; border-radius: 0% !important;">
@@ -285,9 +288,9 @@
       </v-row>
     </v-container>
   </v-parallax>
-  </section>
+  </section> 
 
-  <section  id="mission1" :style="{ minHeight: isMobile ? '70vh' : '90vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+  <section href="#mission1"   id="mission1" :style="{ minHeight: isMobile ? '70vh' : '90vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
   <v-parallax :style="{ minHeight: isMobile ? '70vh' : '90vh'}" style="position: relative;
      border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
     <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
@@ -341,7 +344,7 @@
     </v-container>
   </v-parallax>
   </section>
-  <section  id="mission2" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+  <section href="#mission2"  id="mission2" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
   <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
     <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
       <v-row align="center" justify="center">
@@ -390,7 +393,7 @@
     </v-container>
   </v-parallax>
   </section>
-  <section  id="mission3" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+  <section  href="#mission3"  id="mission3" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
   <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
     <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
       <v-row align="center" justify="center">
@@ -439,7 +442,7 @@
     </v-container>
   </v-parallax>
   </section>
-  <section  id="mission4" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+  <section  href="#mission4"  id="mission4" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
   <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
     <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
       <v-row align="center" justify="center">
@@ -487,7 +490,7 @@
     </v-container>
   </v-parallax>
   </section>
-  <section  id="mission5" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
+  <section href="#mission5"  id="mission5" :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important; z-index: 999;">
   <v-parallax :style="{ minHeight: isMobile ? '70vh' : '100vh'}" style="position: relative; border-radius: 0% !important;" :color="isDarkMode ? '#252423' : '#fffbe9'">
     <v-container :class="!isMobile ? 'custom-paddingdd' : 'custom-paddingMV'">
       <v-row align="center" justify="center">
