@@ -1045,7 +1045,7 @@ import emailjs from 'emailjs-com';
       setup() {
         useHead({
           meta: [
-            { name: 'description', content: 'Kip Coach: Your AI-driven running coach, providing personalized training insights and real-time guidance to help you achieve your running goals.' },
+            { name: 'description', content: 'Kip Coach: Your AGI Running Coach. providing personalized training insights and real-time guidance to help you achieve your running goals.' },
             { name: 'keywords', content: 'Kip Coach, running coach, AI coach, personalized training, running insights, fitness, marathon training, performance analysis' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
           ],

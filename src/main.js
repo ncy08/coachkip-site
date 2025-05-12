@@ -5,29 +5,29 @@ import App from './App.vue';
 import router from './router';
 import Vuetify from './plugins/vuetify';
 import './../firebase-config';
-import { createHead } from '@vueuse/head'; 
+import { createHead } from '@vueuse/head';  // Import VueUse Head
+
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedState);
 
 const app = createApp(App);
-const head = createHead(); 
-// Set up the router to update the document title and meta description
+
+// Use plugins BEFORE mounting
+app.use(router);
+app.use(pinia);
+app.use(Vuetify);
+app.use(createHead()); // Use @vueuse/head
+
+app.mount('#app');
+
+// Optional: legacy method for updating title/meta if not using <useHead> per page
 router.afterEach((to) => {
-  // Set the document title
   if (to.meta.title) {
     document.title = to.meta.title;
   }
 
-  // Set the meta description
   const metaDescription = document.querySelector('meta[name="description"]');
   if (metaDescription) {
     metaDescription.setAttribute('content', to.meta.description || '');
   }
 });
-
-
-app.use(head)
-app.use(router);
-app.use(Vuetify);
-app.use(pinia);
-app.mount('#app');
