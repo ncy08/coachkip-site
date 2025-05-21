@@ -333,11 +333,11 @@
             }">
             Runners are drowning in data-pace, distance, heart rate, sleep scores, and more-but few of us can use this data longitudinally to harness deeper, non-obvious insights locked within these metrics.
            <!-- The factors that drive our individual performance interact in complex ways; the first step is bringing them all together. -->
-            <a :style="{color: isDarkMode ? '#fffbe9' : '#252423' }"
+            <!-- <a :style="{color: isDarkMode ? '#fffbe9' : '#252423' }"
               href="https://docs.google.com/forms/d/e/1FAIpQLSc_WUMqF_UeOE4F20NAGmEVtapyECjJfggwApu8uOWkWdea-Q/viewform"
               target="_blank">
               Sign up</a>
-            to join our bi-weekly ideation sessions.
+            to join our bi-weekly ideation sessions. -->
           </p>
         </v-col>
       </v-row>
