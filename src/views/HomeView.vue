@@ -131,14 +131,14 @@
 <v-row style="position: fixed; bottom: 0; width: 105%; padding: 15px; background: transparent;">
   <div  style="display: flex; justify-content: space-between; width: 100%; align-items: center;background:transparent">
     <p
-      class="b3"
+      class="b3 ml-4 mb-4 "
       style="color:#7da07d; font-weight: 400; font-family: ChaletBook1; font-size:13px; margin: 0;"
     >
       ©2025 McCarren Labs, LLC
     </p>
     <p
       @click="goToPrivacy()"
-      class="b3"
+      class="b3 mr-4 mb-4"
       style="color:#7da07d; font-weight: 400; font-family: ChaletBook1; font-size:13px; margin: 0; cursor: pointer;"
     >
       Privacy Policy
