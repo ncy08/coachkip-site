@@ -12,15 +12,19 @@
    </div>
   
   <transition name="fade">
-    <v-toolbar v-show="isToolbarVisible" :color="isDarkMode ? '#252423' : '#fffbe9'" :class="fixedScroll == false ? 'tBar' : 'tBarFoxed'" class="tBar" style="z-index: 1999">
+    <v-toolbar  v-show="isToolbarVisible" :color="isDarkMode ? '#252423' : '#fffbe9'" :class="fixedScroll == false ? 'tBar' : 'tBarFoxed'" class="tBar" style="z-index: 1999;background:transparent">
       <v-toolbar-title v-on:click="handleMenuItemClick({ link: '#home' })" :style="{color : isDarkMode ? 'white' : 'black'}"> 
         COACH KIP</v-toolbar-title>
       <v-spacer></v-spacer>
       <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" 
+        @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 40px; padding: 12px 38px 12px; display: block;" 
+        class="mr-6 hidden-sm-and-down" @click="drawer = true"> Menu
+      </button>
+      <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" 
         @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 20px; padding: 2px 22px 3px; display: block;" 
         class="mr-6 hidden-md-and-up mt-n1" @click="drawer = true"> Menu
       </button>
-    <v-toolbar-items class="hidden-sm-and-down">
+    <!-- <v-toolbar-items class="hidden-sm-and-down">
       <template v-for="(item, index) in menuItems" :key="index">
         <v-btn :style="{color:isDarkMode ? 'white' : 'black'}" flat :class="{ 'active-line': activeSection === item.link.substring(1) }"
           :color="activeSection === item.link.substring(1) ? '#FFD700' : '#FFFFFF'"
@@ -28,7 +32,7 @@
           {{ item.text }}
         </v-btn>
       </template>
-    </v-toolbar-items>
+    </v-toolbar-items> -->
     </v-toolbar>
   </transition>
   
@@ -56,9 +60,14 @@
       class="side-nav-link-home"
     >Home</a>
     <v-spacer />
+    <button :style="{background:isDarkMode ? 'black' : 'black', color:isDarkMode ? 'white' : 'white'}" 
+        @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 40px; padding: 12px 38px 12px; display: block;
+        " 
+        class="mr-6 hidden-sm-and-down"  @click="drawer = false"> Close
+    </button>
     <button
       style="float: right; font-family: 'Aeonik1'; background-color: #252423; color: #b7e3b6; border-radius: 20px; padding: 2px 22px 3px;"
-      class="mr-6 mt-1"
+      class="mr-6 mt-1  hidden-md-and-up"
       @click="drawer = false"
     >
       Close
@@ -1091,7 +1100,7 @@ import emailjs from 'emailjs-com';
       setup() {
         useHead({
           meta: [
-            { name: 'description', content: 'Kip Coach: Your AGI Running Coach. providing personalized training insights and real-time guidance to help you achieve your running goals.' },
+            {title: 'Kip Coach | AGI Running Coach'},
             { name: 'keywords', content: 'Kip Coach, running coach, AGI coach, personalized training, running insights, fitness, marathon training, performance analysis' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
           ],
