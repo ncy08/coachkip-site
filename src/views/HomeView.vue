@@ -127,7 +127,6 @@
     </v-col>
   </v-row>
 
-<!-- Footer pinned to bottom -->
 <v-row style="position: fixed; bottom: 0; width: 105%; padding: 15px; background: transparent;">
   <div  style="display: flex; justify-content: space-between; width: 100%; align-items: center;background:transparent">
     <p
