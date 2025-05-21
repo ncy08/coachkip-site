@@ -94,6 +94,16 @@
               </ul>
             </v-col>
           </v-row>
+          <br /><br /><br /><br />
+          <v-row style="margin-top: auto; padding: 10px"  >
+            <v-col cols="6" class="ml-2">
+              <p class="b3" style="color:#7da07d;font-weight: 400;font-family: ChaletBook1;font-size:13px">©2025 McCarren Labs, LLC</p>
+            </v-col>
+            <v-col cols="2"></v-col>
+            <v-col>
+              <p @click="goToPrivacy()" class="b3" style="color:#7da07d;font-weight: 400;font-family: ChaletBook1;font-size:13px">Privacy Policy</p>
+            </v-col>
+          </v-row>
   </v-navigation-drawer>
   
   <section href="#home" id="home" :style="{ minHeight: isMobile ? '50vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; z-index: 999;" >
@@ -804,7 +814,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
 <hr width="100%" style="border:0.2px solid #7da07d !important; margin-left: 33.33%;"  class="mt-n8 mb-4" />
 <div class="mt-1" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">  
     <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;padding-left: 15px;"   @click="goToPrivacy">PRIVACY POLICY</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
@@ -934,7 +944,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
       </a>
     </div>
   </div>
-  <hr width="1000vw"  class="mt-n8 mb-6" style="border:0.5px solid #7da07d;"/>
+  <hr width="1000vw" class="mt-n6 mb-6" style="border:0.5px   solid #7da07d;"/>
   <div style="padding: 14px 0 20px 0;display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
     <div style="flex: 1;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">INFO</p>
@@ -945,7 +955,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
       </a>
     </div>
   </div>
-  <hr width="1000vw"  class="mt-n8 mb-6" style="border:0.5px solid #7da07d;"/>
+  <hr width="1000vw" class="mt-n6 mb-6" style="border:0.5px   solid #7da07d;"/>
   <div style="padding: 14px 0 20px 0;display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px">
     <div style="flex: 1;">
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">FOLLOW US</p>
@@ -959,7 +969,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
       </a>
     </div>
   </div>
-  <hr width="1000vw"  class="mt-n8 mb-6" style="border:0.5px solid #7da07d;"/>
+  <hr width="1000vw" class="mt-n6 mb-6" style="border:0.5px  solid #7da07d;"/>
   <div style="padding: 14px 0 20px 0;display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 20px;padding-left:15px" 
   class="mt-n6">
     <div style="flex: 1.6;">
@@ -989,8 +999,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
       <v-icon class="ml-16" size="x-small">mdi-circle</v-icon> SUBMIT
      </div>
   </div>
-  <hr width="1000vw"  class="mt-n10 mb-8" style="border:0.5px solid #7da07d;"/>
-  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%;padding-left:15px">
+  <div style="display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 26px !important;padding-left:15px">
     <div style="flex: 1;">
       <div class="marquee mb-2">
     <v-row>
@@ -1021,18 +1030,6 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
   </div>
     </div>
   </div>
-  
-  <div style="padding: 0 0 20px 0;display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 26px;padding-left:15px" 
-  class="mt-n4">
-    <div style="flex: 1.6;">
-      <p  @click="goToPrivacy"  class="mt-n3  mb-3" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">PRIVACY POLICY</p>
-    </div>
-    <div style="flex: 1; text-align: left;" >
-     </div>
-  </div>
-  
-  
-  
 </footer>
 
 <div class="overlay" v-if="loading == true" style="z-index:1050">

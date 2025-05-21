@@ -8,8 +8,8 @@ const routes = [
     name: 'Home',
     component: HomeView,
     meta: {
-      title: 'COACH KIP | AGI Running Coach',
-      description: 'Coach Kip is your AGI-powered running coach, offering personalized training plans and expert advice to help you run smarter.',
+      title: 'COACH KIP | AGI Running Coach & Trainer',
+      description: 'Coach Kip is your advanced AI-powered running coach. Get personalized training plans, track your progress, and run smarter today.',
     },
   },
   {
@@ -17,11 +17,12 @@ const routes = [
     name: 'About',
     component: AboutView,
     meta: {
-      title: 'About Us | COACH KIP',
-      description: 'Learn more about Coach Kip - your AGI running coach. Discover our mission and how we personalize your training.',
+      title: 'About Coach Kip | Your AI Running Coach',
+      description: 'Discover how Coach Kip uses AGI to become the ultimate running coach. Learn about our mission and personalized training philosophy.',
     },
   },
 ];
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
