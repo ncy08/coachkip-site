@@ -804,7 +804,7 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
 <hr width="100%" style="border:0.2px solid #7da07d !important; margin-left: 33.33%;"  class="mt-n8 mb-4" />
 <div class="mt-1" style=" display: flex; justify-content: space-between; align-items: left; width: 100%;">  
     <div style="flex: 1;">
-      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;padding-left: 15px;"  onclick="window.location.href='/Privacy.html'">PRIVACY POLICY</p>
+      <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;padding-left: 15px;"   @click="goToPrivacy">PRIVACY POLICY</p>
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
       <p style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: clamp(14px, 1.3vw, 24px); color: black;">&nbsp;</p>
@@ -1023,9 +1023,9 @@ flex-direction: column; justify-content: space-between;  box-sizing: border-box;
   </div>
   
   <div style="padding: 0 0 20px 0;display: flex; justify-content: space-between; align-items: left; width: 100%; margin-bottom: 26px;padding-left:15px" 
-  class="mt-n6">
+  class="mt-n4">
     <div style="flex: 1.6;">
-      <p onclick="window.location.href='/Privacy.html'"  class="mt-n3  mb-3" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">PRIVACY POLICY</p>
+      <p  @click="goToPrivacy"  class="mt-n3  mb-3" style="transition: font-size 0.5s ease-out; font-family: 'ChaletBook1'; font-size: 14px; color: black;">PRIVACY POLICY</p>
     </div>
     <div style="flex: 1; text-align: left;" >
      </div>
@@ -1197,6 +1197,10 @@ import emailjs from 'emailjs-com';
         },
       },
       methods: {
+        goToPrivacy() {
+          // Navigate to the static HTML file in public folder
+          window.location.href = '/Privacy.html'
+        },
         sendEmail() {
         this.loading = true
         if (this.validateEmail(this.email)) {
