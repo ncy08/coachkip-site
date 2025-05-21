@@ -20,6 +20,7 @@
     "pinia-plugin-persistedstate": "^4.2.0",
     "sass-embedded": "^1.83.1",
     "sweetalert2": "^11.21.0",
+    "vite-plugin-sitemap": "^0.8.2",
     "vue": "^3.4.29",
     "vue-meta": "^2.4.0",
     "vue-router": "^4.3.3",
