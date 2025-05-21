@@ -1,12 +1,12 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import { ViteSitemap } from 'vite-plugin-sitemap'
+import Sitemap  from 'vite-plugin-sitemap'
 
 export default defineConfig({
   plugins: [
     vue(),
-    ViteSitemap({
+    Sitemap({
       initialRoutes: ['/', '/about'], // Define your routes
       hostname: 'https://kip.coach',
       outDir: 'dist'
