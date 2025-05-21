@@ -32,79 +32,122 @@
     </v-toolbar>
   </transition>
   
-  <v-navigation-drawer style="z-index: 10000"  location="right" v-model="drawer" fixed  temporary  class="mobile-nav fullscreen-drawer" width="490">
-          <v-card style="width: 50% !important"></v-card>
-          <v-toolbar style="background-color: transparent" class="mt-1">
-            <v-icon  size="small"  color="black"  class="mb-n1 ml-5"   v-on:click="handleMenuItemClick({ link: '#home' })" >mdi-arrow-left</v-icon >
-            <a style="font-family: 'Aeonik1'; color:black"  v-on:click="handleMenuItemClick({ link: '#home' })"  
-              class="side-nav-link-home">Home</a>
-            <v-spacer />
-            <button
-              style=" float: right; font-family: 'Aeonik1';  background-color: #252423;  color: #b7e3b6 ;  border-bottom-style: none;
-                border-bottom-color: #000; border-radius: 20px;  padding: 2px 22px 3px; display: block; " class="mr-6 mt-1"  @click="drawer = false">
-              Close
-            </button>
-          </v-toolbar>
-          <v-row>
-            <v-col class="ml-3 mr-3">
-              <nav  class="col col-nav-top w-clearfix" style="padding-left: 2% !important" aria-label="Main Navigation" >
-                <ul class="side-nav-list">
-                  <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#home' })" class="side-nav-link-large"
-                    >Home</a >
-                  <a  style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#whatwedo' })"  class="side-nav-link-large mt-n2"
-                    >Mission</a>
-                  <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#kip' })"  class="side-nav-link-large mt-n2"
-                    >Kip</a>
-                  <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#milesran' })"  class="side-nav-link-large mt-n2"
-                    >About</a>
-                  <!-- <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#team' })" class="side-nav-link-large mt-n2"
-                    >Team</a> -->
-                  <a style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px"  @click="handleMenuItemClick({ link: '#contact' })"  class="side-nav-link-large mt-n2"
-                    >Contact</a>
-                </ul>
-              </nav>
-            </v-col>
-          </v-row>
-          <br /><br />
-          <br /><br /><br /><br />
-          <v-row style="margin-top: auto; padding: 10px">
-            <v-col class="ml-3 mr-3">
-              <ul class="side-nav-list" style="list-style-type: none; padding: 0">
-                <li>
-                  <a class="side-nav-link-large"  href="https://x.com" target="_blank"
-                    style="  font-family: 'Aeonik1'; font-size: 18px !important; line-height: 25px !important;  color: black !important; "  >
-                    <v-icon  class="mr-1">mdi-twitter</v-icon>Twitter</a>
-                </li>
-                <li>
-                  <a class="side-nav-link-large"  href="https://linkedin.com" target="_blank"
-                    style="  font-family: 'Aeonik1';  font-size: 18px !important; line-height: 25px !important; color: black !important; "  >
-                    <v-icon class="mr-1">mdi-linkedin</v-icon>LinkedIn</a
-                  >
-                </li>
-                <li>
-                  <a  class="side-nav-link-large"  href="https://instagram.com" target="_blank"
-                  style="  font-family: 'Aeonik1';  font-size: 18px !important; line-height: 25px !important; color: black !important; " >
-                  <v-icon class="mr-1">mdi-instagram</v-icon>Instagram</a>
-                </li>
-                <li>
-                  <a  class="side-nav-link-large"  href="https://vimeo.com" target="_blank"
-                  style="  font-family: 'Aeonik1';  font-size: 18px !important; line-height: 25px !important; color: black !important; "  >
-                  <v-icon class="mr-1">mdi-vimeo</v-icon>Vimeo</a >
-                </li>
-              </ul>
-            </v-col>
-          </v-row>
-          <br /><br /><br /><br />
-          <v-row style="margin-top: auto; padding: 10px"  >
-            <v-col cols="6" class="ml-2">
-              <p class="b3" style="color:#7da07d;font-weight: 400;font-family: ChaletBook1;font-size:13px">©2025 McCarren Labs, LLC</p>
-            </v-col>
-            <v-col cols="2"></v-col>
-            <v-col>
-              <p @click="goToPrivacy()" class="b3" style="color:#7da07d;font-weight: 400;font-family: ChaletBook1;font-size:13px">Privacy Policy</p>
-            </v-col>
-          </v-row>
-  </v-navigation-drawer>
+<v-navigation-drawer
+  style="z-index: 10000"
+  location="right"
+  v-model="drawer"
+  fixed
+  temporary
+  class="mobile-nav fullscreen-drawer d-flex flex-column"
+  width="490"
+>
+  <v-card style="width: 50% !important"></v-card>
+
+  <v-toolbar style="background-color: transparent" class="mt-1">
+    <v-icon
+      size="small"
+      color="black"
+      class="mb-n1 ml-5"
+      v-on:click="handleMenuItemClick({ link: '#home' })"
+    >mdi-arrow-left</v-icon>
+    <a
+      style="font-family: 'Aeonik1'; color:black"
+      v-on:click="handleMenuItemClick({ link: '#home' })"
+      class="side-nav-link-home"
+    >Home</a>
+    <v-spacer />
+    <button
+      style="float: right; font-family: 'Aeonik1'; background-color: #252423; color: #b7e3b6; border-radius: 20px; padding: 2px 22px 3px;"
+      class="mr-6 mt-1"
+      @click="drawer = false"
+    >
+      Close
+    </button>
+  </v-toolbar>
+
+  <v-row>
+    <v-col class="ml-3 mr-3">
+      <nav class="col col-nav-top w-clearfix" style="padding-left: 2% !important" aria-label="Main Navigation">
+        <ul class="side-nav-list">
+          <a class="side-nav-link-large" style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px" @click="handleMenuItemClick({ link: '#home' })">Home</a>
+          <a class="side-nav-link-large mt-n2" style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px" @click="handleMenuItemClick({ link: '#whatwedo' })">Mission</a>
+          <a class="side-nav-link-large mt-n2" style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px" @click="handleMenuItemClick({ link: '#kip' })">Kip</a>
+          <a class="side-nav-link-large mt-n2" style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px" @click="handleMenuItemClick({ link: '#milesran' })">About</a>
+          <!-- <a class="side-nav-link-large mt-n2" style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px" @click="handleMenuItemClick({ link: '#team' })">Team</a> -->
+          <a class="side-nav-link-large mt-n2" style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px" @click="handleMenuItemClick({ link: '#contact' })">Contact</a>
+        </ul>
+      </nav>
+    </v-col>
+  </v-row>
+
+  <v-row class="mt-8" style="padding: 10px">
+    <v-col class="ml-3 mr-3">
+      <ul class="side-nav-list" style="list-style-type: none; padding: 0">
+        <li>
+          <a
+            class="side-nav-link-large"
+            href="https://x.com"
+            target="_blank"
+            style="font-family: 'Aeonik1'; font-size: 18px !important; line-height: 25px !important; color: black !important;"
+          >
+            <v-icon class="mr-1">mdi-twitter</v-icon>Twitter
+          </a>
+        </li>
+        <li>
+          <a
+            class="side-nav-link-large"
+            href="https://linkedin.com"
+            target="_blank"
+            style="font-family: 'Aeonik1'; font-size: 18px !important; line-height: 25px !important; color: black !important;"
+          >
+            <v-icon class="mr-1">mdi-linkedin</v-icon>LinkedIn
+          </a>
+        </li>
+        <li>
+          <a
+            class="side-nav-link-large"
+            href="https://instagram.com"
+            target="_blank"
+            style="font-family: 'Aeonik1'; font-size: 18px !important; line-height: 25px !important; color: black !important;"
+          >
+            <v-icon class="mr-1">mdi-instagram</v-icon>Instagram
+          </a>
+        </li>
+        <li>
+          <a
+            class="side-nav-link-large"
+            href="https://vimeo.com"
+            target="_blank"
+            style="font-family: 'Aeonik1'; font-size: 18px !important; line-height: 25px !important; color: black !important;"
+          >
+            <v-icon class="mr-1">mdi-vimeo</v-icon>Vimeo
+          </a>
+        </li>
+      </ul>
+    </v-col>
+  </v-row>
+
+<!-- Footer pinned to bottom -->
+<v-row style="position: fixed; bottom: 0; width: 105%; padding: 15px; background: transparent;">
+  <div  style="display: flex; justify-content: space-between; width: 100%; align-items: center;background:transparent">
+    <p
+      class="b3"
+      style="color:#7da07d; font-weight: 400; font-family: ChaletBook1; font-size:13px; margin: 0;"
+    >
+      ©2025 McCarren Labs, LLC
+    </p>
+    <p
+      @click="goToPrivacy()"
+      class="b3"
+      style="color:#7da07d; font-weight: 400; font-family: ChaletBook1; font-size:13px; margin: 0; cursor: pointer;"
+    >
+      Privacy Policy
+    </p>
+  </div>
+</v-row>
+
+</v-navigation-drawer>
+
   
   <section href="#home" id="home" :style="{ minHeight: isMobile ? '50vh' : '100vh'}"  style="position: relative; border-radius: 0% !important; z-index: 999;" >
   <v-parallax :color="isDarkMode ? '#252423' : '#fffbe9'" style="position: relative; min-height: 100vh;">
