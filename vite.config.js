@@ -1,10 +1,16 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import { ViteSitemap } from 'vite-plugin-sitemap'
 
 export default defineConfig({
   plugins: [
     vue(),
+    ViteSitemap({
+      initialRoutes: ['/', '/about'], // Define your routes
+      hostname: 'https://kip.coach',
+      outDir: 'dist'
+    })
   ],
   resolve: {
     alias: {
@@ -20,10 +26,17 @@ export default defineConfig({
     minify: 'esbuild', // Use esbuild for minification
     terserOptions: {
       compress: {
-        drop_console: true, // Remove console logs in production
+        drop_console: true, // Remove console logs in production. Consider removing this for development.
         drop_debugger: true // Remove debugger statements in production
       }
-    }
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['vue', 'vue-router'], // Creates a vendor chunk
+        },
+      },
+    },
   },
   esbuild: {
     logOverride: {

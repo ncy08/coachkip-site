@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-import AboutView from '../views/AboutView.vue'; // Import additional views as needed
-import Sitemap from '../../public/sitemap.xml';
+import AboutView from '../views/AboutView.vue';
 
 const routes = [
   {
@@ -9,8 +8,8 @@ const routes = [
     name: 'Home',
     component: HomeView,
     meta: {
-      title: 'COACH KIP',
-      description: 'Welcome to the home page of our website.',
+      title: 'COACH KIP | AGI Running Coach',
+      description: 'Coach Kip is your AGI-powered running coach, offering personalized training plans and expert advice to help you run smarter.',
     },
   },
   {
@@ -18,16 +17,8 @@ const routes = [
     name: 'About',
     component: AboutView,
     meta: {
-      title: 'About Us',
-      description: 'Learn more about us on this page.',
-    },
-  },{
-    path: '/sitemap.xml', // Route for the sitemap
-    name: 'Sitemap',
-    component: Sitemap,
-    meta: {
-      title: 'Sitemap',
-      description: 'A list of all pages on our website.',
+      title: 'About Us | COACH KIP',
+      description: 'Learn more about Coach Kip - your AGI running coach. Discover our mission and how we personalize your training.',
     },
   },
 ];
@@ -35,6 +26,15 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || 'COACH KIP';
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) {
+    metaDescription.setAttribute('content', to.meta.description || 'Your default description');
+  }
+  next();
 });
 
 export default router;
