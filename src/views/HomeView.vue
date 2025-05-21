@@ -1587,23 +1587,23 @@ import emailjs from 'emailjs-com';
     @import "../assets/fonts/fonts.css";
     @font-face {
       font-family: "Aeonik1";
-      src: url("../src/assets/font/AeonikTRIAL-Regular.otf") format("opentype");
+      src: url("../assets/font/AeonikTRIAL-Regular.otf") format("opentype");
       font-weight: 1000 !important;
       font-style: normal;
     }
     @font-face {
       font-family: "ChaletBook1";
-      src: url("../src/assets/font/poppins.medium.ttf") format("opentype");
+      src: url("../assets/font/poppins.medium.ttf") format("opentype");
       font-style: normal;
     }
     @font-face {
       font-family: "ChaletBook";
-      src: url("../src/assets/font/ChaletBookBold.ttf") format("opentype");
+      src: url("../assets/font/ChaletBookBold.ttf") format("opentype");
       font-style: normal;
     }
     @font-face {
       font-family: "ChaletBook1";
-      src: url("../src/assets/font/ChaletBookOriginal.woff2") format("opentype");
+      src: url("../assets/font/ChaletBookOriginal.woff2") format("opentype");
       font-weight: 800 !important;
       color:black !important;
       font-style: normal;
