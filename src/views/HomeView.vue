@@ -17,7 +17,7 @@
         COACH KIP</v-toolbar-title>
       <v-spacer></v-spacer>
       <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" 
-        @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 40px; padding: 12px 38px 12px; display: block;" 
+        @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 40px; padding: 8px 34px 10px; display: block;" 
         class="mr-6 hidden-sm-and-down" @click="drawer = true"> Menu
       </button>
       <button :style="{background:isDarkMode ? 'white' : 'black', color:isDarkMode ? 'black' : 'white'}" 
@@ -61,7 +61,7 @@
     >Home</a>
     <v-spacer />
     <button :style="{background:isDarkMode ? 'black' : 'black', color:isDarkMode ? 'white' : 'white'}" 
-        @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 40px; padding: 12px 38px 12px; display: block;
+        @click.stop="drawer = !drawer" style="float: right; font-family: 'Aeonik1'; border-bottom-color: #000; border-radius: 40px; padding: 8px 34px 10px; display: block;
         " 
         class="mr-6 hidden-sm-and-down"  @click="drawer = false"> Close
     </button>
@@ -279,7 +279,7 @@
                color: isDarkMode ? '#fffbe9' : '#252423', transition: 'font-size 0.5s ease-out' ,
                opacity: sectionVisible.home1 ? 1 : 0, transition: 'opacity 1s ease'
             }">
-            Most runners don't have access to a professional coach or personal pacer. Kip gives you expert guidance in real time, unlocking your best self on every run. 
+            Your always-on, ever-ready, voice-powered running assistant. Kip guides you through your workouts to help you adjust in the moment.
           </p>
         </v-col>
       </v-row>
