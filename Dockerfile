@@ -17,4 +17,4 @@ COPY . .
 RUN npm run build
 
 # Serve the application
-CMD ["npx", "http-server", "dist"]
+CMD ["npx", "http-server", "dist", "--spa"]
