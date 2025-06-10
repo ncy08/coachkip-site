@@ -10,7 +10,7 @@ const firebaseConfig = {
   storageBucket: "coach-kip-d6793.appspot.com",
   messagingSenderId: "170697876230",
   appId: "1:170697876230:web:bf79a8508d1f9f73523487",
-  measurementId: "G-QMD5MYZ5Y4"
+  measurementId: "G-N3TE67LD2E",
 };
 
 // Initialize Firebase and Analytics
@@ -18,4 +18,3 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 export { app, analytics };
-  

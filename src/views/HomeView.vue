@@ -175,7 +175,7 @@
                     line-height: 42px;
                   "
                   @click="handleMenuItemClick({ link: '#whatwedo' })"
-                  >Mission</a
+                  >About</a
                 >
                 <a
                   class="side-nav-link-large mt-n2"
@@ -195,7 +195,7 @@
                     line-height: 42px;
                   "
                   @click="handleMenuItemClick({ link: '#milesran' })"
-                  >About</a
+                  >Research</a
                 >
                 <!-- <a class="side-nav-link-large mt-n2" style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px" @click="handleMenuItemClick({ link: '#team' })">Team</a> -->
                 <a
