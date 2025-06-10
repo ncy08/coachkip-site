@@ -5,8 +5,8 @@ High-level view
 • Vue Router exposes two public routes: "/" (Home) and "/about"
 • @vueuse/head is used for per-route <title>/<meta> management and SEO
 • Firebase (analytics only) is initialised on page load
-• **DEPLOYMENT NOTE**: The project now uses **Firebase Hosting** via GitHub Actions, NOT Google App Engine
-• CI/CD supports both Firebase Hosting (via GitHub Actions) and Google App Engine (via Cloud Build)
+• **DEPLOYMENT NOTE**: The project uses **Google Cloud Run** for deployment, NOT Firebase Hosting or Google App Engine
+• CI/CD supports Cloud Run deployment via Cloud Build
 • A simple Dockerfile is included for containerised hosting
 
 Entry point
@@ -80,21 +80,23 @@ CMD npx http-server dist
 
 **Deployment Options**
 
-**Option 1: Firebase Hosting (GitHub Actions - Current Primary)**
-.github/workflows/firebase-hosting-deploy.yml
-
-1. Checkout code
-2. Setup Node.js 20
-3. npm install && npm run build
-4. Deploy to Firebase Hosting (project: coach-kip-d6793)
-   firebase.json configures hosting from /dist with SPA rewrites
-
-**Option 2: Google App Engine (Cloud Build)**
+**Primary: Google Cloud Run (Cloud Build)**
 cloudbuild.yaml
+
+1. npm install && npm run build (Node 20 image)
+2. docker build - creates containerized application
+3. deploy to Cloud Run service
+   Dockerfile: Node 20 + http-server serving dist/ folder
+
+**Alternative: Google App Engine (Cloud Build)**
+app.yaml
 
 1. npm install && npm run build (Node 20 image)
 2. gcloud app deploy (uses app.yaml)
    app.yaml: Node.js 20 runtime serving dist/index.html for all routes
+
+**Legacy: Firebase Hosting (GitHub Actions - Not Currently Used)**
+.github/workflows/firebase-hosting-deploy.yml - Available but not the primary deployment method
 
 Other noteworthy files
 • **.eslintrc.cjs**: ESLint configuration with Vue plugin
@@ -114,7 +116,7 @@ In practice
 When you run npm run dev Vite serves the SPA on localhost:5173.
 The SPA loads Firebase analytics, attaches Vuetify + dark-mode, and shows the landing page.
 Pressing "Join Waitlist" calls sendEmail() inside HomeView (emailjs-com dependency).
-Build (npm run build) outputs a static /dist folder ready for Docker, Firebase Hosting, or App Engine.
+Build (npm run build) outputs a static /dist folder ready for Docker and Cloud Run deployment.
 
 **Major Architecture Concerns**
 • **HomeView.vue is 3,431 lines** - desperately needs component breakdown
@@ -127,6 +129,7 @@ Extending the site
 • **CRITICAL**: Break down HomeView.vue into smaller components for maintainability
 • Store authenticated user data or plan configurations in Pinia's state.userInformation
 • Connect to Firestore/Auth if you need more than analytics – firebase-config.js is ready for extension
+• Ensure Cloud Run service configuration is optimized for performance and cost
 • Consider consolidating image assets and optimizing font loading
 • Replace hardcoded social links (currently pointing to generic x.com, linkedin.com, etc.)
 • Add environment variables for EmailJS configuration
@@ -305,7 +308,7 @@ SweetAlert/Toast confirms. 6. Navigation to /about will lazy-load AboutView (emp
 ────────────────────────────────
 □ Install Node 20, run npm ci && npm run dev
 □ Verify EmailJS environment variables are present (check for .env files)
-□ Choose primary deployment method: Firebase Hosting (GitHub Actions) or App Engine (Cloud Build)
+□ Verify Cloud Run deployment configuration is properly set up
 □ Remove noindex header (\_headers) on production deploy
 □ Fill out AboutView.vue and update vite-plugin-sitemap initialRoutes
 □ Replace hard-coded social links placeholders (x.com, linkedin.com, etc.)
