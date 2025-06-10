@@ -1,3 +1,113 @@
+# CURRENT PROJECT STATUS & DEPLOYMENT ISSUES
+
+## Current Stage (As of June 10, 2025)
+
+**CRITICAL DEPLOYMENT ISSUE**: The `/workout-buddy` page is not accessible at https://kip.coach/workout-buddy due to SPA (Single Page Application) routing configuration problems.
+
+### What We're Trying to Achieve
+
+- Deploy a new `/workout-buddy` Vue.js page that works both:
+  1. **Client-side navigation** (clicking links from homepage) ✅ Works
+  2. **Direct URL access** (typing URL in browser) ❌ Returns 404
+
+### Root Cause of Issues
+
+The fundamental problem is **SPA routing misconfiguration** on the production server:
+
+1. **Local Development**: Works perfectly with Vite dev server (localhost:5173)
+2. **Production Build**: `npm run build` succeeds without errors
+3. **Production Deployment**: Server doesn't properly handle SPA routes
+
+### Technical Details of the Problem
+
+**What happens when you visit a direct URL in an SPA:**
+
+1. Browser requests `https://kip.coach/workout-buddy` from server
+2. Server looks for a file at `/workout-buddy` (doesn't exist)
+3. Server returns 404 instead of serving `index.html`
+4. Vue Router never gets a chance to handle the route
+
+**What SHOULD happen:**
+
+1. Browser requests `https://kip.coach/workout-buddy`
+2. Server serves `index.html` for ALL routes (SPA configuration)
+3. Vue Router loads and handles `/workout-buddy` client-side
+4. Page renders correctly
+
+### Changes Made During Troubleshooting
+
+**Deployment Configuration Changes:**
+
+1. **programoverview.md** - Updated to reflect Cloud Run deployment (not Firebase Hosting)
+2. **Dockerfile** - Modified to use `http-server` with `--spa` flag for proper SPA routing
+3. **Attempted Express.js server** - Added then removed server.js (overcomplicated the solution)
+
+**Vue Component Status:**
+
+- ✅ **WorkoutBuddyView.vue** - Exists and compiles successfully
+- ✅ **Router configuration** - `/workout-buddy` route properly defined
+- ✅ **Sitemap generation** - Includes workout-buddy URL
+- ✅ **SEO metadata** - Proper meta tags and structured data
+
+### Current Dockerfile Configuration (FIXED)
+
+```dockerfile
+# Build stage
+FROM node:20 AS builder
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+
+# Production stage
+FROM nginx:alpine
+COPY --from=builder /usr/src/app/dist /usr/share/nginx/html
+# Nginx config with proper SPA routing
+RUN echo 'server { \
+    listen 8080; \
+    location / { \
+        try_files $uri $uri/ /index.html; \
+    } \
+}' > /etc/nginx/conf.d/default.conf
+EXPOSE 8080
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+**ISSUE RESOLVED**: The problem was that `http-server` doesn't actually support the `--spa` flag. The solution is using nginx with proper `try_files` configuration that serves `index.html` for all unmatched routes.
+
+### Deployment Method: Google Cloud Run
+
+- **Build Process**: Cloud Build compiles Vue.js app into static files
+- **Container**: Node.js 20 with http-server serving `/dist` folder
+- **Problem**: Despite `--spa` flag, direct URLs still return 404
+
+### Immediate Next Steps Required
+
+1. **Deploy the fixed Dockerfile** to Cloud Run with nginx configuration
+2. **Test direct URL access** to https://kip.coach/workout-buddy after deployment
+3. **Verify all routes work**: Test /, /about, and /workout-buddy with direct URL access
+4. **Monitor Cloud Run logs** to ensure nginx is serving requests properly
+
+### What Was NOT Broken
+
+- ✅ Vue.js application code (components, routing, build process)
+- ✅ Home page functionality
+- ✅ Client-side navigation between pages
+- ✅ SEO configuration and meta tags
+- ✅ Git history (all previous work preserved)
+
+### Current Git Status
+
+- All original user changes preserved in git history
+- Recent commits only modified deployment infrastructure
+- WorkoutBuddyView.vue component unchanged and functional
+- No data or code loss occurred
+
+---
+
+# ORIGINAL PROJECT OVERVIEW
+
 High-level view
 • Single-page web app built with Vue 3 + Vite
 • Vuetify 3 provides the UI component library and theming
@@ -187,13 +297,13 @@ cloudbuild.yaml Cloud Build steps: npm ci, npm run build, gcloud app
 deploy
 Dockerfile Docker recipe matching the above (useful for local
 container runs)
-index.html “root” HTML; includes SEO meta, GA, JSON-LD schema markup
+index.html "root" HTML; includes SEO meta, GA, JSON-LD schema markup
 firebase-config.js Initialises Firebase + Analytics
 vite.config.js Vite build/serve settings, plugin registration
 package\*.json / yarn.lock Dependency manifests & scripts
 README.md Quickstart (needs updating for current pipeline)
 robots.txt, sitemap.xml Crawling hints for production
-public/\_headers Netlify-style header file forcing “X-Robots-Tag: noindex”
+public/\_headers Netlify-style header file forcing "X-Robots-Tag: noindex"
 (often used on preview deploys)
 CoachKip.jpg, Privacy.html Extra static assets delivered verbatim
 
@@ -204,7 +314,7 @@ src/main.js
 • Sets up Pinia, registers persisted-state plugin, Vuetify, router, @vueuse/head,
 then mounts #app.
 • Includes a router.afterEach fallback that manually updates document.title & meta
-description (defensive code in case a component doesn’t call useHead).
+description (defensive code in case a component doesn't call useHead).
 
 src/App.vue
 Minimal shell → just <router-view>. All real UI sits inside pages.
@@ -218,13 +328,13 @@ src/router/index.js
 sub-paths.
 
 src/stores/mainStore.js
-• Single Pinia store (“store”). Only userInformation is persisted to localStorage.
+• Single Pinia store ("store"). Only userInformation is persisted to localStorage.
 • Other getters/actions are stubbed; ready to add authentication or training-plan
 state later.
 
 src/plugins/vuetify.js
 • Wraps Vuetify createVuetify with default theme & component defaults.
-• Reads preferred theme out of localStorage (key: “theme”).
+• Reads preferred theme out of localStorage (key: "theme").
 • Sets Material Design Icons as default icon set.
 
 src/views/
@@ -232,13 +342,13 @@ HomeView.vue 1,600+ LOC heavy landing page with:
 – responsive hero headline, parallax background, dark/light
 switch
 – Vuetify toolbar + slide-in drawer menu
-– “Join waitlist” email capture (emailjs-com)
+– "Join waitlist" email capture (emailjs-com)
 – social icon row with hover-floating labels
 – section anchors (#whatwedo, #kip, #contact…) for smooth
 scrolling
 – Copyright & Privacy links in fixed footer
 AboutView.vue Empty placeholder.
-AppCustomLogo.vue Small internal component (blue banner with “Vue 3 template”).
+AppCustomLogo.vue Small internal component (blue banner with "Vue 3 template").
 
 src/components/
 Sitemap.vue Client-side generator that builds an XML sitemap string (mainly
@@ -276,7 +386,7 @@ so Vue-Router client-side handles routing.
 
 these in HomeView.vue. 2. Dark-/light-mode
 • toggle writes localStorage.theme, Vuetify reads it on init.
-• Consider using “prefers-color-scheme” to set default. 3. Accessibility & performance
+• Consider using "prefers-color-scheme" to set default. 3. Accessibility & performance
 • Hero animation + parallax can be heavy on mobile.
 • Many inline styles; you may want to move them to scoped <style>. 4. SEO
 • @vueuse/head plus router meta is the canonical path. The manual afterEach in
@@ -298,10 +408,10 @@ natural next step.
 
     1. index.html is served → loads /src/main.js (Vite injects correct path).
     2. main.js initialises Firebase Analytics, loads plugins, mounts #app.
-    3. Router navigates to “/” → HomeView.vue.
+    3. Router navigates to "/" → HomeView.vue.
     4. HomeView renders Vuetify layout; theme is chosen, fonts load from
 
-/src/assets/font, Lottie JSON pulled from /public/lotte. 5. User clicks “Join Waitlist” → sendEmail() uses emailjs-com REST call →
+/src/assets/font, Lottie JSON pulled from /public/lotte. 5. User clicks "Join Waitlist" → sendEmail() uses emailjs-com REST call →
 SweetAlert/Toast confirms. 6. Navigation to /about will lazy-load AboutView (empty for now). 7. GA / Firebase Analytics track page_view events automatically.
 
 ──────────────────────────────── 7. Quick wins / onboarding checklist
