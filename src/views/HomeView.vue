@@ -198,6 +198,18 @@
                   >Research</a
                 >
                 <!-- <a class="side-nav-link-large mt-n2" style="font-size: 36px; font-family: 'Aeonik1'; line-height: 42px" @click="handleMenuItemClick({ link: '#team' })">Team</a> -->
+                <router-link
+                  to="/workout-buddy"
+                  class="side-nav-link-large mt-n2"
+                  style="
+                    font-size: 36px;
+                    font-family: 'Aeonik1';
+                    line-height: 42px;
+                    text-decoration: none;
+                    color: inherit;
+                  "
+                  >Workout Buddy</router-link
+                >
                 <a
                   class="side-nav-link-large mt-n2"
                   style="
@@ -387,30 +399,34 @@
                 '--i': 7,
               }"
             ></div>
+            <!-- Workout Buddy Link -->
+            <div
+              class="workout-buddy-link word"
+              :style="{ '--i': 7.5 }"
+              style="text-align: center; margin: 20px 0"
+            >
+              <router-link
+                to="/workout-buddy"
+                :style="{
+                  color: 'black',
+                  fontFamily: 'Aeonik1',
+                  fontSize: '18px',
+                  textDecoration: 'none',
+                  fontWeight: '500',
+                }"
+              >
+                Coach Kip Workout Buddy Waitlist
+              </router-link>
+            </div>
             <div
               v-if="!isMobile"
               class="form-container word"
               :style="{ '--i': 8 }"
             >
               <div class="input-form">
-                <v-text-field
-                  rounded
-                  placeholder="Enter email"
-                  class="mb-4"
-                  v-model="email"
-                  :width="isMobile ? '205px' : '350px'"
-                  hide-details
-                  :style="{
-                    border: !isDarkMode ? '1px solid black' : '1px solid #ccc',
-                    color: isDarkMode ? 'white' : 'black',
-                    borderRadius: '30px',
-                  }"
-                >
-                </v-text-field>
                 <button
                   :class="isMobile ? 'join-button1' : 'join-button'"
-                  class="mt-n9"
-                  @click="sendEmail()"
+                  @click="openTypeform()"
                 >
                   Join Waitlist
                 </button>
@@ -463,31 +479,22 @@
                   class="input-form"
                   :style="{
                     marginBottom: isMobile ? '53%' : '',
-                    paddingTop: isMobile ? '15% !important' : '',
+                    paddingTop: isMobile ? '8% !important' : '',
                   }"
                 >
-                  <v-text-field
-                    rounded
-                    placeholder="Enter email"
-                    v-model="email"
-                    :width="isMobile ? '205px' : '280px'"
-                    hide-details
-                    :style="{
-                      border: !isDarkMode
-                        ? '1px solid black'
-                        : '1px solid #ccc',
-                      color: isDarkMode ? 'white' : 'black',
-                      borderRadius: '30px',
-                    }"
-                  >
-                  </v-text-field>
                   <v-btn
                     :color="isDarkMode ? 'white' : 'black'"
                     variant="elevated"
-                    class="mt-3"
-                    style="border-radius: 30px"
-                    size="small"
-                    @click="sendEmail()"
+                    style="
+                      border-radius: 30px;
+                      padding: 22px 32px;
+                      font-size: 18px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                    size="x-large"
+                    @click="openTypeform()"
                     >Join Waitlist</v-btn
                   >
                   <v-row
@@ -3384,6 +3391,9 @@ export default {
         this.loading = false;
       }
     },
+    openTypeform() {
+      window.open("https://form.typeform.com/to/ABgYil78", "_blank");
+    },
 
     validateEmail(email) {
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -4778,25 +4788,32 @@ a:hover {
 
 .join-button {
   margin-top: 10px;
-  padding: 20px 10px 22px 15px;
+  padding: 12px 40px;
   border-radius: 30px;
   background-color: black; /* Blue color */
   color: white;
   border: none;
   cursor: pointer;
-  width: 200px;
+  width: 300px;
   letter-spacing: 3px;
+  font-size: 22px;
+  font-weight: 500;
 }
 .join-button1 {
   margin-top: 10px;
-  padding: 10px 10px;
+  padding: 18px 28px;
   border-radius: 30px;
   background-color: black; /* Blue color */
   color: white;
   border: none;
   cursor: pointer;
-  width: 150px;
+  width: 250px;
   letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Optional animation for button on hover */
@@ -4861,14 +4878,17 @@ a:hover {
 }
 
 .join-button {
-  padding: 10px 20px;
+  padding: 12px 40px;
   background-color: black;
   color: white;
   border: none;
   border-radius: 30px;
-  font-size: 1rem;
+  font-size: 22px;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  width: 300px;
+  letter-spacing: 3px;
 }
 
 .join-button:hover {

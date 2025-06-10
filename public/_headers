@@ -1,2 +1,3 @@
-/* 
-  X-Robots-Tag: noindex
+# Commenting out noindex for production
+# /* 
+#   X-Robots-Tag: noindex
