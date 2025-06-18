@@ -662,9 +662,9 @@
                   }"
                 >
                   Kip is your favorite workout instructor at the gym down the
-                  street. He’s that high-school coach that always got the best
-                  out of you. She’s your local running coach who guides your
-                  Saturday morning runs. Except, they’re all in your pocket.
+                  street. He's that high-school coach that always got the best
+                  out of you. She's your local running coach who guides your
+                  Saturday morning runs. Except, they're all in your pocket.
                 </p>
               </v-col>
             </v-row>
@@ -742,7 +742,7 @@
                   }"
                 >
                   Open the app, upload your workout, and share your goals with
-                  Kip. That’s it. While you're running, Kip will be there to
+                  Kip. That's it. While you're running, Kip will be there to
                   help you along the way, either keeping you on pace or giving
                   you some motivation.
                 </p>
@@ -962,7 +962,7 @@
                   }"
                 >
                   Kip applies advanced neural network modeling and a Large
-                  Language Model (LLM) to each runner’s data to model past,
+                  Language Model (LLM) to each runner's data to model past,
                   current, and predicted performance.
                 </p>
               </v-col>
@@ -2629,6 +2629,7 @@
                 "
                 @mouseover="$event.target.style.opacity = '1'"
                 @mouseleave="$event.target.style.opacity = '0.6'"
+                @click="trackWorkoutBuddyClick()"
               >
                 Workout Buddy
               </router-link>
@@ -3180,6 +3181,7 @@
                   font-size: 10px;
                   text-decoration: none;
                 "
+                @click="trackWorkoutBuddyClick()"
               >
                 Workout Buddy
               </router-link>
@@ -3409,6 +3411,15 @@ export default {
       }
     },
     openTypeform() {
+      // Track the button click in Google Analytics
+      if (typeof gtag !== "undefined") {
+        gtag("event", "click", {
+          event_category: "waitlist",
+          event_label: "join_waitlist_typeform",
+          value: 1,
+        });
+      }
+
       window.open("https://form.typeform.com/to/ABgYil78", "_blank");
     },
 
@@ -3737,6 +3748,16 @@ export default {
       }
 
       this.lastScrollY = currentScrollY;
+    },
+    trackWorkoutBuddyClick() {
+      // Track workout buddy page navigation in Google Analytics
+      if (typeof gtag !== "undefined") {
+        gtag("event", "click", {
+          event_category: "navigation",
+          event_label: "workout_buddy_footer_link",
+          value: 1,
+        });
+      }
     },
   },
   created() {
