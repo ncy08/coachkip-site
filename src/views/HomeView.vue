@@ -399,25 +399,7 @@
                 '--i': 7,
               }"
             ></div>
-            <!-- Workout Buddy Link -->
-            <div
-              class="workout-buddy-link word"
-              :style="{ '--i': 7.5 }"
-              style="text-align: center; margin: 20px 0"
-            >
-              <router-link
-                to="/workout-buddy"
-                :style="{
-                  color: 'black',
-                  fontFamily: 'Aeonik1',
-                  fontSize: '18px',
-                  textDecoration: 'none',
-                  fontWeight: '500',
-                }"
-              >
-                Coach Kip Workout Buddy Waitlist
-              </router-link>
-            </div>
+            <!-- Workout Buddy Link removed from here -->
             <div
               v-if="!isMobile"
               class="form-container word"
@@ -2632,6 +2614,25 @@
                 </v-col>
               </v-row>
             </div>
+            <!-- Discreet footer link -->
+            <div
+              style="position: absolute; bottom: 5px; right: 15px; opacity: 0.6"
+            >
+              <router-link
+                to="/workout-buddy"
+                style="
+                  color: #666;
+                  font-family: 'ChaletBook1';
+                  font-size: 11px;
+                  text-decoration: none;
+                  transition: opacity 0.3s ease;
+                "
+                @mouseover="$event.target.style.opacity = '1'"
+                @mouseleave="$event.target.style.opacity = '0.6'"
+              >
+                Workout Buddy
+              </router-link>
+            </div>
           </div>
         </div>
       </footer>
@@ -3166,6 +3167,22 @@
                   </div>
                 </v-col>
               </v-row>
+            </div>
+            <!-- Discreet mobile footer link -->
+            <div
+              style="position: absolute; bottom: 5px; right: 15px; opacity: 0.5"
+            >
+              <router-link
+                to="/workout-buddy"
+                style="
+                  color: #666;
+                  font-family: 'ChaletBook1';
+                  font-size: 10px;
+                  text-decoration: none;
+                "
+              >
+                Workout Buddy
+              </router-link>
             </div>
           </div>
         </div>
