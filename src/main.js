@@ -6,9 +6,13 @@ import router from "./router";
 import Vuetify from "./plugins/vuetify";
 import { createHead } from "@vueuse/head"; // Import VueUse Head
 import { inject } from "@vercel/analytics"; // Add Vercel Analytics
+import { injectSpeedInsights } from "@vercel/speed-insights"; // Add Vercel Speed Insights
 
 // Initialize Vercel Analytics
 inject();
+
+// Initialize Vercel Speed Insights
+injectSpeedInsights();
 
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedState);

@@ -18,6 +18,12 @@ Your Vue.js site is now configured with **dual analytics tracking** for comprehe
 - **Location**: `src/main.js` (inject import)
 - **Purpose**: Real-time page views, performance metrics, unique visitors
 
+### Vercel Speed Insights
+
+- **Auto-configured**: ✅ (No ID needed - uses Vercel deployment)
+- **Location**: `src/main.js` (injectSpeedInsights import)
+- **Purpose**: Core Web Vitals, page load performance, real user metrics
+
 ## What's Being Tracked
 
 ### Automatic Tracking
@@ -27,7 +33,9 @@ Your Vue.js site is now configured with **dual analytics tracking** for comprehe
 - ✅ **User Sessions**
 - ✅ **Geographic Data**
 - ✅ **Device/Browser Information**
-- ✅ **Performance Metrics** (Vercel only)
+- ✅ **Performance Metrics** (Vercel Analytics)
+- ✅ **Core Web Vitals** (Vercel Speed Insights)
+- ✅ **Real User Monitoring** (Speed Insights)
 
 ### Custom Event Tracking
 
@@ -55,13 +63,27 @@ Your Vue.js site is now configured with **dual analytics tracking** for comprehe
   - Top pages
   - Top referrers
 
+### Vercel Speed Insights
+
+- **URL**: https://vercel.com/dashboard/speed-insights
+- **Access**: Your Vercel dashboard → kip.coach project → Speed Insights tab
+- **Key Metrics**:
+  - First Contentful Paint (FCP)
+  - Largest Contentful Paint (LCP)
+  - First Input Delay (FID)
+  - Cumulative Layout Shift (CLS)
+  - Time to First Byte (TTFB)
+
 ## Files Modified
 
 ### `src/main.js`
 
 ```javascript
 import { inject } from "@vercel/analytics";
+import { injectSpeedInsights } from "@vercel/speed-insights";
+
 inject(); // Vercel Analytics initialization
+injectSpeedInsights(); // Vercel Speed Insights initialization
 
 // Enhanced GA4 SPA tracking in router.afterEach
 gtag("config", "G-N3TE67LD2E", {
@@ -101,9 +123,11 @@ trackWorkoutBuddyClick() {
 ## Deployment Notes
 
 - ✅ **Vercel Analytics**: Auto-enabled on Vercel deployment
+- ✅ **Vercel Speed Insights**: Auto-enabled on Vercel deployment
 - ✅ **Google Analytics**: Working across all pages including `/workout-buddy`
 - ✅ **SPA Routing**: Properly tracks route changes
 - ✅ **Custom Events**: Tracking key user interactions
+- ✅ **Core Web Vitals**: Real user performance monitoring
 
 ## Testing Your Analytics
 
@@ -125,6 +149,12 @@ open https://kip.coach
 
 - Visit Vercel dashboard → Project → Analytics
 - Should show page views within 24 hours
+
+### 4. Vercel Speed Insights
+
+- Visit Vercel dashboard → Project → Speed Insights
+- Should show Core Web Vitals data within 24 hours
+- Test page performance with multiple visits
 
 ## Future Analytics Enhancements
 
