@@ -1,8 +1,10 @@
-# CURRENT PROJECT STATUS & DEPLOYMENT ISSUES
+# CURRENT PROJECT STATUS
 
-## Current Stage (As of June 10, 2025)
+## Current Stage (As of January 2025)
 
-**CRITICAL DEPLOYMENT ISSUE**: The `/workout-buddy` page is not accessible at https://kip.coach/workout-buddy due to SPA (Single Page Application) routing configuration problems.
+**STATUS**: Project is fully functional and deployed on Vercel with comprehensive SEO and analytics setup.
+
+**RECENT CHANGE**: Successfully migrated from Google Cloud Run to Vercel deployment with automatic www→non-www redirects configured.
 
 ### What We're Trying to Achieve
 
@@ -115,9 +117,10 @@ High-level view
 • Vue Router exposes two public routes: "/" (Home) and "/about"
 • @vueuse/head is used for per-route <title>/<meta> management and SEO
 • Firebase (analytics only) is initialised on page load
-• **DEPLOYMENT NOTE**: The project uses **Google Cloud Run** for deployment, NOT Firebase Hosting or Google App Engine
-• CI/CD supports Cloud Run deployment via Cloud Build
-• A simple Dockerfile is included for containerised hosting
+• **DEPLOYMENT NOTE**: The project uses **Vercel** for deployment with automatic Git integration
+• CI/CD handled by Vercel's automatic deployments
+• vercel.json configures www→non-www redirects and SPA routing
+• Legacy deployment configs (Cloud Run, Firebase) maintained for reference
 
 Entry point
 src/main.js
@@ -190,13 +193,20 @@ CMD npx http-server dist
 
 **Deployment Options**
 
-**Primary: Google Cloud Run (Cloud Build)**
-cloudbuild.yaml
+**Primary: Vercel (Current)**
+vercel.json
+
+1. Automatic Git-based deployment on push to main branch
+2. Automatic www→non-www redirects (301 permanent redirects)
+3. SPA routing configuration for proper Vue Router functionality
+4. Security headers included
+
+**Legacy: Google Cloud Run (Cloud Build)**
+cloudbuild.yaml & Dockerfile - maintained for reference
 
 1. npm install && npm run build (Node 20 image)
 2. docker build - creates containerized application
 3. deploy to Cloud Run service
-   Dockerfile: Node 20 + http-server serving dist/ folder
 
 **Alternative: Google App Engine (Cloud Build)**
 app.yaml

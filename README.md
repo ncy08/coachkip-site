@@ -1,11 +1,11 @@
 # Coach Kip Website
 
-Coach Kip is an AGI-powered running coach platform built as a Vue 3 single-page application. This repository contains the frontend website with comprehensive SEO optimization, dual deployment options, and a modern tech stack.
+Coach Kip is an AGI-powered running coach platform built as a Vue 3 single-page application. This repository contains the frontend website with comprehensive SEO optimization, deployed on Vercel, and a modern tech stack.
 
 ## 🚀 Live Site
 
 - **Production**: [https://kip.coach](https://kip.coach)
-- **Firebase Project**: coach-kip-d6793
+- **Platform**: Vercel (with automatic www→non-www redirects)
 
 ## 🏗️ Tech Stack
 
@@ -39,8 +39,7 @@ Coach Kip is an AGI-powered running coach platform built as a Vue 3 single-page 
 
 - **Node.js 20** or higher
 - **npm** or **yarn**
-- **Firebase CLI** (for deployment)
-- **Google Cloud SDK** (for App Engine deployment, optional)
+- **Vercel CLI** (optional, for local deployments)
 
 ## 🛠️ Local Development
 
@@ -76,25 +75,29 @@ npm run lint         # Run ESLint with auto-fix
 
 ## 🚀 Deployment
 
-The project supports two deployment methods:
+### Primary: Vercel (Current)
 
-### Primary: Firebase Hosting (Recommended)
+Automated deployment via Vercel Git integration on push to `main` branch.
 
-Automated deployment via GitHub Actions on push to `main` branch.
+**Configuration:**
+
+- `vercel.json` handles www→non-www redirects (301 redirects)
+- SPA routing configured for proper Vue Router functionality
+- Security headers included for production
 
 **Manual deployment:**
 
 ```bash
 npm run build
-firebase deploy --project coach-kip-d6793
+vercel --prod
 ```
 
-### Secondary: Google App Engine
+### Legacy: Firebase Hosting & Google Cloud Run
 
-```bash
-npm run build
-gcloud app deploy
-```
+Previous deployment configurations maintained for reference:
+
+- `firebase.json` - Firebase Hosting setup
+- `cloudbuild.yaml` & `Dockerfile` - Google Cloud Run setup
 
 ## 📁 Project Structure
 
@@ -122,11 +125,12 @@ coachkip-site/
 │   ├── lotte/                 # Lottie animation files (12 animations)
 │   ├── _headers               # Netlify-style headers (noindex for staging)
 │   └── sitemap.xml            # Static sitemap
-├── .github/workflows/         # GitHub Actions for CI/CD
-├── firebase.json              # Firebase Hosting configuration
-├── cloudbuild.yaml           # Google Cloud Build configuration
-├── app.yaml                  # App Engine configuration
-└── Dockerfile                # Container configuration
+├── vercel.json               # Vercel deployment configuration
+├── .github/workflows/         # GitHub Actions (legacy)
+├── firebase.json              # Firebase Hosting configuration (legacy)
+├── cloudbuild.yaml           # Google Cloud Build configuration (legacy)
+├── app.yaml                  # App Engine configuration (legacy)
+└── Dockerfile                # Container configuration (legacy)
 ```
 
 ## ⚠️ Known Issues & Technical Debt
@@ -164,6 +168,26 @@ Firebase configuration is in `firebase-config.js` with hardcoded keys (acceptabl
 ### Vuetify Theming
 
 Theme configuration in `src/plugins/vuetify.js` with localStorage persistence for dark/light mode.
+
+### Vercel Configuration (vercel.json)
+
+The `vercel.json` file handles important production configurations:
+
+**WWW Redirect Fix:**
+
+- Resolves Google Search Console "Alternate page with proper canonical tag" issues
+- Automatically redirects `https://www.kip.coach/*` to `https://kip.coach/*` with 301 redirects
+- Maintains SEO consistency with canonical tags in `index.html`
+
+**SPA Routing:**
+
+- All routes rewrite to `/index.html` for proper Vue Router functionality
+- Enables direct URL access to routes like `/about` and `/workout-buddy`
+
+**Security Headers:**
+
+- X-Frame-Options: DENY
+- X-Content-Type-Options: nosniff
 
 ## 📊 SEO & Analytics
 

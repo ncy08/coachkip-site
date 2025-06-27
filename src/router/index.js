@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import AboutView from "../views/AboutView.vue";
 import WorkoutBuddyView from "../views/WorkoutBuddyView.vue";
 
 const routes = [
@@ -14,16 +13,7 @@ const routes = [
         "Coach Kip is your advanced AI-powered running coach. Get personalized training plans, track your progress, and run smarter today.",
     },
   },
-  {
-    path: "/about",
-    name: "About",
-    component: AboutView,
-    meta: {
-      title: "About Coach Kip | Your AGI Running Coach",
-      description:
-        "Discover how Coach Kip uses AGI to become the ultimate running coach. Learn about our mission and personalized training philosophy.",
-    },
-  },
+
   {
     path: "/workout-buddy",
     name: "WorkoutBuddy",
