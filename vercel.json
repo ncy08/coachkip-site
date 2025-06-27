@@ -1,17 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://kip.coach/$1",
-      "permanent": true,
-      "has": [
-        {
-          "type": "host",
-          "value": "www.kip.coach"
-        }
-      ]
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
