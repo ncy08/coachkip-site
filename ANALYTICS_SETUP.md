@@ -6,11 +6,19 @@ Your Vue.js site is now configured with **dual analytics tracking** for comprehe
 
 ## Current Analytics Tags & IDs
 
+### Google Tag Manager (GTM)
+
+- **Container ID**: `GTM-WS2BJQCV`
+- **Location**: `index.html` (GTM script)
+- **Consent Management**: CookieYes integration
+- **Purpose**: Manages all tracking tags with proper consent
+
 ### Google Analytics 4 (GA4)
 
 - **Tracking ID**: `G-N3TE67LD2E`
-- **Location**: `index.html` (gtag script)
+- **Location**: Google Tag Manager (GTM-WS2BJQCV) + CookieYes consent management
 - **Purpose**: Page views, user behavior, conversions, custom events
+- **Consent Management**: ✅ Integrated with CookieYes for GDPR/CCPA compliance
 
 ### Vercel Analytics
 
@@ -85,49 +93,85 @@ import { injectSpeedInsights } from "@vercel/speed-insights";
 inject(); // Vercel Analytics initialization
 injectSpeedInsights(); // Vercel Speed Insights initialization
 
-// Enhanced GA4 SPA tracking in router.afterEach
-gtag("config", "G-N3TE67LD2E", {
-  page_title: to.meta.title || document.title,
-  page_location: window.location.href,
-});
+// Enhanced GA4 SPA tracking via GTM dataLayer
+if (typeof window !== "undefined" && window.dataLayer) {
+  window.dataLayer.push({
+    event: "page_view",
+    page_title: to.meta.title || document.title,
+    page_location: window.location.href,
+  });
+}
 ```
 
 ### `src/views/HomeView.vue`
 
 ```javascript
-// Join Waitlist tracking
+// Join Waitlist tracking via GTM dataLayer
 openTypeform() {
-  gtag('event', 'click', {
-    event_category: 'waitlist',
-    event_label: 'join_waitlist_typeform',
-    value: 1
-  });
+  if (typeof window !== "undefined" && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'custom_event',
+      event_category: 'waitlist',
+      event_label: 'join_waitlist_typeform',
+      value: 1
+    });
+  }
   window.open("https://form.typeform.com/to/ABgYil78", "_blank");
 }
 
-// Workout Buddy navigation tracking
+// Workout Buddy navigation tracking via GTM dataLayer
 trackWorkoutBuddyClick() {
-  gtag('event', 'click', {
-    event_category: 'navigation',
-    event_label: 'workout_buddy_footer_link',
-    value: 1
-  });
+  if (typeof window !== "undefined" && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'custom_event',
+      event_category: 'navigation',
+      event_label: 'workout_buddy_footer_link',
+      value: 1
+    });
+  }
 }
 ```
 
 ### `index.html`
 
-- Google Analytics gtag script properly configured
+- Google Tag Manager (GTM-WS2BJQCV) properly configured
+- Direct Google Analytics script removed (now handled via GTM + CookieYes)
 - No changes needed for Vercel (auto-configured)
+
+## Required GTM Configuration
+
+### ⚠️ Important: Complete GTM Setup
+
+To activate consent signals, ensure your GTM container (GTM-WS2BJQCV) has:
+
+1. **Google Analytics 4 Configuration Tag**
+
+   - Measurement ID: `G-N3TE67LD2E`
+   - Trigger: All Pages (with CookieYes consent)
+
+2. **CookieYes Consent Integration**
+
+   - Analytics consent trigger: `analytics_storage = 'granted'`
+   - Advertising consent trigger: `ad_storage = 'granted'`
+
+3. **Custom Event Triggers**
+
+   - Event name: `page_view` → Fires GA4 page view
+   - Event name: `custom_event` → Fires GA4 events with category/label
+
+4. **Consent Settings**
+   - Built-in variables: Consent State - Analytics Storage
+   - Built-in variables: Consent State - Ad Storage
 
 ## Deployment Notes
 
 - ✅ **Vercel Analytics**: Auto-enabled on Vercel deployment
 - ✅ **Vercel Speed Insights**: Auto-enabled on Vercel deployment
-- ✅ **Google Analytics**: Working across all pages including `/workout-buddy`
-- ✅ **SPA Routing**: Properly tracks route changes
-- ✅ **Custom Events**: Tracking key user interactions
+- ✅ **Google Analytics**: Now properly managed through GTM + CookieYes consent
+- ✅ **SPA Routing**: Properly tracks route changes via dataLayer
+- ✅ **Custom Events**: Tracking key user interactions via GTM
 - ✅ **Core Web Vitals**: Real user performance monitoring
+- ✅ **Consent Management**: CookieYes integration for GDPR/CCPA compliance
 
 ## Testing Your Analytics
 
@@ -185,9 +229,19 @@ gtag("event", "form_submit", {
 ### Analytics Not Showing Data
 
 1. Check browser console for errors
-2. Verify gtag is loaded: `console.log(typeof gtag)`
-3. Test with GA4 DebugView (add `?debug_mode=1` to URL)
-4. Check ad blockers aren't blocking tracking
+2. Verify GTM is loaded: `console.log(window.dataLayer)`
+3. Test consent in browser: Accept cookies via CookieYes banner
+4. Check GTM Preview mode to verify tags are firing
+5. Test with GA4 DebugView (add `?debug_mode=1` to URL)
+6. Check ad blockers aren't blocking tracking
+
+### Consent Signals Inactive
+
+1. Verify CookieYes is properly integrated with GTM
+2. Check GTM consent triggers are configured correctly
+3. Ensure GA4 tags only fire with proper consent
+4. Test consent flow: Decline → Accept cookies
+5. Wait 24-48 hours for Google to recognize consent signals
 
 ### Vercel Analytics Issues
 

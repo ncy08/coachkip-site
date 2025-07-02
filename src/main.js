@@ -38,9 +38,10 @@ router.afterEach((to) => {
     metaDescription.setAttribute("content", to.meta.description || "");
   }
 
-  // Send page view to Google Analytics
-  if (typeof gtag !== "undefined") {
-    gtag("config", "G-N3TE67LD2E", {
+  // Send page view to Google Analytics via GTM dataLayer
+  if (typeof window !== "undefined" && window.dataLayer) {
+    window.dataLayer.push({
+      event: "page_view",
       page_title: to.meta.title || document.title,
       page_location: window.location.href,
     });
