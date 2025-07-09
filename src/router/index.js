@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import WorkoutBuddyView from "../views/WorkoutBuddyView.vue";
+import ThankYouView from "../views/ThankYouView.vue";
 
 const routes = [
   {
@@ -22,6 +23,16 @@ const routes = [
       title: "Kip Coach Workout Buddy - Your AI Running Partner vs Apple",
       description:
         "Kip Coach workout buddy offers personalized AI coaching that adapts to your running style, unlike Apple's basic fitness tracking. Get smarter training.",
+    },
+  },
+  {
+    path: "/thank-you",
+    name: "ThankYou",
+    component: ThankYouView,
+    meta: {
+      title: "Thank You | Coach Kip",
+      description:
+        "Thank you for signing up with Coach Kip - your AI running coach.",
     },
   },
 ];
