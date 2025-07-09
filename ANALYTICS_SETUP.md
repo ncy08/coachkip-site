@@ -111,10 +111,10 @@ openTypeform() {
   if (typeof window !== "undefined" && window.dataLayer) {
     window.dataLayer.push({
       event: 'custom_event',
-      event_category: 'waitlist',
-      event_label: 'join_waitlist_typeform',
-      value: 1
-    });
+    event_category: 'waitlist',
+    event_label: 'join_waitlist_typeform',
+    value: 1
+  });
   }
   window.open("https://form.typeform.com/to/ABgYil78", "_blank");
 }
@@ -124,10 +124,10 @@ trackWorkoutBuddyClick() {
   if (typeof window !== "undefined" && window.dataLayer) {
     window.dataLayer.push({
       event: 'custom_event',
-      event_category: 'navigation',
-      event_label: 'workout_buddy_footer_link',
-      value: 1
-    });
+    event_category: 'navigation',
+    event_label: 'workout_buddy_footer_link',
+    value: 1
+  });
   }
 }
 ```
